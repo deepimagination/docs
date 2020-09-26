@@ -1,0 +1,133 @@
+imaginaire.utils package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   imaginaire.utils.visualization
+
+Submodules
+----------
+
+imaginaire.utils.cudnn module
+-----------------------------
+
+.. automodule:: imaginaire.utils.cudnn
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.data module
+----------------------------
+
+.. automodule:: imaginaire.utils.data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.dataset module
+-------------------------------
+
+.. automodule:: imaginaire.utils.dataset
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.distributed module
+-----------------------------------
+
+.. automodule:: imaginaire.utils.distributed
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.gpu\_affinity module
+-------------------------------------
+
+.. automodule:: imaginaire.utils.gpu_affinity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.init\_weight module
+------------------------------------
+
+.. automodule:: imaginaire.utils.init_weight
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.io module
+--------------------------
+
+.. automodule:: imaginaire.utils.io
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.lmdb module
+----------------------------
+
+.. automodule:: imaginaire.utils.lmdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.logging module
+-------------------------------
+
+.. automodule:: imaginaire.utils.logging
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.meters module
+------------------------------
+
+.. automodule:: imaginaire.utils.meters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.misc module
+----------------------------
+
+.. automodule:: imaginaire.utils.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.model\_average module
+--------------------------------------
+
+.. automodule:: imaginaire.utils.model_average
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.path module
+----------------------------
+
+.. automodule:: imaginaire.utils.path
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.trainer module
+-------------------------------
+
+.. automodule:: imaginaire.utils.trainer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

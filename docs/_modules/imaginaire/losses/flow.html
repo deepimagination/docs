@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.losses.flow &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.losses.flow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.losses.flow</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># flake8: noqa</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_face_mask</span><span class="p">,</span> <span class="n">get_fg_mask</span><span class="p">,</span>
+                                               <span class="n">get_part_mask</span><span class="p">,</span> <span class="n">pick_image</span><span class="p">,</span>
+                                               <span class="n">resample</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="MaskedL1Loss"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.MaskedL1Loss">[docs]</a><span class="k">class</span> <span class="nc">MaskedL1Loss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Masked L1 loss constructor.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normalize_over_valid</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MaskedL1Loss</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">L1Loss</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">normalize_over_valid</span> <span class="o">=</span> <span class="n">normalize_over_valid</span>
+
+<div class="viewcode-block" id="MaskedL1Loss.forward"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.MaskedL1Loss.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Masked L1 loss computation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input (tensor): Input tensor.</span>
+<span class="sd">            target (tensor): Target tensor.</span>
+<span class="sd">            mask (tensor): Mask to be applied to the output loss.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            (tensor): Loss value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">expand_as</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span><span class="p">(</span><span class="nb">input</span> <span class="o">*</span> <span class="n">mask</span><span class="p">,</span> <span class="n">target</span> <span class="o">*</span> <span class="n">mask</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize_over_valid</span><span class="p">:</span>
+            <span class="c1"># The loss has been averaged over all pixels.</span>
+            <span class="c1"># Only average over regions which are valid.</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">numel</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-6</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss</span></div></div>
+
+
+<div class="viewcode-block" id="FlowLoss"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss">[docs]</a><span class="k">class</span> <span class="nc">FlowLoss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Flow loss constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Configuration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FlowLoss</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">L1Loss</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span> <span class="o">=</span> <span class="n">MaskedL1Loss</span><span class="p">()</span>
+        <span class="n">flow_module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">flow_network</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+        <span class="c1"># Automatically casting the flow network to half precision when using</span>
+        <span class="c1"># ampO1.</span>
+        <span class="n">fp16</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">amp</span> <span class="o">&gt;</span> <span class="s1">&#39;O0&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flowNet</span> <span class="o">=</span> <span class="n">flow_module</span><span class="o">.</span><span class="n">FlowNet</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fp16</span><span class="o">=</span><span class="n">fp16</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warp_ref</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">flow</span><span class="p">,</span> <span class="s1">&#39;warp_ref&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pose_cfg</span> <span class="o">=</span> <span class="n">pose_cfg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;for_pose_dataset&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">for_pose_dataset</span> <span class="o">=</span> <span class="n">pose_cfg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;has_foreground&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FlowLoss.forward"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute losses on the output flow and occlusion mask.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Input data.</span>
+<span class="sd">            net_G_output (dict): Generator output.</span>
+<span class="sd">            current_epoch (int): Current training epoch number.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</span>
+<span class="sd">              - loss_flow_warp (tensor): L1 loss between the warped image and the</span>
+<span class="sd">                target image when using the flow to warp.</span>
+<span class="sd">              - loss_mask (tensor): Loss for the occlusion mask.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tgt_label</span><span class="p">,</span> <span class="n">tgt_image</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span>
+
+        <span class="n">fake_image</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span>
+        <span class="n">warped_images</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;warped_images&#39;</span><span class="p">]</span>
+        <span class="n">flow</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_flow_maps&#39;</span><span class="p">]</span>
+        <span class="n">occ_mask</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_occlusion_masks&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">warp_ref</span><span class="p">:</span>
+            <span class="c1"># Pick the most similar reference image to warp.</span>
+            <span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ref_labels&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ref_images&#39;</span><span class="p">]</span>
+            <span class="n">ref_idx</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;ref_idx&#39;</span><span class="p">]</span>
+            <span class="n">ref_label</span><span class="p">,</span> <span class="n">ref_image</span> <span class="o">=</span> <span class="n">pick_image</span><span class="p">([</span><span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_images</span><span class="p">],</span> <span class="n">ref_idx</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ref_label</span> <span class="o">=</span> <span class="n">ref_image</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Compute the ground truth flows and confidence maps.</span>
+        <span class="n">flow_gt_prev</span> <span class="o">=</span> <span class="n">flow_gt_ref</span> <span class="o">=</span> <span class="n">conf_gt_prev</span> <span class="o">=</span> <span class="n">conf_gt_ref</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">warp_ref</span><span class="p">:</span>
+                <span class="c1"># Compute GT for warping reference -&gt; target.</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">for_pose_dataset</span><span class="p">:</span>
+                    <span class="c1"># Use DensePose maps to compute flows for pose dataset.</span>
+                    <span class="n">flow_gt_ref</span><span class="p">,</span> <span class="n">conf_gt_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flowNet</span><span class="p">(</span><span class="n">tgt_label</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">],</span>
+                                                            <span class="n">ref_label</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Use RGB images for other datasets.</span>
+                    <span class="n">flow_gt_ref</span><span class="p">,</span> <span class="n">conf_gt_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flowNet</span><span class="p">(</span><span class="n">tgt_image</span><span class="p">,</span>
+                                                            <span class="n">ref_image</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">current_epoch</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">single_frame_epoch</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;real_prev_image&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># Compute GT for warping previous -&gt; target.</span>
+                <span class="n">tgt_image_prev</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;real_prev_image&#39;</span><span class="p">]</span>
+                <span class="n">flow_gt_prev</span><span class="p">,</span> <span class="n">conf_gt_prev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flowNet</span><span class="p">(</span><span class="n">tgt_image</span><span class="p">,</span>
+                                                          <span class="n">tgt_image_prev</span><span class="p">)</span>
+
+        <span class="n">flow_gt</span> <span class="o">=</span> <span class="p">[</span><span class="n">flow_gt_ref</span><span class="p">,</span> <span class="n">flow_gt_prev</span><span class="p">]</span>
+        <span class="n">flow_conf_gt</span> <span class="o">=</span> <span class="p">[</span><span class="n">conf_gt_ref</span><span class="p">,</span> <span class="n">conf_gt_prev</span><span class="p">]</span>
+        <span class="c1"># Get the foreground masks.</span>
+        <span class="n">fg_mask</span><span class="p">,</span> <span class="n">ref_fg_mask</span> <span class="o">=</span> <span class="n">get_fg_mask</span><span class="p">([</span><span class="n">tgt_label</span><span class="p">,</span> <span class="n">ref_label</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span><span class="p">)</span>
+
+        <span class="c1"># Compute losses for flow maps and masks.</span>
+        <span class="n">loss_flow_L1</span><span class="p">,</span> <span class="n">loss_flow_warp</span><span class="p">,</span> <span class="n">body_mask_diff</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">compute_flow_losses</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">warped_images</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span> <span class="n">flow_gt</span><span class="p">,</span>
+                                     <span class="n">flow_conf_gt</span><span class="p">,</span> <span class="n">fg_mask</span><span class="p">,</span> <span class="n">tgt_label</span><span class="p">,</span>
+                                     <span class="n">ref_label</span><span class="p">)</span>
+
+        <span class="n">loss_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_mask_losses</span><span class="p">(</span>
+            <span class="n">occ_mask</span><span class="p">,</span> <span class="n">fake_image</span><span class="p">,</span> <span class="n">warped_images</span><span class="p">,</span> <span class="n">tgt_label</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span>
+            <span class="n">fg_mask</span><span class="p">,</span> <span class="n">ref_fg_mask</span><span class="p">,</span> <span class="n">body_mask_diff</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">loss_flow_L1</span><span class="p">,</span> <span class="n">loss_flow_warp</span><span class="p">,</span> <span class="n">loss_mask</span></div>
+
+<div class="viewcode-block" id="FlowLoss.compute_flow_losses"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss.compute_flow_losses">[docs]</a>    <span class="k">def</span> <span class="nf">compute_flow_losses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow</span><span class="p">,</span> <span class="n">warped_images</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span> <span class="n">flow_gt</span><span class="p">,</span>
+                            <span class="n">flow_conf_gt</span><span class="p">,</span> <span class="n">fg_mask</span><span class="p">,</span> <span class="n">tgt_label</span><span class="p">,</span> <span class="n">ref_label</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute losses on the generated flow maps.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            flow (tensor or list of tensors): Generated flow maps.</span>
+<span class="sd">                warped_images (tensor or list of tensors): Warped images using the</span>
+<span class="sd">                flow maps.</span>
+<span class="sd">            tgt_image (tensor): Target image for the warped image.</span>
+<span class="sd">                flow_gt (tensor or list of tensors): Ground truth flow maps.</span>
+<span class="sd">            flow_conf_gt (tensor or list of tensors): Confidence for the ground</span>
+<span class="sd">                truth flow maps.</span>
+<span class="sd">            fg_mask (tensor): Foreground mask for the target image.</span>
+<span class="sd">            tgt_label (tensor): Target label map.</span>
+<span class="sd">            ref_label (tensor): Reference label map.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</span>
+<span class="sd">              - loss_flow_warp (tensor): L1 loss between the warped image and the</span>
+<span class="sd">                target image when using the flow to warp.</span>
+<span class="sd">              - body_mask_diff (tensor): Difference between warped body part map</span>
+<span class="sd">                and target body part map. Used for pose dataset only.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loss_flow_L1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="n">loss_flow_warp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="c1"># Compute flow losses for both warping reference -&gt; target and</span>
+            <span class="c1"># previous -&gt; target.</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flow</span><span class="p">)):</span>
+                <span class="n">loss_flow_L1_i</span><span class="p">,</span> <span class="n">loss_flow_warp_i</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">compute_flow_loss</span><span class="p">(</span><span class="n">flow</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">warped_images</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tgt_image</span><span class="p">,</span>
+                                           <span class="n">flow_gt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">flow_conf_gt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fg_mask</span><span class="p">)</span>
+                <span class="n">loss_flow_L1</span> <span class="o">+=</span> <span class="n">loss_flow_L1_i</span>
+                <span class="n">loss_flow_warp</span> <span class="o">+=</span> <span class="n">loss_flow_warp_i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Compute loss for warping either reference or previous images.</span>
+            <span class="n">loss_flow_L1</span><span class="p">,</span> <span class="n">loss_flow_warp</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">compute_flow_loss</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">warped_images</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span>
+                                       <span class="n">flow_gt</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flow_conf_gt</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">fg_mask</span><span class="p">)</span>
+
+        <span class="c1"># For pose dataset only.</span>
+        <span class="n">body_mask_diff</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">warp_ref</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">for_pose_dataset</span><span class="p">:</span>
+                <span class="c1"># Warped reference body part map should be similar to target</span>
+                <span class="c1"># body part map.</span>
+                <span class="n">body_mask</span> <span class="o">=</span> <span class="n">get_part_mask</span><span class="p">(</span><span class="n">tgt_label</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+                <span class="n">ref_body_mask</span> <span class="o">=</span> <span class="n">get_part_mask</span><span class="p">(</span><span class="n">ref_label</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+                <span class="n">warped_ref_body_mask</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">ref_body_mask</span><span class="p">,</span> <span class="n">flow</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">loss_flow_warp</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span><span class="p">(</span><span class="n">warped_ref_body_mask</span><span class="p">,</span>
+                                                 <span class="n">body_mask</span><span class="p">)</span>
+                <span class="n">body_mask_diff</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+                    <span class="nb">abs</span><span class="p">(</span><span class="n">warped_ref_body_mask</span> <span class="o">-</span> <span class="n">body_mask</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span><span class="p">:</span>
+                <span class="c1"># Warped reference foreground map should be similar to target</span>
+                <span class="c1"># foreground map.</span>
+                <span class="n">fg_mask</span><span class="p">,</span> <span class="n">ref_fg_mask</span> <span class="o">=</span> \
+                    <span class="n">get_fg_mask</span><span class="p">([</span><span class="n">tgt_label</span><span class="p">,</span> <span class="n">ref_label</span><span class="p">],</span> <span class="kc">True</span><span class="p">)</span>
+                <span class="n">warped_ref_fg_mask</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">ref_fg_mask</span><span class="p">,</span> <span class="n">flow</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">loss_flow_warp</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span><span class="p">(</span><span class="n">warped_ref_fg_mask</span><span class="p">,</span> <span class="n">fg_mask</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">loss_flow_L1</span><span class="p">,</span> <span class="n">loss_flow_warp</span><span class="p">,</span> <span class="n">body_mask_diff</span></div>
+
+<div class="viewcode-block" id="FlowLoss.compute_flow_loss"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss.compute_flow_loss">[docs]</a>    <span class="k">def</span> <span class="nf">compute_flow_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span> <span class="n">flow_gt</span><span class="p">,</span>
+                          <span class="n">flow_conf_gt</span><span class="p">,</span> <span class="n">fg_mask</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute losses on the generated flow map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            flow (tensor): Generated flow map.</span>
+<span class="sd">            warped_image (tensor): Warped image using the flow map.</span>
+<span class="sd">            tgt_image (tensor): Target image for the warped image.</span>
+<span class="sd">            flow_gt (tensor): Ground truth flow map.</span>
+<span class="sd">            flow_conf_gt (tensor): Confidence for the ground truth flow map.</span>
+<span class="sd">            fg_mask (tensor): Foreground mask for the target image.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</span>
+<span class="sd">              - loss_flow_warp (tensor): L1 loss between the warped image and the </span>
+<span class="sd">                target image when using the flow to warp.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loss_flow_L1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="n">loss_flow_warp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">flow</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">flow_gt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># L1 loss compared to flow ground truth.</span>
+            <span class="n">loss_flow_L1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">flow_gt</span><span class="p">,</span>
+                                                <span class="n">flow_conf_gt</span> <span class="o">*</span> <span class="n">fg_mask</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">warped_image</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># L1 loss between warped image and target image.</span>
+            <span class="n">loss_flow_warp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterion</span><span class="p">(</span><span class="n">warped_image</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss_flow_L1</span><span class="p">,</span> <span class="n">loss_flow_warp</span></div>
+
+<div class="viewcode-block" id="FlowLoss.compute_mask_losses"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss.compute_mask_losses">[docs]</a>    <span class="k">def</span> <span class="nf">compute_mask_losses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occ_mask</span><span class="p">,</span> <span class="n">fake_image</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">,</span>
+                            <span class="n">tgt_label</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">,</span> <span class="n">fg_mask</span><span class="p">,</span> <span class="n">ref_fg_mask</span><span class="p">,</span>
+                            <span class="n">body_mask_diff</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute losses on the generated occlusion masks.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            occ_mask (tensor or list of tensors): Generated occlusion masks.</span>
+<span class="sd">            fake_image (tensor): Generated image.</span>
+<span class="sd">            warped_image (tensor or list of tensors): Warped images using the</span>
+<span class="sd">                flow maps.</span>
+<span class="sd">            tgt_label (tensor): Target label map.</span>
+<span class="sd">            tgt_image (tensor): Target image for the warped image.</span>
+<span class="sd">            fg_mask (tensor): Foreground mask for the target image.</span>
+<span class="sd">            ref_fg_mask (tensor): Foreground mask for the reference image.</span>
+<span class="sd">            body_mask_diff (tensor): Difference between warped body part map</span>
+<span class="sd">            and target body part map. Used for pose dataset only.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tensor): Loss for the mask.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loss_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="c1"># Compute occlusion mask losses for both warping reference -&gt; target</span>
+            <span class="c1"># and previous -&gt; target.</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">)):</span>
+                <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_mask_loss</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                                    <span class="n">warped_image</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                                    <span class="n">tgt_image</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Compute loss for warping either reference or previous images.</span>
+            <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_mask_loss</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">,</span>
+                                                <span class="n">tgt_image</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">warp_ref</span><span class="p">:</span>
+            <span class="n">ref_occ_mask</span> <span class="o">=</span> <span class="n">occ_mask</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">dummy0</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">ref_occ_mask</span><span class="p">)</span>
+            <span class="n">dummy1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">ref_occ_mask</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">for_pose_dataset</span><span class="p">:</span>
+                <span class="c1"># Enforce output to use more warped reference image for</span>
+                <span class="c1"># face region.</span>
+                <span class="n">face_mask</span> <span class="o">=</span> <span class="n">get_face_mask</span><span class="p">(</span><span class="n">tgt_label</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">AvgPool</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">AvgPool2d</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">face_mask</span> <span class="o">=</span> <span class="n">AvgPool</span><span class="p">(</span><span class="n">face_mask</span><span class="p">)</span>
+                <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">ref_occ_mask</span><span class="p">,</span> <span class="n">dummy0</span><span class="p">,</span>
+                                                  <span class="n">face_mask</span><span class="p">)</span>
+                <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">fake_image</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                                  <span class="n">face_mask</span><span class="p">)</span>
+                <span class="c1"># Enforce output to use more hallucinated image for discrepancy</span>
+                <span class="c1"># regions of body part masks between warped reference and</span>
+                <span class="c1"># target image.</span>
+                <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">ref_occ_mask</span><span class="p">,</span> <span class="n">dummy1</span><span class="p">,</span>
+                                                  <span class="n">body_mask_diff</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span><span class="p">:</span>
+                <span class="c1"># Enforce output to use more hallucinated image for discrepancy</span>
+                <span class="c1"># regions of foreground masks between reference and target</span>
+                <span class="c1"># image.</span>
+                <span class="n">fg_mask_diff</span> <span class="o">=</span> <span class="p">((</span><span class="n">ref_fg_mask</span> <span class="o">-</span> <span class="n">fg_mask</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+                <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">ref_occ_mask</span><span class="p">,</span> <span class="n">dummy1</span><span class="p">,</span>
+                                                  <span class="n">fg_mask_diff</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss_mask</span></div>
+
+<div class="viewcode-block" id="FlowLoss.compute_mask_loss"><a class="viewcode-back" href="../../../imaginaire.losses.html#imaginaire.losses.flow.FlowLoss.compute_mask_loss">[docs]</a>    <span class="k">def</span> <span class="nf">compute_mask_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occ_mask</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">,</span> <span class="n">tgt_image</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute losses on the generated occlusion mask.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            occ_mask (tensor): Generated occlusion mask.</span>
+<span class="sd">            warped_image (tensor): Warped image using the flow map.</span>
+<span class="sd">            tgt_image (tensor): Target image for the warped image.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tensor): Loss for the mask.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loss_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">occ_mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dummy0</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">)</span>
+            <span class="n">dummy1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">)</span>
+
+            <span class="c1"># Compute the confidence map based on L1 distance between warped</span>
+            <span class="c1"># and GT image.</span>
+            <span class="n">img_diff</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">warped_image</span> <span class="o">-</span> <span class="n">tgt_image</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                 <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">conf</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">img_diff</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+            <span class="c1"># Force mask value to be small if warped image is similar to GT,</span>
+            <span class="c1"># and vice versa.</span>
+            <span class="n">loss_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">,</span> <span class="n">dummy0</span><span class="p">,</span> <span class="n">conf</span><span class="p">)</span>
+            <span class="n">loss_mask</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criterionMasked</span><span class="p">(</span><span class="n">occ_mask</span><span class="p">,</span> <span class="n">dummy1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">conf</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">loss_mask</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

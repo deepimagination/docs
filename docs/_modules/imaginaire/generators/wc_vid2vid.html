@@ -1,0 +1,580 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators.wc_vid2vid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.generators.wc_vid2vid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.generators.wc_vid2vid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">transforms</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">imaginaire.generators.vid2vid</span> <span class="kn">import</span> <span class="n">Generator</span> <span class="k">as</span> <span class="n">Vid2VidGenerator</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="n">resample</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.wc_vid2vid.render</span> <span class="kn">import</span> <span class="n">SplatRenderer</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.trainer</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_model_optimizer_and_scheduler</span><span class="p">,</span>
+                                      <span class="n">get_trainer</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.visualization</span> <span class="kn">import</span> <span class="n">tensor2im</span>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">(</span><span class="n">Vid2VidGenerator</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;world consistent vid2vid generator constructor.</span>
+<span class="sd">    Args:</span>
+<span class="sd">       gen_cfg (obj): Generator definition part of the yaml config file.</span>
+<span class="sd">       data_cfg (obj): Data definition part of the yaml config file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="c1"># Guidance options.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guidance_cfg</span> <span class="o">=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">guidance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guidance_only_with_flow</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">guidance_cfg</span><span class="p">,</span> <span class="s1">&#39;only_with_flow&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guidance_partial_conv</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">guidance_cfg</span><span class="p">,</span> <span class="s1">&#39;partial_conv&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Splatter for guidance.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span> <span class="o">=</span> <span class="n">SplatRenderer</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_renderer</span><span class="p">()</span>
+
+        <span class="c1"># Single image model.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Initialize the rest same as vid2vid.</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_single_image_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">load_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load single image model, if any.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> \
+                <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;single_image_model&#39;</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using single image model...&#39;</span><span class="p">)</span>
+            <span class="n">single_image_cfg</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen_cfg</span><span class="o">.</span><span class="n">single_image_model</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+            <span class="c1"># Init model.</span>
+            <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span> <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span> <span class="o">=</span> \
+                <span class="n">get_model_optimizer_and_scheduler</span><span class="p">(</span><span class="n">single_image_cfg</span><span class="p">)</span>
+
+            <span class="c1"># Init trainer and load checkpoint.</span>
+            <span class="n">trainer</span> <span class="o">=</span> <span class="n">get_trainer</span><span class="p">(</span><span class="n">single_image_cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span>
+                                  <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span>
+                                  <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                                  <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">load_weights</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loading single image model checkpoint&#39;</span><span class="p">)</span>
+                <span class="n">single_image_ckpt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_cfg</span><span class="o">.</span><span class="n">single_image_model</span><span class="o">.</span><span class="n">checkpoint</span>
+                <span class="n">trainer</span><span class="o">.</span><span class="n">load_checkpoint</span><span class="p">(</span><span class="n">single_image_cfg</span><span class="p">,</span> <span class="n">single_image_ckpt</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loaded single image model checkpoint&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span> <span class="o">=</span> <span class="n">net_G</span><span class="o">.</span><span class="n">module</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model_z</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Generator.reset_renderer"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.reset_renderer">[docs]</a>    <span class="k">def</span> <span class="nf">reset_renderer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_flipped_input</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the renderer.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            is_flipped_input (bool): Is the input sequence left-right flipped?</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_flipped_input</span> <span class="o">=</span> <span class="n">is_flipped_input</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer_num_forwards</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model_z</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Generator.renderer_update_point_cloud"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.renderer_update_point_cloud">[docs]</a>    <span class="k">def</span> <span class="nf">renderer_update_point_cloud</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">point_info</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Update the renderer&#39;s color dictionary.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">point_info</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">point_info</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="c1"># print(&#39;Updating the renderer.&#39;)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+        <span class="c1"># Renderer expects (h, w, c) [0-255] RGB image.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">detach</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Flip this image to correspond to SfM camera pose.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_flipped_input</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">update_point_cloud</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">point_info</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer_num_forwards</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="Generator.get_guidance_images_and_masks"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.get_guidance_images_and_masks">[docs]</a>    <span class="k">def</span> <span class="nf">get_guidance_images_and_masks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unprojection</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Do stuff.&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">resolution</span><span class="p">,</span> <span class="n">point_info</span> <span class="ow">in</span> <span class="n">unprojection</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">resolution</span> <span class="o">!=</span> <span class="s1">&#39;w1024xh512&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">resolution</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+            <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">:]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+            <span class="c1"># This returns guidance image in [0-255] RGB.</span>
+            <span class="c1"># We will convert it into Tensor repr. below.</span>
+            <span class="n">guidance_image</span><span class="p">,</span> <span class="n">guidance_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">render_image</span><span class="p">(</span>
+                <span class="n">point_info</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="c1"># If mask is None, there is no guidance.</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">guidance_mask</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="n">point_info</span>
+
+            <span class="c1"># Flip guidance image and guidance mask if needed.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_flipped_input</span><span class="p">:</span>
+                <span class="n">guidance_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">guidance_image</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">guidance_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">guidance_mask</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+            <span class="c1"># Go from (h, w, c) to (1, c, h, w).</span>
+            <span class="c1"># Convert guidance image to Tensor.</span>
+            <span class="n">guidance_image</span> <span class="o">=</span> <span class="p">(</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()(</span><span class="n">guidance_image</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">guidance_mask</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()(</span><span class="n">guidance_mask</span><span class="p">)</span>
+            <span class="n">guidance</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">guidance_image</span><span class="p">,</span> <span class="n">guidance_mask</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">guidance</span> <span class="o">=</span> <span class="n">guidance</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+
+            <span class="c1"># Save guidance at all resolutions.</span>
+            <span class="n">guidance_images_and_masks</span> <span class="o">=</span> <span class="n">guidance</span>
+
+        <span class="k">return</span> <span class="n">guidance_images_and_masks</span><span class="p">,</span> <span class="n">point_info</span></div>
+
+<div class="viewcode-block" id="Generator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;vid2vid generator forward.</span>
+<span class="sd">        Args:</span>
+<span class="sd">           data (dict) : Dictionary of input data.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           output (dict) : Dictionary of output data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_single_image_model</span><span class="p">()</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+        <span class="n">unprojection</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;unprojection&#39;</span><span class="p">]</span>
+        <span class="n">label_prev</span><span class="p">,</span> <span class="n">img_prev</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;prev_labels&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;prev_images&#39;</span><span class="p">]</span>
+        <span class="n">is_first_frame</span> <span class="o">=</span> <span class="n">img_prev</span> <span class="ow">is</span> <span class="kc">None</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">bs</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+        <span class="c1"># Whether to warp the previous frame or not.</span>
+        <span class="n">flow</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">img_warp</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">warp_prev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temporal_initialized</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_first_frame</span> <span class="ow">and</span> \
+            <span class="n">label_prev</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_G</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="c1"># Get guidance images and masks.</span>
+        <span class="n">guidance_images_and_masks</span><span class="p">,</span> <span class="n">point_info</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">unprojection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">guidance_images_and_masks</span><span class="p">,</span> <span class="n">point_info</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_guidance_images_and_masks</span><span class="p">(</span><span class="n">unprojection</span><span class="p">)</span>
+
+        <span class="c1"># Get SPADE conditional maps by embedding current label input.</span>
+        <span class="n">cond_maps_now</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_embedding</span><span class="p">)</span>
+
+        <span class="c1"># Use single image model, if flow features are not available.</span>
+        <span class="c1"># Guidance features are used whenever flow features are available.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">warp_prev</span><span class="p">:</span>
+            <span class="c1"># Get z vector for single image model.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model_z</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">bs</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span><span class="o">.</span><span class="n">style_dims</span><span class="p">,</span>
+                                <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">:</span>
+                    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">half</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model_z</span> <span class="o">=</span> <span class="n">z</span>
+
+            <span class="c1"># Get output image.</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model_z</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+            <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_image_model</span><span class="o">.</span><span class="n">spade_generator</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">img_final</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+            <span class="n">fake_images_source</span> <span class="o">=</span> <span class="s1">&#39;pretrained&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Input to the generator will either be noise/segmentation map (for</span>
+            <span class="c1"># first frame) or encoded previous frame (for subsequent frames).</span>
+            <span class="k">if</span> <span class="n">is_first_frame</span><span class="p">:</span>
+                <span class="c1"># First frame in the sequence, start from scratch.</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_segmap_as_input</span><span class="p">:</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sh</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">))</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">label</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+                                        <span class="n">device</span><span class="o">=</span><span class="n">label</span><span class="o">.</span><span class="n">get_device</span><span class="p">())</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sh</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">)</span>
+
+                <span class="c1"># Upsampling layers.</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                    <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;up_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                                    <span class="p">)(</span><span class="n">x_img</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Not the first frame, will encode the previous frame and feed</span>
+                <span class="c1"># to the generator.</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_first</span><span class="p">(</span><span class="n">img_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+                <span class="c1"># Get label embedding for the previous frame.</span>
+                <span class="n">cond_maps_prev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">label_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                                    <span class="bp">self</span><span class="o">.</span><span class="n">label_embedding</span><span class="p">)</span>
+
+                <span class="c1"># Downsampling layers.</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;down_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))(</span><span class="n">x_img</span><span class="p">,</span>
+                                                            <span class="o">*</span><span class="n">cond_maps_prev</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">:</span>
+                        <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">downsample</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+
+                <span class="c1"># Resnet blocks.</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span><span class="p">):</span>
+                    <span class="n">cond_maps</span> <span class="o">=</span> <span class="n">cond_maps_prev</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> \
+                        <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span> <span class="o">//</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;res_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))(</span><span class="n">x_img</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_maps</span><span class="p">)</span>
+
+            <span class="c1"># Optical flow warped image features.</span>
+            <span class="k">if</span> <span class="n">warp_prev</span><span class="p">:</span>
+                <span class="c1"># Estimate flow &amp; mask.</span>
+                <span class="n">label_concat</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">label_prev</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">),</span>
+                                          <span class="n">label</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">img_prev_concat</span> <span class="o">=</span> <span class="n">img_prev</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+                <span class="n">flow</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flow_network_temp</span><span class="p">(</span>
+                    <span class="n">label_concat</span><span class="p">,</span> <span class="n">img_prev_concat</span><span class="p">)</span>
+                <span class="n">img_warp</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">img_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flow</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span><span class="p">:</span>
+                    <span class="c1"># if using SPADE combine, integrate the warped image (and</span>
+                    <span class="c1"># occlusion mask) into conditional inputs for SPADE.</span>
+                    <span class="n">img_embed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">img_warp</span><span class="p">,</span> <span class="n">mask</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">cond_maps_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">img_embed</span><span class="p">,</span>
+                                                       <span class="bp">self</span><span class="o">.</span><span class="n">img_prev_embedding</span><span class="p">)</span>
+                    <span class="n">x_raw_img</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="c1"># Main image generation branch.</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="c1"># Get SPADE conditional inputs.</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">)</span>
+                <span class="n">cond_maps</span> <span class="o">=</span> <span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+                <span class="c1"># For raw output generation.</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_raw_output</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">x_raw_img</span> <span class="o">=</span> <span class="n">x_img</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">:</span>
+                        <span class="n">x_raw_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">one_up_conv_layer</span><span class="p">(</span>
+                            <span class="n">x_raw_img</span><span class="p">,</span> <span class="n">cond_maps</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+                <span class="c1"># Add flow and guidance features.</span>
+                <span class="k">if</span> <span class="n">warp_prev</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">:</span>
+                        <span class="c1"># Add flow.</span>
+                        <span class="n">cond_maps</span> <span class="o">+=</span> <span class="n">cond_maps_img</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                        <span class="c1"># Add guidance.</span>
+                        <span class="k">if</span> <span class="n">guidance_images_and_masks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                            <span class="n">cond_maps</span> <span class="o">+=</span> <span class="p">[</span><span class="n">guidance_images_and_masks</span><span class="p">]</span>
+                    <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_only_with_flow</span><span class="p">:</span>
+                        <span class="c1"># Add guidance if it is to be applied to every layer.</span>
+                        <span class="k">if</span> <span class="n">guidance_images_and_masks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                            <span class="n">cond_maps</span> <span class="o">+=</span> <span class="p">[</span><span class="n">guidance_images_and_masks</span><span class="p">]</span>
+
+                <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">one_up_conv_layer</span><span class="p">(</span><span class="n">x_img</span><span class="p">,</span> <span class="n">cond_maps</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+            <span class="c1"># Final conv layer.</span>
+            <span class="n">img_final</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_img</span><span class="p">(</span><span class="n">x_img</span><span class="p">))</span>
+            <span class="n">fake_images_source</span> <span class="o">=</span> <span class="s1">&#39;in_training&#39;</span>
+
+        <span class="c1"># Update the point cloud color dict of renderer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer_update_point_cloud</span><span class="p">(</span><span class="n">img_final</span><span class="p">,</span> <span class="n">point_info</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_final</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_flow_maps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">flow</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_occlusion_masks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mask</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;warped_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_warp</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">guidance_images_and_masks</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images_source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fake_images_source</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+
+<div class="viewcode-block" id="Generator.get_cond_dims"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.get_cond_dims">[docs]</a>    <span class="k">def</span> <span class="nf">get_cond_dims</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_downs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the dimensions of conditional inputs.</span>
+<span class="sd">        Args:</span>
+<span class="sd">           num_downs (int) : How many downsamples at current layer.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           ch (list) : List of dimensions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span><span class="p">:</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_input_channels</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">emb_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+            <span class="n">num_downs</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">num_downs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">)</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">num_downs</span><span class="p">))]</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">num_downs</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">):</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="n">ch</span> <span class="o">*</span> <span class="mi">2</span>
+                <span class="c1"># Also add guidance (RGB + mask = 4 channels, or 3 if partial).</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_partial_conv</span><span class="p">:</span>
+                    <span class="n">ch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_only_with_flow</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_partial_conv</span><span class="p">:</span>
+                    <span class="n">ch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ch</span></div>
+
+<div class="viewcode-block" id="Generator.get_partial"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.get_partial">[docs]</a>    <span class="k">def</span> <span class="nf">get_partial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_downs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get if convs should be partial or not.</span>
+<span class="sd">        Args:</span>
+<span class="sd">           num_downs (int) : How many downsamples at current layer.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           partial (list) : List of boolean partial or not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">partial</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num_downs</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">):</span>
+            <span class="n">partial</span> <span class="o">=</span> <span class="n">partial</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="c1"># Also add guidance (RGB + mask = 4 channels, or 3 if partial).</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_partial_conv</span><span class="p">:</span>
+                <span class="n">partial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">partial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_only_with_flow</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_partial_conv</span><span class="p">:</span>
+                <span class="n">partial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">partial</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">partial</span></div>
+
+<div class="viewcode-block" id="Generator.get_cond_maps"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.wc_vid2vid.Generator.get_cond_maps">[docs]</a>    <span class="k">def</span> <span class="nf">get_cond_maps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">embedder</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the conditional inputs.</span>
+<span class="sd">        Args:</span>
+<span class="sd">           label (4D tensor) : Input label tensor.</span>
+<span class="sd">           embedder (obj) : Embedding network.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           cond_maps (list) : List of conditional inputs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">embedded_label</span> <span class="o">=</span> <span class="n">embedder</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="n">cond_maps</span> <span class="o">=</span> <span class="p">[</span><span class="n">embedded_label</span><span class="p">]</span>
+        <span class="n">cond_maps</span> <span class="o">=</span> <span class="p">[[</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">cond_maps</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>
+                     <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cond_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span>
+        <span class="k">return</span> <span class="n">cond_maps</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

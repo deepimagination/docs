@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.datasets.base &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.datasets.base</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.datasets.base</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="sd">&quot;&quot;&quot;All datasets are inherited from this class.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">signature</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.utils.data</span> <span class="k">as</span> <span class="nn">data</span>
+<span class="kn">import</span> <span class="nn">torchvision.transforms</span> <span class="k">as</span> <span class="nn">transforms</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.datasets.folder</span> <span class="kn">import</span> <span class="n">FolderDataset</span>
+<span class="kn">from</span> <span class="nn">imaginaire.datasets.lmdb</span> <span class="kn">import</span> <span class="n">IMG_EXTENSIONS</span><span class="p">,</span> <span class="n">LMDBDataset</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.data</span> <span class="kn">import</span> \
+    <span class="p">(</span><span class="n">VIDEO_EXTENSIONS</span><span class="p">,</span> <span class="n">Augmentor</span><span class="p">,</span> <span class="n">load_from_folder</span><span class="p">,</span> <span class="n">load_from_lmdb</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.lmdb</span> <span class="kn">import</span> <span class="n">create_metadata</span>
+
+
+<div class="viewcode-block" id="BaseDataset"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset">[docs]</a><span class="k">class</span> <span class="nc">BaseDataset</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Base class for image/video datasets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (Config object): Input config.</span>
+<span class="sd">        is_inference (bool): Training if False, else validation.</span>
+<span class="sd">        is_test (bool): Final test set after training and validation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">,</span> <span class="n">is_test</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">BaseDataset</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span> <span class="o">=</span> <span class="n">is_inference</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_test</span> <span class="o">=</span> <span class="n">is_test</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_test</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">test_data</span>
+            <span class="n">data_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">test</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">data</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>
+                <span class="n">data_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">val</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">data_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">train</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lmdb_roots</span> <span class="o">=</span> <span class="n">data_info</span><span class="o">.</span><span class="n">roots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_is_lmdb</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_info</span><span class="p">,</span> <span class="s1">&#39;is_lmdb&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_is_lmdb</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;paired&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_is_lmdb</span><span class="p">:</span>
+            <span class="c1"># Add handle to function to load data from LMDB.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_from_dataset</span> <span class="o">=</span> <span class="n">load_from_lmdb</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Add handle to function to load data from folder.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_from_dataset</span> <span class="o">=</span> <span class="n">load_from_folder</span>
+            <span class="c1"># Create metadata for folders.</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Creating metadata&#39;</span><span class="p">)</span>
+            <span class="n">all_filenames</span><span class="p">,</span> <span class="n">all_metadata</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_test</span><span class="p">:</span>
+                <span class="n">cfg</span><span class="o">.</span><span class="n">data_backup</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span>
+                <span class="n">cfg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">test_data</span>
+            <span class="k">for</span> <span class="n">root</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmdb_roots</span><span class="p">:</span>
+                <span class="n">filenames</span><span class="p">,</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">create_metadata</span><span class="p">(</span>
+                    <span class="n">data_root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">cfg</span><span class="o">=</span><span class="n">cfg</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">[</span><span class="s1">&#39;paired&#39;</span><span class="p">])</span>
+                <span class="n">all_filenames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
+                <span class="n">all_metadata</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_test</span><span class="p">:</span>
+                <span class="n">cfg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data_backup</span>
+
+        <span class="c1"># Get the types of data stored in dataset, and their extensions.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_types</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Names of data types.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_data_types</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># These data types are in the dataset.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># These types are images.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Does this data type need normalization?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># What is this data type&#39;s file extension.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Which interpolator to use?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_channels</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># How many channels does this data type have?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pre_aug_ops</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Ops on data type before augmentation.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">post_aug_ops</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Ops on data type after augmentation.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_dont_care</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Use dont care label for this label?</span>
+
+        <span class="c1"># Extract info from data types.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">input_types</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data_type</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">info</span> <span class="o">=</span> <span class="n">data_type</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="s1">&#39;ext&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;ext&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="s1">&#39;normalize&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;normalize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="s1">&#39;interpolator&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;interpolator&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="s1">&#39;pre_aug_ops&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;pre_aug_ops&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
+            <span class="k">if</span> <span class="s1">&#39;post_aug_ops&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;post_aug_ops&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span>
+            <span class="k">if</span> <span class="s1">&#39;use_dont_care&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;use_dont_care&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="s1">&#39;computed_on_the_fly&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;computed_on_the_fly&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="s1">&#39;num_channels&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="n">info</span><span class="p">[</span><span class="s1">&#39;num_channels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;computed_on_the_fly&#39;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dataset_data_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;ext&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;normalize&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_channels</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;num_channels&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pre_aug_ops</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span>
+                                      <span class="n">info</span><span class="p">[</span><span class="s1">&#39;pre_aug_ops&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">post_aug_ops</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span>
+                                       <span class="n">info</span><span class="p">[</span><span class="s1">&#39;post_aug_ops&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_dont_care</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;use_dont_care&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;ext&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> \
+                    <span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;ext&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">IMG_EXTENSIONS</span> <span class="ow">or</span>
+                        <span class="n">info</span><span class="p">[</span><span class="s1">&#39;ext&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">VIDEO_EXTENSIONS</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+                    <span class="n">Image</span><span class="p">,</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;interpolator&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Add some info into cfgdata for legacy support.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">data_types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_types</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">use_dont_care</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">use_dont_care</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                                      <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_types</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">num_channels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_channels</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                                     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_types</span><span class="p">]</span>
+
+        <span class="c1"># Augmentations which need full dict.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">full_data_post_aug_ops</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data_ops</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;full_data_ops&#39;</span><span class="p">):</span>
+            <span class="n">ops</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">full_data_ops</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">full_data_ops</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">op</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">ops</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)])</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;full_data_post_aug_ops&#39;</span><span class="p">):</span>
+            <span class="n">ops</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">full_data_post_aug_ops</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">full_data_post_aug_ops</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">op</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">ops</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)])</span>
+
+        <span class="c1"># These are the labels which will be concatenated for generator input.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_labels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;input_labels&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">input_labels</span>
+
+        <span class="c1"># These are the keypoints which also need to be augmented.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;keypoint_data_types&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">keypoint_data_types</span>
+
+        <span class="c1"># Create augmentation operations.</span>
+        <span class="k">if</span> <span class="n">is_test</span><span class="p">:</span>
+            <span class="n">aug_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">augmentations</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_inference</span><span class="p">:</span>
+                <span class="n">aug_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">val</span><span class="o">.</span><span class="n">augmentations</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">aug_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">augmentations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span> <span class="o">=</span> <span class="n">Augmentor</span><span class="p">(</span>
+            <span class="n">aug_list</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">augmentable_types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span>
+
+        <span class="c1"># Create torch transformations.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+            <span class="n">normalize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_transform</span><span class="p">(</span><span class="n">normalize</span><span class="p">)</span>
+
+        <span class="c1"># Initialize handles.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sequence_lists</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># List of sequences per dataset root.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lmdbs</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Dict for list of lmdb handles per data type.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_data_types</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_probability</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">additional_lists</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Load each dataset.</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">root</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lmdb_roots</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_is_lmdb</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_dataset</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_dataset</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filenames</span><span class="o">=</span><span class="n">all_filenames</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                                  <span class="n">metadata</span><span class="o">=</span><span class="n">all_metadata</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+
+        <span class="c1"># Compute dataset statistics and create whatever self.variables required</span>
+        <span class="c1"># for the specific dataloader.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_compute_dataset_stats</span><span class="p">()</span>
+
+        <span class="c1"># Build index of data to sample.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_mapping</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_create_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates mapping from data sample idx to actual LMDB keys.</span>
+<span class="sd">            All children need to implement their own.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            self.mapping (list): List of LMDB keys.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">_compute_dataset_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes required statistics about dataset.</span>
+<span class="sd">           All children need to implement their own.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Entry function for dataset.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">_get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normalize</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert numpy to torch tensor.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            normalize (bool): Normalize image i.e. (x - 0.5) * 2.</span>
+<span class="sd">                Goes from [0, 1] -&gt; [-1, 1].</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Composed list of torch transforms.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">transform_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()]</span>
+        <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+            <span class="n">transform_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+                                     <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span><span class="n">transform_list</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_add_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">filenames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Adds an LMDB dataset to a list of datasets.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            root (str): Path to LMDB or folder dataset.</span>
+<span class="sd">            filenames: List of filenames for folder dataset.</span>
+<span class="sd">            metadata: Metadata for folder dataset.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get sequences associated with this dataset.</span>
+        <span class="k">if</span> <span class="n">filenames</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">list_path</span> <span class="o">=</span> <span class="s1">&#39;all_filenames.json&#39;</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">list_path</span><span class="p">))</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">sequence_list</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sequence_list</span> <span class="o">=</span> <span class="n">filenames</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sequence_lists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequence_list</span><span class="p">)</span>
+
+        <span class="n">additional_path</span> <span class="o">=</span> <span class="s1">&#39;all_indices.json&#39;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">additional_path</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using additional list for object indices.&#39;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">additional_path</span><span class="p">))</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+                <span class="n">additional_list</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">additional_lists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">additional_list</span><span class="p">)</span>
+
+        <span class="c1"># Get LMDB dataset handles.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_data_types</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_is_lmdb</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">LMDBDataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">data_type</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">FolderDataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">data_type</span><span class="p">),</span> <span class="n">metadata</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_encode_onehot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label_map</span><span class="p">,</span> <span class="n">num_labels</span><span class="p">,</span> <span class="n">use_dont_care</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Make input one-hot.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            label_map (torch.Tensor): (C, H, W) tensor containing indices.</span>
+<span class="sd">            num_labels (int): Number of labels to expand tensor to.</span>
+<span class="sd">            use_dont_care (bool): Use the dont care label or not?</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (torch.Tensor): (num_labels, H, W) one-hot tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># All labels lie in [0. num_label - 1].</span>
+        <span class="c1"># Encode dont care as num_label.</span>
+        <span class="n">label_map</span><span class="p">[</span><span class="n">label_map</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_labels</span>
+        <span class="n">label_map</span><span class="p">[</span><span class="n">label_map</span> <span class="o">&gt;=</span> <span class="n">num_labels</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_labels</span>
+
+        <span class="n">size</span> <span class="o">=</span> <span class="n">label_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="n">output_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_labels</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="o">*</span><span class="n">output_size</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">scatter_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">label_map</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">long</span><span class="p">(),</span> <span class="mf">1.0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">use_dont_care</span><span class="p">:</span>
+            <span class="c1"># Size of output is (num_labels + 1, H, W).</span>
+            <span class="c1"># Last label is for dont care segmentation index.</span>
+            <span class="c1"># Only select first num_labels channels.</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">[:</span><span class="n">num_labels</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">output</span>
+
+<div class="viewcode-block" id="BaseDataset.perform_augmentation"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset.perform_augmentation">[docs]</a>    <span class="k">def</span> <span class="nf">perform_augmentation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">paired</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Perform data augmentation on images only.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Keys are from data types. Values can be numpy.ndarray</span>
+<span class="sd">                or list of numpy.ndarray (image or list of images).</span>
+<span class="sd">            paired (bool): Apply same augmentation to all input keys?</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - data (dict): Augmented data, with same keys as input data.</span>
+<span class="sd">              - is_flipped (bool): Flag which tells if images have been</span>
+<span class="sd">                left-right flipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">aug_inputs</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">augmentable_types</span><span class="p">:</span>
+            <span class="n">aug_inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+
+        <span class="n">augmented</span><span class="p">,</span> <span class="n">is_flipped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">perform_augmentation</span><span class="p">(</span>
+            <span class="n">aug_inputs</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="n">paired</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">augmentable_types</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">augmented</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">is_flipped</span></div>
+
+<div class="viewcode-block" id="BaseDataset.to_tensor"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset.to_tensor">[docs]</a>    <span class="k">def</span> <span class="nf">to_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert all images to tensor.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">                as a list of numpy.ndarrays.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            data (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">            as a list of torch.Tensors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">:</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">[</span><span class="n">data_type</span><span class="p">](</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="BaseDataset.make_one_hot"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset.make_one_hot">[docs]</a>    <span class="k">def</span> <span class="nf">make_one_hot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert appropriate image data types to one-hot representation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">                as a list of torch.Tensors.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            data (dict): same as input data, but with one-hot for selected</span>
+<span class="sd">            types.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+            <span class="n">expected_num_channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_channels</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="n">num_channels</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">interpolation_method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">num_channels</span> <span class="o">&lt;</span> <span class="n">expected_num_channels</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">num_channels</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s1">&#39;Num channels: </span><span class="si">%d</span><span class="s1">. &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">num_channels</span><span class="p">)</span> <span class="o">+</span>
+                        <span class="s1">&#39;One-hot expansion can only be done if &#39;</span> <span class="o">+</span>
+                        <span class="s1">&#39;image has 1 channel&#39;</span><span class="p">)</span>
+                <span class="k">assert</span> <span class="n">interpolation_method</span> <span class="o">==</span> <span class="n">Image</span><span class="o">.</span><span class="n">NEAREST</span><span class="p">,</span> \
+                    <span class="s1">&#39;Cant do one-hot on image which has been resized&#39;</span> <span class="o">+</span> \
+                    <span class="s1">&#39;with BILINEAR.&#39;</span>
+
+                <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_dont_care</span><span class="p">:</span>
+                    <span class="n">use_dont_care</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_dont_care</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">use_dont_care</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">])):</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encode_onehot</span><span class="p">(</span>
+                        <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">*</span> <span class="mf">255.0</span><span class="p">,</span> <span class="n">expected_num_channels</span><span class="p">,</span>
+                        <span class="n">use_dont_care</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">num_channels</span> <span class="o">&gt;</span> <span class="n">expected_num_channels</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;Data type: &#39;</span> <span class="o">+</span> <span class="n">data_type</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span>
+                    <span class="s1">&#39;Num channels </span><span class="si">%d</span><span class="s1"> &gt; Expected num channels </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                        <span class="n">num_channels</span><span class="p">,</span> <span class="n">expected_num_channels</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="BaseDataset.apply_ops"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset.apply_ops">[docs]</a>    <span class="k">def</span> <span class="nf">apply_ops</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">op_dict</span><span class="p">,</span> <span class="n">full_data</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Apply any ops from op_dict to data types.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">                as a list of numpy.ndarrays.</span>
+<span class="sd">            op_dict (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">                containing string of operations to apply.</span>
+<span class="sd">            full_data (bool): Do these ops require access to the full data?</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            data (dict): Dict containing data_type as key, with each value</span>
+<span class="sd">            modified by the op if any.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">full_data</span><span class="p">:</span>
+            <span class="c1"># op needs entire data dict.</span>
+            <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">op_dict</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">op</span><span class="p">,</span> <span class="n">op_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_op</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+                <span class="k">assert</span> <span class="n">op_type</span> <span class="o">==</span> <span class="s1">&#39;full_data&#39;</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">op</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># op per data type.</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">op_dict</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span>
+            <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">op_dict</span><span class="p">[</span><span class="n">data_type</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;None&#39;</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="n">op</span><span class="p">,</span> <span class="n">op_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_op</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">op</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">])</span>
+
+                    <span class="k">if</span> <span class="n">op_type</span> <span class="o">==</span> <span class="s1">&#39;vis&#39;</span><span class="p">:</span>
+                        <span class="c1"># We have converted this data type to an image. Enter it</span>
+                        <span class="c1"># in self.image_data_types and give it a torch</span>
+                        <span class="c1"># transform.</span>
+                        <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_type</span><span class="p">)</span>
+                            <span class="n">normalize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> \
+                                <span class="bp">self</span><span class="o">.</span><span class="n">_get_transform</span><span class="p">(</span><span class="n">normalize</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">op_type</span> <span class="o">==</span> <span class="s1">&#39;convert&#39;</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="k">elif</span> <span class="n">op_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="BaseDataset.get_op"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.base.BaseDataset.get_op">[docs]</a>    <span class="k">def</span> <span class="nf">get_op</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get function to apply for specific op.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            op (str): Name of the op.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            function handle.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">list_to_tensor</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert list of numeric values to tensor.&quot;&quot;&quot;</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+
+        <span class="k">def</span> <span class="nf">decode_json_list</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Decode list of strings in json to objects.&quot;&quot;&quot;</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">decode_pkl_list</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Decode list of pickled strings to objects.&quot;&quot;&quot;</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+
+        <span class="k">def</span> <span class="nf">list_to_numpy</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert list of numeric values to numpy array.&quot;&quot;&quot;</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;to_tensor&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">list_to_tensor</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;decode_json&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">decode_json_list</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;decode_pkl&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">decode_pkl_list</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;to_numpy&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">list_to_numpy</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="s1">&#39;::&#39;</span> <span class="ow">in</span> <span class="n">op</span><span class="p">:</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">module</span><span class="p">,</span> <span class="n">function</span> <span class="o">=</span> <span class="n">parts</span>
+                <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+                <span class="n">function</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">function</span><span class="p">)</span>
+                <span class="n">sig</span> <span class="o">=</span> <span class="n">signature</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+                <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">sig</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> \
+                    <span class="s1">&#39;Full data functions take in (cfgdata, full_data, &#39;</span> \
+                    <span class="s1">&#39;is_inference) as input.&#39;</span>
+                <span class="n">function</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">)</span>
+                <span class="n">function_type</span> <span class="o">=</span> <span class="s1">&#39;full_data&#39;</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">function_type</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">function</span> <span class="o">=</span> <span class="n">parts</span>
+                <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+                <span class="n">function</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">function</span><span class="p">)</span>
+                <span class="n">sig</span> <span class="o">=</span> <span class="n">signature</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">function_type</span> <span class="o">==</span> <span class="s1">&#39;vis&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sig</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="s1">&#39;vis function type needs to take &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;(resize_h, resize_w, crop_h, crop_w, &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;original_h, original_w, is_flipped, cfgdata, &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;data) as input.&#39;</span><span class="p">)</span>
+                    <span class="n">function</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">function</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">resize_w</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">crop_h</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">crop_w</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">original_h</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">original_w</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">augmentor</span><span class="o">.</span><span class="n">is_flipped</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">cfgdata</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">function_type</span> <span class="o">==</span> <span class="s1">&#39;convert&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sig</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="s1">&#39;convert function type needs to take &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;(data) as input.&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown op: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">op</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown op: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">op</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">function</span><span class="p">,</span> <span class="n">function_type</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown op: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">op</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch_length</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

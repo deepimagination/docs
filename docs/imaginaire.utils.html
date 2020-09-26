@@ -1,0 +1,1516 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.utils.visualization package" href="imaginaire.utils.visualization.html" />
+    <link rel="prev" title="imaginaire.trainers package" href="imaginaire.trainers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-utils-package">
+<h1>imaginaire.utils package<a class="headerlink" href="#imaginaire-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="imaginaire.utils.visualization.html">imaginaire.utils.visualization package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.utils.visualization.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.utils.visualization.html#module-imaginaire.utils.visualization.common">imaginaire.utils.visualization.common module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.utils.visualization.html#module-imaginaire.utils.visualization.face">imaginaire.utils.visualization.face module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.utils.visualization.html#module-imaginaire.utils.visualization.pose">imaginaire.utils.visualization.pose module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.utils.visualization.html#module-imaginaire.utils.visualization">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.utils.cudnn">
+<span id="imaginaire-utils-cudnn-module"></span><h2>imaginaire.utils.cudnn module<a class="headerlink" href="#module-imaginaire.utils.cudnn" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.cudnn.init_cudnn">
+<code class="sig-prename descclassname">imaginaire.utils.cudnn.</code><code class="sig-name descname">init_cudnn</code><span class="sig-paren">(</span><em class="sig-param">deterministic</em>, <em class="sig-param">benchmark</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/cudnn.html#init_cudnn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.cudnn.init_cudnn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the cudnn module. The two things to consider is whether to
+use cudnn benchmark and whether to use cudnn deterministic. If cudnn
+benchmark is set, then the cudnn deterministic is automatically false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deterministic</strong> (<em>bool</em>) – Whether to use cudnn deterministic.</p></li>
+<li><p><strong>benchmark</strong> (<em>bool</em>) – Whether to use cudnn benchmark.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.data">
+<span id="imaginaire-utils-data-module"></span><h2>imaginaire.utils.data module<a class="headerlink" href="#module-imaginaire.utils.data" title="Permalink to this headline">¶</a></h2>
+<p>Utils for handling datasets.</p>
+<dl class="class">
+<dt id="imaginaire.utils.data.Augmentor">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">Augmentor</code><span class="sig-paren">(</span><em class="sig-param">aug_list</em>, <em class="sig-param">image_data_types</em>, <em class="sig-param">interpolators</em>, <em class="sig-param">keypoint_data_types</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#Augmentor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.Augmentor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles data augmentation using albumentations library.</p>
+<dl class="method">
+<dt id="imaginaire.utils.data.Augmentor.perform_augmentation">
+<code class="sig-name descname">perform_augmentation</code><span class="sig-paren">(</span><em class="sig-param">inputs</em>, <em class="sig-param">paired</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#Augmentor.perform_augmentation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.Augmentor.perform_augmentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for augmentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>dict</em>) – Keys are from self.augmentable_data_types. Values are
+list of numpy.ndarray (list of images).</p></li>
+<li><p><strong>paired</strong> (<em>bool</em>) – Apply same augmentation to all input keys?</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.get_class_number">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">get_class_number</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#get_class_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.get_class_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of classes for class-conditional GAN model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration structure.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of classes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.get_crop_h_w">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">get_crop_h_w</code><span class="sig-paren">(</span><em class="sig-param">augmentation</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#get_crop_h_w"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.get_crop_h_w" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get height and width of crop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>augmentation</strong> (<em>dict</em>) – Dict of applied augmentations.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>crop_h (int): Height of the image crop.</p></li>
+<li><p>crop_w (int): Width of the image crop.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.get_paired_input_image_channel_number">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">get_paired_input_image_channel_number</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#get_paired_input_image_channel_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.get_paired_input_image_channel_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of channels for the input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration structure.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of input image channels.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>num_channels (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.get_paired_input_label_channel_number">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">get_paired_input_label_channel_number</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em>, <em class="sig-param">video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#get_paired_input_label_channel_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.get_paired_input_label_channel_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of channels for the input label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration structure.</p></li>
+<li><p><strong>video</strong> (<em>bool</em>) – Whether we are dealing with video data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of input label map channels.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>num_channels (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.load_from_folder">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">load_from_folder</code><span class="sig-paren">(</span><em class="sig-param">keys</em>, <em class="sig-param">handles</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#load_from_folder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.load_from_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load keys from lmdb handles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>dict</em>) – This has data_type as key, and a list of paths as
+values.</p></li>
+<li><p><strong>handles</strong> (<em>dict</em>) – This has data_type as key, and Folder handle as value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>This has data_type as key, and a list of decoded items from</dt><dd><p>folders as value.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.data.load_from_lmdb">
+<code class="sig-prename descclassname">imaginaire.utils.data.</code><code class="sig-name descname">load_from_lmdb</code><span class="sig-paren">(</span><em class="sig-param">keys</em>, <em class="sig-param">lmdbs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/data.html#load_from_lmdb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.data.load_from_lmdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load keys from lmdb handles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>dict</em>) – This has data_type as key, and a list of paths into LMDB as
+values.</p></li>
+<li><p><strong>lmdbs</strong> (<em>dict</em>) – This has data_type as key, and LMDB handle as value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>This has data_type as key, and a list of decoded items from</dt><dd><p>LMDBs as value.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.dataset">
+<span id="imaginaire-utils-dataset-module"></span><h2>imaginaire.utils.dataset module<a class="headerlink" href="#module-imaginaire.utils.dataset" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.dataset.get_test_dataloader">
+<code class="sig-prename descclassname">imaginaire.utils.dataset.</code><code class="sig-name descname">get_test_dataloader</code><span class="sig-paren">(</span><em class="sig-param">cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/dataset.html#get_test_dataloader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.dataset.get_test_dataloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dataset objects for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> (<em>obj</em>) – Global configuration file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Val data loader. It may not contain the ground truth.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.dataset.get_train_and_val_dataloader">
+<code class="sig-prename descclassname">imaginaire.utils.dataset.</code><code class="sig-name descname">get_train_and_val_dataloader</code><span class="sig-paren">(</span><em class="sig-param">cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/dataset.html#get_train_and_val_dataloader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.dataset.get_train_and_val_dataloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return dataset objects for the training and validation sets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> (<em>obj</em>) – Global configuration file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>train_data_loader (obj): Train data loader.</p></li>
+<li><p>val_data_loader (obj): Val data loader.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.distributed">
+<span id="imaginaire-utils-distributed-module"></span><h2>imaginaire.utils.distributed module<a class="headerlink" href="#module-imaginaire.utils.distributed" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.distributed.dist_all_gather_tensor">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">dist_all_gather_tensor</code><span class="sig-paren">(</span><em class="sig-param">tensor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#dist_all_gather_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.dist_all_gather_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>gather to all ranks</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.dist_all_reduce_tensor">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">dist_all_reduce_tensor</code><span class="sig-paren">(</span><em class="sig-param">tensor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#dist_all_reduce_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.dist_all_reduce_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce to all ranks</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.dist_reduce_tensor">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">dist_reduce_tensor</code><span class="sig-paren">(</span><em class="sig-param">tensor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#dist_reduce_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.dist_reduce_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce to rank 0</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.get_rank">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">get_rank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#get_rank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.get_rank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get rank of the thread.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.get_world_size">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">get_world_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#get_world_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.get_world_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get world size. How many GPUs are available in this job.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.init_dist">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">init_dist</code><span class="sig-paren">(</span><em class="sig-param">local_rank</em>, <em class="sig-param">backend='nccl'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#init_dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.init_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize distributed training</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.is_master">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">is_master</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#is_master"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.is_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if current process is the master</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.master_only">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">master_only</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#master_only"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.master_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply this function only to the master GPU.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.distributed.master_only_print">
+<code class="sig-prename descclassname">imaginaire.utils.distributed.</code><code class="sig-name descname">master_only_print</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/distributed.html#master_only_print"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.distributed.master_only_print" title="Permalink to this definition">¶</a></dt>
+<dd><p>master-only print</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.gpu_affinity">
+<span id="imaginaire-utils-gpu-affinity-module"></span><h2>imaginaire.utils.gpu_affinity module<a class="headerlink" href="#module-imaginaire.utils.gpu_affinity" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.utils.gpu_affinity.device">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.gpu_affinity.</code><code class="sig-name descname">device</code><span class="sig-paren">(</span><em class="sig-param">device_idx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Device used for nvml.</p>
+<dl class="method">
+<dt id="imaginaire.utils.gpu_affinity.device.getCpuAffinity">
+<code class="sig-name descname">getCpuAffinity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#device.getCpuAffinity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.device.getCpuAffinity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get CPU affinity</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.gpu_affinity.device.getName">
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#device.getName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.device.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get obect name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.gpu_affinity.deviceGetCount">
+<code class="sig-prename descclassname">imaginaire.utils.gpu_affinity.</code><code class="sig-name descname">deviceGetCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#deviceGetCount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.deviceGetCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get number of devices</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.gpu_affinity.set_affinity">
+<code class="sig-prename descclassname">imaginaire.utils.gpu_affinity.</code><code class="sig-name descname">set_affinity</code><span class="sig-paren">(</span><em class="sig-param">gpu_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#set_affinity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.set_affinity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set GPU affinity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gpu_id</strong> (<em>int</em>) – Which gpu device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.gpu_affinity.systemGetDriverVersion">
+<code class="sig-prename descclassname">imaginaire.utils.gpu_affinity.</code><code class="sig-name descname">systemGetDriverVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/gpu_affinity.html#systemGetDriverVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.gpu_affinity.systemGetDriverVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Driver Version</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.init_weight">
+<span id="imaginaire-utils-init-weight-module"></span><h2>imaginaire.utils.init_weight module<a class="headerlink" href="#module-imaginaire.utils.init_weight" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.init_weight.weights_init">
+<code class="sig-prename descclassname">imaginaire.utils.init_weight.</code><code class="sig-name descname">weights_init</code><span class="sig-paren">(</span><em class="sig-param">init_type='normal'</em>, <em class="sig-param">gain=0.02</em>, <em class="sig-param">bias=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/init_weight.html#weights_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.init_weight.weights_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize weights in the network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_type</strong> (<em>str</em>) – The name of the initialization scheme.</p></li>
+<li><p><strong>gain</strong> (<em>float</em>) – The parameter that is required for the initialization
+scheme.</p></li>
+<li><p><strong>bias</strong> (<em>object</em>) – If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, specifies the initialization parameter
+for bias.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>init function to be applied.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.io">
+<span id="imaginaire-utils-io-module"></span><h2>imaginaire.utils.io module<a class="headerlink" href="#module-imaginaire.utils.io" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.io.download_file_from_google_drive">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">download_file_from_google_drive</code><span class="sig-paren">(</span><em class="sig-param">file_id</em>, <em class="sig-param">destination</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#download_file_from_google_drive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.download_file_from_google_drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download a file from the google drive by using the file ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_id</strong> – Google drive file ID</p></li>
+<li><p><strong>destination</strong> – Path to save the file.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.io.get_checkpoint">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">get_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">checkpoint_path</em>, <em class="sig-param">url=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#get_checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.get_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the checkpoint path. If it does not exist yet, download it from
+the url.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checkpoint_path</strong> (<em>str</em>) – Checkpoint path.</p></li>
+<li><p><strong>url</strong> (<em>str</em>) – URL to download checkpoint.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Full checkpoint path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.io.get_confirm_token">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">get_confirm_token</code><span class="sig-paren">(</span><em class="sig-param">response</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#get_confirm_token"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.get_confirm_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get confirm token</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>response</strong> – Check if the file exists.</p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.io.save_intermediate_training_results">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">save_intermediate_training_results</code><span class="sig-paren">(</span><em class="sig-param">visualization_images</em>, <em class="sig-param">logdir</em>, <em class="sig-param">current_epoch</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#save_intermediate_training_results"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.save_intermediate_training_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save intermediate training results for debugging purpose.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>visualization_images</strong> (<em>tensor</em>) – Image where pixel values are in [-1, 1].</p></li>
+<li><p><strong>logdir</strong> (<em>str</em>) – Where to save the image.</p></li>
+<li><p><strong>current_epoch</strong> (<em>int</em>) – Current training epoch.</p></li>
+<li><p><strong>current_iteration</strong> (<em>int</em>) – Current training iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.io.save_pilimage_in_jpeg">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">save_pilimage_in_jpeg</code><span class="sig-paren">(</span><em class="sig-param">fullname</em>, <em class="sig-param">output_img</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#save_pilimage_in_jpeg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.save_pilimage_in_jpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save PIL Image to JPEG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fullname</strong> (<em>str</em>) – Full save path.</p></li>
+<li><p><strong>output_img</strong> (<em>PIL Image</em>) – Image to be saved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.io.save_response_content">
+<code class="sig-prename descclassname">imaginaire.utils.io.</code><code class="sig-name descname">save_response_content</code><span class="sig-paren">(</span><em class="sig-param">response</em>, <em class="sig-param">destination</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/io.html#save_response_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.io.save_response_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save response content</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> – </p></li>
+<li><p><strong>destination</strong> – Path to save the file.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.lmdb">
+<span id="imaginaire-utils-lmdb-module"></span><h2>imaginaire.utils.lmdb module<a class="headerlink" href="#module-imaginaire.utils.lmdb" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.build_lmdb">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">build_lmdb</code><span class="sig-paren">(</span><em class="sig-param">filepaths</em>, <em class="sig-param">keys</em>, <em class="sig-param">output_filepath</em>, <em class="sig-param">map_size</em>, <em class="sig-param">large</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#build_lmdb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.build_lmdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out lmdb containing (key, contents of filepath) to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepaths</strong> (<em>list</em>) – List of filepath strings.</p></li>
+<li><p><strong>keys</strong> (<em>list</em>) – List of key strings associated with filepaths.</p></li>
+<li><p><strong>output_filepath</strong> (<em>str</em>) – Location to write LMDB to.</p></li>
+<li><p><strong>map_size</strong> (<em>int</em>) – Size of LMDB.</p></li>
+<li><p><strong>large</strong> (<em>bool</em>) – Is the dataset large?</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.check_and_add">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">check_and_add</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">key</em>, <em class="sig-param">filepaths</em>, <em class="sig-param">keys</em>, <em class="sig-param">remove_missing=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#check_and_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.check_and_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add filepath and key to list of filepaths and keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Filepath to add.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – LMDB key for this filepath.</p></li>
+<li><p><strong>filepaths</strong> (<em>list</em>) – List of filepaths added so far.</p></li>
+<li><p><strong>keys</strong> (<em>list</em>) – List of keys added so far.</p></li>
+<li><p><strong>remove_missing</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, removes missing files, otherwise
+raises an error.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Size of file at filepath.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.construct_file_path">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">construct_file_path</code><span class="sig-paren">(</span><em class="sig-param">root</em>, <em class="sig-param">data_type</em>, <em class="sig-param">sequence</em>, <em class="sig-param">filename</em>, <em class="sig-param">ext</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#construct_file_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.construct_file_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get file path for our dataset structure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.create_metadata">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">create_metadata</code><span class="sig-paren">(</span><em class="sig-param">data_root=None</em>, <em class="sig-param">cfg=None</em>, <em class="sig-param">paired=None</em>, <em class="sig-param">input_list=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#create_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.create_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_root</strong> (<em>str</em>) – Location of dataset root.</p></li>
+<li><p><strong>cfg</strong> (<em>object</em>) – Loaded config object.</p></li>
+<li><p><strong>paired</strong> (<em>bool</em>) – Paired or unpaired data.</p></li>
+<li><p><strong>input_list</strong> (<em>str</em>) – Path to filename containing list of inputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>all_filenames (dict): Key of data type, values with sequences.</p></li>
+<li><p>extensions (dict): Extension of each data type.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.get_all_filenames_from_list">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">get_all_filenames_from_list</code><span class="sig-paren">(</span><em class="sig-param">list_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#get_all_filenames_from_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.get_all_filenames_from_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all filenames from list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>list_name</strong> (<em>str</em>) – Path to filename list.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Folder name for key, and filename for values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>all_filenames (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.get_lmdb_data_types">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">get_lmdb_data_types</code><span class="sig-paren">(</span><em class="sig-param">cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#get_lmdb_data_types"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.get_lmdb_data_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the data types which should be put in LMDB.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> – Configuration object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.lmdb.write_entry">
+<code class="sig-prename descclassname">imaginaire.utils.lmdb.</code><code class="sig-name descname">write_entry</code><span class="sig-paren">(</span><em class="sig-param">txn</em>, <em class="sig-param">key</em>, <em class="sig-param">filepath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/lmdb.html#write_entry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.lmdb.write_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump binary contents of file associated with key to LMDB.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>txn</strong> – handle to LMDB.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – LMDB key for this filepath.</p></li>
+<li><p><strong>filepath</strong> (<em>str</em>) – Filepath to add.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.logging">
+<span id="imaginaire-utils-logging-module"></span><h2>imaginaire.utils.logging module<a class="headerlink" href="#module-imaginaire.utils.logging" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.logging.get_date_uid">
+<code class="sig-prename descclassname">imaginaire.utils.logging.</code><code class="sig-name descname">get_date_uid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/logging.html#get_date_uid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.logging.get_date_uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a unique id based on date.
+:returns: Return uid string, e.g. ‘20171122171307111552’.
+:rtype: str</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.logging.init_logging">
+<code class="sig-prename descclassname">imaginaire.utils.logging.</code><code class="sig-name descname">init_logging</code><span class="sig-paren">(</span><em class="sig-param">config_path</em>, <em class="sig-param">logdir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/logging.html#init_logging"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.logging.init_logging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create log directory for storing checkpoints and output images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config_path</strong> (<em>str</em>) – Path to the configuration file.</p></li>
+<li><p><strong>logdir</strong> (<em>str</em>) – Log directory name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return log dir</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.logging.make_logging_dir">
+<code class="sig-prename descclassname">imaginaire.utils.logging.</code><code class="sig-name descname">make_logging_dir</code><span class="sig-paren">(</span><em class="sig-param">logdir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/logging.html#make_logging_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.logging.make_logging_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the logging directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logdir</strong> (<em>str</em>) – Log directory name</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.meters">
+<span id="imaginaire-utils-meters-module"></span><h2>imaginaire.utils.meters module<a class="headerlink" href="#module-imaginaire.utils.meters" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.utils.meters.Meter">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">Meter</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#Meter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.Meter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Meter is to keep track of statistics along steps.
+Meters write values for purpose like printing average values.
+Meters can be flushed to log files (i.e. TensorBoard for now)
+regularly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – the name of meter</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.utils.meters.Meter.flush">
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><em class="sig-param">step</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#Meter.flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.Meter.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the value in the tensorboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>step</strong> (<em>int</em>) – Epoch or iteration number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.meters.Meter.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#Meter.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.Meter.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the meter values</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.meters.Meter.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#Meter.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.Meter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record the value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.meters.Meter.write_image">
+<code class="sig-name descname">write_image</code><span class="sig-paren">(</span><em class="sig-param">img_grid</em>, <em class="sig-param">step</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#Meter.write_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.Meter.write_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the value in the tensorboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_grid</strong> – </p></li>
+<li><p><strong>step</strong> (<em>int</em>) – Epoch or iteration number.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.meters.add_hparams">
+<code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">add_hparams</code><span class="sig-paren">(</span><em class="sig-param">hparam_dict=None</em>, <em class="sig-param">metric_dict=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#add_hparams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.add_hparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a set of hyperparameters to be compared in tensorboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hparam_dict</strong> (<em>dictionary</em>) – Each key-value pair in the dictionary is the
+name of the hyper parameter and it’s corresponding value.
+The type of the value can be one of <cite>bool</cite>, <cite>string</cite>, <cite>float</cite>,
+<cite>int</cite>, or <cite>None</cite>.</p></li>
+<li><p><strong>metric_dict</strong> (<em>dictionary</em>) – Each key-value pair in the dictionary is the
+name of the metric and it’s corresponding value. Note that the key
+used here should be unique in the tensorboard record. Otherwise the
+value you added by <cite>add_scalar</cite> will be displayed in hparam plugin.
+In most cases, this is unwanted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.meters.get_weight_stats">
+<code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">get_weight_stats</code><span class="sig-paren">(</span><em class="sig-param">mod</em>, <em class="sig-param">cfg</em>, <em class="sig-param">loss_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#get_weight_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.get_weight_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get weight state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mod</strong> – Pytorch module</p></li>
+<li><p><strong>cfg</strong> – Configuration object</p></li>
+<li><p><strong>loss_id</strong> – Needed when using AMP.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.meters.set_summary_writer">
+<code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">set_summary_writer</code><span class="sig-paren">(</span><em class="sig-param">log_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#set_summary_writer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.set_summary_writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set summary writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log_dir</strong> (<em>str</em>) – Log directory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.meters.sn_reshape_weight_to_matrix">
+<code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">sn_reshape_weight_to_matrix</code><span class="sig-paren">(</span><em class="sig-param">weight</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#sn_reshape_weight_to_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.sn_reshape_weight_to_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshape weight to obtain the matrix form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weight</strong> (<em>Parameters</em>) – pytorch layer parameter tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.meters.write_summary">
+<code class="sig-prename descclassname">imaginaire.utils.meters.</code><code class="sig-name descname">write_summary</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">summary</em>, <em class="sig-param">step</em>, <em class="sig-param">hist=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/meters.html#write_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.meters.write_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility function for write summary to log_writer.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.misc">
+<span id="imaginaire-utils-misc-module"></span><h2>imaginaire.utils.misc module<a class="headerlink" href="#module-imaginaire.utils.misc" title="Permalink to this headline">¶</a></h2>
+<p>Miscellaneous utils.</p>
+<dl class="function">
+<dt id="imaginaire.utils.misc.apply_imagenet_normalization">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">apply_imagenet_normalization</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#apply_imagenet_normalization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.apply_imagenet_normalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize using ImageNet mean and std.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>4D tensor NxCxHxW</em>) – The input images, assuming to be [-1, 1].</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Normalized inputs using the ImageNet normalization.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.get_and_setattr">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">get_and_setattr</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">name</em>, <em class="sig-param">default</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#get_and_setattr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.get_and_setattr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get attribute with default choice. If attribute does not exist, set it
+using the default value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Config options.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Attribute name.</p></li>
+<li><p><strong>default</strong> (<em>obj</em>) – Default attribute.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Desired attribute.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.get_nested_attr">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">get_nested_attr</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">attr_name</em>, <em class="sig-param">default</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#get_nested_attr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.get_nested_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iteratively try to get the attribute from cfg. If not found, return
+default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Config file.</p></li>
+<li><p><strong>attr_name</strong> (<em>str</em>) – Attribute name (e.g. XXX.YYY.ZZZ).</p></li>
+<li><p><strong>default</strong> (<em>obj</em>) – Default return value for the attribute.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Attribute value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.gradient_norm">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">gradient_norm</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#gradient_norm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.gradient_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the gradient norm of model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>PyTorch module</em>) – Your network.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.random_shift">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">random_shift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">offset=0.05</em>, <em class="sig-param">mode='bilinear'</em>, <em class="sig-param">padding_mode='reflection'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#random_shift"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.random_shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly shift the input tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>4D tensor</em>) – The input batch of images.</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) – The maximum offset ratio that is between [0, 1].</p></li>
+<li><p><strong>maximum shift is offset * image_size for each direction.</strong> (<em>The</em>) – </p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – The resample mode for ‘F.grid_sample’.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – The padding mode for ‘F.grid_sample’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The randomly shifted image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.requires_grad">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">requires_grad</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">require=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#requires_grad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.requires_grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a model to require gradient or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>nn.Module</em>) – Neural network model.</p></li>
+<li><p><strong>require</strong> (<em>bool</em>) – Whether the network requires gradient or not.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.split_labels">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">split_labels</code><span class="sig-paren">(</span><em class="sig-param">labels</em>, <em class="sig-param">label_lengths</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#split_labels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.split_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split concatenated labels into their parts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>torch.Tensor</em>) – Labels obtained through concatenation.</p></li>
+<li><p><strong>label_lengths</strong> (<em>OrderedDict</em>) – Containing order of labels &amp; their lengths.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.to_cpu">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">to_cpu</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#to_cpu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.to_cpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move all tensors inside data to cpu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>, </em><em>list</em><em>, or </em><em>tensor</em>) – Input data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.to_cuda">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">to_cuda</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#to_cuda"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.to_cuda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move all tensors inside data to gpu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>, </em><em>list</em><em>, or </em><em>tensor</em>) – Input data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.to_device">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">to_device</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">device</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#to_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.to_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move all tensors inside data to device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em><em>, </em><em>list</em><em>, or </em><em>tensor</em>) – Input data.</p></li>
+<li><p><strong>device</strong> (<em>str</em>) – ‘cpu’ or ‘cuda’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.to_float">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">to_float</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#to_float"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.to_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move all halfs to float.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>, </em><em>list</em><em> or </em><em>tensor</em>) – Input data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.to_half">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">to_half</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#to_half"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.to_half" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move all floats to half.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em><em>, </em><em>list</em><em> or </em><em>tensor</em>) – Input data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.misc.truncated_gaussian">
+<code class="sig-prename descclassname">imaginaire.utils.misc.</code><code class="sig-name descname">truncated_gaussian</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">size</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">device=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/misc.html#truncated_gaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.misc.truncated_gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the truncated gaussian trick to trade diversity for quality</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – Truncation threshold.</p></li>
+<li><p><strong>size</strong> (<em>list of integer</em>) – Tensor size.</p></li>
+<li><p><strong>seed</strong> (<em>int</em>) – Random seed.</p></li>
+<li><p><strong>device</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.model_average">
+<span id="imaginaire-utils-model-average-module"></span><h2>imaginaire.utils.model_average module<a class="headerlink" href="#module-imaginaire.utils.model_average" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.utils.model_average.ModelAverage">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.model_average.</code><code class="sig-name descname">ModelAverage</code><span class="sig-paren">(</span><em class="sig-param">module</em>, <em class="sig-param">beta=0.9999</em>, <em class="sig-param">start_iteration=1000</em>, <em class="sig-param">remove_sn=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>In this model average implementation, the spectral layers are
+absorbed in the model parameter by default. If such options are
+turned on, be careful with how you do the training. Remember to
+re-estimate the batch norm parameters before using the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<em>torch nn module</em>) – Torch network.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – Moving average weights. How much we weight the past.</p></li>
+<li><p><strong>start_iteration</strong> (<em>int</em>) – From which iteration, we start the update.</p></li>
+<li><p><strong>remove_sn</strong> (<em>bool</em>) – Whether we remove the spectral norm when we it.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.copy_s2t">
+<code class="sig-name descname">copy_s2t</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.copy_s2t"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.copy_s2t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy state_dictionary from source to target.
+Here source is the regular module and the target is the moving
+average module. Basically, we will copy weights in the regular module
+to the moving average module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.copy_t2s">
+<code class="sig-name descname">copy_t2s</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.copy_t2s"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.copy_t2s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the original weights to the moving average weights.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">*inputs</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyTorch module forward function overload.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.sn_compute_weight">
+<code class="sig-name descname">sn_compute_weight</code><span class="sig-paren">(</span><em class="sig-param">weight</em>, <em class="sig-param">u</em>, <em class="sig-param">v</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.sn_compute_weight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.sn_compute_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the spectral norm normalized matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weight</strong> (<em>Parameters</em>) – pytorch layer parameter tensor.</p></li>
+<li><p><strong>u</strong> (<em>tensor</em>) – left singular vectors.</p></li>
+<li><p><strong>v</strong> (<em>tensor</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>weight parameter object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Parameters)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.sn_reshape_weight_to_matrix">
+<code class="sig-name descname">sn_reshape_weight_to_matrix</code><span class="sig-paren">(</span><em class="sig-param">weight</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.sn_reshape_weight_to_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.sn_reshape_weight_to_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshape weight to obtain the matrix form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weight</strong> (<em>Parameters</em>) – pytorch layer parameter tensor.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reshaped weight matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Parameters)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.utils.model_average.ModelAverage.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.utils.model_average.ModelAverage.update_average">
+<code class="sig-name descname">update_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#ModelAverage.update_average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.ModelAverage.update_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the moving average.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.model_average.calibrate_batch_norm_momentum">
+<code class="sig-prename descclassname">imaginaire.utils.model_average.</code><code class="sig-name descname">calibrate_batch_norm_momentum</code><span class="sig-paren">(</span><em class="sig-param">m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#calibrate_batch_norm_momentum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.calibrate_batch_norm_momentum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calibrate batch norm momentum</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>m</strong> – Pytorch module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.model_average.reset_batch_norm">
+<code class="sig-prename descclassname">imaginaire.utils.model_average.</code><code class="sig-name descname">reset_batch_norm</code><span class="sig-paren">(</span><em class="sig-param">m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/model_average.html#reset_batch_norm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.model_average.reset_batch_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset batch norm statistics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>m</strong> – Pytorch module</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.path">
+<span id="imaginaire-utils-path-module"></span><h2>imaginaire.utils.path module<a class="headerlink" href="#module-imaginaire.utils.path" title="Permalink to this headline">¶</a></h2>
+<p>Utils to deal with directories and paths.</p>
+<dl class="function">
+<dt id="imaginaire.utils.path.get_immediate_subdirectories">
+<code class="sig-prename descclassname">imaginaire.utils.path.</code><code class="sig-name descname">get_immediate_subdirectories</code><span class="sig-paren">(</span><em class="sig-param">input_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/path.html#get_immediate_subdirectories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.path.get_immediate_subdirectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>List dirs immediately under input_dir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dir</strong> (<em>str</em>) – Directory to list children of.</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>(</strong><strong>list</strong><strong>)</strong> – List of directory paths relative to input_dir.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.path.get_recursive_subdirectories">
+<code class="sig-prename descclassname">imaginaire.utils.path.</code><code class="sig-name descname">get_recursive_subdirectories</code><span class="sig-paren">(</span><em class="sig-param">input_dir</em>, <em class="sig-param">ext</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/path.html#get_recursive_subdirectories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.path.get_recursive_subdirectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>List dirs recursively under input_dir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dir</strong> (<em>str</em>) – Directory to list children of.</p></li>
+<li><p><strong>ext</strong> (<em>str</em>) – Extension of files expected in this directory.</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>(</strong><strong>list</strong><strong>)</strong> – List of directory paths relative to input_dir.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.trainer">
+<span id="imaginaire-utils-trainer-module"></span><h2>imaginaire.utils.trainer module<a class="headerlink" href="#module-imaginaire.utils.trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.utils.trainer.WrappedModel">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">WrappedModel</code><span class="sig-paren">(</span><em class="sig-param">module</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#WrappedModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.WrappedModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Dummy wrapping the module.</p>
+<dl class="method">
+<dt id="imaginaire.utils.trainer.WrappedModel.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#WrappedModel.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.WrappedModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyTorch module forward function overload.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.utils.trainer.WrappedModel.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.utils.trainer.WrappedModel.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.get_model_optimizer_and_scheduler">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">get_model_optimizer_and_scheduler</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">seed=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#get_model_optimizer_and_scheduler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.get_model_optimizer_and_scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the networks, the optimizers, and the schedulers. We will
+first set the random seed to a fixed value so that each GPU copy will be
+initialized to have the same network weights. We will then use different
+random seeds for different GPUs. After this we will wrap the generator
+with a moving average model if applicable. It is followed by getting the
+optimizers, amp initialization, and data distributed data parallel wrapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>seed</strong> (<em>int</em>) – Random seed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>net_G (obj): Generator network object.</p></li>
+<li><p>net_D (obj): Discriminator network object.</p></li>
+<li><p>opt_G (obj): Generator optimizer object.</p></li>
+<li><p>opt_D (obj): Discriminator optimizer object.</p></li>
+<li><p>sch_G (obj): Generator optimizer scheduler object.</p></li>
+<li><p>sch_D (obj): Discriminator optimizer scheduler object.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.get_optimizer">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">get_optimizer</code><span class="sig-paren">(</span><em class="sig-param">cfg_opt</em>, <em class="sig-param">net</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#get_optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.get_optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the scheduler object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg_opt</strong> (<em>obj</em>) – Config for the specific optimization module (gen/dis).</p></li>
+<li><p><strong>net</strong> (<em>obj</em>) – PyTorch network object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pytorch optimizer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.get_optimizer_for_params">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">get_optimizer_for_params</code><span class="sig-paren">(</span><em class="sig-param">cfg_opt</em>, <em class="sig-param">params</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#get_optimizer_for_params"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.get_optimizer_for_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the scheduler object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg_opt</strong> (<em>obj</em>) – Config for the specific optimization module (gen/dis).</p></li>
+<li><p><strong>params</strong> (<em>obj</em>) – Parameters to be trained by the parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Optimizer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.get_scheduler">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">get_scheduler</code><span class="sig-paren">(</span><em class="sig-param">cfg_opt</em>, <em class="sig-param">opt</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#get_scheduler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.get_scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the scheduler object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg_opt</strong> (<em>obj</em>) – Config for the specific optimization module (gen/dis).</p></li>
+<li><p><strong>opt</strong> (<em>obj</em>) – PyTorch optimizer object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Scheduler</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.get_trainer">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">get_trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D=None</em>, <em class="sig-param">opt_G=None</em>, <em class="sig-param">opt_D=None</em>, <em class="sig-param">sch_G=None</em>, <em class="sig-param">sch_D=None</em>, <em class="sig-param">train_data_loader=None</em>, <em class="sig-param">val_data_loader=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#get_trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.get_trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the trainer object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<a class="reference internal" href="imaginaire.html#imaginaire.config.Config" title="imaginaire.config.Config"><em>Config</em></a>) – Loaded config object.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network object.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network object.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Generator optimizer object.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Discriminator optimizer object.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Generator optimizer scheduler object.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Discriminator optimizer scheduler object.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Trainer object.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(obj)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.set_random_seed">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">set_random_seed</code><span class="sig-paren">(</span><em class="sig-param">seed</em>, <em class="sig-param">by_rank=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#set_random_seed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.set_random_seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set random seeds for everything.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seed</strong> (<em>int</em>) – Random seed.</p></li>
+<li><p><strong>by_rank</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.trainer.wrap_model_and_optimizer">
+<code class="sig-prename descclassname">imaginaire.utils.trainer.</code><code class="sig-name descname">wrap_model_and_optimizer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/trainer.html#wrap_model_and_optimizer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.trainer.wrap_model_and_optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap the networks and the optimizers with AMP DDP and (optionally)
+model average.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network object.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network object.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Generator optimizer object.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Discriminator optimizer object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>net_G (obj): Generator network object.</p></li>
+<li><p>net_D (obj): Discriminator network object.</p></li>
+<li><p>opt_G (obj): Generator optimizer object.</p></li>
+<li><p>opt_D (obj): Discriminator optimizer object.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.utils.visualization.html" class="btn btn-neutral float-right" title="imaginaire.utils.visualization package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.trainers.html" class="btn btn-neutral float-left" title="imaginaire.trainers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

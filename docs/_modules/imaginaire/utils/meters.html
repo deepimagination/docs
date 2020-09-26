@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.meters &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.utils.meters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.utils.meters</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch.utils.tensorboard</span> <span class="kn">import</span> <span class="n">SummaryWriter</span>
+<span class="kn">from</span> <span class="nn">torch.utils.tensorboard.summary</span> <span class="kn">import</span> <span class="n">hparams</span>
+
+<span class="kn">from</span> <span class="nn">apex</span> <span class="kn">import</span> <span class="n">amp</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+
+<span class="n">LOG_WRITER</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">LOG_DIR</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="sn_reshape_weight_to_matrix"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.sn_reshape_weight_to_matrix">[docs]</a><span class="nd">@torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">sn_reshape_weight_to_matrix</span><span class="p">(</span><span class="n">weight</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reshape weight to obtain the matrix form.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        weight (Parameters): pytorch layer parameter tensor.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">weight_mat</span> <span class="o">=</span> <span class="n">weight</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_weight_stats"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.get_weight_stats">[docs]</a><span class="nd">@torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">get_weight_stats</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">loss_id</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get weight state</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">         mod: Pytorch module</span>
+<span class="sd">         cfg: Configuration object</span>
+<span class="sd">         loss_id: Needed when using AMP.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">loss_scale</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">if</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">amp</span> <span class="o">==</span> <span class="s1">&#39;O1&#39;</span> <span class="ow">or</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">amp</span> <span class="o">==</span> <span class="s1">&#39;O2&#39;</span><span class="p">:</span>
+        <span class="c1"># AMP rescales the gradient so we have to undo it.</span>
+        <span class="n">loss_scale</span> <span class="o">=</span> <span class="n">amp</span><span class="o">.</span><span class="n">_amp_state</span><span class="o">.</span><span class="n">loss_scalers</span><span class="p">[</span><span class="n">loss_id</span><span class="p">]</span><span class="o">.</span><span class="n">loss_scale</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mod</span><span class="o">.</span><span class="n">weight_orig</span><span class="o">.</span><span class="n">grad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">grad_norm</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">weight_orig</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">loss_scale</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">grad_norm</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="n">weight_norm</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">weight_orig</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+    <span class="n">weight_mat</span> <span class="o">=</span> <span class="n">sn_reshape_weight_to_matrix</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">weight_orig</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mod</span><span class="o">.</span><span class="n">weight_u</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span><span class="n">weight_mat</span><span class="p">,</span> <span class="n">mod</span><span class="o">.</span><span class="n">weight_v</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">grad_norm</span><span class="p">,</span> <span class="n">weight_norm</span><span class="p">,</span> <span class="n">sigma</span></div>
+
+
+<div class="viewcode-block" id="set_summary_writer"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.set_summary_writer">[docs]</a><span class="nd">@master_only</span>
+<span class="k">def</span> <span class="nf">set_summary_writer</span><span class="p">(</span><span class="n">log_dir</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set summary writer</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        log_dir (str): Log directory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">LOG_DIR</span><span class="p">,</span> <span class="n">LOG_WRITER</span>
+    <span class="n">LOG_DIR</span> <span class="o">=</span> <span class="n">log_dir</span>
+    <span class="n">LOG_WRITER</span> <span class="o">=</span> <span class="n">SummaryWriter</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="n">log_dir</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="write_summary"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.write_summary">[docs]</a><span class="nd">@master_only</span>
+<span class="k">def</span> <span class="nf">write_summary</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Utility function for write summary to log_writer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">LOG_WRITER</span>
+    <span class="n">lw</span> <span class="o">=</span> <span class="n">LOG_WRITER</span>
+    <span class="k">if</span> <span class="n">lw</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Log writer not set.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">hist</span><span class="p">:</span>
+        <span class="n">lw</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lw</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_hparams"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.add_hparams">[docs]</a><span class="nd">@master_only</span>
+<span class="k">def</span> <span class="nf">add_hparams</span><span class="p">(</span><span class="n">hparam_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metric_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Add a set of hyperparameters to be compared in tensorboard.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        hparam_dict (dictionary): Each key-value pair in the dictionary is the</span>
+<span class="sd">            name of the hyper parameter and it&#39;s corresponding value.</span>
+<span class="sd">            The type of the value can be one of `bool`, `string`, `float`,</span>
+<span class="sd">            `int`, or `None`.</span>
+<span class="sd">        metric_dict (dictionary): Each key-value pair in the dictionary is the</span>
+<span class="sd">            name of the metric and it&#39;s corresponding value. Note that the key</span>
+<span class="sd">            used here should be unique in the tensorboard record. Otherwise the</span>
+<span class="sd">            value you added by `add_scalar` will be displayed in hparam plugin.</span>
+<span class="sd">            In most cases, this is unwanted.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">hparam_dict</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">dict</span> <span class="ow">or</span> <span class="nb">type</span><span class="p">(</span><span class="n">metric_dict</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;hparam_dict and metric_dict should be dictionary.&#39;</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">LOG_WRITER</span>
+    <span class="n">lw</span> <span class="o">=</span> <span class="n">LOG_WRITER</span>
+
+    <span class="n">exp</span><span class="p">,</span> <span class="n">ssi</span><span class="p">,</span> <span class="n">sei</span> <span class="o">=</span> <span class="n">hparams</span><span class="p">(</span><span class="n">hparam_dict</span><span class="p">,</span> <span class="n">metric_dict</span><span class="p">)</span>
+
+    <span class="n">lw</span><span class="o">.</span><span class="n">file_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+    <span class="n">lw</span><span class="o">.</span><span class="n">file_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">ssi</span><span class="p">)</span>
+    <span class="n">lw</span><span class="o">.</span><span class="n">file_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">sei</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Meter"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.Meter">[docs]</a><span class="k">class</span> <span class="nc">Meter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Meter is to keep track of statistics along steps.</span>
+<span class="sd">    Meters write values for purpose like printing average values.</span>
+<span class="sd">    Meters can be flushed to log files (i.e. TensorBoard for now)</span>
+<span class="sd">    regularly.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        name (str): the name of meter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@master_only</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Meter.reset"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.Meter.reset">[docs]</a>    <span class="nd">@master_only</span>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the meter values&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="Meter.write"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.Meter.write">[docs]</a>    <span class="nd">@master_only</span>
+    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Record the value&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Meter.flush"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.Meter.flush">[docs]</a>    <span class="nd">@master_only</span>
+    <span class="k">def</span> <span class="nf">flush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write the value in the tensorboard.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            step (int): Epoch or iteration number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meter </span><span class="si">{}</span><span class="s2"> contained a nan or inf.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+        <span class="n">filtered_values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">math</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered_values</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">filtered_values</span><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered_values</span><span class="p">))</span>
+            <span class="n">write_summary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Meter.write_image"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.meters.Meter.write_image">[docs]</a>    <span class="nd">@master_only</span>
+    <span class="k">def</span> <span class="nf">write_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_grid</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write the value in the tensorboard.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            img_grid:</span>
+<span class="sd">            step (int): Epoch or iteration number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">LOG_WRITER</span>
+        <span class="n">lw</span> <span class="o">=</span> <span class="n">LOG_WRITER</span>
+        <span class="k">if</span> <span class="n">lw</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Log writer not set.&quot;</span><span class="p">)</span>
+        <span class="n">lw</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Visualizations&quot;</span><span class="p">,</span> <span class="n">img_grid</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

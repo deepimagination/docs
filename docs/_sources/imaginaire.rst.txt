@@ -1,0 +1,38 @@
+imaginaire package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   imaginaire.datasets
+   imaginaire.discriminators
+   imaginaire.evaluation
+   imaginaire.generators
+   imaginaire.layers
+   imaginaire.losses
+   imaginaire.model_utils
+   imaginaire.optimizers
+   imaginaire.trainers
+   imaginaire.utils
+
+Submodules
+----------
+
+imaginaire.config module
+------------------------
+
+.. automodule:: imaginaire.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+imaginaire.model\_utils.first\_order\_motion package
+====================================================
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.model_utils.first_order_motion
+   :members:
+   :undoc-members:
+   :show-inheritance:

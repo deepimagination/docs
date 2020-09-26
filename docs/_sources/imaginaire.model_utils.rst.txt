@@ -1,0 +1,38 @@
+imaginaire.model\_utils package
+===============================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   imaginaire.model_utils.first_order_motion
+   imaginaire.model_utils.position_encoding
+
+Submodules
+----------
+
+imaginaire.model\_utils.fs\_vid2vid module
+------------------------------------------
+
+.. automodule:: imaginaire.model_utils.fs_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.model\_utils.pix2pixHD module
+----------------------------------------
+
+.. automodule:: imaginaire.model_utils.pix2pixHD
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.model_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

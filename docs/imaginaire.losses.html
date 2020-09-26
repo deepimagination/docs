@@ -1,0 +1,1036 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.losses package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.model_utils package" href="imaginaire.model_utils.html" />
+    <link rel="prev" title="imaginaire.layers package" href="imaginaire.layers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.losses package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.losses.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-losses-package">
+<h1>imaginaire.losses package<a class="headerlink" href="#imaginaire-losses-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.losses.feature_matching">
+<span id="imaginaire-losses-feature-matching-module"></span><h2>imaginaire.losses.feature_matching module<a class="headerlink" href="#module-imaginaire.losses.feature_matching" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.feature_matching.FeatureMatchingLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.feature_matching.</code><code class="sig-name descname">FeatureMatchingLoss</code><span class="sig-paren">(</span><em class="sig-param">criterion='l1'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/feature_matching.html#FeatureMatchingLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.feature_matching.FeatureMatchingLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Compute feature matching loss</p>
+<dl class="method">
+<dt id="imaginaire.losses.feature_matching.FeatureMatchingLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">fake_features</em>, <em class="sig-param">real_features</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/feature_matching.html#FeatureMatchingLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.feature_matching.FeatureMatchingLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the target vector for the binary cross entropy loss
+computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fake_features</strong> (<em>list of lists</em>) – Discriminator features of fake images.</p></li>
+<li><p><strong>real_features</strong> (<em>list of lists</em>) – Discriminator features of real images.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.feature_matching.FeatureMatchingLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.feature_matching.FeatureMatchingLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.losses.flow">
+<span id="imaginaire-losses-flow-module"></span><h2>imaginaire.losses.flow module<a class="headerlink" href="#module-imaginaire.losses.flow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.flow.FlowLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.flow.</code><code class="sig-name descname">FlowLoss</code><span class="sig-paren">(</span><em class="sig-param">cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Flow loss constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> (<em>obj</em>) – Configuration.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.flow.FlowLoss.compute_flow_loss">
+<code class="sig-name descname">compute_flow_loss</code><span class="sig-paren">(</span><em class="sig-param">flow</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">flow_gt</em>, <em class="sig-param">flow_conf_gt</em>, <em class="sig-param">fg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_flow_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.compute_flow_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated flow map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<em>tensor</em>) – Generated flow map.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em>) – Warped image using the flow map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+<li><p><strong>flow_gt</strong> (<em>tensor</em>) – Ground truth flow map.</p></li>
+<li><p><strong>flow_conf_gt</strong> (<em>tensor</em>) – Confidence for the ground truth flow map.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.flow.FlowLoss.compute_flow_losses">
+<code class="sig-name descname">compute_flow_losses</code><span class="sig-paren">(</span><em class="sig-param">flow</em>, <em class="sig-param">warped_images</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">flow_gt</em>, <em class="sig-param">flow_conf_gt</em>, <em class="sig-param">fg_mask</em>, <em class="sig-param">tgt_label</em>, <em class="sig-param">ref_label</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_flow_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.compute_flow_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated flow maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Generated flow maps.
+warped_images (tensor or list of tensors): Warped images using the
+flow maps.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.
+flow_gt (tensor or list of tensors): Ground truth flow maps.</p></li>
+<li><p><strong>flow_conf_gt</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Confidence for the ground
+truth flow maps.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+<li><p><strong>tgt_label</strong> (<em>tensor</em>) – Target label map.</p></li>
+<li><p><strong>ref_label</strong> (<em>tensor</em>) – Reference label map.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+<li><p>body_mask_diff (tensor): Difference between warped body part map
+and target body part map. Used for pose dataset only.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.flow.FlowLoss.compute_mask_loss">
+<code class="sig-name descname">compute_mask_loss</code><span class="sig-paren">(</span><em class="sig-param">occ_mask</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_image</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_mask_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.compute_mask_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated occlusion mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>occ_mask</strong> (<em>tensor</em>) – Generated occlusion mask.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em>) – Warped image using the flow map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss for the mask.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.flow.FlowLoss.compute_mask_losses">
+<code class="sig-name descname">compute_mask_losses</code><span class="sig-paren">(</span><em class="sig-param">occ_mask</em>, <em class="sig-param">fake_image</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_label</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">fg_mask</em>, <em class="sig-param">ref_fg_mask</em>, <em class="sig-param">body_mask_diff</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_mask_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.compute_mask_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated occlusion masks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>occ_mask</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Generated occlusion masks.</p></li>
+<li><p><strong>fake_image</strong> (<em>tensor</em>) – Generated image.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Warped images using the
+flow maps.</p></li>
+<li><p><strong>tgt_label</strong> (<em>tensor</em>) – Target label map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+<li><p><strong>ref_fg_mask</strong> (<em>tensor</em>) – Foreground mask for the reference image.</p></li>
+<li><p><strong>body_mask_diff</strong> (<em>tensor</em>) – Difference between warped body part map</p></li>
+<li><p><strong>target body part map. Used for pose dataset only.</strong> (<em>and</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss for the mask.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.flow.FlowLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">current_epoch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the output flow and occlusion mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Generator output.</p></li>
+<li><p><strong>current_epoch</strong> (<em>int</em>) – Current training epoch number.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+<li><p>loss_mask (tensor): Loss for the occlusion mask.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.flow.FlowLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.flow.FlowLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.flow.MaskedL1Loss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.flow.</code><code class="sig-name descname">MaskedL1Loss</code><span class="sig-paren">(</span><em class="sig-param">normalize_over_valid=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#MaskedL1Loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.MaskedL1Loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Masked L1 loss constructor.</p>
+<dl class="method">
+<dt id="imaginaire.losses.flow.MaskedL1Loss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">target</em>, <em class="sig-param">mask</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#MaskedL1Loss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.flow.MaskedL1Loss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Masked L1 loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>tensor</em>) – Input tensor.</p></li>
+<li><p><strong>target</strong> (<em>tensor</em>) – Target tensor.</p></li>
+<li><p><strong>mask</strong> (<em>tensor</em>) – Mask to be applied to the output loss.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.flow.MaskedL1Loss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.flow.MaskedL1Loss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.losses.gan">
+<span id="imaginaire-losses-gan-module"></span><h2>imaginaire.losses.gan module<a class="headerlink" href="#module-imaginaire.losses.gan" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.gan.GANLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.gan.</code><code class="sig-name descname">GANLoss</code><span class="sig-paren">(</span><em class="sig-param">gan_mode</em>, <em class="sig-param">target_real_label=1.0</em>, <em class="sig-param">target_fake_label=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.gan.GANLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>GAN loss constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gan_mode</strong> (<em>str</em>) – Type of GAN loss. <code class="docutils literal notranslate"><span class="pre">'hinge'</span></code>, <code class="docutils literal notranslate"><span class="pre">'least_square'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'non_saturated'</span></code>, <code class="docutils literal notranslate"><span class="pre">'wasserstein'</span></code>.</p></li>
+<li><p><strong>target_real_label</strong> (<em>float</em>) – The desired output label for real images.</p></li>
+<li><p><strong>target_fake_label</strong> (<em>float</em>) – The desired output label for fake images.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.gan.GANLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em>, <em class="sig-param">dis_update=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.gan.GANLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>GAN loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+<li><p><strong>dis_update</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the loss will be used to update the
+discriminator, otherwise the generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.gan.GANLoss.get_target_tensor">
+<code class="sig-name descname">get_target_tensor</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.get_target_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.gan.GANLoss.get_target_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the target vector for the binary cross entropy loss
+computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Target tensor vector.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>target (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.gan.GANLoss.loss">
+<code class="sig-name descname">loss</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em>, <em class="sig-param">dis_update=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.gan.GANLoss.loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>GAN loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+<li><p><strong>dis_update</strong> (<em>bool</em>) – Updating the discriminator or the generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.gan.GANLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.gan.GANLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.losses.kl">
+<span id="imaginaire-losses-kl-module"></span><h2>imaginaire.losses.kl module<a class="headerlink" href="#module-imaginaire.losses.kl" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.kl.GaussianKLLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.kl.</code><code class="sig-name descname">GaussianKLLoss</code><a class="reference internal" href="_modules/imaginaire/losses/kl.html#GaussianKLLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.kl.GaussianKLLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Compute KL loss in VAE for Gaussian distributions</p>
+<dl class="method">
+<dt id="imaginaire.losses.kl.GaussianKLLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">logvar=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/kl.html#GaussianKLLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.kl.GaussianKLLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute loss</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu</strong> (<em>tensor</em>) – mean</p></li>
+<li><p><strong>logvar</strong> (<em>tensor</em>) – logarithm of variance</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.kl.GaussianKLLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.kl.GaussianKLLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.losses.perceptual">
+<span id="imaginaire-losses-perceptual-module"></span><h2>imaginaire.losses.perceptual module<a class="headerlink" href="#module-imaginaire.losses.perceptual" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.perceptual.PerceptualLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.perceptual.</code><code class="sig-name descname">PerceptualLoss</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">network='vgg19'</em>, <em class="sig-param">layers='relu_4_1'</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">criterion='l1'</em>, <em class="sig-param">resize=False</em>, <em class="sig-param">resize_mode='bilinear'</em>, <em class="sig-param">num_scales=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/perceptual.html#PerceptualLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.perceptual.PerceptualLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Perceptual loss initialization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<a class="reference internal" href="imaginaire.html#imaginaire.config.Config" title="imaginaire.config.Config"><em>Config</em></a>) – Configuration file.</p></li>
+<li><p><strong>network</strong> (<em>str</em>) – The name of the loss network: ‘vgg16’ | ‘vgg19’.</p></li>
+<li><p><strong>layers</strong> (<em>str</em><em> or </em><em>list of str</em>) – The layers used to compute the loss.</p></li>
+<li><p><strong>(</strong><strong>float</strong><strong> or </strong><strong>list of float</strong> (<em>weights</em>) – The loss weights of each layer.</p></li>
+<li><p><strong>criterion</strong> (<em>str</em>) – The type of distance function: ‘l1’ | ‘l2’.</p></li>
+<li><p><strong>resize</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, resize the input images to 224x224.</p></li>
+<li><p><strong>resize_mode</strong> (<em>str</em>) – Algorithm used for resizing.</p></li>
+<li><p><strong>num_scales</strong> (<em>int</em>) – The loss will be evaluated at original size and
+this many times downsampled sizes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.perceptual.PerceptualLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">inp</em>, <em class="sig-param">target</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/perceptual.html#PerceptualLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.perceptual.PerceptualLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perceptual loss forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inp</strong> (<em>4D tensor</em>) – Input tensor.</p></li>
+<li><p><strong>target</strong> (<em>4D tensor</em>) – Ground truth tensor, same shape as the input.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The perceptual loss.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(scalar tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.perceptual.PerceptualLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.perceptual.PerceptualLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.losses">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.losses" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.losses.GANLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">GANLoss</code><span class="sig-paren">(</span><em class="sig-param">gan_mode</em>, <em class="sig-param">target_real_label=1.0</em>, <em class="sig-param">target_fake_label=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GANLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>GAN loss constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gan_mode</strong> (<em>str</em>) – Type of GAN loss. <code class="docutils literal notranslate"><span class="pre">'hinge'</span></code>, <code class="docutils literal notranslate"><span class="pre">'least_square'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'non_saturated'</span></code>, <code class="docutils literal notranslate"><span class="pre">'wasserstein'</span></code>.</p></li>
+<li><p><strong>target_real_label</strong> (<em>float</em>) – The desired output label for real images.</p></li>
+<li><p><strong>target_fake_label</strong> (<em>float</em>) – The desired output label for fake images.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.GANLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em>, <em class="sig-param">dis_update=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GANLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>GAN loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+<li><p><strong>dis_update</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the loss will be used to update the
+discriminator, otherwise the generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.GANLoss.get_target_tensor">
+<code class="sig-name descname">get_target_tensor</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.get_target_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GANLoss.get_target_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the target vector for the binary cross entropy loss
+computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Target tensor vector.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>target (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.GANLoss.loss">
+<code class="sig-name descname">loss</code><span class="sig-paren">(</span><em class="sig-param">dis_output</em>, <em class="sig-param">t_real</em>, <em class="sig-param">dis_update=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/gan.html#GANLoss.loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GANLoss.loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>GAN loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_output</strong> (<em>tensor</em>) – Discriminator outputs.</p></li>
+<li><p><strong>t_real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the real label as target, otherwise
+uses the fake label as target.</p></li>
+<li><p><strong>dis_update</strong> (<em>bool</em>) – Updating the discriminator or the generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.GANLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.GANLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.PerceptualLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">PerceptualLoss</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">network='vgg19'</em>, <em class="sig-param">layers='relu_4_1'</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">criterion='l1'</em>, <em class="sig-param">resize=False</em>, <em class="sig-param">resize_mode='bilinear'</em>, <em class="sig-param">num_scales=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/perceptual.html#PerceptualLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.PerceptualLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Perceptual loss initialization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<a class="reference internal" href="imaginaire.html#imaginaire.config.Config" title="imaginaire.config.Config"><em>Config</em></a>) – Configuration file.</p></li>
+<li><p><strong>network</strong> (<em>str</em>) – The name of the loss network: ‘vgg16’ | ‘vgg19’.</p></li>
+<li><p><strong>layers</strong> (<em>str</em><em> or </em><em>list of str</em>) – The layers used to compute the loss.</p></li>
+<li><p><strong>(</strong><strong>float</strong><strong> or </strong><strong>list of float</strong> (<em>weights</em>) – The loss weights of each layer.</p></li>
+<li><p><strong>criterion</strong> (<em>str</em>) – The type of distance function: ‘l1’ | ‘l2’.</p></li>
+<li><p><strong>resize</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, resize the input images to 224x224.</p></li>
+<li><p><strong>resize_mode</strong> (<em>str</em>) – Algorithm used for resizing.</p></li>
+<li><p><strong>num_scales</strong> (<em>int</em>) – The loss will be evaluated at original size and
+this many times downsampled sizes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.PerceptualLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">inp</em>, <em class="sig-param">target</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/perceptual.html#PerceptualLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.PerceptualLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perceptual loss forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inp</strong> (<em>4D tensor</em>) – Input tensor.</p></li>
+<li><p><strong>target</strong> (<em>4D tensor</em>) – Ground truth tensor, same shape as the input.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The perceptual loss.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(scalar tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.PerceptualLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.PerceptualLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.FeatureMatchingLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">FeatureMatchingLoss</code><span class="sig-paren">(</span><em class="sig-param">criterion='l1'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/feature_matching.html#FeatureMatchingLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FeatureMatchingLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Compute feature matching loss</p>
+<dl class="method">
+<dt id="imaginaire.losses.FeatureMatchingLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">fake_features</em>, <em class="sig-param">real_features</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/feature_matching.html#FeatureMatchingLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FeatureMatchingLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the target vector for the binary cross entropy loss
+computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fake_features</strong> (<em>list of lists</em>) – Discriminator features of fake images.</p></li>
+<li><p><strong>real_features</strong> (<em>list of lists</em>) – Discriminator features of real images.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.FeatureMatchingLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.FeatureMatchingLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.GaussianKLLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">GaussianKLLoss</code><a class="reference internal" href="_modules/imaginaire/losses/kl.html#GaussianKLLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GaussianKLLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Compute KL loss in VAE for Gaussian distributions</p>
+<dl class="method">
+<dt id="imaginaire.losses.GaussianKLLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">mu</em>, <em class="sig-param">logvar=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/kl.html#GaussianKLLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.GaussianKLLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute loss</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu</strong> (<em>tensor</em>) – mean</p></li>
+<li><p><strong>logvar</strong> (<em>tensor</em>) – logarithm of variance</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.GaussianKLLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.GaussianKLLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.MaskedL1Loss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">MaskedL1Loss</code><span class="sig-paren">(</span><em class="sig-param">normalize_over_valid=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#MaskedL1Loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.MaskedL1Loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Masked L1 loss constructor.</p>
+<dl class="method">
+<dt id="imaginaire.losses.MaskedL1Loss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">target</em>, <em class="sig-param">mask</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#MaskedL1Loss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.MaskedL1Loss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Masked L1 loss computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>tensor</em>) – Input tensor.</p></li>
+<li><p><strong>target</strong> (<em>tensor</em>) – Target tensor.</p></li>
+<li><p><strong>mask</strong> (<em>tensor</em>) – Mask to be applied to the output loss.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.MaskedL1Loss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.MaskedL1Loss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.losses.FlowLoss">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.losses.</code><code class="sig-name descname">FlowLoss</code><span class="sig-paren">(</span><em class="sig-param">cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Flow loss constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg</strong> (<em>obj</em>) – Configuration.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.losses.FlowLoss.compute_flow_loss">
+<code class="sig-name descname">compute_flow_loss</code><span class="sig-paren">(</span><em class="sig-param">flow</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">flow_gt</em>, <em class="sig-param">flow_conf_gt</em>, <em class="sig-param">fg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_flow_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss.compute_flow_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated flow map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<em>tensor</em>) – Generated flow map.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em>) – Warped image using the flow map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+<li><p><strong>flow_gt</strong> (<em>tensor</em>) – Ground truth flow map.</p></li>
+<li><p><strong>flow_conf_gt</strong> (<em>tensor</em>) – Confidence for the ground truth flow map.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.FlowLoss.compute_flow_losses">
+<code class="sig-name descname">compute_flow_losses</code><span class="sig-paren">(</span><em class="sig-param">flow</em>, <em class="sig-param">warped_images</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">flow_gt</em>, <em class="sig-param">flow_conf_gt</em>, <em class="sig-param">fg_mask</em>, <em class="sig-param">tgt_label</em>, <em class="sig-param">ref_label</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_flow_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss.compute_flow_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated flow maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Generated flow maps.
+warped_images (tensor or list of tensors): Warped images using the
+flow maps.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.
+flow_gt (tensor or list of tensors): Ground truth flow maps.</p></li>
+<li><p><strong>flow_conf_gt</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Confidence for the ground
+truth flow maps.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+<li><p><strong>tgt_label</strong> (<em>tensor</em>) – Target label map.</p></li>
+<li><p><strong>ref_label</strong> (<em>tensor</em>) – Reference label map.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+<li><p>body_mask_diff (tensor): Difference between warped body part map
+and target body part map. Used for pose dataset only.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.FlowLoss.compute_mask_loss">
+<code class="sig-name descname">compute_mask_loss</code><span class="sig-paren">(</span><em class="sig-param">occ_mask</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_image</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_mask_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss.compute_mask_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated occlusion mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>occ_mask</strong> (<em>tensor</em>) – Generated occlusion mask.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em>) – Warped image using the flow map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss for the mask.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.FlowLoss.compute_mask_losses">
+<code class="sig-name descname">compute_mask_losses</code><span class="sig-paren">(</span><em class="sig-param">occ_mask</em>, <em class="sig-param">fake_image</em>, <em class="sig-param">warped_image</em>, <em class="sig-param">tgt_label</em>, <em class="sig-param">tgt_image</em>, <em class="sig-param">fg_mask</em>, <em class="sig-param">ref_fg_mask</em>, <em class="sig-param">body_mask_diff</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.compute_mask_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss.compute_mask_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the generated occlusion masks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>occ_mask</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Generated occlusion masks.</p></li>
+<li><p><strong>fake_image</strong> (<em>tensor</em>) – Generated image.</p></li>
+<li><p><strong>warped_image</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Warped images using the
+flow maps.</p></li>
+<li><p><strong>tgt_label</strong> (<em>tensor</em>) – Target label map.</p></li>
+<li><p><strong>tgt_image</strong> (<em>tensor</em>) – Target image for the warped image.</p></li>
+<li><p><strong>fg_mask</strong> (<em>tensor</em>) – Foreground mask for the target image.</p></li>
+<li><p><strong>ref_fg_mask</strong> (<em>tensor</em>) – Foreground mask for the reference image.</p></li>
+<li><p><strong>body_mask_diff</strong> (<em>tensor</em>) – Difference between warped body part map</p></li>
+<li><p><strong>target body part map. Used for pose dataset only.</strong> (<em>and</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Loss for the mask.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.losses.FlowLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">current_epoch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/losses/flow.html#FlowLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.losses.FlowLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute losses on the output flow and occlusion mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Generator output.</p></li>
+<li><p><strong>current_epoch</strong> (<em>int</em>) – Current training epoch number.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>loss_flow_L1 (tensor): L1 loss compared to ground truth flow.</p></li>
+<li><p>loss_flow_warp (tensor): L1 loss between the warped image and the
+target image when using the flow to warp.</p></li>
+<li><p>loss_mask (tensor): Loss for the occlusion mask.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.losses.FlowLoss.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.losses.FlowLoss.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.model_utils.html" class="btn btn-neutral float-right" title="imaginaire.model_utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.layers.html" class="btn btn-neutral float-left" title="imaginaire.layers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

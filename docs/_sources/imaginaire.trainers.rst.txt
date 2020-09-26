@@ -1,0 +1,86 @@
+imaginaire.trainers package
+===========================
+
+Submodules
+----------
+
+imaginaire.trainers.base module
+-------------------------------
+
+.. automodule:: imaginaire.trainers.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.fs\_vid2vid module
+--------------------------------------
+
+.. automodule:: imaginaire.trainers.fs_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.funit module
+--------------------------------
+
+.. automodule:: imaginaire.trainers.funit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.munit module
+--------------------------------
+
+.. automodule:: imaginaire.trainers.munit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.pix2pixHD module
+------------------------------------
+
+.. automodule:: imaginaire.trainers.pix2pixHD
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.spade module
+--------------------------------
+
+.. automodule:: imaginaire.trainers.spade
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.unit module
+-------------------------------
+
+.. automodule:: imaginaire.trainers.unit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.vid2vid module
+----------------------------------
+
+.. automodule:: imaginaire.trainers.vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.trainers.wc\_vid2vid module
+--------------------------------------
+
+.. automodule:: imaginaire.trainers.wc_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.trainers
+   :members:
+   :undoc-members:
+   :show-inheritance:

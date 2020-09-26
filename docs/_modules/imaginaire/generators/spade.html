@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators.spade &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.generators.spade</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.generators.spade</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">types</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Upsample</span> <span class="k">as</span> <span class="n">NearestUpsample</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.layers</span> <span class="kn">import</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">LinearBlock</span><span class="p">,</span> <span class="n">Res2dBlock</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.data</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_crop_h_w</span><span class="p">,</span>
+                                   <span class="n">get_paired_input_image_channel_number</span><span class="p">,</span>
+                                   <span class="n">get_paired_input_label_channel_number</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE generator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        gen_cfg (obj): Generator definition part of the yaml config file.</span>
+<span class="sd">        data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Generator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SPADE generator initialization.&#39;</span><span class="p">)</span>
+        <span class="c1"># We assume the first datum is the ground truth image.</span>
+        <span class="n">image_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="c1"># Calculate number of channels in the input label.</span>
+        <span class="n">num_labels</span> <span class="o">=</span> <span class="n">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span> <span class="o">=</span> <span class="n">get_crop_h_w</span><span class="p">(</span><span class="n">data_cfg</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">augmentations</span><span class="p">)</span>
+        <span class="c1"># Build the generator</span>
+        <span class="n">out_image_small_side_size</span> <span class="o">=</span> <span class="n">crop_w</span> <span class="k">if</span> <span class="n">crop_w</span> <span class="o">&lt;</span> <span class="n">crop_h</span> <span class="k">else</span> <span class="n">crop_h</span>
+        <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="n">kernel_size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
+
+        <span class="n">cond_dims</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Check whether we use the style code.</span>
+        <span class="n">style_dims</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;style_dims&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style_dims</span> <span class="o">=</span> <span class="n">style_dims</span>
+        <span class="k">if</span> <span class="n">style_dims</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Style code dimensions: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">style_dims</span><span class="p">)</span>
+            <span class="n">cond_dims</span> <span class="o">+=</span> <span class="n">style_dims</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_style</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_style</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># Check whether we use the attribute code.</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;attribute_dims&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_attribute</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">attribute_dims</span> <span class="o">=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">attribute_dims</span>
+            <span class="n">cond_dims</span> <span class="o">+=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">attribute_dims</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_attribute</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_attribute</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Base filter number: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Convolution kernel size: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">kernel_size</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Weight norm type: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">weight_norm_type</span><span class="p">)</span>
+        <span class="n">skip_activation_norm</span> <span class="o">=</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;skip_activation_norm&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">activation_norm_params</span> <span class="o">=</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;activation_norm_params&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">activation_norm_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">activation_norm_params</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">SimpleNamespace</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span>
+                    <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;sync_batch&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;separate_projection&#39;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;separate_projection&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;activation_norm_params&#39;</span><span class="p">):</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">activation_norm_params</span> <span class="o">=</span> \
+                <span class="n">types</span><span class="o">.</span><span class="n">SimpleNamespace</span><span class="p">()</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">activation_norm_params</span><span class="o">.</span><span class="n">affine</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;cond_dims&#39;</span><span class="p">,</span> <span class="n">num_labels</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span>
+                    <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="n">weight_norm_type</span><span class="p">)</span>
+        <span class="n">global_adaptive_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span>
+                                            <span class="s1">&#39;global_adaptive_norm_type&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;sync_batch&#39;</span><span class="p">)</span>
+        <span class="n">use_posenc_in_input_layer</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span>
+                                            <span class="s1">&#39;use_posenc_in_input_layer&#39;</span><span class="p">,</span>
+                                            <span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spade_generator</span> <span class="o">=</span> <span class="n">SPADEGenerator</span><span class="p">(</span><span class="n">num_labels</span><span class="p">,</span>
+                                              <span class="n">out_image_small_side_size</span><span class="p">,</span>
+                                              <span class="n">image_channels</span><span class="p">,</span>
+                                              <span class="n">num_filters</span><span class="p">,</span>
+                                              <span class="n">kernel_size</span><span class="p">,</span>
+                                              <span class="n">cond_dims</span><span class="p">,</span>
+                                              <span class="n">activation_norm_params</span><span class="p">,</span>
+                                              <span class="n">weight_norm_type</span><span class="p">,</span>
+                                              <span class="n">global_adaptive_norm_type</span><span class="p">,</span>
+                                              <span class="n">skip_activation_norm</span><span class="p">,</span>
+                                              <span class="n">use_posenc_in_input_layer</span><span class="p">,</span>
+                                              <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style</span><span class="p">:</span>
+            <span class="c1"># Build the encoder.</span>
+            <span class="n">style_enc_cfg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;style_enc&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">style_enc_cfg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">style_enc_cfg</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">SimpleNamespace</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="n">weight_norm_type</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;input_image_channels&#39;</span><span class="p">,</span> <span class="n">image_channels</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">,</span> <span class="s1">&#39;style_dims&#39;</span><span class="p">,</span> <span class="n">style_dims</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span> <span class="o">=</span> <span class="n">StyleEncoder</span><span class="p">(</span><span class="n">style_enc_cfg</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with the SPADE generator initialization.&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Generator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.Generator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE Generator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict):</span>
+<span class="sd">              - images (N x C1 x H x W tensor) : Ground truth images</span>
+<span class="sd">              - label (N x C2 x H x W tensor) : Semantic representations</span>
+<span class="sd">              - z (N x style_dims tensor): Gaussian random noise</span>
+<span class="sd">              - random_style (bool): Whether to sample a random style vector.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - fake_images (N x 3 x H x W tensor): fake images</span>
+<span class="sd">              - mu (N x C1 tensor): mean vectors</span>
+<span class="sd">              - logvar (N x C1 tensor): log-variance vectors</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">random_style</span><span class="p">:</span>
+                <span class="n">bs</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span>
+                    <span class="n">bs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_dims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span>
+                        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">):</span>
+                    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">half</span><span class="p">()</span>
+                <span class="n">mu</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">logvar</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mu</span><span class="p">,</span> <span class="n">logvar</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_attribute</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">z</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;attributes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_generator</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;mu&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mu</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;logvar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">logvar</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+
+<div class="viewcode-block" id="Generator.inference"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.Generator.inference">[docs]</a>    <span class="k">def</span> <span class="nf">inference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                  <span class="n">data</span><span class="p">,</span>
+                  <span class="n">random_style</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">use_fixed_random_style</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">keep_original_size</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute results images for a batch of input data and save the</span>
+<span class="sd">        results in the specified folder.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict):</span>
+<span class="sd">              - images (N x C1 x H x W tensor) : Ground truth images</span>
+<span class="sd">              - label (N x C2 x H x W tensor) : Semantic representations</span>
+<span class="sd">              - z (N x style_dims tensor): Gaussian random noise</span>
+<span class="sd">            random_style (bool): Whether to sample a random style vector.</span>
+<span class="sd">            use_fixed_random_style (bool): Sample random style once and use it</span>
+<span class="sd">                for all the remaining inference.</span>
+<span class="sd">            keep_original_size (bool): Keep original size of the input.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - fake_images (N x 3 x H x W tensor): fake images</span>
+<span class="sd">              - mu (N x C1 tensor): mean vectors</span>
+<span class="sd">              - logvar (N x C1 tensor): log-variance vectors</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spade_generator</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">random_style</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">use_fixed_random_style</span><span class="p">:</span>
+                <span class="n">bs</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span>
+                    <span class="n">bs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_dims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">:</span>
+                    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">half</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">z</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mu</span><span class="p">,</span> <span class="n">logvar</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">])</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_generator</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">output_images</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">keep_original_size</span><span class="p">:</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;original_h_w&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;original_h_w&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">output_images</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">output_images</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">])</span>
+        <span class="n">file_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="s1">&#39;seg_maps&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">output_images</span><span class="p">,</span> <span class="n">file_names</span></div></div>
+
+
+<div class="viewcode-block" id="SPADEGenerator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.SPADEGenerator">[docs]</a><span class="k">class</span> <span class="nc">SPADEGenerator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE Image Generator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_labels (int): Number of different labels.</span>
+<span class="sd">        out_image_small_side_size (int): min(width, height)</span>
+<span class="sd">        image_channels (int): Num. of channels of the output image.</span>
+<span class="sd">        num_filters (int): Base filter numbers.</span>
+<span class="sd">        kernel_size (int): Convolution kernel size.</span>
+<span class="sd">        style_dims (int): Dimensions of the style code.</span>
+<span class="sd">        activation_norm_params (obj): Spatially adaptive normalization param.</span>
+<span class="sd">        weight_norm_type (str): Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, or ``&#39;weight&#39;``.</span>
+<span class="sd">        global_adaptive_norm_type (str): Type of normalization in SPADE.</span>
+<span class="sd">        skip_activation_norm (bool): If ``True``, applies activation norm to the</span>
+<span class="sd">            shortcut connection in residual blocks.</span>
+<span class="sd">        use_style_encoder (bool): Whether to use global adaptive norm</span>
+<span class="sd">            like conditional batch norm or adaptive instance norm.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_labels</span><span class="p">,</span>
+                 <span class="n">out_image_small_side_size</span><span class="p">,</span>
+                 <span class="n">image_channels</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="p">,</span>
+                 <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">style_dims</span><span class="p">,</span>
+                 <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span>
+                 <span class="n">global_adaptive_norm_type</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span>
+                 <span class="n">use_posenc_in_input_layer</span><span class="p">,</span>
+                 <span class="n">use_style_encoder</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SPADEGenerator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span> <span class="o">=</span> <span class="n">use_style_encoder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_posenc_in_input_layer</span> <span class="o">=</span> <span class="n">use_posenc_in_input_layer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">=</span> <span class="n">out_image_small_side_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_filters</span> <span class="o">=</span> <span class="n">num_filters</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">kernel_size</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">nonlinearity</span> <span class="o">=</span> <span class="s1">&#39;leakyrelu&#39;</span>
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="s1">&#39;spatially_adaptive&#39;</span>
+        <span class="n">base_res2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Res2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                              <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">bias</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">activation_norm_params</span><span class="p">,</span>
+                              <span class="n">skip_activation_norm</span><span class="o">=</span><span class="n">skip_activation_norm</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                              <span class="n">order</span><span class="o">=</span><span class="s1">&#39;NACNAC&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fc_0</span> <span class="o">=</span> <span class="n">LinearBlock</span><span class="p">(</span><span class="n">style_dims</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">style_dims</span><span class="p">,</span>
+                                    <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                    <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+                                    <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CAN&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fc_1</span> <span class="o">=</span> <span class="n">LinearBlock</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">style_dims</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">style_dims</span><span class="p">,</span>
+                                    <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                    <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+                                    <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CAN&#39;</span><span class="p">)</span>
+
+            <span class="n">adaptive_norm_params</span> <span class="o">=</span> <span class="n">types</span><span class="o">.</span><span class="n">SimpleNamespace</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;cond_dims&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;cond_dims&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">style_dims</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">,</span>
+                        <span class="n">global_adaptive_norm_type</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span>
+                        <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span>
+                        <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">weight_norm_type</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;separate_projection&#39;</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="p">,</span> <span class="s1">&#39;separate_projection&#39;</span><span class="p">,</span>
+                        <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">separate_projection</span><span class="p">)</span>
+            <span class="n">adaptive_norm_params</span><span class="o">.</span><span class="n">activation_norm_params</span> <span class="o">=</span> \
+                <span class="n">types</span><span class="o">.</span><span class="n">SimpleNamespace</span><span class="p">()</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">adaptive_norm_params</span><span class="o">.</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;affine&#39;</span><span class="p">,</span>
+                    <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">activation_norm_params</span><span class="o">.</span><span class="n">affine</span><span class="p">)</span>
+            <span class="n">base_cbn2d_block</span> <span class="o">=</span> \
+                <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                                  <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                                  <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                  <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                  <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                  <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                  <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;adaptive&#39;</span><span class="p">,</span>
+                                  <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">adaptive_norm_params</span><span class="p">,</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                  <span class="n">order</span><span class="o">=</span><span class="s1">&#39;NAC&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base_conv2d_block</span> <span class="o">=</span> \
+                <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                                  <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                                  <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                  <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                  <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                  <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                  <span class="n">order</span><span class="o">=</span><span class="s1">&#39;NAC&#39;</span><span class="p">)</span>
+        <span class="n">in_num_labels</span> <span class="o">=</span> <span class="n">num_labels</span>
+        <span class="n">in_num_labels</span> <span class="o">+=</span> <span class="mi">2</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_posenc_in_input_layer</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_0</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">in_num_labels</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span>
+                                  <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                  <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                  <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                  <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cbn_head_0</span> <span class="o">=</span> <span class="n">base_cbn2d_block</span><span class="p">(</span>
+                <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_head_0</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span>
+                <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_1</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_2</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_0a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">16</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_0a</span> <span class="o">=</span> <span class="n">base_cbn2d_block</span><span class="p">(</span>
+                <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_0a</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span>
+                <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_0b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_1a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_1a</span> <span class="o">=</span> <span class="n">base_cbn2d_block</span><span class="p">(</span>
+                <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_1a</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span>
+                <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_1b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_2a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_2a</span> <span class="o">=</span> <span class="n">base_cbn2d_block</span><span class="p">(</span>
+                <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_2a</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span>
+                <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_2b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_img256</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="n">image_channels</span><span class="p">,</span>
+                                       <span class="mi">5</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                       <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                       <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                       <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                       <span class="n">order</span><span class="o">=</span><span class="s1">&#39;ANC&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="mi">16</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_3a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_3b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_img512</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="n">image_channels</span><span class="p">,</span>
+                                           <span class="mi">5</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                           <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                           <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                           <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                           <span class="n">order</span><span class="o">=</span><span class="s1">&#39;ANC&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="mi">32</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">==</span> <span class="mi">1024</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_3a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_3b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_4a</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">up_4b</span> <span class="o">=</span> <span class="n">base_res2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_img1024</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">image_channels</span><span class="p">,</span>
+                                            <span class="mi">5</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                            <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                            <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                            <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                            <span class="n">order</span><span class="o">=</span><span class="s1">&#39;ANC&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="mi">64</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">!=</span> <span class="mi">256</span> <span class="ow">and</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">!=</span> \
+                <span class="mi">512</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">!=</span> <span class="mi">1024</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Generation image size (</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">) not supported&#39;</span> <span class="o">%</span>
+                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span><span class="p">,</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span> <span class="o">=</span> <span class="n">NearestUpsample</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                                  <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+        <span class="n">xv</span><span class="p">,</span> <span class="n">yv</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.</span> <span class="o">/</span> <span class="mi">15</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.</span> <span class="o">/</span> <span class="mi">15</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">xv</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">yv</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xy</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+
+<div class="viewcode-block" id="SPADEGenerator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.SPADEGenerator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE Generator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict):</span>
+<span class="sd">              - data  (N x C1 x H x W tensor) : Ground truth images.</span>
+<span class="sd">              - label (N x C2 x H x W tensor) : Semantic representations.</span>
+<span class="sd">              - z (N x style_dims tensor): Gaussian random noise.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (dict):</span>
+<span class="sd">              - fake_images (N x 3 x H x W tensor): Fake images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">seg</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc_0</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc_1</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+        <span class="c1"># The code piece below makes sure that the input size is always 16x16</span>
+        <span class="n">sy</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">)</span>
+        <span class="n">sx</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">)</span>
+
+        <span class="n">in_seg</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">seg</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">sy</span><span class="p">,</span> <span class="n">sx</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_posenc_in_input_layer</span><span class="p">:</span>
+            <span class="n">in_xy</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">sy</span><span class="p">,</span> <span class="n">sx</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bicubic&#39;</span><span class="p">)</span>
+            <span class="n">in_seg_xy</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">in_seg</span><span class="p">,</span> <span class="n">in_xy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">in_seg</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sy</span><span class="p">,</span> <span class="n">sx</span><span class="p">)),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">in_seg_xy</span> <span class="o">=</span> <span class="n">in_seg</span>
+        <span class="c1"># 16x16</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_0</span><span class="p">(</span><span class="n">in_seg_xy</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cbn_head_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_head_0</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># 32x32</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_0a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_0a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_0a</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_0b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># 64x64</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_1a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_1a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_1a</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_1b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># 128x128</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_2a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cbn_up_2a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_up_2a</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_2b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># 256x256</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">==</span> <span class="mi">256</span><span class="p">:</span>
+            <span class="n">x256</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img256</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x256</span><span class="p">)</span>
+        <span class="c1"># 512x512</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">==</span> <span class="mi">512</span><span class="p">:</span>
+            <span class="n">x256</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img256</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x256</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x256</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_3a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_3b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x512</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img512</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x256</span> <span class="o">+</span> <span class="n">x512</span><span class="p">)</span>
+        <span class="c1"># 1024x1024</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_image_small_side_size</span> <span class="o">==</span> <span class="mi">1024</span><span class="p">:</span>
+            <span class="n">x256</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img256</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x256</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x256</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_3a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_3b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x512</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img512</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x512</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x512</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_4a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_4b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">seg</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nearest_upsample2x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x1024</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_img1024</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x256</span> <span class="o">+</span> <span class="n">x512</span> <span class="o">+</span> <span class="n">x1024</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">output</span></div></div>
+
+
+<div class="viewcode-block" id="StyleEncoder"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.StyleEncoder">[docs]</a><span class="k">class</span> <span class="nc">StyleEncoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Style Encode constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        style_enc_cfg (obj): Style encoder definition file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style_enc_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">StyleEncoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">input_image_channels</span> <span class="o">=</span> <span class="n">style_enc_cfg</span><span class="o">.</span><span class="n">input_image_channels</span>
+        <span class="n">num_filters</span> <span class="o">=</span> <span class="n">style_enc_cfg</span><span class="o">.</span><span class="n">num_filters</span>
+        <span class="n">kernel_size</span> <span class="o">=</span> <span class="n">style_enc_cfg</span><span class="o">.</span><span class="n">kernel_size</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">kernel_size</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">style_dims</span> <span class="o">=</span> <span class="n">style_enc_cfg</span><span class="o">.</span><span class="n">style_dims</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="n">style_enc_cfg</span><span class="o">.</span><span class="n">weight_norm_type</span>
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+        <span class="n">nonlinearity</span> <span class="o">=</span> <span class="s1">&#39;leakyrelu&#39;</span>
+        <span class="n">base_conv2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                              <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                              <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="c1"># inplace_nonlinearity=True,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer1</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">input_image_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer2</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer3</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer4</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer5</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer6</span> <span class="o">=</span> <span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc_mu</span> <span class="o">=</span> <span class="n">LinearBlock</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">style_dims</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc_var</span> <span class="o">=</span> <span class="n">LinearBlock</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">style_dims</span><span class="p">)</span>
+
+<div class="viewcode-block" id="StyleEncoder.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.spade.StyleEncoder.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE Style Encoder forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_x (N x 3 x H x W tensor): input images.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - mu (N x C tensor): Mean vectors.</span>
+<span class="sd">              - logvar (N x C tensor): Log-variance vectors.</span>
+<span class="sd">              - z (N x C tensor): Style code vectors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">input_x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">256</span> <span class="ow">or</span> <span class="n">input_x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">256</span><span class="p">:</span>
+            <span class="n">input_x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer1</span><span class="p">(</span><span class="n">input_x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer4</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer5</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer6</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc_mu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">logvar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc_var</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">std</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">logvar</span><span class="p">)</span>
+        <span class="n">eps</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn_like</span><span class="p">(</span><span class="n">std</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">eps</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">std</span><span class="p">)</span> <span class="o">+</span> <span class="n">mu</span>
+        <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">logvar</span><span class="p">,</span> <span class="n">z</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.model_utils package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.model_utils.first_order_motion package" href="imaginaire.model_utils.first_order_motion.html" />
+    <link rel="prev" title="imaginaire.losses package" href="imaginaire.losses.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.model_utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.model_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-model-utils-package">
+<h1>imaginaire.model_utils package<a class="headerlink" href="#imaginaire-model-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="imaginaire.model_utils.first_order_motion.html">imaginaire.model_utils.first_order_motion package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.model_utils.first_order_motion.html#module-imaginaire.model_utils.first_order_motion">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imaginaire.model_utils.position_encoding.html">imaginaire.model_utils.position_encoding package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.model_utils.position_encoding.html#module-imaginaire.model_utils.position_encoding">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.model_utils.fs_vid2vid">
+<span id="imaginaire-model-utils-fs-vid2vid-module"></span><h2>imaginaire.model_utils.fs_vid2vid module<a class="headerlink" href="#module-imaginaire.model_utils.fs_vid2vid" title="Permalink to this headline">¶</a></h2>
+<p>Utils for the few shot vid2vid model.</p>
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.combine_fg_mask">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">combine_fg_mask</code><span class="sig-paren">(</span><em class="sig-param">fg_mask</em>, <em class="sig-param">ref_fg_mask</em>, <em class="sig-param">has_fg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#combine_fg_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.combine_fg_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the union of target and reference foreground masks.
+:param fg_mask: Foreground mask for target image.
+:type fg_mask: tensor
+:param ref_fg_mask: Foreground mask for reference image.
+:type ref_fg_mask: tensor
+:param has_fg: Whether the image can be classified into fg/bg.
+:type has_fg: bool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Combined foreground mask.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>output (tensor or int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.concat_frames">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">concat_frames</code><span class="sig-paren">(</span><em class="sig-param">prev</em>, <em class="sig-param">now</em>, <em class="sig-param">n_frames</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#concat_frames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.concat_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concat previous and current frames and only keep the latest $(n_frames).
+If concatenated frames are longer than $(n_frames), drop the oldest one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prev</strong> (<em>NxTxCxHxW tensor</em>) – Tensor for previous frames.</p></li>
+<li><p><strong>now</strong> (<em>NxCxHxW tensor</em>) – Tensor for current frame.</p></li>
+<li><p><strong>n_frames</strong> (<em>int</em>) – Max number of frames to store.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Updated tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>result (NxTxCxHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.crop_and_resize">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">crop_and_resize</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">coords</em>, <em class="sig-param">size=None</em>, <em class="sig-param">method='bilinear'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#crop_and_resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.crop_and_resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop the image using the given coordinates and resize to target size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Input image.</p></li>
+<li><p><strong>coords</strong> (<em>list of int</em>) – Pixel coordinates to crop.</p></li>
+<li><p><strong>size</strong> (<em>list of int</em>) – Output size.</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – Interpolation method.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>img (tensor or list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.crop_face_from_data">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">crop_face_from_data</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">is_inference</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#crop_face_from_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.crop_face_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop the face regions in input data and resize to the target size.
+This is for training face datasets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>is_inference</strong> (<em>bool</em>) – Is doing inference or not.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cropped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.crop_face_from_output">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">crop_face_from_output</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em>, <em class="sig-param">image</em>, <em class="sig-param">input_label</em>, <em class="sig-param">crop_smaller=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#crop_face_from_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.crop_face_from_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop out the face region of the image (and resize if necessary to feed
+into generator/discriminator).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>image</strong> (<em>NxC1xHxW tensor</em><em> or </em><em>list of tensors</em>) – Image to crop.</p></li>
+<li><p><strong>input_label</strong> (<em>NxC2xHxW tensor</em>) – Input label map.</p></li>
+<li><p><strong>crop_smaller</strong> (<em>int</em>) – Number of pixels to crop slightly smaller region.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cropped image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (NxC1xHxW tensor or list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.crop_hand_from_output">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">crop_hand_from_output</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em>, <em class="sig-param">image</em>, <em class="sig-param">input_label</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#crop_hand_from_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.crop_hand_from_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop out the hand region of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>image</strong> (<em>NxC1xHxW tensor</em><em> or </em><em>list of tensors</em>) – Image to crop.</p></li>
+<li><p><strong>input_label</strong> (<em>NxC2xHxW tensor</em>) – Input label map.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cropped image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (NxC1xHxW tensor or list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.crop_person_from_data">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">crop_person_from_data</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">is_inference</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#crop_person_from_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.crop_person_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop the person regions in data and resize to the target size.
+This is for training full body datasets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>is_inference</strong> (<em>bool</em>) – Is doing inference or not.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cropped data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.detach">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">detach</code><span class="sig-paren">(</span><em class="sig-param">output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#detach"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.detach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detach tensors in the dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output</strong> (<em>dict</em>) – Output dict.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Detached output dict.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.extract_valid_pose_labels">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">extract_valid_pose_labels</code><span class="sig-paren">(</span><em class="sig-param">pose_map</em>, <em class="sig-param">pose_type</em>, <em class="sig-param">remove_face_labels</em>, <em class="sig-param">do_remove=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#extract_valid_pose_labels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.extract_valid_pose_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove some labels (e.g. face regions) in the pose map if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose_map</strong> (<em>3D</em><em>, </em><em>4D</em><em> or </em><em>5D tensor</em>) – Input pose map.</p></li>
+<li><p><strong>pose_type</strong> (<em>str</em>) – ‘both’ or ‘open’.</p></li>
+<li><p><strong>remove_face_labels</strong> (<em>bool</em>) – Whether to remove labels for the face region.</p></li>
+<li><p><strong>do_remove</strong> (<em>bool</em>) – Do remove face labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output pose map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pose_map (3D, 4D or 5D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_data">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_face_bbox_for_data</code><span class="sig-paren">(</span><em class="sig-param">keypoints</em>, <em class="sig-param">orig_img_size</em>, <em class="sig-param">scale</em>, <em class="sig-param">is_inference</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_face_bbox_for_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the bbox coordinates for face region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keypoints</strong> (<em>Nx2 tensor</em>) – Facial landmarks.</p></li>
+<li><p><strong>orig_img_size</strong> (<em>int tuple</em>) – Height and width of the input image size.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – When training, randomly scale the crop size for</p></li>
+<li><p><strong>augmentation.</strong> – </p></li>
+<li><p><strong>is_inference</strong> (<em>bool</em>) – Is doing inference or not.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bbox for face region.
+scale (float): Also returns scale to ensure reference and target frames
+are croppped using the same scale.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>crop_coords (list of int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_output">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_face_bbox_for_output</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em>, <em class="sig-param">pose</em>, <em class="sig-param">crop_smaller=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_face_bbox_for_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pixel coordinates of the face bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>pose</strong> (<em>NxCxHxW tensor</em>) – Pose label map.</p></li>
+<li><p><strong>crop_smaller</strong> (<em>int</em>) – Number of pixels to crop slightly smaller region.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Face bbox.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (list of int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_face_mask">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_face_mask</code><span class="sig-paren">(</span><em class="sig-param">densepose_map</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_face_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_face_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain mask of faces.
+:param densepose_map: DensePose map.
+:type densepose_map: 3D or 4D tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Face mask.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>mask (3D or 4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_fg_mask">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_fg_mask</code><span class="sig-paren">(</span><em class="sig-param">densepose_map</em>, <em class="sig-param">has_fg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_fg_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_fg_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain the foreground mask for pose sequences, which only includes
+the human. This is done by looking at the body part map from DensePose.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>densepose_map</strong> (<em>NxCxHxW tensor</em>) – DensePose map.</p></li>
+<li><p><strong>has_fg</strong> (<em>bool</em>) – Whether data has foreground or not.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fg mask.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>mask (Nx1xHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_grid">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_grid</code><span class="sig-paren">(</span><em class="sig-param">batchsize</em>, <em class="sig-param">size</em>, <em class="sig-param">minval=-1.0</em>, <em class="sig-param">maxval=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a grid ranging [-1, 1] of 2D/3D coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batchsize</strong> (<em>int</em>) – Batch size.</p></li>
+<li><p><strong>size</strong> (<em>tuple</em>) – (height, width) or (depth, height, width).</p></li>
+<li><p><strong>minval</strong> (<em>float</em>) – minimum value in returned grid.</p></li>
+<li><p><strong>maxval</strong> (<em>float</em>) – maximum value in returned grid.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Grid of coordinates.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>t_grid (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_hand_bbox_for_output">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_hand_bbox_for_output</code><span class="sig-paren">(</span><em class="sig-param">data_cfg</em>, <em class="sig-param">pose</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_hand_bbox_for_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_hand_bbox_for_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get coordinates of the hand bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>pose</strong> (<em>NxCxHxW tensor</em>) – Pose label map.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Hand bbox.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (list of int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_part_mask">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_part_mask</code><span class="sig-paren">(</span><em class="sig-param">densepose_map</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_part_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_part_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain mask of different body parts of humans. This is done by
+looking at the body part map from DensePose.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>densepose_map</strong> (<em>NxCxHxW tensor</em>) – DensePose map.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Body part mask, where K is the number of parts.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>mask (NxKxHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.get_person_bbox_for_data">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">get_person_bbox_for_data</code><span class="sig-paren">(</span><em class="sig-param">pose_map</em>, <em class="sig-param">orig_img_size</em>, <em class="sig-param">scale=1.5</em>, <em class="sig-param">crop_aspect_ratio=1</em>, <em class="sig-param">offset=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#get_person_bbox_for_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.get_person_bbox_for_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the bbox (pixel coordinates) to crop for person body region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose_map</strong> (<em>NxCxHxW tensor</em>) – Input pose map.</p></li>
+<li><p><strong>orig_img_size</strong> (<em>int tuple</em>) – Height and width of the input image size.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – When training, randomly scale the crop size for</p></li>
+<li><p><strong>augmentation.</strong> – </p></li>
+<li><p><strong>crop_aspect_ratio</strong> (<em>float</em>) – Output aspect ratio,</p></li>
+<li><p><strong>offset</strong> (<em>list of float</em>) – Offset for crop position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bbox for body region.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>crop_coords (list of int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.normalize_faces">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">normalize_faces</code><span class="sig-paren">(</span><em class="sig-param">keypoints</em>, <em class="sig-param">ref_keypoints</em>, <em class="sig-param">dist_scale_x=None</em>, <em class="sig-param">dist_scale_y=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#normalize_faces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.normalize_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize face keypoints w.r.t. the reference face keypoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keypoints</strong> (<em>Kx2 numpy array</em>) – target facial keypoints.</p></li>
+<li><p><strong>ref_keypoints</strong> (<em>Kx2 numpy array</em>) – reference facial keypoints.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>normalized facial keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>keypoints (Kx2 numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.pick_image">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">pick_image</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">idx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#pick_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.pick_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pick the image among images according to idx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> (<em>B x N x C x H x W tensor</em><em> or </em><em>list of tensors</em>) – N images.</p></li>
+<li><p><strong>idx</strong> (<em>B tensor</em>) – indices to select.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Selected images.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>image (B x C x H x W)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.pre_process_densepose">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">pre_process_densepose</code><span class="sig-paren">(</span><em class="sig-param">pose_cfg</em>, <em class="sig-param">pose_map</em>, <em class="sig-param">is_infer=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#pre_process_densepose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.pre_process_densepose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-process the DensePose part of input label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose_cfg</strong> (<em>obj</em>) – Pose data configuration.</p></li>
+<li><p><strong>pose_map</strong> (<em>NxCxHxW tensor</em>) – Pose label map.</p></li>
+<li><p><strong>is_infer</strong> (<em>bool</em>) – Is doing inference.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Processed pose label map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pose_map (NxCxHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.random_roll">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">random_roll</code><span class="sig-paren">(</span><em class="sig-param">tensors</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#random_roll"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.random_roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly roll the input tensors along x and y dimensions. Also randomly
+flip the tensors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tensors</strong> (<em>list of 4D tensors</em>) – Input tensors.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Rolled tensors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (list of 4D tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.remove_other_ppl">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">remove_other_ppl</code><span class="sig-paren">(</span><em class="sig-param">labels</em>, <em class="sig-param">densemasks</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#remove_other_ppl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.remove_other_ppl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove other people in the label map except for the current target
+by looking at the id in the densemask map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>NxCxHxW tensor</em>) – Input labels.</p></li>
+<li><p><strong>densemasks</strong> (<em>Nx1xHxW tensor</em>) – Densemask maps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output labels.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>labels (NxCxHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.resample">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">resample</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">flow</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#resample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.resample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resamples an image using the provided flow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>NxCxHxW tensor</em>) – Image to resample.</p></li>
+<li><p><strong>flow</strong> (<em>Nx2xHxW tensor</em>) – Optical flow to resample the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Resampled image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (NxCxHxW tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.roll">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">roll</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">ny</em>, <em class="sig-param">nx</em>, <em class="sig-param">flip</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#roll"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Roll and flip the tensor by specified amounts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>4D tensor</em>) – Input tensor.</p></li>
+<li><p><strong>ny</strong> (<em>int</em>) – Amount to roll along y dimension.</p></li>
+<li><p><strong>nx</strong> (<em>int</em>) – Amount to roll along x dimension.</p></li>
+<li><p><strong>flip</strong> (<em>bool</em>) – Whether to flip input.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>t (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.fs_vid2vid.select_object">
+<code class="sig-prename descclassname">imaginaire.model_utils.fs_vid2vid.</code><code class="sig-name descname">select_object</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">obj_indices=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/fs_vid2vid.html#select_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.fs_vid2vid.select_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the object/person in the dict according to the object index.
+Currently it’s used to select the target person in OpenPose dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+<li><p><strong>obj_indices</strong> (<em>list of int</em>) – Indices for the objects to select.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.model_utils.pix2pixHD">
+<span id="imaginaire-model-utils-pix2pixhd-module"></span><h2>imaginaire.model_utils.pix2pixHD module<a class="headerlink" href="#module-imaginaire.model_utils.pix2pixHD" title="Permalink to this headline">¶</a></h2>
+<p>Utils for the pix2pixHD model.</p>
+<dl class="function">
+<dt id="imaginaire.model_utils.pix2pixHD.cluster_features">
+<code class="sig-prename descclassname">imaginaire.model_utils.pix2pixHD.</code><code class="sig-name descname">cluster_features</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">net_E</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">small_ratio=0.0625</em>, <em class="sig-param">is_cityscapes=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/pix2pixHD.html#cluster_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.pix2pixHD.cluster_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use clustering to compute the features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration file.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Dataloader for iterate through the training
+set.</p></li>
+<li><p><strong>net_E</strong> (<em>nn.Module</em>) – Pytorch network.</p></li>
+<li><p><strong>preprocess</strong> (<em>function</em>) – Pre-processing function.</p></li>
+<li><p><strong>small_ratio</strong> (<em>float</em>) – We only consider instance that at least occupy
+$(small_ratio) amount of image space.</p></li>
+<li><p><strong>is_cityscapes</strong> (<em>bool</em>) – Is this is the cityscape dataset? In the
+Cityscapes dataset, the instance labels for car start with 26001,
+26002, …</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cluster centers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>( num_labels x num_cluster_centers x feature_dims)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.pix2pixHD.encode_features">
+<code class="sig-prename descclassname">imaginaire.model_utils.pix2pixHD.</code><code class="sig-name descname">encode_features</code><span class="sig-paren">(</span><em class="sig-param">net_E</em>, <em class="sig-param">feat_nc</em>, <em class="sig-param">label_nc</em>, <em class="sig-param">image</em>, <em class="sig-param">inst</em>, <em class="sig-param">is_cityscapes=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/pix2pixHD.html#encode_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.pix2pixHD.encode_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute feature embeddings for an image image.
+TODO(Ting-Chun): To make this funciton dataset independent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>net_E</strong> (<em>nn.Module</em>) – The encoder network.</p></li>
+<li><p><strong>feat_nc</strong> (<em>int</em>) – Feature dimensions</p></li>
+<li><p><strong>label_nc</strong> (<em>int</em>) – Number of segmentation labels.</p></li>
+<li><p><strong>image</strong> (<em>tensor</em>) – Input image tensor.</p></li>
+<li><p><strong>inst</strong> (<em>tensor</em>) – Input instance map.</p></li>
+<li><p><strong>is_cityscapes</strong> (<em>bool</em>) – Is this is the cityscape dataset? In the
+Cityscapes dataset, the instance labels for car start with 26001,
+26002, …</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>We will have $(label_nc)</dt><dd><p>list. For each list, it will record a list of feature vectors of
+dimension $(feat_nc+1) where the first $(feat_nc) dimensions is
+the representative feature of an instance and the last dimension
+is the proportion.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of list of numpy vectors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.pix2pixHD.get_edges">
+<code class="sig-prename descclassname">imaginaire.model_utils.pix2pixHD.</code><code class="sig-name descname">get_edges</code><span class="sig-paren">(</span><em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/pix2pixHD.html#get_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.pix2pixHD.get_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute edge maps for a given input instance map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>4D tensor</em>) – Input instance map.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output edge map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.model_utils.pix2pixHD.get_optimizer_with_params">
+<code class="sig-prename descclassname">imaginaire.model_utils.pix2pixHD.</code><code class="sig-name descname">get_optimizer_with_params</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">param_names_start_with=[]</em>, <em class="sig-param">param_names_include=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/model_utils/pix2pixHD.html#get_optimizer_with_params"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.model_utils.pix2pixHD.get_optimizer_with_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the optimizer object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global config.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>param_names_start_with</strong> (<em>list of strings</em>) – Params whose names
+start with any of the strings will be trained.</p></li>
+<li><p><strong>param_names_include</strong> (<em>list of strings</em>) – Params whose names include
+any of the strings will be trained.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.model_utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.model_utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.model_utils.first_order_motion.html" class="btn btn-neutral float-right" title="imaginaire.model_utils.first_order_motion package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.losses.html" class="btn btn-neutral float-left" title="imaginaire.losses package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+imaginaire.discriminators package
+=================================
+
+Submodules
+----------
+
+imaginaire.discriminators.dummy module
+--------------------------------------
+
+.. automodule:: imaginaire.discriminators.dummy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.fpse module
+-------------------------------------
+
+.. automodule:: imaginaire.discriminators.fpse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.fs\_vid2vid module
+--------------------------------------------
+
+.. automodule:: imaginaire.discriminators.fs_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.funit module
+--------------------------------------
+
+.. automodule:: imaginaire.discriminators.funit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.mlp\_multiclass module
+------------------------------------------------
+
+.. automodule:: imaginaire.discriminators.mlp_multiclass
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.multires\_patch module
+------------------------------------------------
+
+.. automodule:: imaginaire.discriminators.multires_patch
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.munit module
+--------------------------------------
+
+.. automodule:: imaginaire.discriminators.munit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.residual module
+-----------------------------------------
+
+.. automodule:: imaginaire.discriminators.residual
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.spade module
+--------------------------------------
+
+.. automodule:: imaginaire.discriminators.spade
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.discriminators.unit module
+-------------------------------------
+
+.. automodule:: imaginaire.discriminators.unit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.discriminators
+   :members:
+   :undoc-members:
+   :show-inheritance:

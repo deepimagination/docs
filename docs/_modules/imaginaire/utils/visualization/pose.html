@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.visualization.pose &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.utils.visualization.pose</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.utils.visualization.pose</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># Copyright (c) 2019, NVIDIA Corporation. All rights reserved.</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">from</span> <span class="nn">.common</span> <span class="kn">import</span> <span class="n">tensor2im</span><span class="p">,</span> <span class="n">tensor2label</span>
+<span class="kn">from</span> <span class="nn">.face</span> <span class="kn">import</span> <span class="n">draw_edge</span><span class="p">,</span> <span class="n">interp_points</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="n">extract_valid_pose_labels</span>
+
+
+<div class="viewcode-block" id="draw_openpose_npy"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.draw_openpose_npy">[docs]</a><span class="k">def</span> <span class="nf">draw_openpose_npy</span><span class="p">(</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span><span class="p">,</span> <span class="n">original_h</span><span class="p">,</span>
+                      <span class="n">original_w</span><span class="p">,</span> <span class="n">is_flipped</span><span class="p">,</span> <span class="n">cfgdata</span><span class="p">,</span> <span class="n">keypoints_npy</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Connect the OpenPose keypoints to edges and draw the pose map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        resize_h (int): Height the input image was resized to.</span>
+<span class="sd">        resize_w (int): Width the input image was resized to.</span>
+<span class="sd">        crop_h (int): Height the input image was cropped.</span>
+<span class="sd">        crop_w (int): Width the input image was cropped.</span>
+<span class="sd">        original_h (int): Original height of the input image.</span>
+<span class="sd">        original_w (int): Original width of the input image.</span>
+<span class="sd">        is_flipped (bool): Is the input image flipped.</span>
+<span class="sd">        cfgdata (obj): Data configuration.</span>
+<span class="sd">        keypoints_npy (dict): OpenPose keypoint dict.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (list of HxWxC numpy array): Drawn label map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pose_cfg</span> <span class="o">=</span> <span class="n">cfgdata</span><span class="o">.</span><span class="n">for_pose_dataset</span>
+    <span class="c1"># Whether to draw only the basic keypoints.</span>
+    <span class="n">basic_points_only</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;basic_points_only&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># Whether to remove the face labels to avoid overfitting.</span>
+    <span class="n">remove_face_labels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;remove_face_labels&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># Whether to randomly drop some keypoints to avoid overfitting.</span>
+    <span class="n">random_drop_prob</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;random_drop_prob&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Get the list of edges to draw.</span>
+    <span class="n">edge_lists</span> <span class="o">=</span> <span class="n">define_edge_lists</span><span class="p">(</span><span class="n">basic_points_only</span><span class="p">)</span>
+    <span class="n">op_key</span> <span class="o">=</span> <span class="n">cfgdata</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">input_type</span> <span class="ow">in</span> <span class="n">cfgdata</span><span class="o">.</span><span class="n">input_types</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">op_key</span> <span class="ow">in</span> <span class="n">input_type</span><span class="p">:</span>
+            <span class="n">nc</span> <span class="o">=</span> <span class="n">input_type</span><span class="p">[</span><span class="n">op_key</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+    <span class="k">if</span> <span class="n">crop_h</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span>
+
+    <span class="n">outputs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">keypoint_npy</span> <span class="ow">in</span> <span class="n">keypoints_npy</span><span class="p">:</span>
+        <span class="n">person_keypoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">keypoint_npy</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">3</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># Separate out the keypoint array to different parts.</span>
+        <span class="n">pose_pts</span> <span class="o">=</span> <span class="n">person_keypoints</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span>
+        <span class="n">face_pts</span> <span class="o">=</span> <span class="n">person_keypoints</span><span class="p">[</span><span class="mi">25</span><span class="p">:</span> <span class="p">(</span><span class="mi">25</span> <span class="o">+</span> <span class="mi">70</span><span class="p">)]</span>
+        <span class="n">hand_pts_l</span> <span class="o">=</span> <span class="n">person_keypoints</span><span class="p">[(</span><span class="mi">25</span> <span class="o">+</span> <span class="mi">70</span><span class="p">):</span> <span class="p">(</span><span class="mi">25</span> <span class="o">+</span> <span class="mi">70</span> <span class="o">+</span> <span class="mi">21</span><span class="p">)]</span>
+        <span class="n">hand_pts_r</span> <span class="o">=</span> <span class="n">person_keypoints</span><span class="p">[</span><span class="o">-</span><span class="mi">21</span><span class="p">:]</span>
+        <span class="n">all_pts</span> <span class="o">=</span> <span class="p">[</span><span class="n">pose_pts</span><span class="p">,</span> <span class="n">face_pts</span><span class="p">,</span> <span class="n">hand_pts_l</span><span class="p">,</span> <span class="n">hand_pts_r</span><span class="p">]</span>
+        <span class="c1"># Remove the keypoints with low confidence.</span>
+        <span class="n">all_pts</span> <span class="o">=</span> <span class="p">[</span><span class="n">extract_valid_keypoints</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">edge_lists</span><span class="p">)</span>
+                   <span class="k">for</span> <span class="n">pts</span> <span class="ow">in</span> <span class="n">all_pts</span><span class="p">]</span>
+
+        <span class="c1"># Connect the keypoints to form the label map.</span>
+        <span class="n">pose_img</span> <span class="o">=</span> <span class="n">connect_pose_keypoints</span><span class="p">(</span><span class="n">all_pts</span><span class="p">,</span> <span class="n">edge_lists</span><span class="p">,</span>
+                                          <span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">nc</span><span class="p">),</span>
+                                          <span class="n">basic_points_only</span><span class="p">,</span>
+                                          <span class="n">remove_face_labels</span><span class="p">,</span>
+                                          <span class="n">random_drop_prob</span><span class="p">)</span>
+        <span class="n">pose_img</span> <span class="o">=</span> <span class="n">pose_img</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
+        <span class="n">outputs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pose_img</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">outputs</span></div>
+
+
+<div class="viewcode-block" id="openpose_to_npy_largest_only"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.openpose_to_npy_largest_only">[docs]</a><span class="k">def</span> <span class="nf">openpose_to_npy_largest_only</span><span class="p">(</span><span class="n">inputs</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert OpenPose dicts to numpy arrays of keypoints. Only return the</span>
+<span class="sd">    largest/tallest person in each dict.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        inputs (list of dicts): List of OpenPose dicts.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (list of numpy arrays): Keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base_openpose_to_npy</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">return_largest_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="openpose_to_npy"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.openpose_to_npy">[docs]</a><span class="k">def</span> <span class="nf">openpose_to_npy</span><span class="p">(</span><span class="n">inputs</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Conver OpenPose dicts to numpy arrays of keypoints.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        inputs (list of dicts): List of OpenPose dicts.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (list of numpy arrays): Keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base_openpose_to_npy</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">return_largest_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="base_openpose_to_npy"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.base_openpose_to_npy">[docs]</a><span class="k">def</span> <span class="nf">base_openpose_to_npy</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">return_largest_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert OpenPose dicts to numpy arrays of keypoints.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        inputs (list of dicts): List of OpenPose dicts.</span>
+<span class="sd">        return_largest_only (bool): Whether to return only the largest person.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (list of numpy arrays): Keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">outputs_npy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="nb">input</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+        <span class="n">people_dict</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">]</span>
+        <span class="n">n_ppl</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">people_dict</span><span class="p">))</span>
+        <span class="n">output_npy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_ppl</span><span class="p">,</span> <span class="mi">25</span> <span class="o">+</span> <span class="mi">70</span> <span class="o">+</span> <span class="mi">21</span> <span class="o">+</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">y_len_max</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">person_dict</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">people_dict</span><span class="p">):</span>
+            <span class="c1"># Extract corresponding keypoints from the dict.</span>
+            <span class="n">pose_pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">person_dict</span><span class="p">[</span><span class="s2">&quot;pose_keypoints_2d&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="n">face_pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">person_dict</span><span class="p">[</span><span class="s2">&quot;face_keypoints_2d&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="n">hand_pts_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">person_dict</span><span class="p">[</span><span class="s2">&quot;hand_left_keypoints_2d&quot;</span><span class="p">]</span>
+                                  <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="n">hand_pts_r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">person_dict</span><span class="p">[</span><span class="s2">&quot;hand_right_keypoints_2d&quot;</span><span class="p">]</span>
+                                  <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">return_largest_only</span><span class="p">:</span>
+                <span class="c1"># Get the body length.</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">pose_pts</span><span class="p">[</span><span class="n">pose_pts</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="n">y_len</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">y</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">y_len</span> <span class="o">&gt;</span> <span class="n">y_len_max</span><span class="p">:</span>
+                    <span class="n">y_len_max</span> <span class="o">=</span> <span class="n">y_len</span>
+                    <span class="n">max_ind</span> <span class="o">=</span> <span class="n">i</span>
+
+            <span class="c1"># Concatenate all keypoint together.</span>
+            <span class="n">output_npy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">pose_pts</span><span class="p">,</span> <span class="n">face_pts</span><span class="p">,</span>
+                                       <span class="n">hand_pts_l</span><span class="p">,</span> <span class="n">hand_pts_r</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">return_largest_only</span><span class="p">:</span>
+            <span class="c1"># Only return the largest person in the dict.</span>
+            <span class="n">output_npy</span> <span class="o">=</span> <span class="n">output_npy</span><span class="p">[</span><span class="n">max_ind</span><span class="p">:</span> <span class="n">max_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">outputs_npy</span> <span class="o">+=</span> <span class="p">[</span><span class="n">output_npy</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">outputs_npy</span></div>
+
+
+<div class="viewcode-block" id="extract_valid_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.extract_valid_keypoints">[docs]</a><span class="k">def</span> <span class="nf">extract_valid_keypoints</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">edge_lists</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Use only the valid keypoints by looking at the detection confidences.</span>
+<span class="sd">    If the confidences for all keypoints in an edge are above threshold,</span>
+<span class="sd">    keep the keypoints. Otherwise, their coordinates will be set to zero.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pts (Px3 numpy array): Keypoint xy coordinates + confidence.</span>
+<span class="sd">        edge_lists (nested list of ints):  List of keypoint indices for edges.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (Px2 numpy array): Output keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pose_edge_list</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">hand_edge_list</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">face_list</span> <span class="o">=</span> <span class="n">edge_lists</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">thre</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">70</span> <span class="k">else</span> <span class="mf">0.01</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">70</span><span class="p">:</span>  <span class="c1"># ai_emoji</span>
+        <span class="k">for</span> <span class="n">edge_list</span> <span class="ow">in</span> <span class="n">face_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edge_list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">pts</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">thre</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                    <span class="n">output</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">21</span><span class="p">:</span>  <span class="c1"># hand</span>
+        <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">hand_edge_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">pts</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">thre</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                <span class="n">output</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># pose</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="p">(</span><span class="n">pts</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">thre</span><span class="p">)</span>
+        <span class="n">output</span><span class="p">[</span><span class="n">valid</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">valid</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="connect_pose_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.connect_pose_keypoints">[docs]</a><span class="k">def</span> <span class="nf">connect_pose_keypoints</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">edge_lists</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">basic_points_only</span><span class="p">,</span>
+                           <span class="n">remove_face_labels</span><span class="p">,</span> <span class="n">random_drop_prob</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Draw edges by connecting the keypoints onto the label map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pts (Px3 numpy array): Keypoint xy coordinates + confidence.</span>
+<span class="sd">        edge_lists (nested list of ints):  List of keypoint indices for edges.</span>
+<span class="sd">        size (tuple of int): Output size.</span>
+<span class="sd">        basic_points_only (bool): Whether to use only the basic keypoints.</span>
+<span class="sd">        remove_face_labels (bool): Whether to remove face labels.</span>
+<span class="sd">        random_drop_prob (float): Probability to randomly drop keypoints.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (HxWxC numpy array): Output label map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pose_pts</span><span class="p">,</span> <span class="n">face_pts</span><span class="p">,</span> <span class="n">hand_pts_l</span><span class="p">,</span> <span class="n">hand_pts_r</span> <span class="o">=</span> <span class="n">pts</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="n">body_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="c1"># If using one-hot, different parts of the body will be drawn to</span>
+    <span class="c1"># different channels.</span>
+    <span class="n">use_one_hot</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">3</span>
+    <span class="k">if</span> <span class="n">use_one_hot</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">27</span>
+    <span class="n">pose_edge_list</span><span class="p">,</span> <span class="n">pose_color_list</span><span class="p">,</span> <span class="n">hand_edge_list</span><span class="p">,</span> <span class="n">hand_color_list</span><span class="p">,</span> \
+        <span class="n">face_list</span> <span class="o">=</span> <span class="n">edge_lists</span>
+
+    <span class="c1"># Draw pose edges.</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pose_pts</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">pose_pts</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="n">bw</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">150</span><span class="p">)</span>  <span class="c1"># Stroke width.</span>
+    <span class="n">body_edges</span> <span class="o">=</span> <span class="n">draw_edges</span><span class="p">(</span><span class="n">body_edges</span><span class="p">,</span> <span class="n">pose_pts</span><span class="p">,</span> <span class="p">[</span><span class="n">pose_edge_list</span><span class="p">],</span> <span class="n">bw</span><span class="p">,</span>
+                            <span class="n">use_one_hot</span><span class="p">,</span> <span class="n">random_drop_prob</span><span class="p">,</span>
+                            <span class="n">colors</span><span class="o">=</span><span class="n">pose_color_list</span><span class="p">,</span> <span class="n">draw_end_points</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_points_only</span><span class="p">:</span>
+        <span class="c1"># Draw hand edges.</span>
+        <span class="n">bw</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">450</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">hand_pts</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="n">hand_pts_l</span><span class="p">,</span> <span class="n">hand_pts_r</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="n">use_one_hot</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">+</span> <span class="n">i</span>
+                <span class="n">body_edges</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">draw_edges</span><span class="p">(</span><span class="n">body_edges</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">k</span><span class="p">],</span> <span class="n">hand_pts</span><span class="p">,</span>
+                                                 <span class="p">[</span><span class="n">hand_edge_list</span><span class="p">],</span>
+                                                 <span class="n">bw</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">random_drop_prob</span><span class="p">,</span>
+                                                 <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">hand_pts</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">body_edges</span> <span class="o">=</span> <span class="n">draw_edges</span><span class="p">(</span><span class="n">body_edges</span><span class="p">,</span> <span class="n">hand_pts</span><span class="p">,</span> <span class="p">[</span><span class="n">hand_edge_list</span><span class="p">],</span>
+                                        <span class="n">bw</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">random_drop_prob</span><span class="p">,</span>
+                                        <span class="n">colors</span><span class="o">=</span><span class="n">hand_color_list</span><span class="p">)</span>
+        <span class="c1"># Draw face edges.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">remove_face_labels</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">use_one_hot</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="mi">26</span>
+                <span class="n">body_edges</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">draw_edges</span><span class="p">(</span><span class="n">body_edges</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">k</span><span class="p">],</span> <span class="n">face_pts</span><span class="p">,</span>
+                                                 <span class="n">face_list</span><span class="p">,</span> <span class="n">bw</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span>
+                                                 <span class="n">random_drop_prob</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">body_edges</span> <span class="o">=</span> <span class="n">draw_edges</span><span class="p">(</span><span class="n">body_edges</span><span class="p">,</span> <span class="n">face_pts</span><span class="p">,</span> <span class="n">face_list</span><span class="p">,</span> <span class="n">bw</span><span class="p">,</span>
+                                        <span class="kc">False</span><span class="p">,</span> <span class="n">random_drop_prob</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">body_edges</span></div>
+
+
+<div class="viewcode-block" id="draw_edges"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.draw_edges">[docs]</a><span class="k">def</span> <span class="nf">draw_edges</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">,</span> <span class="n">edges_list</span><span class="p">,</span> <span class="n">bw</span><span class="p">,</span> <span class="n">use_one_hot</span><span class="p">,</span>
+               <span class="n">random_drop_prob</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">edge_len</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">draw_end_points</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Draw all the edges in the edge list on the canvas.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        canvas (HxWxK numpy array): Canvas to draw.</span>
+<span class="sd">        keypoints (Px2 numpy array): Keypoints.</span>
+<span class="sd">        edge_list (nested list of ints):  List of keypoint indices for edges.</span>
+<span class="sd">        bw (int): Stroke width.</span>
+<span class="sd">        use_one_hot (bool): Use one-hot encoding or not.</span>
+<span class="sd">        random_drop_prob (float): Probability to randomly drop keypoints.</span>
+<span class="sd">        edge_len (int): Number of keypoints in an edge.</span>
+<span class="sd">        colors (tuple of int): Color to draw.</span>
+<span class="sd">        draw_end_points (bool): Whether to draw end points for edges.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (HxWxK numpy array): Output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">edge_list</span> <span class="ow">in</span> <span class="n">edges_list</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">edge</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">edge_list</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">edge</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">edge_len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">random_drop_prob</span><span class="p">:</span>
+                    <span class="n">sub_edge</span> <span class="o">=</span> <span class="n">edge</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span> <span class="o">+</span> <span class="n">edge_len</span><span class="p">]</span>
+                    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">sub_edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">sub_edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="mi">0</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>  <span class="c1"># Get rid of invalid keypoints.</span>
+                        <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span> <span class="o">=</span> <span class="n">interp_points</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">use_one_hot</span><span class="p">:</span>
+                            <span class="c1"># If using one-hot, draw to different channels of</span>
+                            <span class="c1"># the canvas.</span>
+                            <span class="n">draw_edge</span><span class="p">(</span><span class="n">canvas</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">k</span><span class="p">],</span> <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span><span class="p">,</span>
+                                      <span class="n">bw</span><span class="o">=</span><span class="n">bw</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+                                      <span class="n">draw_end_points</span><span class="o">=</span><span class="n">draw_end_points</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">colors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+                                <span class="k">else</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+                            <span class="n">draw_edge</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span><span class="p">,</span>
+                                      <span class="n">bw</span><span class="o">=</span><span class="n">bw</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+                                      <span class="n">draw_end_points</span><span class="o">=</span><span class="n">draw_end_points</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">canvas</span></div>
+
+
+<div class="viewcode-block" id="define_edge_lists"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.define_edge_lists">[docs]</a><span class="k">def</span> <span class="nf">define_edge_lists</span><span class="p">(</span><span class="n">basic_points_only</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Define the list of keypoints that should be connected to form the edges.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        basic_points_only (bool): Whether to use only the basic keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Pose edges and corresponding colors.</span>
+    <span class="n">pose_edge_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>  <span class="c1"># head</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>                        <span class="c1"># body</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>                <span class="c1"># right arm</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>                <span class="c1"># left arm</span>
+        <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>             <span class="c1"># right leg</span>
+        <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>            <span class="c1"># left leg</span>
+    <span class="p">]</span>
+    <span class="n">pose_color_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">102</span><span class="p">],</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">51</span><span class="p">],</span> <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">153</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">51</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">102</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span>
+    <span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_points_only</span><span class="p">:</span>
+        <span class="n">pose_edge_list</span> <span class="o">+=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>  <span class="c1"># right foot</span>
+            <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>   <span class="c1"># left foot</span>
+        <span class="p">]</span>
+        <span class="n">pose_color_list</span> <span class="o">+=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">153</span><span class="p">]</span>
+        <span class="p">]</span>
+
+    <span class="c1"># Hand edges and corresponding colors.</span>
+    <span class="n">hand_edge_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+    <span class="p">]</span>
+    <span class="n">hand_color_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">204</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">163</span><span class="p">,</span> <span class="mi">204</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">204</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">204</span><span class="p">],</span> <span class="p">[</span><span class="mi">163</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">204</span><span class="p">]</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Face edges.</span>
+    <span class="n">face_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">)],</span>   <span class="c1"># face contour</span>
+        <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">22</span><span class="p">)],</span>  <span class="c1"># left eyebrow</span>
+        <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">27</span><span class="p">)],</span>  <span class="c1"># right eyebrow</span>
+        <span class="p">[[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span> <span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">28</span><span class="p">]],</span>   <span class="c1"># nose</span>
+        <span class="p">[[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">39</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">36</span><span class="p">]],</span>  <span class="c1"># left eye</span>
+        <span class="p">[[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">42</span><span class="p">]],</span>  <span class="c1"># right eye</span>
+        <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">48</span><span class="p">]],</span>  <span class="c1"># mouth</span>
+    <span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">pose_edge_list</span><span class="p">,</span> <span class="n">pose_color_list</span><span class="p">,</span> <span class="n">hand_edge_list</span><span class="p">,</span> <span class="n">hand_color_list</span><span class="p">,</span> \
+        <span class="n">face_list</span></div>
+
+
+<div class="viewcode-block" id="tensor2pose"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.pose.tensor2pose">[docs]</a><span class="k">def</span> <span class="nf">tensor2pose</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">label_tensor</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert output tensor to a numpy pose map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        label_tensor (3D/4D/5D tensor): Label tensor.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (HxWx3 numpy array or list of numpy arrays): Pose map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">label_tensor</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">label_tensor</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">tensor2pose</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">label_tensor</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+                <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">label_tensor</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">))]</span>
+
+    <span class="c1"># If adding additional discriminators, draw the bbox for the regions</span>
+    <span class="c1"># (e.g. faces) too.</span>
+    <span class="n">add_dis_cfg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis</span><span class="p">,</span> <span class="s1">&#39;additional_discriminators&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">add_dis_cfg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">crop_coords</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">add_dis_cfg</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">add_dis_cfg</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">vis</span>
+            <span class="n">file</span><span class="p">,</span> <span class="n">crop_func</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="n">crop_func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">crop_func</span><span class="p">)</span>
+            <span class="n">crop_coord</span> <span class="o">=</span> <span class="n">crop_func</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">label_tensor</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">crop_coord</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">crop_coord</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+                    <span class="n">crop_coords</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">crop_coord</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">crop_coords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">crop_coord</span><span class="p">)</span>
+
+    <span class="n">pose_cfg</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">for_pose_dataset</span>
+    <span class="n">pose_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;pose_type&#39;</span><span class="p">,</span> <span class="s1">&#39;both&#39;</span><span class="p">)</span>
+    <span class="n">remove_face_labels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;remove_face_labels&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">label_tensor</span> <span class="o">=</span> <span class="n">extract_valid_pose_labels</span><span class="p">(</span><span class="n">label_tensor</span><span class="p">,</span> <span class="n">pose_type</span><span class="p">,</span>
+                                             <span class="n">remove_face_labels</span><span class="p">)</span>
+
+    <span class="c1"># If using both DensePose and OpenPose, overlay one image onto the other</span>
+    <span class="c1"># to get the visualization map.</span>
+    <span class="n">dp_key</span> <span class="o">=</span> <span class="s1">&#39;pose_maps-densepose&#39;</span>
+    <span class="n">op_key</span> <span class="o">=</span> <span class="s1">&#39;poses-openpose&#39;</span>
+    <span class="n">use_densepose</span> <span class="o">=</span> <span class="n">use_openpose</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">input_type</span> <span class="ow">in</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">input_types</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dp_key</span> <span class="ow">in</span> <span class="n">input_type</span><span class="p">:</span>
+            <span class="n">dp_ch</span> <span class="o">=</span> <span class="n">input_type</span><span class="p">[</span><span class="n">dp_key</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+            <span class="n">use_densepose</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">op_key</span> <span class="ow">in</span> <span class="n">input_type</span><span class="p">:</span>
+            <span class="n">op_ch</span> <span class="o">=</span> <span class="n">input_type</span><span class="p">[</span><span class="n">op_key</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+            <span class="n">use_openpose</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">use_densepose</span><span class="p">:</span>
+        <span class="n">label_img</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">label_tensor</span><span class="p">[:</span><span class="n">dp_ch</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">use_openpose</span><span class="p">:</span>
+        <span class="n">openpose</span> <span class="o">=</span> <span class="n">label_tensor</span><span class="p">[</span><span class="o">-</span><span class="n">op_ch</span><span class="p">:]</span>
+        <span class="n">openpose</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">openpose</span><span class="p">)</span> <span class="k">if</span> <span class="n">op_ch</span> <span class="o">==</span> <span class="mi">3</span> <span class="k">else</span> \
+            <span class="n">tensor2label</span><span class="p">(</span><span class="n">openpose</span><span class="p">,</span> <span class="n">op_ch</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">use_densepose</span><span class="p">:</span>
+            <span class="n">label_img</span><span class="p">[</span><span class="n">openpose</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">openpose</span><span class="p">[</span><span class="n">openpose</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">label_img</span> <span class="o">=</span> <span class="n">openpose</span>
+
+    <span class="c1"># Draw the bbox for the regions for the additional discriminator.</span>
+    <span class="k">if</span> <span class="n">add_dis_cfg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">crop_coord</span> <span class="ow">in</span> <span class="n">crop_coords</span><span class="p">:</span>
+            <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">crop_coord</span>
+            <span class="n">label_img</span><span class="p">[</span><span class="n">ys</span><span class="p">,</span> <span class="n">xs</span><span class="p">:</span><span class="n">xe</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">label_img</span><span class="p">[</span><span class="n">ye</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xs</span><span class="p">:</span><span class="n">xe</span><span class="p">,</span> <span class="p">:]</span> \
+                <span class="o">=</span> <span class="n">label_img</span><span class="p">[</span><span class="n">ys</span><span class="p">:</span><span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">label_img</span><span class="p">[</span><span class="n">ys</span><span class="p">:</span><span class="n">ye</span><span class="p">,</span> <span class="n">xe</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">255</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">label_img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">label_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">label_img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">label_img</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

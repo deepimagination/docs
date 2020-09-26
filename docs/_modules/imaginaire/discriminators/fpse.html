@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.discriminators.fpse &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.discriminators.fpse</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.discriminators.fpse</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.layers</span> <span class="kn">import</span> <span class="n">Conv2dBlock</span>
+
+
+<div class="viewcode-block" id="FPSEDiscriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fpse.FPSEDiscriminator">[docs]</a><span class="k">class</span> <span class="nc">FPSEDiscriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;# Feature-Pyramid Semantics Embedding Discriminator. This is a copy</span>
+<span class="sd">    of the discriminator in https://arxiv.org/pdf/1910.06809.pdf</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_input_channels</span><span class="p">,</span>
+                 <span class="n">num_labels</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="p">,</span>
+                 <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">kernel_size</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">nonlinearity</span> <span class="o">=</span> <span class="s1">&#39;leakyrelu&#39;</span>
+        <span class="n">stride1_conv2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                              <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                              <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                              <span class="c1"># inplace_nonlinearity=True,</span>
+                              <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">)</span>
+        <span class="n">down_conv2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                              <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                              <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                              <span class="c1"># inplace_nonlinearity=True,</span>
+                              <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">)</span>
+        <span class="n">latent_conv2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                              <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                              <span class="c1"># inplace_nonlinearity=True,</span>
+                              <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">)</span>
+        <span class="c1"># bottom-up pathway</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc1</span> <span class="o">=</span> <span class="n">down_conv2d_block</span><span class="p">(</span><span class="n">num_input_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc2</span> <span class="o">=</span> <span class="n">down_conv2d_block</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc3</span> <span class="o">=</span> <span class="n">down_conv2d_block</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc4</span> <span class="o">=</span> <span class="n">down_conv2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc5</span> <span class="o">=</span> <span class="n">down_conv2d_block</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+
+        <span class="c1"># top-down pathway</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lat2</span> <span class="o">=</span> <span class="n">latent_conv2d_block</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lat3</span> <span class="o">=</span> <span class="n">latent_conv2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lat4</span> <span class="o">=</span> <span class="n">latent_conv2d_block</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lat5</span> <span class="o">=</span> <span class="n">latent_conv2d_block</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+
+        <span class="c1"># upsampling</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upsample2x</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Upsample</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                                      <span class="n">align_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># final layers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final2</span> <span class="o">=</span> <span class="n">stride1_conv2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final3</span> <span class="o">=</span> <span class="n">stride1_conv2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final4</span> <span class="o">=</span> <span class="n">stride1_conv2d_block</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">)</span>
+
+        <span class="c1"># true/false prediction and semantic alignment prediction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seg</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_labels</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FPSEDiscriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fpse.FPSEDiscriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">segmaps</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            images: image tensors.</span>
+<span class="sd">            segmaps: segmentation map tensors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># bottom-up pathway</span>
+        <span class="n">feat11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc1</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">feat12</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc2</span><span class="p">(</span><span class="n">feat11</span><span class="p">)</span>
+        <span class="n">feat13</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc3</span><span class="p">(</span><span class="n">feat12</span><span class="p">)</span>
+        <span class="n">feat14</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc4</span><span class="p">(</span><span class="n">feat13</span><span class="p">)</span>
+        <span class="n">feat15</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc5</span><span class="p">(</span><span class="n">feat14</span><span class="p">)</span>
+        <span class="c1"># top-down pathway and lateral connections</span>
+        <span class="n">feat25</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat5</span><span class="p">(</span><span class="n">feat15</span><span class="p">)</span>
+        <span class="n">feat24</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample2x</span><span class="p">(</span><span class="n">feat25</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat4</span><span class="p">(</span><span class="n">feat14</span><span class="p">)</span>
+        <span class="n">feat23</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample2x</span><span class="p">(</span><span class="n">feat24</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat3</span><span class="p">(</span><span class="n">feat13</span><span class="p">)</span>
+        <span class="n">feat22</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample2x</span><span class="p">(</span><span class="n">feat23</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat2</span><span class="p">(</span><span class="n">feat12</span><span class="p">)</span>
+        <span class="c1"># final prediction layers</span>
+        <span class="n">feat32</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">final2</span><span class="p">(</span><span class="n">feat22</span><span class="p">)</span>
+        <span class="n">feat33</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">final3</span><span class="p">(</span><span class="n">feat23</span><span class="p">)</span>
+        <span class="n">feat34</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">final4</span><span class="p">(</span><span class="n">feat24</span><span class="p">)</span>
+        <span class="c1"># Patch-based True/False prediction</span>
+        <span class="n">pred2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">feat32</span><span class="p">)</span>
+        <span class="n">pred3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">feat33</span><span class="p">)</span>
+        <span class="n">pred4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">feat34</span><span class="p">)</span>
+        <span class="n">seg2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="p">(</span><span class="n">feat32</span><span class="p">)</span>
+        <span class="n">seg3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="p">(</span><span class="n">feat33</span><span class="p">)</span>
+        <span class="n">seg4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seg</span><span class="p">(</span><span class="n">feat34</span><span class="p">)</span>
+
+        <span class="c1"># # segmentation map embedding</span>
+        <span class="n">segembs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">segmaps</span><span class="p">)</span>
+        <span class="n">segembs</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">avg_pool2d</span><span class="p">(</span><span class="n">segembs</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">segembs2</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">avg_pool2d</span><span class="p">(</span><span class="n">segembs</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">segembs3</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">avg_pool2d</span><span class="p">(</span><span class="n">segembs2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">segembs4</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">avg_pool2d</span><span class="p">(</span><span class="n">segembs3</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># semantics embedding discriminator score</span>
+        <span class="n">pred2</span> <span class="o">+=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">segembs2</span><span class="p">,</span> <span class="n">seg2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">pred3</span> <span class="o">+=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">segembs3</span><span class="p">,</span> <span class="n">seg3</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">pred4</span> <span class="o">+=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">segembs4</span><span class="p">,</span> <span class="n">seg4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># concat results from multiple resolutions</span>
+        <span class="c1"># results = [pred2, pred3, pred4]</span>
+
+        <span class="k">return</span> <span class="n">pred2</span><span class="p">,</span> <span class="n">pred3</span><span class="p">,</span> <span class="n">pred4</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

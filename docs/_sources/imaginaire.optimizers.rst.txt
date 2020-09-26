@@ -1,0 +1,30 @@
+imaginaire.optimizers package
+=============================
+
+Submodules
+----------
+
+imaginaire.optimizers.fromage module
+------------------------------------
+
+.. automodule:: imaginaire.optimizers.fromage
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.optimizers.madam module
+----------------------------------
+
+.. automodule:: imaginaire.optimizers.madam
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.optimizers
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+imaginaire_release
+==================
+
+.. toctree::
+   :maxdepth: 4
+
+   evaluate
+   imaginaire
+   inference
+   train

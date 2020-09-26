@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.config &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.config</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="sd">&quot;&quot;&quot;Config utilities for yml file.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+
+
+<div class="viewcode-block" id="AttrDict"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.AttrDict">[docs]</a><span class="k">class</span> <span class="nc">AttrDict</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dict as attribute trick.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AttrDict</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">AttrDict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="AttrDict.yaml"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.AttrDict.yaml">[docs]</a>    <span class="k">def</span> <span class="nf">yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Convert object to yaml dict and return.&quot;&quot;&quot;</span>
+        <span class="n">yaml_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">AttrDict</span><span class="p">):</span>
+                <span class="n">yaml_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">yaml</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">AttrDict</span><span class="p">):</span>
+                    <span class="n">new_l</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+                        <span class="n">new_l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">yaml</span><span class="p">())</span>
+                    <span class="n">yaml_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_l</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">yaml_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">yaml_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="n">yaml_dict</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print all variables.&quot;&quot;&quot;</span>
+        <span class="n">ret_str</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">AttrDict</span><span class="p">):</span>
+                <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                <span class="n">child_ret_str</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">child_ret_str</span><span class="p">:</span>
+                    <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;    &#39;</span> <span class="o">+</span> <span class="n">item</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">AttrDict</span><span class="p">):</span>
+                    <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+                        <span class="c1"># Treat as AttrDict above.</span>
+                        <span class="n">child_ret_str</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">child_ret_str</span><span class="p">:</span>
+                            <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;    &#39;</span> <span class="o">+</span> <span class="n">item</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret_str</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ret_str</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.Config">[docs]</a><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">AttrDict</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Configuration class. This should include every human specifiable</span>
+<span class="sd">    hyperparameter values for your training.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Config</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># Set default parameters.</span>
+        <span class="c1"># Logging.</span>
+        <span class="n">large_number</span> <span class="o">=</span> <span class="mi">1000000000</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot_save_iter</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot_save_epoch</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot_save_start_iter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snapshot_save_start_epoch</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_save_iter</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_display_iter</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_epoch</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_iter</span> <span class="o">=</span> <span class="n">large_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logging_iter</span> <span class="o">=</span> <span class="mi">100</span>
+
+        <span class="c1"># Trainer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trainer</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span>
+            <span class="n">model_average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">model_average_beta</span><span class="o">=</span><span class="mf">0.9999</span><span class="p">,</span>
+            <span class="n">model_average_start_iteration</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="n">model_average_batch_norm_estimation_iteration</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+            <span class="n">model_average_remove_sn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">image_to_tensorboard</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">hparam_to_tensorboard</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">distributed_data_parallel</span><span class="o">=</span><span class="s1">&#39;pytorch&#39;</span><span class="p">,</span>
+            <span class="n">delay_allreduce</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">gan_relativistic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">gen_step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">dis_step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Networks.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;imaginaire.generators.dummy&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;imaginaire.discriminators.dummy&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Optimizers.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_opt</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+                                <span class="n">fused_opt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                <span class="n">lr</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span>
+                                <span class="n">adam_beta1</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                                <span class="n">adam_beta2</span><span class="o">=</span><span class="mf">0.999</span><span class="p">,</span>
+                                <span class="n">eps</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span>
+                                <span class="n">lr_policy</span><span class="o">=</span><span class="n">AttrDict</span><span class="p">(</span><span class="n">iteration_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                   <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span>
+                                                   <span class="n">step_size</span><span class="o">=</span><span class="n">large_number</span><span class="p">,</span>
+                                                   <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_opt</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+                                <span class="n">fused_opt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                <span class="n">lr</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span>
+                                <span class="n">adam_beta1</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                                <span class="n">adam_beta2</span><span class="o">=</span><span class="mf">0.999</span><span class="p">,</span>
+                                <span class="n">eps</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span>
+                                <span class="n">lr_policy</span><span class="o">=</span><span class="n">AttrDict</span><span class="p">(</span><span class="n">iteration_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                   <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span>
+                                                   <span class="n">step_size</span><span class="o">=</span><span class="n">large_number</span><span class="p">,</span>
+                                                   <span class="n">gamma</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># Data.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;dummy&#39;</span><span class="p">,</span>
+                             <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;imaginaire.datasets.images&#39;</span><span class="p">,</span>
+                             <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_data</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;dummy&#39;</span><span class="p">,</span>
+                                  <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;imaginaire.datasets.images&#39;</span><span class="p">,</span>
+                                  <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                  <span class="n">test</span><span class="o">=</span><span class="n">AttrDict</span><span class="p">(</span><span class="n">is_lmdb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                                <span class="n">roots</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                                                <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+
+<span class="c1"># Cudnn.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cudnn</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="n">deterministic</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                              <span class="n">benchmark</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Others.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pretrained_weight</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inference_args</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">()</span>
+
+        <span class="c1"># Update with given configurations.</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="s1">&#39;File </span><span class="si">{}</span><span class="s1"> not exist.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">loader</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">SafeLoader</span>
+        <span class="n">loader</span><span class="o">.</span><span class="n">add_implicit_resolver</span><span class="p">(</span>
+            <span class="sa">u</span><span class="s1">&#39;tag:yaml.org,2002:float&#39;</span><span class="p">,</span>
+            <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&#39;&#39;^(?:</span>
+<span class="s1">             [-+]?(?:[0-9][0-9_]*)</span><span class="se">\\</span><span class="s1">.[0-9_]*(?:[eE][-+]?[0-9]+)?</span>
+<span class="s1">            |[-+]?(?:[0-9][0-9_]*)(?:[eE][-+]?[0-9]+)</span>
+<span class="s1">            |</span><span class="se">\\</span><span class="s1">.[0-9_]+(?:[eE][-+][0-9]+)?</span>
+<span class="s1">            |[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+</span><span class="se">\\</span><span class="s1">.[0-9_]*</span>
+<span class="s1">            |[-+]?</span><span class="se">\\</span><span class="s1">.(?:inf|Inf|INF)</span>
+<span class="s1">            |</span><span class="se">\\</span><span class="s1">.(?:nan|NaN|NAN))$&#39;&#39;&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">X</span><span class="p">),</span>
+            <span class="nb">list</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;-+0123456789.&#39;</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">cfg_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">loader</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">EnvironmentError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Please check the file with name of &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">recursive_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg_dict</span><span class="p">)</span>
+
+        <span class="c1"># Put common opts in both gen and dis.</span>
+        <span class="k">if</span> <span class="s1">&#39;common&#39;</span> <span class="ow">in</span> <span class="n">cfg_dict</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">common</span> <span class="o">=</span> <span class="n">AttrDict</span><span class="p">(</span><span class="o">**</span><span class="n">cfg_dict</span><span class="p">[</span><span class="s1">&#39;common&#39;</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">common</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">common</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dis</span><span class="o">.</span><span class="n">common</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">common</span>
+
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; imaginaire config &#39;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">())</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="rsetattr"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.rsetattr">[docs]</a><span class="k">def</span> <span class="nf">rsetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Recursively find object and set value&quot;&quot;&quot;</span>
+    <span class="n">pre</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">post</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">setattr</span><span class="p">(</span><span class="n">rgetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">pre</span><span class="p">)</span> <span class="k">if</span> <span class="n">pre</span> <span class="k">else</span> <span class="n">obj</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="rgetattr"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.rgetattr">[docs]</a><span class="k">def</span> <span class="nf">rgetattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Recursively find object and return value&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get attribute.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">_getattr</span><span class="p">,</span> <span class="p">[</span><span class="n">obj</span><span class="p">]</span> <span class="o">+</span> <span class="n">attr</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="recursive_update"><a class="viewcode-back" href="../../imaginaire.html#imaginaire.config.recursive_update">[docs]</a><span class="k">def</span> <span class="nf">recursive_update</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Recursively update AttrDict d with AttrDict u&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">d</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">recursive_update</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">AttrDict</span><span class="p">({})),</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">d</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">AttrDict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">d</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">d</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

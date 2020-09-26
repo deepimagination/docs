@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.datasets.images &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.datasets.images</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.datasets.images</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.datasets.base</span> <span class="kn">import</span> <span class="n">BaseDataset</span>
+
+
+<div class="viewcode-block" id="Dataset"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.images.Dataset">[docs]</a><span class="k">class</span> <span class="nc">Dataset</span><span class="p">(</span><span class="n">BaseDataset</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Image dataset for use in class conditional GAN.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (Config): Loaded config object.</span>
+<span class="sd">        is_inference (bool): In train or inference mode?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Dataset</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">,</span> <span class="n">is_test</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_classes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_name_to_idx</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_class_idx</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Dataset.set_sample_class_idx"><a class="viewcode-back" href="../../../imaginaire.datasets.html#imaginaire.datasets.images.Dataset.set_sample_class_idx">[docs]</a>    <span class="k">def</span> <span class="nf">set_sample_class_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_idx</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set sample class idx. This is not used in this class...</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            class_idx (int): Which class idx to sample from.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_class_idx</span> <span class="o">=</span> <span class="n">class_idx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_length</span> <span class="o">=</span> \
+            <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">lmdb_keys</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">lmdb_keys</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span></div>
+
+    <span class="k">def</span> <span class="nf">_create_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates mapping from idx to key in LMDB.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - self.mapping (dict): Dict with data type as key mapping idx to</span>
+<span class="sd">                LMDB key.</span>
+<span class="sd">              - self.epoch_length (int): Number of samples in an epoch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">idx_to_key</span><span class="p">,</span> <span class="n">class_names</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">lmdb_idx</span><span class="p">,</span> <span class="n">sequence_list</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence_lists</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">data_type_sequence_list</span> <span class="ow">in</span> <span class="n">sequence_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">class_names</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">idx_to_key</span><span class="p">:</span>
+                    <span class="n">idx_to_key</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">sequence_name</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">data_type_sequence_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">class_name</span> <span class="o">=</span> <span class="n">sequence_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                        <span class="n">idx_to_key</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                            <span class="s1">&#39;lmdb_root&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmdb_roots</span><span class="p">[</span><span class="n">lmdb_idx</span><span class="p">],</span>
+                            <span class="s1">&#39;lmdb_idx&#39;</span><span class="p">:</span> <span class="n">lmdb_idx</span><span class="p">,</span>
+                            <span class="s1">&#39;sequence_name&#39;</span><span class="p">:</span> <span class="n">sequence_name</span><span class="p">,</span>
+                            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span>
+                            <span class="s1">&#39;class_name&#39;</span><span class="p">:</span> <span class="n">class_name</span>
+                        <span class="p">})</span>
+                    <span class="n">class_names</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">class_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span> <span class="o">=</span> <span class="n">idx_to_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">lmdb_keys</span><span class="p">)</span>
+                                 <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">lmdb_keys</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+
+        <span class="c1"># Create mapping from class name to class idx.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_name_to_idx</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">class_names_data_type</span> <span class="ow">in</span> <span class="n">class_names</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">class_name_to_idx</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">class_names_data_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">class_names_data_type</span><span class="p">)))</span>
+            <span class="k">for</span> <span class="n">class_idx</span><span class="p">,</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">class_names_data_type</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">class_name_to_idx</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">class_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_idx</span>
+
+        <span class="c1"># Add class idx to mapping.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="n">data_type</span><span class="p">]:</span>
+                <span class="n">key</span><span class="p">[</span><span class="s1">&#39;class_idx&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">class_name_to_idx</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">key</span><span class="p">[</span><span class="s1">&#39;class_name&#39;</span><span class="p">]]</span>
+
+        <span class="c1"># Create a mapping from index to lmdb key for each class.</span>
+        <span class="n">idx_to_key_class</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">:</span>
+            <span class="n">idx_to_key_class</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">class_idx</span><span class="p">,</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">data_type</span><span class="p">]):</span>
+                <span class="n">idx_to_key_class</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">class_idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="n">data_type</span><span class="p">]:</span>
+                <span class="n">idx_to_key_class</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">key</span><span class="p">[</span><span class="s1">&#39;class_idx&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapping_class</span> <span class="o">=</span> <span class="n">idx_to_key_class</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch_length</span>
+
+    <span class="k">def</span> <span class="nf">_sample_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Gets files to load for this sample.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            index (int): Index in [0, len(dataset)].</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            keys (dict): Each key of this dict is a data type.</span>
+<span class="sd">              - lmdb_key (dict):</span>
+<span class="sd">                  - lmdb_idx (int): Chosen LMDB dataset root.</span>
+<span class="sd">                  - sequence_name (str): Chosen sequence in chosen dataset.</span>
+<span class="sd">                  - filename (str): Chosen filename in chosen sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">keys</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>  <span class="c1"># evaluation mode</span>
+            <span class="n">lmdb_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+            <span class="n">keys</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lmdb_keys</span><span class="p">[</span><span class="n">index</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">lmdb_keys</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lmdb_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+            <span class="n">keys</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">lmdb_keys</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">keys</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Gets selected files.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            index (int): Index into dataset.</span>
+<span class="sd">            concat (bool): Concatenate all items in labels?</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            data (dict): Dict with all chosen data_types.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Select a sample from the available data.</span>
+        <span class="n">keys_per_data_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_keys</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+
+        <span class="c1"># Get class idx into a list.</span>
+        <span class="n">class_idxs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">keys_per_data_type</span><span class="p">:</span>
+            <span class="n">class_idxs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">keys_per_data_type</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="s1">&#39;class_idx&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Get keys and lmdbs.</span>
+        <span class="n">keys</span><span class="p">,</span> <span class="n">lmdbs</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_data_types</span><span class="p">:</span>
+            <span class="c1"># Unpack keys.</span>
+            <span class="n">lmdb_idx</span> <span class="o">=</span> <span class="n">keys_per_data_type</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="s1">&#39;lmdb_idx&#39;</span><span class="p">]</span>
+            <span class="n">sequence_name</span> <span class="o">=</span> <span class="n">keys_per_data_type</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="s1">&#39;sequence_name&#39;</span><span class="p">]</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">keys_per_data_type</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span>
+            <span class="n">keys</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">/</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sequence_name</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+            <span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">lmdb_idx</span><span class="p">]</span>
+
+        <span class="c1"># Load all data for this index.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_from_dataset</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">lmdbs</span><span class="p">)</span>
+
+        <span class="c1"># Apply ops pre augmentation.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_ops</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pre_aug_ops</span><span class="p">)</span>
+
+        <span class="c1"># Do augmentations for images.</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">is_flipped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">perform_augmentation</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Apply ops post augmentation.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_ops</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_aug_ops</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_ops</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_data_post_aug_ops</span><span class="p">,</span> <span class="n">full_data</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Convert images to tensor.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_tensor</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Remove any extra dimensions.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Package output.</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;is_flipped&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">is_flipped</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">keys_per_data_type</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_idxs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

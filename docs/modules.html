@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire_release &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="evaluate module" href="evaluate.html" />
+    <link rel="prev" title="Welcome to Imaginaire’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>imaginaire_release</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-release">
+<h1>imaginaire_release<a class="headerlink" href="#imaginaire-release" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.base">imaginaire.datasets.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.folder">imaginaire.datasets.folder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.images">imaginaire.datasets.images module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.lmdb">imaginaire.datasets.lmdb module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.paired_few_shot_videos">imaginaire.datasets.paired_few_shot_videos module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.paired_few_shot_videos_native">imaginaire.datasets.paired_few_shot_videos_native module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.paired_images">imaginaire.datasets.paired_images module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.paired_videos">imaginaire.datasets.paired_videos module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.unpaired_few_shot_images">imaginaire.datasets.unpaired_few_shot_images module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets.unpaired_images">imaginaire.datasets.unpaired_images module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html#module-imaginaire.datasets">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.dummy">imaginaire.discriminators.dummy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.fpse">imaginaire.discriminators.fpse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.fs_vid2vid">imaginaire.discriminators.fs_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.funit">imaginaire.discriminators.funit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.mlp_multiclass">imaginaire.discriminators.mlp_multiclass module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.multires_patch">imaginaire.discriminators.multires_patch module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.munit">imaginaire.discriminators.munit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.residual">imaginaire.discriminators.residual module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.spade">imaginaire.discriminators.spade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators.unit">imaginaire.discriminators.unit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html#module-imaginaire.discriminators">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#module-imaginaire.evaluation.common">imaginaire.evaluation.common module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#module-imaginaire.evaluation.fid">imaginaire.evaluation.fid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#module-imaginaire.evaluation.kid">imaginaire.evaluation.kid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#module-imaginaire.evaluation.prdc">imaginaire.evaluation.prdc module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html#module-imaginaire.evaluation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.coco_funit">imaginaire.generators.coco_funit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.dummy">imaginaire.generators.dummy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.fs_vid2vid">imaginaire.generators.fs_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.funit">imaginaire.generators.funit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.munit">imaginaire.generators.munit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.pix2pixHD">imaginaire.generators.pix2pixHD module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.spade">imaginaire.generators.spade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.unit">imaginaire.generators.unit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.vid2vid">imaginaire.generators.vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators.wc_vid2vid">imaginaire.generators.wc_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html#module-imaginaire.generators">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.activation_norm">imaginaire.layers.activation_norm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.conv">imaginaire.layers.conv module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.misc">imaginaire.layers.misc module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.non_local">imaginaire.layers.non_local module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.nonlinearity">imaginaire.layers.nonlinearity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.residual">imaginaire.layers.residual module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers.weight_norm">imaginaire.layers.weight_norm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html#module-imaginaire.layers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses.feature_matching">imaginaire.losses.feature_matching module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses.flow">imaginaire.losses.flow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses.gan">imaginaire.losses.gan module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses.kl">imaginaire.losses.kl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses.perceptual">imaginaire.losses.perceptual module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html#module-imaginaire.losses">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html#module-imaginaire.model_utils.fs_vid2vid">imaginaire.model_utils.fs_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html#module-imaginaire.model_utils.pix2pixHD">imaginaire.model_utils.pix2pixHD module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html#module-imaginaire.model_utils">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html#module-imaginaire.optimizers.fromage">imaginaire.optimizers.fromage module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html#module-imaginaire.optimizers.madam">imaginaire.optimizers.madam module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html#module-imaginaire.optimizers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.base">imaginaire.trainers.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.fs_vid2vid">imaginaire.trainers.fs_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.funit">imaginaire.trainers.funit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.munit">imaginaire.trainers.munit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.pix2pixHD">imaginaire.trainers.pix2pixHD module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.spade">imaginaire.trainers.spade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.unit">imaginaire.trainers.unit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.vid2vid">imaginaire.trainers.vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers.wc_vid2vid">imaginaire.trainers.wc_vid2vid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html#module-imaginaire.trainers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.cudnn">imaginaire.utils.cudnn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.data">imaginaire.utils.data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.dataset">imaginaire.utils.dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.distributed">imaginaire.utils.distributed module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.gpu_affinity">imaginaire.utils.gpu_affinity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.init_weight">imaginaire.utils.init_weight module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.io">imaginaire.utils.io module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.lmdb">imaginaire.utils.lmdb module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.logging">imaginaire.utils.logging module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.meters">imaginaire.utils.meters module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.misc">imaginaire.utils.misc module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.model_average">imaginaire.utils.model_average module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.path">imaginaire.utils.path module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils.trainer">imaginaire.utils.trainer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html#module-imaginaire.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="evaluate.html" class="btn btn-neutral float-right" title="evaluate module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Imaginaire’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

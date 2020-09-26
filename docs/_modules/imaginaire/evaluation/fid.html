@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.evaluation.fid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.evaluation.fid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.evaluation.fid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.evaluation.common</span> <span class="kn">import</span> <span class="n">get_activations</span><span class="p">,</span> <span class="n">get_video_activations</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">is_master</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+
+
+<div class="viewcode-block" id="compute_fid"><a class="viewcode-back" href="../../../imaginaire.evaluation.html#imaginaire.evaluation.fid.compute_fid">[docs]</a><span class="k">def</span> <span class="nf">compute_fid</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span>
+                <span class="n">key_real</span><span class="o">=</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="n">key_fake</span><span class="o">=</span><span class="s1">&#39;fake_images&#39;</span><span class="p">,</span>
+                <span class="n">sample_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">is_video</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute the fid score.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fid_path (str): Location for the numpy file to store or to load the</span>
+<span class="sd">            statistics.</span>
+<span class="sd">        data_loader (obj): PyTorch dataloader object.</span>
+<span class="sd">        net_G (obj): For image generation modes, net_G is the PyTorch trainer</span>
+<span class="sd">            network. For video generation models, net_G is the trainer</span>
+<span class="sd">            because video generation requires more complicated processing.</span>
+<span class="sd">        key_real (str): Dictionary key value for the real data.</span>
+<span class="sd">        key_fake (str): Dictionary key value for the fake data.</span>
+<span class="sd">        sample_size (int or tuple): How many samples to be used.</span>
+<span class="sd">        preprocess (func): The preprocess function to be applied to the data.</span>
+<span class="sd">        is_video (bool): Whether we are handling video sequences.</span>
+<span class="sd">        few_shot_video (bool): If ``True``, uses few-shot video synthesis.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): FID value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computing FID.&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="c1"># Get the fake mean and covariance.</span>
+        <span class="n">fake_mean</span><span class="p">,</span> <span class="n">fake_cov</span> <span class="o">=</span> <span class="n">load_or_compute_stats</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span>
+                                                    <span class="n">data_loader</span><span class="p">,</span>
+                                                    <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span>
+                                                    <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">,</span>
+                                                    <span class="n">is_video</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="p">)</span>
+        <span class="c1"># Get the ground truth mean and covariance.</span>
+        <span class="n">mean_cov_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">fid_path</span><span class="p">),</span>
+                                     <span class="s1">&#39;real_mean_cov.npz&#39;</span><span class="p">)</span>
+        <span class="n">real_mean</span><span class="p">,</span> <span class="n">real_cov</span> <span class="o">=</span> <span class="n">load_or_compute_stats</span><span class="p">(</span><span class="n">mean_cov_path</span><span class="p">,</span>
+                                                    <span class="n">data_loader</span><span class="p">,</span>
+                                                    <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                                                    <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">,</span>
+                                                    <span class="n">is_video</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">is_master</span><span class="p">():</span>
+        <span class="n">fid</span> <span class="o">=</span> <span class="n">calculate_frechet_distance</span><span class="p">(</span>
+            <span class="n">real_mean</span><span class="p">,</span> <span class="n">real_cov</span><span class="p">,</span> <span class="n">fake_mean</span><span class="p">,</span> <span class="n">fake_cov</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fid</span></div>
+
+
+<div class="viewcode-block" id="compute_fid_data"><a class="viewcode-back" href="../../../imaginaire.evaluation.html#imaginaire.evaluation.fid.compute_fid_data">[docs]</a><span class="k">def</span> <span class="nf">compute_fid_data</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span> <span class="n">data_loader_a</span><span class="p">,</span> <span class="n">data_loader_b</span><span class="p">,</span>
+                     <span class="n">key_a</span><span class="o">=</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="n">key_b</span><span class="o">=</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                     <span class="n">is_video</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute the fid score between two datasets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fid_path (str): Location for the numpy file to store or to load the</span>
+<span class="sd">            statistics.</span>
+<span class="sd">        data_loader_a (obj): PyTorch dataloader object for dataset a.</span>
+<span class="sd">        data_loader_b (obj): PyTorch dataloader object for dataset b.</span>
+<span class="sd">        key_a (str): Dictionary key value for images in the dataset a.</span>
+<span class="sd">        key_b (str): Dictionary key value for images in the dataset b.</span>
+<span class="sd">        sample_size (int): How many samples to be used for computing the FID.</span>
+<span class="sd">        is_video (bool): Whether we are handling video sequences.</span>
+<span class="sd">        few_shot_video (bool): If ``True``, uses few-shot video synthesis.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (float): FID value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">sample_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">sample_size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_loader_a</span><span class="o">.</span><span class="n">dataset</span><span class="p">),</span>
+                          <span class="nb">len</span><span class="p">(</span><span class="n">data_loader_b</span><span class="o">.</span><span class="n">dataset</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computing FID using </span><span class="si">{}</span><span class="s1"> images from both distributions.&#39;</span><span class="o">.</span>
+          <span class="nb">format</span><span class="p">(</span><span class="n">sample_size</span><span class="p">))</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="n">path_a</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">fid_path</span><span class="p">),</span>
+                              <span class="s1">&#39;mean_cov_a.npz&#39;</span><span class="p">)</span>
+        <span class="n">path_b</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">fid_path</span><span class="p">),</span>
+                              <span class="s1">&#39;mean_cov_b.npz&#39;</span><span class="p">)</span>
+        <span class="n">mean_a</span><span class="p">,</span> <span class="n">cov_a</span> <span class="o">=</span> <span class="n">load_or_compute_stats</span><span class="p">(</span><span class="n">path_a</span><span class="p">,</span> <span class="n">data_loader_a</span><span class="p">,</span>
+                                              <span class="n">key_a</span><span class="p">,</span> <span class="n">key_a</span><span class="p">,</span>
+                                              <span class="n">sample_size</span><span class="o">=</span><span class="n">sample_size</span><span class="p">,</span>
+                                              <span class="n">is_video</span><span class="o">=</span><span class="n">is_video</span><span class="p">)</span>
+        <span class="n">mean_b</span><span class="p">,</span> <span class="n">cov_b</span> <span class="o">=</span> <span class="n">load_or_compute_stats</span><span class="p">(</span><span class="n">path_b</span><span class="p">,</span> <span class="n">data_loader_b</span><span class="p">,</span>
+                                              <span class="n">key_b</span><span class="p">,</span> <span class="n">key_b</span><span class="p">,</span>
+                                              <span class="n">sample_size</span><span class="o">=</span><span class="n">sample_size</span><span class="p">,</span>
+                                              <span class="n">is_video</span><span class="o">=</span><span class="n">is_video</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_master</span><span class="p">():</span>
+        <span class="n">fid</span> <span class="o">=</span> <span class="n">calculate_frechet_distance</span><span class="p">(</span><span class="n">mean_b</span><span class="p">,</span> <span class="n">cov_b</span><span class="p">,</span> <span class="n">mean_a</span><span class="p">,</span> <span class="n">cov_a</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fid</span></div>
+
+
+<div class="viewcode-block" id="load_or_compute_stats"><a class="viewcode-back" href="../../../imaginaire.evaluation.html#imaginaire.evaluation.fid.load_or_compute_stats">[docs]</a><span class="k">def</span> <span class="nf">load_or_compute_stats</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">,</span> <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span>
+                          <span class="n">generator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sample_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">is_video</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load mean and covariance from saved npy file if exists. Otherwise,</span>
+<span class="sd">    compute the mean and covariance.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fid_path (str): Location for the numpy file to store or to load the</span>
+<span class="sd">            statistics.</span>
+<span class="sd">        data_loader (obj): PyTorch dataloader object.</span>
+<span class="sd">        key_real (str): Dictionary key value for the real data.</span>
+<span class="sd">        key_fake (str): Dictionary key value for the fake data.</span>
+<span class="sd">        generator (obj): PyTorch trainer network.</span>
+<span class="sd">        sample_size (int or tuple): How many samples to be used.</span>
+<span class="sd">        preprocess (func): The preprocess function to be applied to the data.</span>
+<span class="sd">        is_video (bool): Whether we are handling video sequences.</span>
+<span class="sd">        few_shot_video (bool): If ``True``, uses few-shot video synthesis.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - mean (tensor): Mean vector.</span>
+<span class="sd">          - cov (tensor): Covariance matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fid_path</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Load FID mean and cov from </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fid_path</span><span class="p">))</span>
+        <span class="n">npz_file</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fid_path</span><span class="p">)</span>
+        <span class="n">mean</span> <span class="o">=</span> <span class="n">npz_file</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span>
+        <span class="n">cov</span> <span class="o">=</span> <span class="n">npz_file</span><span class="p">[</span><span class="s1">&#39;cov&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Get FID mean and cov and save to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fid_path</span><span class="p">))</span>
+        <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">get_inception_mean_cov</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span>
+                                           <span class="n">generator</span><span class="p">,</span> <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">,</span>
+                                           <span class="n">is_video</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">fid_path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_master</span><span class="p">():</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">savez</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="n">cov</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mean</span><span class="p">,</span> <span class="n">cov</span></div>
+
+
+<div class="viewcode-block" id="get_inception_mean_cov"><a class="viewcode-back" href="../../../imaginaire.evaluation.html#imaginaire.evaluation.fid.get_inception_mean_cov">[docs]</a><span class="k">def</span> <span class="nf">get_inception_mean_cov</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span>
+                           <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">,</span>
+                           <span class="n">is_video</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load mean and covariance from saved npy file if exists. Otherwise,</span>
+<span class="sd">    compute the mean and covariance.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_loader (obj): PyTorch dataloader object.</span>
+<span class="sd">        key_real (str): Dictionary key value for the real data.</span>
+<span class="sd">        key_fake (str): Dictionary key value for the fake data.</span>
+<span class="sd">        generator (obj): PyTorch trainer network.</span>
+<span class="sd">        sample_size (int or tuple): How many samples to be used.</span>
+<span class="sd">        preprocess (func): The preprocess function to be applied to the data.</span>
+<span class="sd">        is_video (bool): Whether we are handling video sequences.</span>
+<span class="sd">        is_video (bool): Whether we are handling video sequences.</span>
+<span class="sd">        few_shot_video (bool): If ``True``, uses few-shot video synthesis.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - mean (tensor): Mean vector.</span>
+<span class="sd">          - cov (tensor): Covariance matrix.</span>
+<span class="sd">    trainer (obj): PyTorch trainer network.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Extract mean and covariance.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_video</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">get_video_activations</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span>
+                                  <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">,</span> <span class="n">few_shot_video</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">get_activations</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">key_real</span><span class="p">,</span> <span class="n">key_fake</span><span class="p">,</span> <span class="n">generator</span><span class="p">,</span>
+                            <span class="n">sample_size</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_master</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span></div>
+
+
+<div class="viewcode-block" id="calculate_frechet_distance"><a class="viewcode-back" href="../../../imaginaire.evaluation.html#imaginaire.evaluation.fid.calculate_frechet_distance">[docs]</a><span class="k">def</span> <span class="nf">calculate_frechet_distance</span><span class="p">(</span><span class="n">mu1</span><span class="p">,</span> <span class="n">sigma1</span><span class="p">,</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sigma2</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Numpy implementation of the Frechet Distance.</span>
+<span class="sd">    The Frechet distance between two multivariate Gaussians X_1 ~ N(mu_1, C_1)</span>
+<span class="sd">    and X_2 ~ N(mu_2, C_2) is</span>
+<span class="sd">    d^2 = ||mu_1 - mu_2||^2 + Tr(C_1 + C_2 - 2*sqrt(C_1*C_2)).</span>
+<span class="sd">    Stable version by Dougal J. Sutherland.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        mu1: Numpy array containing the activations of a layer of the</span>
+<span class="sd">            inception net (like returned by the function &#39;get_predictions&#39;)</span>
+<span class="sd">            for generated samples.</span>
+<span class="sd">        mu2: The sample mean over activations, pre-calculated on an</span>
+<span class="sd">            representative data set.</span>
+<span class="sd">        sigma1: The covariance matrix over activations for generated samples.</span>
+<span class="sd">        sigma2: The covariance matrix over activations, pre-calculated on an</span>
+<span class="sd">            representative data set.</span>
+<span class="sd">        eps: a value added to the diagonal of cov for numerical stability.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        The Frechet Distance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mu1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu1</span><span class="p">)</span>
+    <span class="n">mu2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu2</span><span class="p">)</span>
+    <span class="n">sigma1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">sigma1</span><span class="p">)</span>
+    <span class="n">sigma2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">sigma2</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">mu1</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">mu2</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> \
+        <span class="s1">&#39;Training and test mean vectors have different lengths&#39;</span>
+    <span class="k">assert</span> <span class="n">sigma1</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">sigma2</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> \
+        <span class="s1">&#39;Training and test covariances have different dimensions&#39;</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">mu1</span> <span class="o">-</span> <span class="n">mu2</span>
+    <span class="c1"># Product might be almost singular</span>
+    <span class="n">covmean</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">sqrtm</span><span class="p">(</span><span class="n">sigma1</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">sigma2</span><span class="p">),</span> <span class="n">disp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">covmean</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;fid calculation produces singular product; &#39;</span>
+               <span class="s1">&#39;adding </span><span class="si">%s</span><span class="s1"> to diagonal of cov estimates&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="n">eps</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">sigma1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">eps</span>
+        <span class="n">covmean</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">sqrtm</span><span class="p">((</span><span class="n">sigma1</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">sigma2</span> <span class="o">+</span> <span class="n">offset</span><span class="p">))</span>
+
+    <span class="c1"># Numerical error might give slight imaginary component</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">iscomplexobj</span><span class="p">(</span><span class="n">covmean</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">covmean</span><span class="p">)</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">):</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">covmean</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Imaginary component </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+            <span class="c1"># raise ValueError(&#39;Imaginary component {}&#39;.format(m))</span>
+        <span class="n">covmean</span> <span class="o">=</span> <span class="n">covmean</span><span class="o">.</span><span class="n">real</span>
+    <span class="n">tr_covmean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">covmean</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">sigma1</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span>
+        <span class="n">sigma2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">tr_covmean</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

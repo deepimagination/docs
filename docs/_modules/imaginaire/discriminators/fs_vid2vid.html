@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.discriminators.fs_vid2vid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.discriminators.fs_vid2vid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.discriminators.fs_vid2vid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.discriminators.multires_patch</span> <span class="kn">import</span> <span class="n">NLayerPatchDiscriminator</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="n">get_fg_mask</span><span class="p">,</span> <span class="n">pick_image</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.data</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_paired_input_image_channel_number</span><span class="p">,</span>
+                                   <span class="n">get_paired_input_label_channel_number</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.misc</span> <span class="kn">import</span> <span class="n">get_nested_attr</span>
+
+
+<div class="viewcode-block" id="Discriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.Discriminator">[docs]</a><span class="k">class</span> <span class="nc">Discriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Image and video discriminator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dis_cfg (obj): Discriminator part of the yaml config file.</span>
+<span class="sd">        data_cfg (obj): Data definition part of the yaml config file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dis_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span> <span class="o">=</span> <span class="n">data_cfg</span>
+        <span class="n">num_input_channels</span> <span class="o">=</span> <span class="n">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">num_input_channels</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">num_input_channels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="s1">&#39;label_channels&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">num_img_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_D</span> <span class="o">=</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">num_frames_D</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_scales</span> <span class="o">=</span> <span class="n">get_nested_attr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;temporal.num_scales&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">num_netD_input_channels</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_input_channels</span> <span class="o">+</span> <span class="n">num_img_channels</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_few_shot</span> <span class="o">=</span> <span class="s1">&#39;few_shot&#39;</span> <span class="ow">in</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_few_shot</span><span class="p">:</span>
+            <span class="n">num_netD_input_channels</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span> <span class="o">=</span> <span class="n">MultiPatchDiscriminator</span><span class="p">(</span><span class="n">dis_cfg</span><span class="o">.</span><span class="n">image</span><span class="p">,</span>
+                                             <span class="n">num_netD_input_channels</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;additional_discriminators&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span><span class="p">:</span>
+                <span class="n">add_dis_cfg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                <span class="n">num_ch</span> <span class="o">=</span> <span class="n">num_img_channels</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_few_shot</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;net_D_&#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span>
+                        <span class="n">MultiPatchDiscriminator</span><span class="p">(</span><span class="n">add_dis_cfg</span><span class="p">,</span> <span class="n">num_ch</span><span class="p">))</span>
+
+        <span class="c1"># Temporal discriminator.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_netDT_input_channels</span> <span class="o">=</span> <span class="n">num_img_channels</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_D</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_scales</span><span class="p">):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;net_DT</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">n</span><span class="p">,</span>
+                    <span class="n">MultiPatchDiscriminator</span><span class="p">(</span><span class="n">dis_cfg</span><span class="o">.</span><span class="n">temporal</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">num_netDT_input_channels</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="s1">&#39;has_foreground&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Discriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.Discriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">past_frames</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Discriminator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Input data.</span>
+<span class="sd">            net_G_output (dict): Generator output.</span>
+<span class="sd">            past_frames (list of tensors): Past real frames / generator outputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output (dict): Discriminator output.</span>
+<span class="sd">              - past_frames (list of tensors): New past frames by adding</span>
+<span class="sd">                current outputs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">label</span><span class="p">,</span> <span class="n">real_image</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span>
+        <span class="c1"># Only operate on the latest output frame.</span>
+        <span class="k">if</span> <span class="n">label</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_few_shot</span><span class="p">:</span>
+            <span class="c1"># Pick only one reference image to concat with.</span>
+            <span class="n">ref_idx</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;ref_idx&#39;</span><span class="p">]</span> \
+                <span class="k">if</span> <span class="s1">&#39;ref_idx&#39;</span> <span class="ow">in</span> <span class="n">net_G_output</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">ref_label</span> <span class="o">=</span> <span class="n">pick_image</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ref_labels&#39;</span><span class="p">],</span> <span class="n">ref_idx</span><span class="p">)</span>
+            <span class="n">ref_image</span> <span class="o">=</span> <span class="n">pick_image</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ref_images&#39;</span><span class="p">],</span> <span class="n">ref_idx</span><span class="p">)</span>
+            <span class="c1"># Concat references with label map as discriminator input.</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">label</span><span class="p">,</span> <span class="n">ref_label</span><span class="p">,</span> <span class="n">ref_image</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">fake_image</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="c1"># Individual frame loss.</span>
+        <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discrminate_image</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span>
+                                                      <span class="n">real_image</span><span class="p">,</span> <span class="n">fake_image</span><span class="p">)</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;indv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;indv&#39;</span><span class="p">][</span><span class="s1">&#39;pred_real&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_real</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;indv&#39;</span><span class="p">][</span><span class="s1">&#39;pred_fake&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_fake</span>
+
+        <span class="k">if</span> <span class="s1">&#39;fake_raw_images&#39;</span> <span class="ow">in</span> <span class="n">net_G_output</span> <span class="ow">and</span> \
+                <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Raw generator output loss.</span>
+            <span class="n">fake_raw_image</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">]</span>
+            <span class="n">fg_mask</span> <span class="o">=</span> <span class="n">get_fg_mask</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_fg</span><span class="p">)</span>
+            <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discrminate_image</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span>
+                <span class="n">real_image</span> <span class="o">*</span> <span class="n">fg_mask</span><span class="p">,</span>
+                <span class="n">fake_raw_image</span> <span class="o">*</span> <span class="n">fg_mask</span><span class="p">)</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">][</span><span class="s1">&#39;pred_real&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_real</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">][</span><span class="s1">&#39;pred_fake&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_fake</span>
+
+        <span class="c1"># Additional GAN loss on specific regions.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span><span class="p">:</span>
+                <span class="c1"># Crop corresponding regions in the image according to the</span>
+                <span class="c1"># crop function.</span>
+                <span class="n">add_dis_cfg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_dis_cfg</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                <span class="n">file</span><span class="p">,</span> <span class="n">crop_func</span> <span class="o">=</span> <span class="n">add_dis_cfg</span><span class="o">.</span><span class="n">crop_func</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)</span>
+                <span class="n">file</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+                <span class="n">crop_func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">crop_func</span><span class="p">)</span>
+
+                <span class="n">real_crop</span> <span class="o">=</span> <span class="n">crop_func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">real_image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+                <span class="n">fake_crop</span> <span class="o">=</span> <span class="n">crop_func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">fake_image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_few_shot</span><span class="p">:</span>
+                    <span class="n">ref_crop</span> <span class="o">=</span> <span class="n">crop_func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">ref_image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">ref_crop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">real_crop</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">real_crop</span><span class="p">,</span> <span class="n">ref_crop</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                        <span class="n">fake_crop</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">fake_crop</span><span class="p">,</span> <span class="n">ref_crop</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+                <span class="c1"># Feed the crops to specific discriminator.</span>
+                <span class="k">if</span> <span class="n">fake_crop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">net_D</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;net_D_&#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+                    <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span> <span class="o">=</span> \
+                        <span class="bp">self</span><span class="o">.</span><span class="n">discrminate_image</span><span class="p">(</span><span class="n">net_D</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                                               <span class="n">real_crop</span><span class="p">,</span> <span class="n">fake_crop</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pred_real</span> <span class="o">=</span> <span class="n">pred_fake</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">output</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+                <span class="n">output</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">&#39;pred_real&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_real</span>
+                <span class="n">output</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">&#39;pred_fake&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_fake</span>
+
+        <span class="c1"># Temporal loss.</span>
+        <span class="n">past_frames</span><span class="p">,</span> <span class="n">skipped_frames</span> <span class="o">=</span> \
+            <span class="n">get_all_skipped_frames</span><span class="p">(</span><span class="n">past_frames</span><span class="p">,</span> <span class="p">[</span><span class="n">real_image</span><span class="p">,</span> <span class="n">fake_image</span><span class="p">],</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">num_scales</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_D</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">scale</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_scales</span><span class="p">):</span>
+            <span class="n">real_image</span><span class="p">,</span> <span class="n">fake_image</span> <span class="o">=</span> \
+                <span class="p">[</span><span class="n">skipped_frame</span><span class="p">[</span><span class="n">scale</span><span class="p">]</span> <span class="k">for</span> <span class="n">skipped_frame</span> <span class="ow">in</span> <span class="n">skipped_frames</span><span class="p">]</span>
+            <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminate_video</span><span class="p">(</span><span class="n">real_image</span><span class="p">,</span>
+                                                           <span class="n">fake_image</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;temporal_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">scale</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;temporal_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">scale</span><span class="p">][</span><span class="s1">&#39;pred_real&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_real</span>
+            <span class="n">output</span><span class="p">[</span><span class="s1">&#39;temporal_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">scale</span><span class="p">][</span><span class="s1">&#39;pred_fake&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_fake</span>
+
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">past_frames</span></div>
+
+<div class="viewcode-block" id="Discriminator.discrminate_image"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.Discriminator.discrminate_image">[docs]</a>    <span class="k">def</span> <span class="nf">discrminate_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">real_A</span><span class="p">,</span> <span class="n">real_B</span><span class="p">,</span> <span class="n">fake_B</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Discriminate individual images.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            net_D (obj): Discriminator network.</span>
+<span class="sd">            real_A (NxC1xHxW tensor): Input label map.</span>
+<span class="sd">            real_B (NxC2xHxW tensor): Real image.</span>
+<span class="sd">            fake_B (NxC2xHxW tensor): Fake image.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - pred_real (NxC3xH2xW2 tensor): Output of net_D for real images.</span>
+<span class="sd">              - pred_fake (NxC3xH2xW2 tensor): Output of net_D for fake images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">real_A</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">real_AB</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">real_A</span><span class="p">,</span> <span class="n">real_B</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">fake_AB</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">real_A</span><span class="p">,</span> <span class="n">fake_B</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">real_AB</span><span class="p">,</span> <span class="n">fake_AB</span> <span class="o">=</span> <span class="n">real_B</span><span class="p">,</span> <span class="n">fake_B</span>
+
+        <span class="n">pred_real</span> <span class="o">=</span> <span class="n">net_D</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">real_AB</span><span class="p">)</span>
+        <span class="n">pred_fake</span> <span class="o">=</span> <span class="n">net_D</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">fake_AB</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span></div>
+
+<div class="viewcode-block" id="Discriminator.discriminate_video"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.Discriminator.discriminate_video">[docs]</a>    <span class="k">def</span> <span class="nf">discriminate_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real_B</span><span class="p">,</span> <span class="n">fake_B</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Discriminate a sequence of images.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            real_B (NxCxHxW tensor): Real image.</span>
+<span class="sd">            fake_B (NxCxHxW tensor): Fake image.</span>
+<span class="sd">            scale (int): Temporal scale.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - pred_real (NxC2xH2xW2 tensor): Output of net_D for real images.</span>
+<span class="sd">              - pred_fake (NxC2xH2xW2 tensor): Output of net_D for fake images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">real_B</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="n">net_DT</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;net_DT</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">scale</span><span class="p">)</span>
+        <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">real_B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+        <span class="n">real_B</span> <span class="o">=</span> <span class="n">real_B</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_netDT_input_channels</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+        <span class="n">fake_B</span> <span class="o">=</span> <span class="n">fake_B</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_netDT_input_channels</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+
+        <span class="n">pred_real</span> <span class="o">=</span> <span class="n">net_DT</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">real_B</span><span class="p">)</span>
+        <span class="n">pred_fake</span> <span class="o">=</span> <span class="n">net_DT</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">fake_B</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pred_real</span><span class="p">,</span> <span class="n">pred_fake</span></div></div>
+
+
+<div class="viewcode-block" id="get_all_skipped_frames"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.get_all_skipped_frames">[docs]</a><span class="k">def</span> <span class="nf">get_all_skipped_frames</span><span class="p">(</span><span class="n">past_frames</span><span class="p">,</span> <span class="n">new_frames</span><span class="p">,</span> <span class="n">t_scales</span><span class="p">,</span> <span class="n">tD</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get temporally skipped frames from the input frames.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        past_frames (list of tensors): Past real frames / generator outputs.</span>
+<span class="sd">        new_frames (list of tensors): Current real frame / generated output.</span>
+<span class="sd">        t_scales (int): Temporal scale.</span>
+<span class="sd">        tD (int): Number of frames as input to the temporal discriminator.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (tuple):</span>
+<span class="sd">          - new_past_frames (list of tensors): Past + current frames.</span>
+<span class="sd">          - skipped_frames (list of tensors): Temporally skipped frames using</span>
+<span class="sd">            the given t_scales.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">new_past_frames</span><span class="p">,</span> <span class="n">skipped_frames</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">past_frame</span><span class="p">,</span> <span class="n">new_frame</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">past_frames</span><span class="p">,</span> <span class="n">new_frames</span><span class="p">):</span>
+        <span class="n">skipped_frame</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">t_scales</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">past_frame</span><span class="p">,</span> <span class="n">skipped_frame</span> <span class="o">=</span> \
+                <span class="n">get_skipped_frames</span><span class="p">(</span><span class="n">past_frame</span><span class="p">,</span> <span class="n">new_frame</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                                   <span class="n">t_scales</span><span class="p">,</span> <span class="n">tD</span><span class="p">)</span>
+        <span class="n">new_past_frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">past_frame</span><span class="p">)</span>
+        <span class="n">skipped_frames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">skipped_frame</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">new_past_frames</span><span class="p">,</span> <span class="n">skipped_frames</span></div>
+
+
+<div class="viewcode-block" id="get_skipped_frames"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.get_skipped_frames">[docs]</a><span class="k">def</span> <span class="nf">get_skipped_frames</span><span class="p">(</span><span class="n">all_frames</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">t_scales</span><span class="p">,</span> <span class="n">tD</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get temporally skipped frames from the input frames.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        all_frames (NxTxCxHxW tensor): All past frames.</span>
+<span class="sd">        frame (Nx1xCxHxW tensor): Current frame.</span>
+<span class="sd">        t_scales (int): Temporal scale.</span>
+<span class="sd">        tD (int): Number of frames as input to the temporal discriminator.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (tuple):</span>
+<span class="sd">          - all_frames (NxTxCxHxW tensor): Past + current frames.</span>
+<span class="sd">          - skipped_frames (list of NxTxCxHxW tensors): Temporally skipped</span>
+<span class="sd">            frames.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">all_frames</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">all_frames</span><span class="o">.</span><span class="n">detach</span><span class="p">(),</span> <span class="n">frame</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> \
+        <span class="k">if</span> <span class="n">all_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">frame</span>
+    <span class="n">skipped_frames</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">t_scales</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t_scales</span><span class="p">):</span>
+        <span class="c1"># Number of skipped frames between neighboring frames (e.g. 1, 3, 9,...)</span>
+        <span class="n">t_step</span> <span class="o">=</span> <span class="n">tD</span> <span class="o">**</span> <span class="n">s</span>
+        <span class="c1"># Number of frames the final triplet frames span before skipping</span>
+        <span class="c1"># (e.g., 2, 6, 18, ...).</span>
+        <span class="n">t_span</span> <span class="o">=</span> <span class="n">t_step</span> <span class="o">*</span> <span class="p">(</span><span class="n">tD</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">all_frames</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">t_span</span><span class="p">:</span>
+            <span class="n">skipped_frames</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_frames</span><span class="p">[:,</span> <span class="o">-</span><span class="p">(</span><span class="n">t_span</span><span class="o">+</span><span class="mi">1</span><span class="p">)::</span><span class="n">t_step</span><span class="p">]</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span>
+
+    <span class="c1"># Maximum number of past frames we need to keep track of.</span>
+    <span class="n">max_num_prev_frames</span> <span class="o">=</span> <span class="p">(</span><span class="n">tD</span> <span class="o">**</span> <span class="p">(</span><span class="n">t_scales</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">tD</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Remove past frames that are older than this number.</span>
+    <span class="k">if</span> <span class="n">all_frames</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_num_prev_frames</span><span class="p">:</span>
+        <span class="n">all_frames</span> <span class="o">=</span> <span class="n">all_frames</span><span class="p">[:,</span> <span class="o">-</span><span class="n">max_num_prev_frames</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">all_frames</span><span class="p">,</span> <span class="n">skipped_frames</span></div>
+
+
+<div class="viewcode-block" id="MultiPatchDiscriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator">[docs]</a><span class="k">class</span> <span class="nc">MultiPatchDiscriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dis_cfg (obj): Discriminator part of the yaml config file.</span>
+<span class="sd">        num_input_channels (int): Number of input channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dis_cfg</span><span class="p">,</span> <span class="n">num_input_channels</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MultiPatchDiscriminator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">kernel_size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="n">max_num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;max_num_filters&#39;</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+        <span class="n">num_discriminators</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_discriminators&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">num_layers</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span>
+                                   <span class="s1">&#39;spectral_norm&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nets_discriminator</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_discriminators</span><span class="p">):</span>
+            <span class="n">net_discriminator</span> <span class="o">=</span> <span class="n">NLayerPatchDiscriminator</span><span class="p">(</span>
+                <span class="n">kernel_size</span><span class="p">,</span>
+                <span class="n">num_input_channels</span><span class="p">,</span>
+                <span class="n">num_filters</span><span class="p">,</span>
+                <span class="n">num_layers</span><span class="p">,</span>
+                <span class="n">max_num_filters</span><span class="p">,</span>
+                <span class="n">activation_norm_type</span><span class="p">,</span>
+                <span class="n">weight_norm_type</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span><span class="s1">&#39;discriminator_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">net_discriminator</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nets_discriminator</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">net_discriminator</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MultiPatchDiscriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_x (N x C x H x W tensor) : Concatenation of images and</span>
+<span class="sd">                semantic representations.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - output (list): list of output tensors produced by individual</span>
+<span class="sd">                patch discriminators.</span>
+<span class="sd">              - features (list): list of lists of features produced by</span>
+<span class="sd">                individual patch discriminators.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">output_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">features_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">input_x</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">net_discriminator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">named_children</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;discriminator_&#39;</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">output</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">net_discriminator</span><span class="p">(</span><span class="n">input_downsampled</span><span class="p">)</span>
+            <span class="n">output_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+            <span class="n">features_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+            <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">input_downsampled</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                <span class="n">align_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">recompute_scale_factor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">output_x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output_list</span>
+        <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">features_list</span>
+        <span class="k">return</span> <span class="n">output_x</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

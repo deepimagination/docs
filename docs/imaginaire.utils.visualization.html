@@ -1,0 +1,973 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.visualization package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="inference module" href="inference.html" />
+    <link rel="prev" title="imaginaire.utils package" href="imaginaire.utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+          <li><a href="imaginaire.utils.html">imaginaire.utils package</a> &raquo;</li>
+        
+      <li>imaginaire.utils.visualization package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.utils.visualization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-utils-visualization-package">
+<h1>imaginaire.utils.visualization package<a class="headerlink" href="#imaginaire-utils-visualization-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.utils.visualization.common">
+<span id="imaginaire-utils-visualization-common-module"></span><h2>imaginaire.utils.visualization.common module<a class="headerlink" href="#module-imaginaire.utils.visualization.common" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.utils.visualization.common.Colorize">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">Colorize</code><span class="sig-paren">(</span><em class="sig-param">n=35</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#Colorize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.Colorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to colorize segmentation maps.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.labelcolormap">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">labelcolormap</code><span class="sig-paren">(</span><em class="sig-param">N</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#labelcolormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.labelcolormap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create colors for segmentation label ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>N</strong> (<em>int</em>) – Number of labels.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.plot_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">plot_keypoints</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">keypoints</em>, <em class="sig-param">normalize=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#plot_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.plot_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot keypoints on image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>PIL.Image</em><em>, or </em><em>numpy.ndarray</em><em>, or </em><em>torch.Tensor</em>) – Input image.</p></li>
+<li><p><strong>keypoints</strong> (<em>np.ndarray</em><em> or </em><em>torch.Tensor</em><em>, </em><em>Nx2</em>) – Keypoint locations.</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Whether to normalize the image or not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.plot_keypoints_on_black">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">plot_keypoints_on_black</code><span class="sig-paren">(</span><em class="sig-param">resize_h</em>, <em class="sig-param">resize_w</em>, <em class="sig-param">crop_h</em>, <em class="sig-param">crop_w</em>, <em class="sig-param">is_flipped</em>, <em class="sig-param">cfgdata</em>, <em class="sig-param">keypoints</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#plot_keypoints_on_black"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.plot_keypoints_on_black" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot keypoints on black image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resize_h</strong> (<em>int</em>) – Height to be resized to.</p></li>
+<li><p><strong>resize_w</strong> (<em>int</em>) – Width to be resized to.</p></li>
+<li><p><strong>crop_h</strong> (<em>int</em>) – Height of the cropping.</p></li>
+<li><p><strong>crop_w</strong> (<em>int</em>) – Width of the cropping.</p></li>
+<li><p><strong>is_flipped</strong> (<em>bool</em>) – If image is a flipped version.</p></li>
+<li><p><strong>cfgdata</strong> (<em>obj</em>) – Data configuration object.</p></li>
+<li><p><strong>keypoints</strong> (<em>np.ndarray</em>) – Keypoint locations. Shape of
+(Nx2) or (TxNx2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of images (output_h, output_w, 3).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.save_tensor_image">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">save_tensor_image</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">image</em>, <em class="sig-param">minus1to1_normalized=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#save_tensor_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.save_tensor_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a 3 dimensional torch tensor to a PIL image with the desired
+width and height.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Image filename to be saved to.</p></li>
+<li><p><strong>image</strong> (<em>3 x W1 x H1 tensor</em>) – Image tensor</p></li>
+<li><p><strong>minus1to1_normalized</strong> (<em>bool</em>) – True if the tensor values are in [-1,</p></li>
+<li><p><strong>Otherwise</strong><strong>, </strong><strong>we assume the values are in</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> (<em>1</em><em>]</em><em></em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting PIL image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(PIL image)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.tensor2flow">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">tensor2flow</code><span class="sig-paren">(</span><em class="sig-param">tensor</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2flow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.tensor2flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert flow tensor to color image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor</strong> (<em>tensor</em>) – </p></li>
+<li><p><strong>tensor then</strong> (<em>If</em>) – </p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray or normalized torch image).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.tensor2im">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">tensor2im</code><span class="sig-paren">(</span><em class="sig-param">image_tensor</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em>, <em class="sig-param">normalize=True</em>, <em class="sig-param">three_channel_output=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2im"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.tensor2im" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert tensor to image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_tensor</strong> (<em>torch.tensor</em><em> or </em><em>list of torch.tensor</em>) – If tensor then
+(NxCxHxW) or (NxTxCxHxW) or (CxHxW).</p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Is the input image normalized or not?
+three_channel_output (bool): Should single channel images be made 3
+channel in output?</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray, list if case 1, 2 above).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.tensor2label">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">tensor2label</code><span class="sig-paren">(</span><em class="sig-param">segmap</em>, <em class="sig-param">n_label=None</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em>, <em class="sig-param">colorize=True</em>, <em class="sig-param">output_normalized_tensor=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.tensor2label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert segmentation tensor to color image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>segmap</strong> (<em>tensor</em>) – </p></li>
+<li><p><strong>tensor then</strong> (<em>If</em>) – </p></li>
+<li><p><strong>n_label</strong> (<em>int</em>) – If None, then segmap.size(0).</p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+<li><p><strong>colorize</strong> (<em>bool</em>) – Put colors in.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray or normalized torch image).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.common.tensor2pilimage">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.common.</code><code class="sig-name descname">tensor2pilimage</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">width=None</em>, <em class="sig-param">height=None</em>, <em class="sig-param">minus1to1_normalized=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2pilimage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.common.tensor2pilimage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a 3 dimensional torch tensor to a PIL image with the desired
+width and height.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>3 x W1 x H1 tensor</em>) – Image tensor</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – Desired width for the result PIL image.</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – Desired height for the result PIL image.</p></li>
+<li><p><strong>minus1to1_normalized</strong> (<em>bool</em>) – True if the tensor values are in [-1,</p></li>
+<li><p><strong>Otherwise</strong><strong>, </strong><strong>we assume the values are in</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> (<em>1</em><em>]</em><em></em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting PIL image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(PIL image)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.visualization.face">
+<span id="imaginaire-utils-visualization-face-module"></span><h2>imaginaire.utils.visualization.face module<a class="headerlink" href="#module-imaginaire.utils.visualization.face" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.add_face_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">add_face_keypoints</code><span class="sig-paren">(</span><em class="sig-param">label_map</em>, <em class="sig-param">image</em>, <em class="sig-param">keypoints</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#add_face_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.add_face_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add additional keypoints to label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label_map</strong> (<em>Nx1xHxW tensor</em><em> or </em><em>None</em>) – </p></li>
+<li><p><strong>image</strong> (<em>Nx3xHxW tensor</em>) – </p></li>
+<li><p><strong>keypoints</strong> (<em>NxKx2 tensor</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.connect_face_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">connect_face_keypoints</code><span class="sig-paren">(</span><em class="sig-param">resize_h</em>, <em class="sig-param">resize_w</em>, <em class="sig-param">crop_h</em>, <em class="sig-param">crop_w</em>, <em class="sig-param">original_h</em>, <em class="sig-param">original_w</em>, <em class="sig-param">is_flipped</em>, <em class="sig-param">cfgdata</em>, <em class="sig-param">keypoints</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#connect_face_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.connect_face_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect the face keypoints to edges and draw the sketch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resize_h</strong> (<em>int</em>) – Height the input image was resized to.</p></li>
+<li><p><strong>resize_w</strong> (<em>int</em>) – Width the input image was resized to.</p></li>
+<li><p><strong>crop_h</strong> (<em>int</em>) – Height the input image was cropped.</p></li>
+<li><p><strong>crop_w</strong> (<em>int</em>) – Width the input image was cropped.</p></li>
+<li><p><strong>original_h</strong> (<em>int</em>) – Original height of the input image.</p></li>
+<li><p><strong>original_w</strong> (<em>int</em>) – Original width of the input image.</p></li>
+<li><p><strong>is_flipped</strong> (<em>bool</em>) – Is the input image flipped.</p></li>
+<li><p><strong>cfgdata</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>keypoints</strong> (<em>NxKx2 numpy array</em>) – Facial landmarks (with K keypoints).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Drawn label map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of HxWxC numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.convert_face_landmarks_to_image">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">convert_face_landmarks_to_image</code><span class="sig-paren">(</span><em class="sig-param">cfgdata</em>, <em class="sig-param">landmarks</em>, <em class="sig-param">output_size</em>, <em class="sig-param">output_tensor=True</em>, <em class="sig-param">cpu_only=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#convert_face_landmarks_to_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.convert_face_landmarks_to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the facial landmarks to a label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfgdata</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>landmarks</strong> – </p></li>
+<li><p><strong>output_size</strong> (<em>tuple of int</em>) – H, W of output label map.</p></li>
+<li><p><strong>output_tensor</strong> (<em>bool</em>) – Output tensors instead of numpy arrays.</p></li>
+<li><p><strong>cpu_only</strong> (<em>bool</em>) – Output CPU tensor only.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Label maps.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(NxCxHxW tensor or list of HxWxC numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.draw_edge">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">draw_edge</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">bw=1</em>, <em class="sig-param">color=(255</em>, <em class="sig-param">255</em>, <em class="sig-param">255)</em>, <em class="sig-param">draw_end_points=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#draw_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.draw_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set colors given a list of x and y coordinates for the edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> (<em>HxWxC numpy array</em>) – Canvas to draw.</p></li>
+<li><p><strong>x</strong> (<em>1D numpy array</em>) – x coordinates of the edge.</p></li>
+<li><p><strong>y</strong> (<em>1D numpy array</em>) – y coordinates of the edge.</p></li>
+<li><p><strong>bw</strong> (<em>int</em>) – Width of the stroke.</p></li>
+<li><p><strong>color</strong> (<em>list</em><em> or </em><em>tuple of int</em>) – Color to draw.</p></li>
+<li><p><strong>draw_end_points</strong> (<em>bool</em>) – Whether to draw end points of the edge.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.func">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">func</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quadratic fitting function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.get_126_landmarks_from_image">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">get_126_landmarks_from_image</code><span class="sig-paren">(</span><em class="sig-param">imgs</em>, <em class="sig-param">landmarks_network</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#get_126_landmarks_from_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.get_126_landmarks_from_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get face keypoints from an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imgs</strong> (<em>Nx3xHxW tensor</em><em> or </em><em>NxHxWx3 numpy array</em>) – </p></li>
+<li><p><strong>images.</strong> (<em>Input</em>) – </p></li>
+<li><p><strong>landmarks_network</strong> (<em>obj</em>) – The landmark detection network.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Predicted landmarks.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Nx126x2 numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.get_dlib_landmarks_from_image">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">get_dlib_landmarks_from_image</code><span class="sig-paren">(</span><em class="sig-param">imgs</em>, <em class="sig-param">predictor_path='shape_predictor_68_face_landmarks.dat'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#get_dlib_landmarks_from_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.get_dlib_landmarks_from_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get face keypoints from an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imgs</strong> (<em>N x 3 x H x W tensor</em><em> or </em><em>N x H x W x 3 numpy array</em>) – Input images.</p></li>
+<li><p><strong>predictor_path</strong> (<em>str</em>) – Path to the predictor model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.interp_points">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">interp_points</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#interp_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.interp_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the start and end points, interpolate to get a curve/line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>1D array</em>) – x coordinates of the points to interpolate.</p></li>
+<li><p><strong>y</strong> (<em>1D array</em>) – y coordinates of the points to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>curve_x (1D array): x coordinates of the interpolated points.</p></li>
+<li><p>curve_y (1D array): y coordinates of the interpolated points.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.linear">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">linear</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#linear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear fitting function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.normalize_and_connect_face_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">normalize_and_connect_face_keypoints</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">is_inference</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#normalize_and_connect_face_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.normalize_and_connect_face_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize face keypoints w.r.t. reference face keypoints and connect
+keypoints to form 2D images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>is_inference</strong> (<em>bool</em>) – Is doing inference or not.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.normalize_face_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">normalize_face_keypoints</code><span class="sig-paren">(</span><em class="sig-param">keypoints</em>, <em class="sig-param">ref_keypoints</em>, <em class="sig-param">dist_scales=None</em>, <em class="sig-param">momentum=0.9</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#normalize_face_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.normalize_face_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize face keypoints w.r.t. the reference face keypoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keypoints</strong> (<em>Kx2 numpy array</em>) – Target facial keypoints to be normalized.</p></li>
+<li><p><strong>ref_keypoints</strong> (<em>Kx2 numpy array</em>) – Reference facial keypoints.</p></li>
+<li><p><strong>dist_scales</strong> (<em>list of list of floats</em>) – Normalization params.</p></li>
+<li><p><strong>momentum</strong> (<em>float</em>) – Temporal momentum for the normalization params.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Normalized facial keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Kx2 numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.npy_to_tensor">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">npy_to_tensor</code><span class="sig-paren">(</span><em class="sig-param">keypoints</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#npy_to_tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.npy_to_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert numpy array to pytorch tensor.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.set_color">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">yy</em>, <em class="sig-param">xx</em>, <em class="sig-param">color</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#set_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.set_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set pixels of the image to the given color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> (<em>HxWxC numpy array</em>) – Canvas to draw.</p></li>
+<li><p><strong>xx</strong> (<em>1D numpy array</em>) – x coordinates of the pixels.</p></li>
+<li><p><strong>yy</strong> (<em>1D numpy array</em>) – y coordinates of the pixels.</p></li>
+<li><p><strong>color</strong> (<em>list</em><em> or </em><em>tuple of int</em>) – Color to draw.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.face.smooth_face_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.face.</code><code class="sig-name descname">smooth_face_keypoints</code><span class="sig-paren">(</span><em class="sig-param">concat_keypoints</em>, <em class="sig-param">ks</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/face.html#smooth_face_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.face.smooth_face_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporally smooth the face keypoints by median filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>concat_keypoints</strong> (<em>TxKx2 numpy array</em>) – Face keypoints to be filtered.</p></li>
+<li><p><strong>ks</strong> (<em>int</em>) – Filter kernel size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output face keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(1xKx2 numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.visualization.pose">
+<span id="imaginaire-utils-visualization-pose-module"></span><h2>imaginaire.utils.visualization.pose module<a class="headerlink" href="#module-imaginaire.utils.visualization.pose" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.base_openpose_to_npy">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">base_openpose_to_npy</code><span class="sig-paren">(</span><em class="sig-param">inputs</em>, <em class="sig-param">return_largest_only=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#base_openpose_to_npy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.base_openpose_to_npy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert OpenPose dicts to numpy arrays of keypoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>list of dicts</em>) – List of OpenPose dicts.</p></li>
+<li><p><strong>return_largest_only</strong> (<em>bool</em>) – Whether to return only the largest person.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.connect_pose_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">connect_pose_keypoints</code><span class="sig-paren">(</span><em class="sig-param">pts</em>, <em class="sig-param">edge_lists</em>, <em class="sig-param">size</em>, <em class="sig-param">basic_points_only</em>, <em class="sig-param">remove_face_labels</em>, <em class="sig-param">random_drop_prob</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#connect_pose_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.connect_pose_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw edges by connecting the keypoints onto the label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pts</strong> (<em>Px3 numpy array</em>) – Keypoint xy coordinates + confidence.</p></li>
+<li><p><strong>edge_lists</strong> (<em>nested list of ints</em>) – List of keypoint indices for edges.</p></li>
+<li><p><strong>size</strong> (<em>tuple of int</em>) – Output size.</p></li>
+<li><p><strong>basic_points_only</strong> (<em>bool</em>) – Whether to use only the basic keypoints.</p></li>
+<li><p><strong>remove_face_labels</strong> (<em>bool</em>) – Whether to remove face labels.</p></li>
+<li><p><strong>random_drop_prob</strong> (<em>float</em>) – Probability to randomly drop keypoints.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output label map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(HxWxC numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.define_edge_lists">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">define_edge_lists</code><span class="sig-paren">(</span><em class="sig-param">basic_points_only</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#define_edge_lists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.define_edge_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the list of keypoints that should be connected to form the edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>basic_points_only</strong> (<em>bool</em>) – Whether to use only the basic keypoints.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.draw_edges">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">draw_edges</code><span class="sig-paren">(</span><em class="sig-param">canvas</em>, <em class="sig-param">keypoints</em>, <em class="sig-param">edges_list</em>, <em class="sig-param">bw</em>, <em class="sig-param">use_one_hot</em>, <em class="sig-param">random_drop_prob=0</em>, <em class="sig-param">edge_len=2</em>, <em class="sig-param">colors=None</em>, <em class="sig-param">draw_end_points=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#draw_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.draw_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw all the edges in the edge list on the canvas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>canvas</strong> (<em>HxWxK numpy array</em>) – Canvas to draw.</p></li>
+<li><p><strong>keypoints</strong> (<em>Px2 numpy array</em>) – Keypoints.</p></li>
+<li><p><strong>edge_list</strong> (<em>nested list of ints</em>) – List of keypoint indices for edges.</p></li>
+<li><p><strong>bw</strong> (<em>int</em>) – Stroke width.</p></li>
+<li><p><strong>use_one_hot</strong> (<em>bool</em>) – Use one-hot encoding or not.</p></li>
+<li><p><strong>random_drop_prob</strong> (<em>float</em>) – Probability to randomly drop keypoints.</p></li>
+<li><p><strong>edge_len</strong> (<em>int</em>) – Number of keypoints in an edge.</p></li>
+<li><p><strong>colors</strong> (<em>tuple of int</em>) – Color to draw.</p></li>
+<li><p><strong>draw_end_points</strong> (<em>bool</em>) – Whether to draw end points for edges.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(HxWxK numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.draw_openpose_npy">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">draw_openpose_npy</code><span class="sig-paren">(</span><em class="sig-param">resize_h</em>, <em class="sig-param">resize_w</em>, <em class="sig-param">crop_h</em>, <em class="sig-param">crop_w</em>, <em class="sig-param">original_h</em>, <em class="sig-param">original_w</em>, <em class="sig-param">is_flipped</em>, <em class="sig-param">cfgdata</em>, <em class="sig-param">keypoints_npy</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#draw_openpose_npy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.draw_openpose_npy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect the OpenPose keypoints to edges and draw the pose map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resize_h</strong> (<em>int</em>) – Height the input image was resized to.</p></li>
+<li><p><strong>resize_w</strong> (<em>int</em>) – Width the input image was resized to.</p></li>
+<li><p><strong>crop_h</strong> (<em>int</em>) – Height the input image was cropped.</p></li>
+<li><p><strong>crop_w</strong> (<em>int</em>) – Width the input image was cropped.</p></li>
+<li><p><strong>original_h</strong> (<em>int</em>) – Original height of the input image.</p></li>
+<li><p><strong>original_w</strong> (<em>int</em>) – Original width of the input image.</p></li>
+<li><p><strong>is_flipped</strong> (<em>bool</em>) – Is the input image flipped.</p></li>
+<li><p><strong>cfgdata</strong> (<em>obj</em>) – Data configuration.</p></li>
+<li><p><strong>keypoints_npy</strong> (<em>dict</em>) – OpenPose keypoint dict.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Drawn label map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of HxWxC numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.extract_valid_keypoints">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">extract_valid_keypoints</code><span class="sig-paren">(</span><em class="sig-param">pts</em>, <em class="sig-param">edge_lists</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#extract_valid_keypoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.extract_valid_keypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use only the valid keypoints by looking at the detection confidences.
+If the confidences for all keypoints in an edge are above threshold,
+keep the keypoints. Otherwise, their coordinates will be set to zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pts</strong> (<em>Px3 numpy array</em>) – Keypoint xy coordinates + confidence.</p></li>
+<li><p><strong>edge_lists</strong> (<em>nested list of ints</em>) – List of keypoint indices for edges.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Px2 numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.openpose_to_npy">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">openpose_to_npy</code><span class="sig-paren">(</span><em class="sig-param">inputs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#openpose_to_npy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.openpose_to_npy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conver OpenPose dicts to numpy arrays of keypoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inputs</strong> (<em>list of dicts</em>) – List of OpenPose dicts.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.openpose_to_npy_largest_only">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">openpose_to_npy_largest_only</code><span class="sig-paren">(</span><em class="sig-param">inputs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#openpose_to_npy_largest_only"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.openpose_to_npy_largest_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert OpenPose dicts to numpy arrays of keypoints. Only return the
+largest/tallest person in each dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inputs</strong> (<em>list of dicts</em>) – List of OpenPose dicts.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Keypoints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.pose.tensor2pose">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.pose.</code><code class="sig-name descname">tensor2pose</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">label_tensor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#tensor2pose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.pose.tensor2pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert output tensor to a numpy pose map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_tensor</strong> (<em>3D/4D/5D tensor</em>) – Label tensor.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pose map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(HxWx3 numpy array or list of numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.utils.visualization">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.utils.visualization" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.utils.visualization.tensor2im">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">tensor2im</code><span class="sig-paren">(</span><em class="sig-param">image_tensor</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em>, <em class="sig-param">normalize=True</em>, <em class="sig-param">three_channel_output=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2im"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.tensor2im" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert tensor to image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_tensor</strong> (<em>torch.tensor</em><em> or </em><em>list of torch.tensor</em>) – If tensor then
+(NxCxHxW) or (NxTxCxHxW) or (CxHxW).</p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Is the input image normalized or not?
+three_channel_output (bool): Should single channel images be made 3
+channel in output?</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray, list if case 1, 2 above).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.tensor2flow">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">tensor2flow</code><span class="sig-paren">(</span><em class="sig-param">tensor</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2flow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.tensor2flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert flow tensor to color image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor</strong> (<em>tensor</em>) – </p></li>
+<li><p><strong>tensor then</strong> (<em>If</em>) – </p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray or normalized torch image).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.tensor2label">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">tensor2label</code><span class="sig-paren">(</span><em class="sig-param">segmap</em>, <em class="sig-param">n_label=None</em>, <em class="sig-param">imtype=&lt;class 'numpy.uint8'&gt;</em>, <em class="sig-param">colorize=True</em>, <em class="sig-param">output_normalized_tensor=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.tensor2label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert segmentation tensor to color image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>segmap</strong> (<em>tensor</em>) – </p></li>
+<li><p><strong>tensor then</strong> (<em>If</em>) – </p></li>
+<li><p><strong>n_label</strong> (<em>int</em>) – If None, then segmap.size(0).</p></li>
+<li><p><strong>imtype</strong> (<em>np.dtype</em>) – Type of output image.</p></li>
+<li><p><strong>colorize</strong> (<em>bool</em>) – Put colors in.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(numpy.ndarray or normalized torch image).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.tensor2pilimage">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">tensor2pilimage</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">width=None</em>, <em class="sig-param">height=None</em>, <em class="sig-param">minus1to1_normalized=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#tensor2pilimage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.tensor2pilimage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a 3 dimensional torch tensor to a PIL image with the desired
+width and height.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>3 x W1 x H1 tensor</em>) – Image tensor</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – Desired width for the result PIL image.</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – Desired height for the result PIL image.</p></li>
+<li><p><strong>minus1to1_normalized</strong> (<em>bool</em>) – True if the tensor values are in [-1,</p></li>
+<li><p><strong>Otherwise</strong><strong>, </strong><strong>we assume the values are in</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> (<em>1</em><em>]</em><em></em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting PIL image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(PIL image)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.save_tensor_image">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">save_tensor_image</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">image</em>, <em class="sig-param">minus1to1_normalized=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/common.html#save_tensor_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.save_tensor_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a 3 dimensional torch tensor to a PIL image with the desired
+width and height.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Image filename to be saved to.</p></li>
+<li><p><strong>image</strong> (<em>3 x W1 x H1 tensor</em>) – Image tensor</p></li>
+<li><p><strong>minus1to1_normalized</strong> (<em>bool</em>) – True if the tensor values are in [-1,</p></li>
+<li><p><strong>Otherwise</strong><strong>, </strong><strong>we assume the values are in</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> (<em>1</em><em>]</em><em></em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting PIL image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(PIL image)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.utils.visualization.tensor2pose">
+<code class="sig-prename descclassname">imaginaire.utils.visualization.</code><code class="sig-name descname">tensor2pose</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">label_tensor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/utils/visualization/pose.html#tensor2pose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.utils.visualization.tensor2pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert output tensor to a numpy pose map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label_tensor</strong> (<em>3D/4D/5D tensor</em>) – Label tensor.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pose map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(HxWx3 numpy array or list of numpy arrays)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="inference.html" class="btn btn-neutral float-right" title="inference module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.utils.html" class="btn btn-neutral float-left" title="imaginaire.utils package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

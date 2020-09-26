@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.discriminators.multires_patch &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.discriminators.multires_patch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.discriminators.multires_patch</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.layers</span> <span class="kn">import</span> <span class="n">Conv2dBlock</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.data</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_paired_input_image_channel_number</span><span class="p">,</span>
+                                   <span class="n">get_paired_input_label_channel_number</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+
+
+<div class="viewcode-block" id="Discriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.Discriminator">[docs]</a><span class="k">class</span> <span class="nc">Discriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dis_cfg (obj): Discriminator definition part of the yaml config</span>
+<span class="sd">            file.</span>
+<span class="sd">        data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dis_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Discriminator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multi-resolution patch discriminator initialization.&#39;</span><span class="p">)</span>
+        <span class="c1"># We assume the first datum is the ground truth image.</span>
+        <span class="n">image_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="c1"># Calculate number of channels in the input label.</span>
+        <span class="n">num_labels</span> <span class="o">=</span> <span class="n">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+
+        <span class="c1"># Build the discriminator.</span>
+        <span class="n">kernel_size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="n">max_num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;max_num_filters&#39;</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+        <span class="n">num_discriminators</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_discriminators&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">num_layers</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">dis_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Base filter number: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_filters</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Number of discriminators: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_discriminators</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Number of layers in a discriminator: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_layers</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Weight norm type: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">weight_norm_type</span><span class="p">)</span>
+        <span class="n">num_input_channels</span> <span class="o">=</span> <span class="n">image_channels</span> <span class="o">+</span> <span class="n">num_labels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">MultiResPatchDiscriminator</span><span class="p">(</span><span class="n">num_discriminators</span><span class="p">,</span>
+                                                <span class="n">kernel_size</span><span class="p">,</span>
+                                                <span class="n">num_input_channels</span><span class="p">,</span>
+                                                <span class="n">num_filters</span><span class="p">,</span>
+                                                <span class="n">num_layers</span><span class="p">,</span>
+                                                <span class="n">max_num_filters</span><span class="p">,</span>
+                                                <span class="n">activation_norm_type</span><span class="p">,</span>
+                                                <span class="n">weight_norm_type</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with the Multi-resolution patch &#39;</span>
+              <span class="s1">&#39;discriminator initialization.&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Discriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.Discriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;SPADE Generator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict):</span>
+<span class="sd">              - data  (N x C1 x H x W tensor) : Ground truth images.</span>
+<span class="sd">              - label (N x C2 x H x W tensor) : Semantic representations.</span>
+<span class="sd">              - z (N x style_dims tensor): Gaussian random noise.</span>
+<span class="sd">            net_G_output (dict):</span>
+<span class="sd">                fake_images  (N x C1 x H x W tensor) : Fake images.</span>
+<span class="sd">            real (bool): If ``True``, also classifies real images. Otherwise it</span>
+<span class="sd">                only classifies generated images to save computation during the</span>
+<span class="sd">                generator update.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - real_outputs (list): list of output tensors produced by</span>
+<span class="sd">              - individual patch discriminators for real images.</span>
+<span class="sd">              - real_features (list): list of lists of features produced by</span>
+<span class="sd">                individual patch discriminators for real images.</span>
+<span class="sd">              - fake_outputs (list): list of output tensors produced by</span>
+<span class="sd">                individual patch discriminators for fake images.</span>
+<span class="sd">              - fake_features (list): list of lists of features produced by</span>
+<span class="sd">                individual patch discriminators for fake images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">output_x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;label&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">fake_input_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fake_input_x</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span>
+        <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;fake_outputs&#39;</span><span class="p">],</span> <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;fake_features&#39;</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">fake_input_x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">real</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;label&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="n">real_input_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]),</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">real_input_x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+            <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;real_outputs&#39;</span><span class="p">],</span> <span class="n">output_x</span><span class="p">[</span><span class="s1">&#39;real_features&#39;</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">real_input_x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_x</span></div></div>
+
+
+<div class="viewcode-block" id="MultiResPatchDiscriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator">[docs]</a><span class="k">class</span> <span class="nc">MultiResPatchDiscriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_discriminators (int): Num. of discriminators (one per scale).</span>
+<span class="sd">        kernel_size (int): Convolution kernel size.</span>
+<span class="sd">        num_image_channels (int): Num. of channels in the real/fake image.</span>
+<span class="sd">        num_filters (int): Num. of base filters in a layer.</span>
+<span class="sd">        num_layers (int): Num. of layers for the patch discriminator.</span>
+<span class="sd">        max_num_filters (int): Maximum num. of filters in a layer.</span>
+<span class="sd">        activation_norm_type (str): batch_norm/instance_norm/none/....</span>
+<span class="sd">        weight_norm_type (str): none/spectral_norm/weight_norm</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_discriminators</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">num_image_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                 <span class="n">num_layers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                 <span class="n">max_num_filters</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;type&#39;</span> <span class="ow">and</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;patch_wise&#39;</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;Discriminator argument </span><span class="si">{}</span><span class="s2"> is not used&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminators</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_discriminators</span><span class="p">):</span>
+            <span class="n">net_discriminator</span> <span class="o">=</span> <span class="n">NLayerPatchDiscriminator</span><span class="p">(</span>
+                <span class="n">kernel_size</span><span class="p">,</span>
+                <span class="n">num_image_channels</span><span class="p">,</span>
+                <span class="n">num_filters</span><span class="p">,</span>
+                <span class="n">num_layers</span><span class="p">,</span>
+                <span class="n">max_num_filters</span><span class="p">,</span>
+                <span class="n">activation_norm_type</span><span class="p">,</span>
+                <span class="n">weight_norm_type</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">discriminators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">net_discriminator</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with the Multi-resolution patch &#39;</span>
+              <span class="s1">&#39;discriminator initialization.&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MultiResPatchDiscriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_x (tensor) : Input images.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output_list (list): list of output tensors produced by</span>
+<span class="sd">                individual patch discriminators.</span>
+<span class="sd">              - features_list (list): list of lists of features produced by</span>
+<span class="sd">                individual patch discriminators.</span>
+<span class="sd">              - input_list (list): list of downsampled input images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">output_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">features_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">input_x</span>
+        <span class="k">for</span> <span class="n">net_discriminator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminators</span><span class="p">:</span>
+            <span class="n">input_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_downsampled</span><span class="p">)</span>
+            <span class="n">output</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="n">net_discriminator</span><span class="p">(</span><span class="n">input_downsampled</span><span class="p">)</span>
+            <span class="n">output_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+            <span class="n">features_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+            <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">input_downsampled</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                <span class="n">align_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">recompute_scale_factor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_list</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">input_list</span></div></div>
+
+
+<div class="viewcode-block" id="WeightSharedMultiResPatchDiscriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator">[docs]</a><span class="k">class</span> <span class="nc">WeightSharedMultiResPatchDiscriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator with shared weights.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_discriminators (int): Num. of discriminators (one per scale).</span>
+<span class="sd">        kernel_size (int): Convolution kernel size.</span>
+<span class="sd">        num_image_channels (int): Num. of channels in the real/fake image.</span>
+<span class="sd">        num_filters (int): Num. of base filters in a layer.</span>
+<span class="sd">        num_layers (int): Num. of layers for the patch discriminator.</span>
+<span class="sd">        max_num_filters (int): Maximum num. of filters in a layer.</span>
+<span class="sd">        activation_norm_type (str): batch_norm/instance_norm/none/....</span>
+<span class="sd">        weight_norm_type (str): none/spectral_norm/weight_norm</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_discriminators</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">num_image_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                 <span class="n">num_layers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                 <span class="n">max_num_filters</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;type&#39;</span> <span class="ow">and</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;patch_wise&#39;</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;Discriminator argument </span><span class="si">{}</span><span class="s2"> is not used&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_discriminators</span> <span class="o">=</span> <span class="n">num_discriminators</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="n">NLayerPatchDiscriminator</span><span class="p">(</span>
+            <span class="n">kernel_size</span><span class="p">,</span>
+            <span class="n">num_image_channels</span><span class="p">,</span>
+            <span class="n">num_filters</span><span class="p">,</span>
+            <span class="n">num_layers</span><span class="p">,</span>
+            <span class="n">max_num_filters</span><span class="p">,</span>
+            <span class="n">activation_norm_type</span><span class="p">,</span>
+            <span class="n">weight_norm_type</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with the Weight-Shared Multi-resolution patch &#39;</span>
+              <span class="s1">&#39;discriminator initialization.&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="WeightSharedMultiResPatchDiscriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Multi-resolution patch discriminator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_x (tensor) : Input images.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output_list (list): list of output tensors produced by</span>
+<span class="sd">                individual patch discriminators.</span>
+<span class="sd">              - features_list (list): list of lists of features produced by</span>
+<span class="sd">                individual patch discriminators.</span>
+<span class="sd">              - input_list (list): list of downsampled input images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">input_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">output_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">features_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">input_x</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_discriminators</span><span class="p">):</span>
+            <span class="n">input_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_downsampled</span><span class="p">)</span>
+            <span class="n">output</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span><span class="p">(</span><span class="n">input_downsampled</span><span class="p">)</span>
+            <span class="n">output_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+            <span class="n">features_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+            <span class="n">input_downsampled</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">input_downsampled</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                <span class="n">align_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_list</span><span class="p">,</span> <span class="n">features_list</span><span class="p">,</span> <span class="n">input_list</span></div></div>
+
+
+<div class="viewcode-block" id="NLayerPatchDiscriminator"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator">[docs]</a><span class="k">class</span> <span class="nc">NLayerPatchDiscriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Patch Discriminator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        kernel_size (int): Convolution kernel size.</span>
+<span class="sd">        num_input_channels (int): Num. of channels in the real/fake image.</span>
+<span class="sd">        num_filters (int): Num. of base filters in a layer.</span>
+<span class="sd">        num_layers (int): Num. of layers for the patch discriminator.</span>
+<span class="sd">        max_num_filters (int): Maximum num. of filters in a layer.</span>
+<span class="sd">        activation_norm_type (str): batch_norm/instance_norm/none/....</span>
+<span class="sd">        weight_norm_type (str): none/spectral_norm/weight_norm</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">num_input_channels</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="p">,</span>
+                 <span class="n">num_layers</span><span class="p">,</span>
+                 <span class="n">max_num_filters</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NLayerPatchDiscriminator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">=</span> <span class="n">num_layers</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">kernel_size</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">nonlinearity</span> <span class="o">=</span> <span class="s1">&#39;leakyrelu&#39;</span>
+        <span class="n">base_conv2d_block</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span>
+                              <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                              <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                              <span class="c1"># inplace_nonlinearity=True,</span>
+                              <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">)</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="p">[[</span><span class="n">base_conv2d_block</span><span class="p">(</span>
+            <span class="n">num_input_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)]]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">):</span>
+            <span class="n">num_filters_prev</span> <span class="o">=</span> <span class="n">num_filters</span>
+            <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">num_filters</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">max_num_filters</span><span class="p">)</span>
+            <span class="n">stride</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">num_layers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
+            <span class="n">layers</span> <span class="o">+=</span> <span class="p">[[</span><span class="n">base_conv2d_block</span><span class="p">(</span><span class="n">num_filters_prev</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span>
+                                          <span class="n">stride</span><span class="o">=</span><span class="n">stride</span><span class="p">)]]</span>
+        <span class="n">layers</span> <span class="o">+=</span> <span class="p">[[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="n">padding</span><span class="p">,</span>
+                                <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">)]]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)):</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">layers</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span>
+
+<div class="viewcode-block" id="NLayerPatchDiscriminator.forward"><a class="viewcode-back" href="../../../imaginaire.discriminators.html#imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Patch Discriminator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_x (N x C x H1 x W2 tensor): Concatenation of images and</span>
+<span class="sd">                semantic representations.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output (N x 1 x H2 x W2 tensor): Discriminator output value.</span>
+<span class="sd">                Before the sigmoid when using NSGAN.</span>
+<span class="sd">              - features (list): lists of tensors of the intermediate</span>
+<span class="sd">                activations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">input_x</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">features</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

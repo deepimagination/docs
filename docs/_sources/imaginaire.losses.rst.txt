@@ -1,0 +1,54 @@
+imaginaire.losses package
+=========================
+
+Submodules
+----------
+
+imaginaire.losses.feature\_matching module
+------------------------------------------
+
+.. automodule:: imaginaire.losses.feature_matching
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.losses.flow module
+-----------------------------
+
+.. automodule:: imaginaire.losses.flow
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.losses.gan module
+----------------------------
+
+.. automodule:: imaginaire.losses.gan
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.losses.kl module
+---------------------------
+
+.. automodule:: imaginaire.losses.kl
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.losses.perceptual module
+-----------------------------------
+
+.. automodule:: imaginaire.losses.perceptual
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.losses
+   :members:
+   :undoc-members:
+   :show-inheritance:

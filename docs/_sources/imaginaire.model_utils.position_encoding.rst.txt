@@ -1,0 +1,10 @@
+imaginaire.model\_utils.position\_encoding package
+==================================================
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.model_utils.position_encoding
+   :members:
+   :undoc-members:
+   :show-inheritance:

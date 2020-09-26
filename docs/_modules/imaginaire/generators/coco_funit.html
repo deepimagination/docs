@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators.coco_funit &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.generators.coco_funit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.generators.coco_funit</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.generators.funit</span> <span class="kn">import</span> <span class="p">(</span><span class="n">MLP</span><span class="p">,</span> <span class="n">ContentEncoder</span><span class="p">,</span> <span class="n">Decoder</span><span class="p">,</span>
+                                         <span class="n">StyleEncoder</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;COCO-FUNIT Generator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;COCO-FUNIT Generator constructor.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            gen_cfg (obj): Generator definition part of the yaml config file.</span>
+<span class="sd">            data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generator</span> <span class="o">=</span> <span class="n">COCOFUNITTranslator</span><span class="p">(</span><span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">))</span>
+
+<div class="viewcode-block" id="Generator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.Generator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;In the FUNIT&#39;s forward pass, it generates a content embedding and</span>
+<span class="sd">        a style code from the content image, and a style code from the style</span>
+<span class="sd">        image. By mixing the content code and the style code from the content</span>
+<span class="sd">        image, we reconstruct the input image. By mixing the content code and</span>
+<span class="sd">        the style code from the style image, we have a translation output.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">content_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">content_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_content&#39;</span><span class="p">])</span>
+        <span class="n">style_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_content&#39;</span><span class="p">])</span>
+        <span class="n">style_b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_style&#39;</span><span class="p">])</span>
+        <span class="n">images_trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_a</span><span class="p">,</span> <span class="n">style_b</span><span class="p">)</span>
+        <span class="n">images_recon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_a</span><span class="p">,</span> <span class="n">style_a</span><span class="p">)</span>
+
+        <span class="n">net_G_output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">images_trans</span><span class="o">=</span><span class="n">images_trans</span><span class="p">,</span>
+                            <span class="n">images_recon</span><span class="o">=</span><span class="n">images_recon</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">net_G_output</span></div>
+
+<div class="viewcode-block" id="Generator.inference"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.Generator.inference">[docs]</a>    <span class="k">def</span> <span class="nf">inference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">keep_original_size</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;COCO-FUNIT inference.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">              - images_content (tensor): Content images.</span>
+<span class="sd">              - images_style (tensor): Style images.</span>
+<span class="sd">            a2b (bool): If ``True``, translates images from domain A to B,</span>
+<span class="sd">                otherwise from B to A.</span>
+<span class="sd">            keep_original_size (bool): If ``True``, output image is resized</span>
+<span class="sd">            to the input content image size.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">content_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">content_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_content&#39;</span><span class="p">])</span>
+        <span class="n">style_b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_style&#39;</span><span class="p">])</span>
+        <span class="n">output_images</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_a</span><span class="p">,</span> <span class="n">style_b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">keep_original_size</span><span class="p">:</span>
+            <span class="n">height</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;original_h_w&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;original_h_w&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="c1"># print(&#39;( H, W) = ( %d, %d)&#39; % (height, width))</span>
+            <span class="n">output_images</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">output_images</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">])</span>
+        <span class="n">file_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="s1">&#39;images_content&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">output_images</span><span class="p">,</span> <span class="n">file_names</span></div></div>
+
+
+<div class="viewcode-block" id="COCOFUNITTranslator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.COCOFUNITTranslator">[docs]</a><span class="k">class</span> <span class="nc">COCOFUNITTranslator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;COCO-FUNIT Generator architecture.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_filters (int): Base filter numbers.</span>
+<span class="sd">        num_filters_mlp (int): Base filter number in the MLP module.</span>
+<span class="sd">        style_dims (int): Dimension of the style code.</span>
+<span class="sd">        usb_dims (int): Dimension of the universal style bias code.</span>
+<span class="sd">        num_res_blocks (int): Number of residual blocks at the end of the</span>
+<span class="sd">            content encoder.</span>
+<span class="sd">        num_mlp_blocks (int): Number of layers in the MLP module.</span>
+<span class="sd">        num_downsamples_content (int): Number of times we reduce</span>
+<span class="sd">            resolution by 2x2 for the content image.</span>
+<span class="sd">        num_downsamples_style (int): Number of times we reduce</span>
+<span class="sd">            resolution by 2x2 for the style image.</span>
+<span class="sd">        num_image_channels (int): Number of input image channels.</span>
+<span class="sd">        weight_norm_type (str): Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, or ``&#39;weight&#39;``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                 <span class="n">num_filters_mlp</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                 <span class="n">style_dims</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                 <span class="n">usb_dims</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+                 <span class="n">num_res_blocks</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">num_mlp_blocks</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">num_downsamples_style</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                 <span class="n">num_downsamples_content</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">num_image_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span> <span class="o">=</span> <span class="n">StyleEncoder</span><span class="p">(</span><span class="n">num_downsamples_style</span><span class="p">,</span>
+                                          <span class="n">num_image_channels</span><span class="p">,</span>
+                                          <span class="n">num_filters</span><span class="p">,</span>
+                                          <span class="n">style_dims</span><span class="p">,</span>
+                                          <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                                          <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                          <span class="n">weight_norm_type</span><span class="p">,</span>
+                                          <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span> <span class="o">=</span> <span class="n">ContentEncoder</span><span class="p">(</span><span class="n">num_downsamples_content</span><span class="p">,</span>
+                                              <span class="n">num_res_blocks</span><span class="p">,</span>
+                                              <span class="n">num_image_channels</span><span class="p">,</span>
+                                              <span class="n">num_filters</span><span class="p">,</span>
+                                              <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;instance&#39;</span><span class="p">,</span>
+                                              <span class="n">weight_norm_type</span><span class="p">,</span>
+                                              <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">=</span> <span class="n">Decoder</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span><span class="o">.</span><span class="n">output_dim</span><span class="p">,</span>
+                               <span class="n">num_filters_mlp</span><span class="p">,</span>
+                               <span class="n">num_image_channels</span><span class="p">,</span>
+                               <span class="n">num_downsamples_content</span><span class="p">,</span>
+                               <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                               <span class="n">weight_norm_type</span><span class="p">,</span>
+                               <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">usb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">usb_dims</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span> <span class="o">=</span> <span class="n">MLP</span><span class="p">(</span><span class="n">style_dims</span><span class="p">,</span>
+                       <span class="n">num_filters_mlp</span><span class="p">,</span>
+                       <span class="n">num_filters_mlp</span><span class="p">,</span>
+                       <span class="n">num_mlp_blocks</span><span class="p">,</span>
+                       <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="n">num_content_mlp_blocks</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">num_style_mlp_blocks</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mlp_content</span> <span class="o">=</span> <span class="n">MLP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span><span class="o">.</span><span class="n">output_dim</span><span class="p">,</span>
+                               <span class="n">style_dims</span><span class="p">,</span>
+                               <span class="n">num_filters_mlp</span><span class="p">,</span>
+                               <span class="n">num_content_mlp_blocks</span><span class="p">,</span>
+                               <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                               <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mlp_style</span> <span class="o">=</span> <span class="n">MLP</span><span class="p">(</span><span class="n">style_dims</span> <span class="o">+</span> <span class="n">usb_dims</span><span class="p">,</span>
+                             <span class="n">style_dims</span><span class="p">,</span>
+                             <span class="n">num_filters_mlp</span><span class="p">,</span>
+                             <span class="n">num_style_mlp_blocks</span><span class="p">,</span>
+                             <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="COCOFUNITTranslator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.COCOFUNITTranslator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reconstruct the input image by combining the computer content and</span>
+<span class="sd">        style code.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            images (tensor): Input image tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># reconstruct an image</span>
+        <span class="n">content</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">images_recon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images_recon</span></div>
+
+<div class="viewcode-block" id="COCOFUNITTranslator.encode"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.COCOFUNITTranslator.encode">[docs]</a>    <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Encoder images to get their content and style codes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            images (tensor): Input image tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">content</span><span class="p">,</span> <span class="n">style</span></div>
+
+<div class="viewcode-block" id="COCOFUNITTranslator.decode"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.coco_funit.COCOFUNITTranslator.decode">[docs]</a>    <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Generate images by combining their content and style codes.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            content (tensor): Content code tensor.</span>
+<span class="sd">            style (tensor): Style code tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">content_style_code</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">content_style_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp_content</span><span class="p">(</span><span class="n">content_style_code</span><span class="p">)</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">usb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">usb</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="n">style</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">style_in</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp_style</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">style</span><span class="p">,</span> <span class="n">usb</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">coco_style</span> <span class="o">=</span> <span class="n">style_in</span> <span class="o">*</span> <span class="n">content_style_code</span>
+        <span class="n">coco_style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span><span class="p">(</span><span class="n">coco_style</span><span class="p">)</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">coco_style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

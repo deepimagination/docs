@@ -1,0 +1,2396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.layers package" href="imaginaire.layers.html" />
+    <link rel="prev" title="imaginaire.evaluation package" href="imaginaire.evaluation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.generators package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.generators.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-generators-package">
+<h1>imaginaire.generators package<a class="headerlink" href="#imaginaire-generators-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.generators.coco_funit">
+<span id="imaginaire-generators-coco-funit-module"></span><h2>imaginaire.generators.coco_funit module<a class="headerlink" href="#module-imaginaire.generators.coco_funit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.coco_funit.COCOFUNITTranslator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.coco_funit.</code><code class="sig-name descname">COCOFUNITTranslator</code><span class="sig-paren">(</span><em class="sig-param">num_filters=64</em>, <em class="sig-param">num_filters_mlp=256</em>, <em class="sig-param">style_dims=64</em>, <em class="sig-param">usb_dims=1024</em>, <em class="sig-param">num_res_blocks=2</em>, <em class="sig-param">num_mlp_blocks=3</em>, <em class="sig-param">num_downsamples_style=4</em>, <em class="sig-param">num_downsamples_content=2</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#COCOFUNITTranslator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.COCOFUNITTranslator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>COCO-FUNIT Generator architecture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>num_filters_mlp</strong> (<em>int</em>) – Base filter number in the MLP module.</p></li>
+<li><p><strong>style_dims</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>usb_dims</strong> (<em>int</em>) – Dimension of the universal style bias code.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks at the end of the
+content encoder.</p></li>
+<li><p><strong>num_mlp_blocks</strong> (<em>int</em>) – Number of layers in the MLP module.</p></li>
+<li><p><strong>num_downsamples_content</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the content image.</p></li>
+<li><p><strong>num_downsamples_style</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the style image.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.coco_funit.COCOFUNITTranslator.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">content</em>, <em class="sig-param">style</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#COCOFUNITTranslator.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.COCOFUNITTranslator.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate images by combining their content and style codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>tensor</em>) – Content code tensor.</p></li>
+<li><p><strong>style</strong> (<em>tensor</em>) – Style code tensor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.coco_funit.COCOFUNITTranslator.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#COCOFUNITTranslator.encode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.COCOFUNITTranslator.encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encoder images to get their content and style codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>tensor</em>) – Input image tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.coco_funit.COCOFUNITTranslator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#COCOFUNITTranslator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.COCOFUNITTranslator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct the input image by combining the computer content and
+style code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>tensor</em>) – Input image tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.coco_funit.COCOFUNITTranslator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.coco_funit.COCOFUNITTranslator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.coco_funit.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.coco_funit.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>COCO-FUNIT Generator.</p>
+<dl class="method">
+<dt id="imaginaire.generators.coco_funit.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>In the FUNIT’s forward pass, it generates a content embedding and
+a style code from the content image, and a style code from the style
+image. By mixing the content code and the style code from the content
+image, we reconstruct the input image. By mixing the content code and
+the style code from the style image, we have a translation output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.coco_funit.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">keep_original_size=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/coco_funit.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.coco_funit.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>COCO-FUNIT inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.
+- images_content (tensor): Content images.
+- images_style (tensor): Style images.</p></li>
+<li><p><strong>a2b</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, translates images from domain A to B,
+otherwise from B to A.</p></li>
+<li><p><strong>keep_original_size</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, output image is resized</p></li>
+<li><p><strong>the input content image size.</strong> (<em>to</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.coco_funit.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.coco_funit.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.dummy">
+<span id="imaginaire-generators-dummy-module"></span><h2>imaginaire.generators.dummy module<a class="headerlink" href="#module-imaginaire.generators.dummy" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.dummy.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.dummy.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/dummy.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.dummy.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Dummy generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.dummy.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/dummy.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.dummy.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dummy Generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.dummy.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.dummy.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.fs_vid2vid">
+<span id="imaginaire-generators-fs-vid2vid-module"></span><h2>imaginaire.generators.fs_vid2vid module<a class="headerlink" href="#module-imaginaire.generators.fs_vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.AttentionModule">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">AttentionModule</code><span class="sig-paren">(</span><em class="sig-param">atn_cfg</em>, <em class="sig-param">data_cfg</em>, <em class="sig-param">conv_2d_block</em>, <em class="sig-param">num_filters_each_layer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#AttentionModule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.AttentionModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Attention module constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atn_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+<li><p><strong>conv_2d_block</strong> – Conv2DBlock constructor.</p></li>
+<li><p><strong>num_filters_each_layer</strong> (<em>int</em>) – The number of filters in each layer.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.AttentionModule.attention_encode">
+<code class="sig-name descname">attention_encode</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">net_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#AttentionModule.attention_encode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.AttentionModule.attention_encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode the input image to get the attention map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>NxCxHxW tensor</em>) – Input image.</p></li>
+<li><p><strong>net_name</strong> (<em>str</em>) – Name for attention network.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Encoded feature.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (NxC2xH2xW2 tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.AttentionModule.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">in_features</em>, <em class="sig-param">label</em>, <em class="sig-param">ref_label</em>, <em class="sig-param">attention=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#AttentionModule.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.AttentionModule.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the attention map to combine multiple image features in the
+case of multiple reference images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_features</strong> (<em>(</em><em>NxK</em><em>)</em><em>xC1xH1xW1 tensor</em>) – Input feaures.</p></li>
+<li><p><strong>label</strong> (<em>NxC2xH2xW2 tensor</em>) – Target label.</p></li>
+<li><p><strong>ref_label</strong> (<em>NxC2xH2xW2 tensor</em>) – Reference label.</p></li>
+<li><p><strong>attention</strong> (<em>Nx</em><em>(</em><em>KxH1xW1</em><em>)</em><em>x</em><em>(</em><em>H1xW1</em><em>) </em><em>tensor</em>) – Attention maps.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>out_features (NxC1xH1xW1 tensor): Attention-combined features.</p></li>
+<li><p>attention (Nx(KxH1xW1)x(H1xW1) tensor): Attention maps.</p></li>
+<li><p>atn_vis (1x1xH1xW1 tensor): Visualization for attention scores.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.fs_vid2vid.AttentionModule.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.AttentionModule.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.FlowGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">FlowGenerator</code><span class="sig-paren">(</span><em class="sig-param">flow_cfg</em>, <em class="sig-param">data_cfg</em>, <em class="sig-param">num_frames</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#FlowGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.FlowGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>flow generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow_cfg</strong> (<em>obj</em>) – Flow definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+<li><p><strong>num_frames</strong> (<em>int</em>) – Number of input frames.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.FlowGenerator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">ref_label</em>, <em class="sig-param">ref_image</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#FlowGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.FlowGenerator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flow generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>4D tensor</em>) – Input label tensor.</p></li>
+<li><p><strong>ref_label</strong> (<em>4D tensor</em>) – Reference label tensors.</p></li>
+<li><p><strong>ref_image</strong> (<em>4D tensor</em>) – Reference image tensors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>flow (4D tensor) : Generated flow map.</p></li>
+<li><p>mask (4D tensor) : Generated occlusion mask.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.fs_vid2vid.FlowGenerator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.FlowGenerator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Few-shot vid2vid generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.SPADE_combine">
+<code class="sig-name descname">SPADE_combine</code><span class="sig-paren">(</span><em class="sig-param">encoded_label</em>, <em class="sig-param">cond_inputs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.SPADE_combine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.SPADE_combine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Using Multi-SPADE to combine raw synthesized image with warped
+images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoded_label</strong> (<em>list of tensors</em>) – Original label map embeddings.</p></li>
+<li><p><strong>cond_inputs</strong> (<em>list of tensors</em>) – New SPADE conditional inputs from the
+warped images.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Combined conditional inputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>encoded_label (list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.custom_init">
+<code class="sig-name descname">custom_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.custom_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.custom_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is for dealing with the numerical issue that might
+occur when doing mixed precision training.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.flow_generation">
+<code class="sig-name descname">flow_generation</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">ref_labels</em>, <em class="sig-param">ref_images</em>, <em class="sig-param">prev_labels</em>, <em class="sig-param">prev_images</em>, <em class="sig-param">ref_idx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.flow_generation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.flow_generation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates flows and masks for warping reference / previous images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>NxCxHxW tensor</em>) – Target label map.</p></li>
+<li><p><strong>ref_labels</strong> (<em>NxKxCxHxW tensor</em>) – Reference label maps.</p></li>
+<li><p><strong>ref_images</strong> (<em>NxKx3xHxW tensor</em>) – Reference images.</p></li>
+<li><p><strong>prev_labels</strong> (<em>NxTxCxHxW tensor</em>) – Previous label maps.</p></li>
+<li><p><strong>prev_images</strong> (<em>NxTx3xHxW tensor</em>) – Previous images.</p></li>
+<li><p><strong>ref_idx</strong> (<em>Nx1 tensor</em>) – Index for which image to use from the</p></li>
+<li><p><strong>images.</strong> (<em>reference</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>flow (list of Nx2xHxW tensor): Optical flows.</p></li>
+<li><p>occ_mask (list of Nx1xHxW tensor): Occlusion masks.</p></li>
+<li><p>img_warp (list of Nx3xHxW tensor): Warped reference / previous
+images.</p></li>
+<li><p>cond_inputs (list of Nx4xHxW tensor): Conditional inputs for
+SPADE combination.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>few-shot vid2vid generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Dictionary of input data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.init_network_weights">
+<code class="sig-name descname">init_network_weights</code><span class="sig-paren">(</span><em class="sig-param">net_src</em>, <em class="sig-param">net_dst</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.init_network_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.init_network_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize weights in net_dst with those in net_src.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.init_temporal_network">
+<code class="sig-name descname">init_temporal_network</code><span class="sig-paren">(</span><em class="sig-param">cfg_init=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.init_temporal_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.init_temporal_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>When starting training multiple frames, initialize the flow network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg_init</strong> (<em>dict</em>) – Weight initialization config.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.load_pretrained_network">
+<code class="sig-name descname">load_pretrained_network</code><span class="sig-paren">(</span><em class="sig-param">pretrained_dict</em>, <em class="sig-param">prefix='module.'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.load_pretrained_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.load_pretrained_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the pretrained network into self network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_dict</strong> (<em>dict</em>) – Pretrained network weights.</p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – Prefix to the network weights name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.one_up_conv_layer">
+<code class="sig-name descname">one_up_conv_layer</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">encoded_label</em>, <em class="sig-param">conv_weight</em>, <em class="sig-param">norm_weight</em>, <em class="sig-param">i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.one_up_conv_layer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.one_up_conv_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>One residual block layer in the main branch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>4D tensor</em>) – Current feature map.</p></li>
+<li><p><strong>encoded_label</strong> (<em>list of tensors</em>) – Encoded input label maps.</p></li>
+<li><p><strong>conv_weight</strong> (<em>list of tensors</em>) – Hyper conv weights.</p></li>
+<li><p><strong>norm_weight</strong> (<em>list of tensors</em>) – Hyper norm weights.</p></li>
+<li><p><strong>i</strong> (<em>int</em>) – Layer index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output feature map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#Generator.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the network at the beginning of a sequence.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.fs_vid2vid.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.LabelEmbedder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">LabelEmbedder</code><span class="sig-paren">(</span><em class="sig-param">emb_cfg</em>, <em class="sig-param">num_input_channels</em>, <em class="sig-param">num_hyper_layers=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#LabelEmbedder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.LabelEmbedder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Embed the input label map to get embedded features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emb_cfg</strong> (<em>obj</em>) – Embed network configuration.</p></li>
+<li><p><strong>num_input_channels</strong> (<em>int</em>) – Number of input channels.</p></li>
+<li><p><strong>num_hyper_layers</strong> (<em>int</em>) – Number of hyper layers.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.LabelEmbedder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#LabelEmbedder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.LabelEmbedder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embedding network forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>NxCxHxW tensor</em>) – Network input.</p></li>
+<li><p><strong>weights</strong> (<em>list of tensors</em>) – Conv weights if using hyper network.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Network outputs at different layers.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.fs_vid2vid.LabelEmbedder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.LabelEmbedder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">WeightGenerator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Weight generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.encode_reference">
+<code class="sig-name descname">encode_reference</code><span class="sig-paren">(</span><em class="sig-param">ref_image</em>, <em class="sig-param">ref_label</em>, <em class="sig-param">label</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator.encode_reference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.encode_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode the reference image to get features for weight generation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ref_image</strong> (<em>(</em><em>NxK</em><em>)</em><em>x3xHxW tensor</em>) – Reference images.</p></li>
+<li><p><strong>ref_label</strong> (<em>(</em><em>NxK</em><em>)</em><em>xCxHxW tensor</em>) – Reference labels.</p></li>
+<li><p><strong>label</strong> (<em>NxCxHxW tensor</em>) – Target label.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Number of reference images.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>x (NxC2xH2xW2 tensor): Encoded features from reference images
+for the main branch (as input to the decoder).</p></li>
+<li><p>encoded_ref (list of tensors): Encoded features from reference
+images for the weight generation branch.</p></li>
+<li><p>attention (Nx(KxH1xW1)x(H1xW1) tensor): Attention maps.</p></li>
+<li><p>atn_vis (1x1xH1xW1 tensor): Visualization for attention scores.</p></li>
+<li><p>ref_idx (Nx1 tensor): Index for which image to use from the
+reference images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">ref_image</em>, <em class="sig-param">ref_label</em>, <em class="sig-param">label</em>, <em class="sig-param">is_first_frame</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate network weights based on the reference images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ref_image</strong> (<em>NxKx3xHxW tensor</em>) – Reference images.</p></li>
+<li><p><strong>ref_label</strong> (<em>NxKxCxHxW tensor</em>) – Reference labels.</p></li>
+<li><p><strong>label</strong> (<em>NxCxHxW tensor</em>) – Target label.</p></li>
+<li><p><strong>is_first_frame</strong> (<em>bool</em>) – Whether the current frame is the first frame.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>x (NxC2xH2xW2 tensor): Encoded features from reference images
+for the main branch (as input to the decoder).</p></li>
+<li><p>encoded_label (list of tensors): Encoded target label map for
+SPADE.</p></li>
+<li><p>conv_weights (list of tensors): Network weights for conv
+layers in the main network.</p></li>
+<li><p>norm_weights (list of tensors): Network weights for SPADE
+layers in the main network.</p></li>
+<li><p>attention (Nx(KxH1xW1)x(H1xW1) tensor): Attention maps.</p></li>
+<li><p>atn_vis (1x1xH1xW1 tensor): Visualization for attention
+scores.</p></li>
+<li><p>ref_idx (Nx1 tensor): Index for which image to use from the
+reference images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.get_conv_weights">
+<code class="sig-name descname">get_conv_weights</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator.get_conv_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.get_conv_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adaptively generate weights for layer i in main branch convolutions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>NxCxHxW tensor</em>) – Input features.</p></li>
+<li><p><strong>i</strong> (<em>int</em>) – Layer index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>conv_weights (list of tensors): Weights for the conv layers in
+the main branch.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.get_norm_weights">
+<code class="sig-name descname">get_norm_weights</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator.get_norm_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.get_norm_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adaptively generate weights for SPADE in layer i of generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>NxCxHxW tensor</em>) – Input features.</p></li>
+<li><p><strong>i</strong> (<em>int</em>) – Layer index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>embedding_weights (list of tensors): Weights for the label
+embedding network.</p></li>
+<li><p>norm_weights (list of tensors): Weights for the SPADE layers.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightGenerator.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the network at the beginning of a sequence.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.fs_vid2vid.WeightGenerator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightGenerator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.fs_vid2vid.</code><code class="sig-name descname">WeightReshaper</code><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles all weight reshape related tasks.</p>
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper.reshape_embed_input">
+<code class="sig-name descname">reshape_embed_input</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper.reshape_embed_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper.reshape_embed_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshape input to be (B x C) X H X W.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Input features.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reshaped features.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (tensor or list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper.reshape_weight">
+<code class="sig-name descname">reshape_weight</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">weight_shape</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper.reshape_weight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper.reshape_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshape input x to the desired weight shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>tensor</em><em> or </em><em>list of tensors</em>) – Input features.</p></li>
+<li><p><strong>weight_shape</strong> (<em>list of int</em>) – Desired shape of the weight.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>weight (tensor): Network weights</p></li>
+<li><p>bias (tensor): Network bias.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper.split_weights">
+<code class="sig-name descname">split_weights</code><span class="sig-paren">(</span><em class="sig-param">weight</em>, <em class="sig-param">sizes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper.split_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper.split_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the desired shape is a list, first divide the input to each
+corresponding weight shape in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weight</strong> (<em>tensor</em>) – Input weight.</p></li>
+<li><p><strong>sizes</strong> (<em>int</em><em> or </em><em>list of int</em>) – Target sizes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Divided weights.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>weight (list of tensors)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper.sum">
+<code class="sig-name descname">sum</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper.sum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sum all elements recursively in a nested list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>nested list of int</em>) – Input list of elements.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sum of all elements.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>out (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.fs_vid2vid.WeightReshaper.sum_mul">
+<code class="sig-name descname">sum_mul</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/fs_vid2vid.html#WeightReshaper.sum_mul"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.fs_vid2vid.WeightReshaper.sum_mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a weight shape, compute the number of elements needed for
+weight + bias. If input is a list of shapes, sum all the elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>list of int</em>) – Input list of elements.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Summed number of elements.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>out (int or list of int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.funit">
+<span id="imaginaire-generators-funit-module"></span><h2>imaginaire.generators.funit module<a class="headerlink" href="#module-imaginaire.generators.funit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.funit.ContentEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">ContentEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_downsamples</em>, <em class="sig-param">num_res_blocks</em>, <em class="sig-param">image_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#ContentEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.ContentEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved FUNIT Content Encoder. This is basically the same as the
+original FUNIT content encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_downsamples</strong> (<em>int</em>) – Number of times we reduce resolution by
+2x2.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of times we append residual block
+after all the downsampling modules.</p></li>
+<li><p><strong>image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter number.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – Padding mode</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Nonlinearity.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.funit.ContentEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#ContentEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.ContentEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.ContentEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.ContentEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.funit.Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">Decoder</code><span class="sig-paren">(</span><em class="sig-param">num_enc_output_channels</em>, <em class="sig-param">style_channels</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">num_upsamples=4</em>, <em class="sig-param">padding_type='reflect'</em>, <em class="sig-param">weight_norm_type='none'</em>, <em class="sig-param">nonlinearity='relu'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#Decoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved FUNIT decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_enc_output_channels</strong> (<em>int</em>) – Number of content feature channels.</p></li>
+<li><p><strong>style_channels</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of image channels.</p></li>
+<li><p><strong>num_upsamples</strong> (<em>int</em>) – How many times we are going to apply
+upsample residual block.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.funit.Decoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">style</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#Decoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.Decoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>tensor</em>) – Content embedding of the content image.</p></li>
+<li><p><strong>style</strong> (<em>tensor</em>) – Style embedding of the style image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.Decoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.Decoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.funit.FUNITTranslator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">FUNITTranslator</code><span class="sig-paren">(</span><em class="sig-param">num_filters=64</em>, <em class="sig-param">num_filters_mlp=256</em>, <em class="sig-param">style_dims=64</em>, <em class="sig-param">num_res_blocks=2</em>, <em class="sig-param">num_mlp_blocks=3</em>, <em class="sig-param">num_downsamples_style=4</em>, <em class="sig-param">num_downsamples_content=2</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#FUNITTranslator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.FUNITTranslator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>num_filters_mlp</strong> (<em>int</em>) – Base filter number in the MLP module.</p></li>
+<li><p><strong>style_dims</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks at the end of the
+content encoder.</p></li>
+<li><p><strong>num_mlp_blocks</strong> (<em>int</em>) – Number of layers in the MLP module.</p></li>
+<li><p><strong>num_downsamples_content</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the content image.</p></li>
+<li><p><strong>num_downsamples_style</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the style image.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.funit.FUNITTranslator.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">content</em>, <em class="sig-param">style</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#FUNITTranslator.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.FUNITTranslator.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate images by combining their content and style codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>tensor</em>) – Content code tensor.</p></li>
+<li><p><strong>style</strong> (<em>tensor</em>) – Style code tensor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.funit.FUNITTranslator.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#FUNITTranslator.encode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.FUNITTranslator.encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encoder images to get their content and style codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>tensor</em>) – Input image tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.funit.FUNITTranslator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#FUNITTranslator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.FUNITTranslator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct the input image by combining the computer content and
+style code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>tensor</em>) – Input image tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.FUNITTranslator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.FUNITTranslator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.funit.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Generator of the improved FUNIT baseline in the COCO-FUNIT paper.</p>
+<dl class="method">
+<dt id="imaginaire.generators.funit.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>In the FUNIT’s forward pass, it generates a content embedding and
+a style code from the content image, and a style code from the style
+image. By mixing the content code and the style code from the content
+image, we reconstruct the input image. By mixing the content code and
+the style code from the style image, we have a translation output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.funit.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">keep_original_size=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>COCO-FUNIT inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.
+- images_content (tensor): Content images.
+- images_style (tensor): Style images.</p></li>
+<li><p><strong>a2b</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, translates images from domain A to B,
+otherwise from B to A.</p></li>
+<li><p><strong>keep_original_size</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, output image is resized</p></li>
+<li><p><strong>the input content image size.</strong> (<em>to</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.funit.MLP">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">MLP</code><span class="sig-paren">(</span><em class="sig-param">input_dim</em>, <em class="sig-param">output_dim</em>, <em class="sig-param">latent_dim</em>, <em class="sig-param">num_layers</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">nonlinearity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#MLP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.MLP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved FUNIT style decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dim</strong> (<em>int</em>) – Input dimension (style code dimension).</p></li>
+<li><p><strong>output_dim</strong> (<em>int</em>) – Output dimension (to be fed into the AdaIN
+layer).</p></li>
+<li><p><strong>latent_dim</strong> (<em>int</em>) – Latent dimension.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Number of layers in the MLP.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Activation type.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Nonlinearity type.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.funit.MLP.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#MLP.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.MLP.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.MLP.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.MLP.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.funit.StyleEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.funit.</code><code class="sig-name descname">StyleEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_downsamples</em>, <em class="sig-param">image_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">style_channels</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#StyleEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.StyleEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved FUNIT Style Encoder. This is basically the same as the
+original FUNIT Style Encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_downsamples</strong> (<em>int</em>) – Number of times we reduce resolution by
+2x2.</p></li>
+<li><p><strong>image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter number.</p></li>
+<li><p><strong>style_channels</strong> (<em>int</em>) – Style code dimension.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – Padding mode.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Nonlinearity.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.funit.StyleEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/funit.html#StyleEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.funit.StyleEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.funit.StyleEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.funit.StyleEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.munit">
+<span id="imaginaire-generators-munit-module"></span><h2>imaginaire.generators.munit module<a class="headerlink" href="#module-imaginaire.generators.munit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.munit.AutoEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.munit.</code><code class="sig-name descname">AutoEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_filters=64</em>, <em class="sig-param">max_num_filters=256</em>, <em class="sig-param">num_filters_mlp=256</em>, <em class="sig-param">latent_dim=8</em>, <em class="sig-param">num_res_blocks=4</em>, <em class="sig-param">num_mlp_blocks=2</em>, <em class="sig-param">num_downsamples_style=4</em>, <em class="sig-param">num_downsamples_content=2</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">content_norm_type='instance'</em>, <em class="sig-param">style_norm_type=''</em>, <em class="sig-param">decoder_norm_type='instance'</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">decoder_norm_params=namespace(affine=False)</em>, <em class="sig-param">output_nonlinearity=''</em>, <em class="sig-param">pre_act=False</em>, <em class="sig-param">apply_noise=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#AutoEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.AutoEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved MUNIT autoencoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum number of filters in the encoder.</p></li>
+<li><p><strong>num_filters_mlp</strong> (<em>int</em>) – Base filter number in the MLP module.</p></li>
+<li><p><strong>latent_dim</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks at the end of the
+content encoder.</p></li>
+<li><p><strong>num_mlp_blocks</strong> (<em>int</em>) – Number of layers in the MLP module.</p></li>
+<li><p><strong>num_downsamples_style</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the style image.</p></li>
+<li><p><strong>num_downsamples_content</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the content image.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>content_norm_type</strong> (<em>str</em>) – Type of activation normalization in the
+content encoder.</p></li>
+<li><p><strong>style_norm_type</strong> (<em>str</em>) – Type of activation normalization in the
+style encoder.</p></li>
+<li><p><strong>decoder_norm_type</strong> (<em>str</em>) – Type of activation normalization in the
+decoder.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>decoder_norm_params</strong> (<em>obj</em>) – Parameters of activation normalization in the
+decoder. If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, decoder_norm_params.__dict__ will be used
+as keyword arguments when initializing activation normalization.</p></li>
+<li><p><strong>output_nonlinearity</strong> (<em>str</em>) – Type of nonlinearity before final output,
+<code class="docutils literal notranslate"><span class="pre">'tanh'</span></code> or <code class="docutils literal notranslate"><span class="pre">'none'</span></code>.</p></li>
+<li><p><strong>pre_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses pre-activation residual blocks.</p></li>
+<li><p><strong>apply_noise</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, injects Gaussian noise in the decoder.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.munit.AutoEncoder.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">content</em>, <em class="sig-param">style</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#AutoEncoder.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.AutoEncoder.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode content and style code to an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>Tensor</em>) – Content code.</p></li>
+<li><p><strong>style</strong> (<em>Tensor</em>) – Style code.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output images.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>images (Tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.munit.AutoEncoder.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#AutoEncoder.encode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.AutoEncoder.encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode an image to content and style code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>Tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>content (Tensor): Content code.</p></li>
+<li><p>style (Tensor): Style code.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.munit.AutoEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#AutoEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.AutoEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>Tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reconstructed images.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>images_recon (Tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.munit.AutoEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.munit.AutoEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.munit.Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.munit.</code><code class="sig-name descname">Decoder</code><span class="sig-paren">(</span><em class="sig-param">num_upsamples</em>, <em class="sig-param">num_res_blocks</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">num_image_channels</em>, <em class="sig-param">style_channels</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">activation_norm_params</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em>, <em class="sig-param">output_nonlinearity</em>, <em class="sig-param">pre_act=False</em>, <em class="sig-param">apply_noise=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#Decoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved MUNIT decoder. The network consists of</p>
+<ul class="simple">
+<li><p>$(num_res_blocks) residual blocks.</p></li>
+<li><p>$(num_upsamples) residual blocks or convolutional blocks</p></li>
+<li><p>output layer.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_upsamples</strong> (<em>int</em>) – Number of times we increase resolution by 2x2.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>style_channels</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>padding_mode</strong> (<em>string</em>) – Type of padding.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>activation_norm_params</strong> (<em>obj</em>) – Parameters of activation normalization.
+If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, decoder_norm_params.__dict__ will be used
+as keyword arguments when initializing activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Type of nonlinear activation function.</p></li>
+<li><p><strong>output_nonlinearity</strong> (<em>str</em>) – Type of nonlinearity before final output,
+<code class="docutils literal notranslate"><span class="pre">'tanh'</span></code> or <code class="docutils literal notranslate"><span class="pre">'none'</span></code>.</p></li>
+<li><p><strong>pre_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses pre-activation residual blocks.</p></li>
+<li><p><strong>apply_noise</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, injects Gaussian noise.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.munit.Decoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">style</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#Decoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.Decoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>tensor</em>) – Content embedding of the content image.</p></li>
+<li><p><strong>style</strong> (<em>tensor</em>) – Style embedding of the style image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.munit.Decoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.munit.Decoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.munit.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.munit.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved MUNIT generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.munit.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">random_style=True</em>, <em class="sig-param">image_recon=True</em>, <em class="sig-param">latent_recon=True</em>, <em class="sig-param">cycle_recon=True</em>, <em class="sig-param">within_latent_recon=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>In MUNIT’s forward pass, it generates a content code and a style
+code from images in both domain. It then performs a within-domain
+reconstruction step and a cross-domain translation step.
+In within-domain reconstruction, it reconstructs an image using the
+content and style from the same image and optionally encodes the image
+back to the latent space.
+In cross-domain translation, it generates an translated image by mixing
+the content and style from images in different domains, and optionally
+encodes the image back to the latent space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.
+- images_a (tensor): Images from domain A.
+- images_b (tensor): Images from domain B.</p></li>
+<li><p><strong>random_style</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, samples the style code from the
+prior distribution, otherwise uses the style code encoded from
+the input images in the other domain.</p></li>
+<li><p><strong>image_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns reconstructed images.</p></li>
+<li><p><strong>latent_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns reconstructed latent
+code during cross-domain translation.</p></li>
+<li><p><strong>cycle_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns cycle
+reconstructed images.</p></li>
+<li><p><strong>within_latent_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns reconstructed
+latent code during within-domain reconstruction.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.munit.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">a2b=True</em>, <em class="sig-param">random_style=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>MUNIT inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.
+- images_a (tensor): Images from domain A.
+- images_b (tensor): Images from domain B.</p></li>
+<li><p><strong>a2b</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, translates images from domain A to B,
+otherwise from B to A.</p></li>
+<li><p><strong>random_style</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, samples the style code from the
+prior distribution, otherwise uses the style code encoded from
+the input images in the other domain.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.munit.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.munit.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.munit.MLP">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.munit.</code><code class="sig-name descname">MLP</code><span class="sig-paren">(</span><em class="sig-param">input_dim</em>, <em class="sig-param">output_dim</em>, <em class="sig-param">latent_dim</em>, <em class="sig-param">num_layers</em>, <em class="sig-param">norm</em>, <em class="sig-param">nonlinearity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#MLP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.MLP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>The multi-layer perceptron (MLP) that maps Gaussian style code to a
+feature vector that is given as the conditional input to AdaIN.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dim</strong> (<em>int</em>) – Number of channels in the input tensor.</p></li>
+<li><p><strong>output_dim</strong> (<em>int</em>) – Number of channels in the output tensor.</p></li>
+<li><p><strong>latent_dim</strong> (<em>int</em>) – Number of channels in the latent features.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Number of layers in the MLP.</p></li>
+<li><p><strong>norm</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Type of nonlinear activation function.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.munit.MLP.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#MLP.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.MLP.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.munit.MLP.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.munit.MLP.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.munit.StyleEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.munit.</code><code class="sig-name descname">StyleEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_downsamples</em>, <em class="sig-param">num_image_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">style_channels</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#StyleEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.StyleEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>MUNIT style encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_downsamples</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>style_channels</strong> (<em>int</em>) – Dimension of the style code.</p></li>
+<li><p><strong>padding_mode</strong> (<em>string</em>) – Type of padding.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Type of nonlinear activation function.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.munit.StyleEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/munit.html#StyleEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.munit.StyleEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.munit.StyleEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.munit.StyleEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.pix2pixHD">
+<span id="imaginaire-generators-pix2pixhd-module"></span><h2>imaginaire.generators.pix2pixHD module<a class="headerlink" href="#module-imaginaire.generators.pix2pixHD" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.pix2pixHD.Encoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.pix2pixHD.</code><code class="sig-name descname">Encoder</code><span class="sig-paren">(</span><em class="sig-param">enc_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Encoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Encoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Encoder for getting region-wise features for style control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enc_cfg</strong> (<em>obj</em>) – Encoder definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.Encoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">instance_map</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Encoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Encoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracting region-wise features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>4D tensor</em>) – Real RGB images.</p></li>
+<li><p><strong>instance_map</strong> (<em>4D tensor</em>) – Instance label mask.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Instance-wise average-pooled</dt><dd><p>feature maps.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>outputs_mean (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.pix2pixHD.Encoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Encoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.pix2pixHD.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.pix2pixHD.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Pix2pixHD coarse-to-fine generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">random_style=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coarse-to-fine generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Dictionary of input data.</p></li>
+<li><p><strong>random_style</strong> (<em>bool</em>) – Always set to false for the pix2pixHD model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Dictionary of input data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output fake images.
+file_names (str): Data file name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fake_images (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.Generator.load_pretrained_network">
+<code class="sig-name descname">load_pretrained_network</code><span class="sig-paren">(</span><em class="sig-param">pretrained_dict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#Generator.load_pretrained_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Generator.load_pretrained_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a pretrained network.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.pix2pixHD.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.pix2pixHD.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.pix2pixHD.GlobalGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.pix2pixHD.</code><code class="sig-name descname">GlobalGenerator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em>, <em class="sig-param">num_input_channels</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">base_conv_block</em>, <em class="sig-param">base_res_block</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#GlobalGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.GlobalGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Coarse generator constructor. This is the main generator in the
+pix2pixHD architecture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+<li><p><strong>num_input_channels</strong> (<em>int</em>) – Number of segmentation labels.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – zero | reflect | …</p></li>
+<li><p><strong>base_conv_block</strong> (<em>obj</em>) – Conv block with preset attributes.</p></li>
+<li><p><strong>base_res_block</strong> (<em>obj</em>) – Residual block with preset attributes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.GlobalGenerator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#GlobalGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.GlobalGenerator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coarse-to-fine generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>4D tensor</em>) – Input semantic representations.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Synthesized image by generator.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.pix2pixHD.GlobalGenerator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.pix2pixHD.GlobalGenerator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.pix2pixHD.LocalEnhancer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.pix2pixHD.</code><code class="sig-name descname">LocalEnhancer</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em>, <em class="sig-param">num_input_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">base_conv_block</em>, <em class="sig-param">base_res_block</em>, <em class="sig-param">output_img=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#LocalEnhancer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.LocalEnhancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Local enhancer constructor. These are sub-networks that are useful
+when aiming to produce high-resolution outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – local generator definition part of the yaml config</p></li>
+<li><p><strong>file.</strong> – </p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+<li><p><strong>num_input_channels</strong> (<em>int</em>) – Number of segmentation labels.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Number of filters for the first layer.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – zero | reflect | …</p></li>
+<li><p><strong>base_conv_block</strong> (<em>obj</em>) – Conv block with preset attributes.</p></li>
+<li><p><strong>base_res_block</strong> (<em>obj</em>) – Residual block with preset attributes.</p></li>
+<li><p><strong>output_img</strong> (<em>bool</em>) – Output is image or feature map.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.pix2pixHD.LocalEnhancer.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">output_coarse</em>, <em class="sig-param">input_fine</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/pix2pixHD.html#LocalEnhancer.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.pix2pixHD.LocalEnhancer.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local enhancer forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_coarse</strong> (<em>4D tensor</em>) – Coarse output from previous layer.</p></li>
+<li><p><strong>input_fine</strong> (<em>4D tensor</em>) – Fine input from current layer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Refined output.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.pix2pixHD.LocalEnhancer.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.pix2pixHD.LocalEnhancer.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.spade">
+<span id="imaginaire-generators-spade-module"></span><h2>imaginaire.generators.spade module<a class="headerlink" href="#module-imaginaire.generators.spade" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.spade.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.spade.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>SPADE generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.spade.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">random_style=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>SPADE Generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – <ul class="simple">
+<li><p>images (N x C1 x H x W tensor) : Ground truth images</p></li>
+<li><p>label (N x C2 x H x W tensor) : Semantic representations</p></li>
+<li><p>z (N x style_dims tensor): Gaussian random noise</p></li>
+<li><p>random_style (bool): Whether to sample a random style vector.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>fake_images (N x 3 x H x W tensor): fake images</p></li>
+<li><p>mu (N x C1 tensor): mean vectors</p></li>
+<li><p>logvar (N x C1 tensor): log-variance vectors</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.spade.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">random_style=False</em>, <em class="sig-param">use_fixed_random_style=False</em>, <em class="sig-param">keep_original_size=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute results images for a batch of input data and save the
+results in the specified folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – <ul>
+<li><p>images (N x C1 x H x W tensor) : Ground truth images</p></li>
+<li><p>label (N x C2 x H x W tensor) : Semantic representations</p></li>
+<li><p>z (N x style_dims tensor): Gaussian random noise</p></li>
+</ul>
+</p></li>
+<li><p><strong>random_style</strong> (<em>bool</em>) – Whether to sample a random style vector.</p></li>
+<li><p><strong>use_fixed_random_style</strong> (<em>bool</em>) – Sample random style once and use it
+for all the remaining inference.</p></li>
+<li><p><strong>keep_original_size</strong> (<em>bool</em>) – Keep original size of the input.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>fake_images (N x 3 x H x W tensor): fake images</p></li>
+<li><p>mu (N x C1 tensor): mean vectors</p></li>
+<li><p>logvar (N x C1 tensor): log-variance vectors</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.spade.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.spade.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.spade.SPADEGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.spade.</code><code class="sig-name descname">SPADEGenerator</code><span class="sig-paren">(</span><em class="sig-param">num_labels</em>, <em class="sig-param">out_image_small_side_size</em>, <em class="sig-param">image_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">style_dims</em>, <em class="sig-param">activation_norm_params</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">global_adaptive_norm_type</em>, <em class="sig-param">skip_activation_norm</em>, <em class="sig-param">use_posenc_in_input_layer</em>, <em class="sig-param">use_style_encoder</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#SPADEGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.SPADEGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>SPADE Image Generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_labels</strong> (<em>int</em>) – Number of different labels.</p></li>
+<li><p><strong>out_image_small_side_size</strong> (<em>int</em>) – min(width, height)</p></li>
+<li><p><strong>image_channels</strong> (<em>int</em>) – Num. of channels of the output image.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>kernel_size</strong> (<em>int</em>) – Convolution kernel size.</p></li>
+<li><p><strong>style_dims</strong> (<em>int</em>) – Dimensions of the style code.</p></li>
+<li><p><strong>activation_norm_params</strong> (<em>obj</em>) – Spatially adaptive normalization param.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+<li><p><strong>global_adaptive_norm_type</strong> (<em>str</em>) – Type of normalization in SPADE.</p></li>
+<li><p><strong>skip_activation_norm</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, applies activation norm to the
+shortcut connection in residual blocks.</p></li>
+<li><p><strong>use_style_encoder</strong> (<em>bool</em>) – Whether to use global adaptive norm
+like conditional batch norm or adaptive instance norm.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.spade.SPADEGenerator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#SPADEGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.SPADEGenerator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>SPADE Generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – <ul class="simple">
+<li><p>data  (N x C1 x H x W tensor) : Ground truth images.</p></li>
+<li><p>label (N x C2 x H x W tensor) : Semantic representations.</p></li>
+<li><p>z (N x style_dims tensor): Gaussian random noise.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>fake_images (N x 3 x H x W tensor): Fake images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.spade.SPADEGenerator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.spade.SPADEGenerator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.spade.StyleEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.spade.</code><code class="sig-name descname">StyleEncoder</code><span class="sig-paren">(</span><em class="sig-param">style_enc_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#StyleEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.StyleEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Style Encode constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>style_enc_cfg</strong> (<em>obj</em>) – Style encoder definition file.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.spade.StyleEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/spade.html#StyleEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.spade.StyleEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>SPADE Style Encoder forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_x</strong> (<em>N x 3 x H x W tensor</em>) – input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>mu (N x C tensor): Mean vectors.</p></li>
+<li><p>logvar (N x C tensor): Log-variance vectors.</p></li>
+<li><p>z (N x C tensor): Style code vectors.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.spade.StyleEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.spade.StyleEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.unit">
+<span id="imaginaire-generators-unit-module"></span><h2>imaginaire.generators.unit module<a class="headerlink" href="#module-imaginaire.generators.unit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.unit.AutoEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.unit.</code><code class="sig-name descname">AutoEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_filters=64</em>, <em class="sig-param">max_num_filters=256</em>, <em class="sig-param">num_res_blocks=4</em>, <em class="sig-param">num_downsamples_content=2</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">content_norm_type='instance'</em>, <em class="sig-param">decoder_norm_type='instance'</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">output_nonlinearity=''</em>, <em class="sig-param">pre_act=False</em>, <em class="sig-param">apply_noise=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#AutoEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.AutoEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved UNIT autoencoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum number of filters in the encoder.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks at the end of the
+content encoder.</p></li>
+<li><p><strong>num_downsamples_content</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2 for the content image.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>content_norm_type</strong> (<em>str</em>) – Type of activation normalization in the
+content encoder.</p></li>
+<li><p><strong>decoder_norm_type</strong> (<em>str</em>) – Type of activation normalization in the
+decoder.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>output_nonlinearity</strong> (<em>str</em>) – Type of nonlinearity before final output,
+<code class="docutils literal notranslate"><span class="pre">'tanh'</span></code> or <code class="docutils literal notranslate"><span class="pre">'none'</span></code>.</p></li>
+<li><p><strong>pre_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses pre-activation residual blocks.</p></li>
+<li><p><strong>apply_noise</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, injects Gaussian noise in the decoder.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.unit.AutoEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#AutoEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.AutoEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>Tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Reconstructed images.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>images_recon (Tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.unit.AutoEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.unit.AutoEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.unit.ContentEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.unit.</code><code class="sig-name descname">ContentEncoder</code><span class="sig-paren">(</span><em class="sig-param">num_downsamples</em>, <em class="sig-param">num_res_blocks</em>, <em class="sig-param">num_image_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">max_num_filters</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em>, <em class="sig-param">pre_act=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#ContentEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.ContentEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved UNIT encoder. The network consists of:</p>
+<ul class="simple">
+<li><p>input layers</p></li>
+<li><p>$(num_downsamples) convolutional blocks</p></li>
+<li><p>$(num_res_blocks) residual blocks.</p></li>
+<li><p>output layer.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_downsamples</strong> (<em>int</em>) – Number of times we reduce
+resolution by 2x2.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks at the end of the
+content encoder.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum number of filters in the encoder.</p></li>
+<li><p><strong>padding_mode</strong> (<em>string</em>) – Type of padding.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Type of nonlinear activation function.</p></li>
+<li><p><strong>pre_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses pre-activation residual blocks.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.unit.ContentEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#ContentEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.ContentEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Input image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.unit.ContentEncoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.unit.ContentEncoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.unit.Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.unit.</code><code class="sig-name descname">Decoder</code><span class="sig-paren">(</span><em class="sig-param">num_upsamples</em>, <em class="sig-param">num_res_blocks</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">num_image_channels</em>, <em class="sig-param">padding_mode</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">nonlinearity</em>, <em class="sig-param">output_nonlinearity</em>, <em class="sig-param">pre_act=False</em>, <em class="sig-param">apply_noise=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#Decoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved UNIT decoder. The network consists of:</p>
+<ul class="simple">
+<li><p>$(num_res_blocks) residual blocks.</p></li>
+<li><p>$(num_upsamples) residual blocks or convolutional blocks</p></li>
+<li><p>output layer.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_upsamples</strong> (<em>int</em>) – Number of times we increase resolution by 2x2.</p></li>
+<li><p><strong>num_res_blocks</strong> (<em>int</em>) – Number of residual blocks.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Base filter numbers.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Number of input image channels.</p></li>
+<li><p><strong>padding_mode</strong> (<em>string</em>) – Type of padding.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.</p></li>
+<li><p><strong>nonlinearity</strong> (<em>str</em>) – Type of nonlinear activation function.</p></li>
+<li><p><strong>output_nonlinearity</strong> (<em>str</em>) – Type of nonlinearity before final output,
+<code class="docutils literal notranslate"><span class="pre">'tanh'</span></code> or <code class="docutils literal notranslate"><span class="pre">'none'</span></code>.</p></li>
+<li><p><strong>pre_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses pre-activation residual blocks.</p></li>
+<li><p><strong>apply_noise</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, injects Gaussian noise.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.unit.Decoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#Decoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.Decoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>tensor</em>) – Content embedding of the content image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.unit.Decoder.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.unit.Decoder.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.unit.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.unit.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Improved UNIT generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.unit.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">image_recon=True</em>, <em class="sig-param">cycle_recon=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>UNIT forward function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.unit.Generator.inference">
+<code class="sig-name descname">inference</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">a2b=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/unit.html#Generator.inference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.unit.Generator.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>UNIT inference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.
+- images_a (tensor): Images from domain A.
+- images_b (tensor): Images from domain B.</p></li>
+<li><p><strong>a2b</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, translates images from domain A to B,
+otherwise from B to A.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.unit.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.unit.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.vid2vid">
+<span id="imaginaire-generators-vid2vid-module"></span><h2>imaginaire.generators.vid2vid module<a class="headerlink" href="#module-imaginaire.generators.vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.vid2vid.BaseNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.vid2vid.</code><code class="sig-name descname">BaseNetwork</code><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#BaseNetwork"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.BaseNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>vid2vid generator.</p>
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.BaseNetwork.get_num_filters">
+<code class="sig-name descname">get_num_filters</code><span class="sig-paren">(</span><em class="sig-param">num_downsamples</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#BaseNetwork.get_num_filters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.BaseNetwork.get_num_filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of filters at current layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_downsamples</strong> (<em>int</em>) – How many downsamples at current layer.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of filters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.vid2vid.BaseNetwork.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.vid2vid.BaseNetwork.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.vid2vid.FlowGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.vid2vid.</code><code class="sig-name descname">FlowGenerator</code><span class="sig-paren">(</span><em class="sig-param">flow_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#FlowGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.FlowGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.generators.vid2vid.BaseNetwork" title="imaginaire.generators.vid2vid.BaseNetwork"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.generators.vid2vid.BaseNetwork</span></code></a></p>
+<p>Flow generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flow_cfg</strong> (<em>obj</em>) – Flow definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.FlowGenerator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">img_prev</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#FlowGenerator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.FlowGenerator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flow generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>4D tensor</em>) – Input label tensor.</p></li>
+<li><p><strong>img_prev</strong> (<em>4D tensor</em>) – Previously generated image tensors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>flow (4D tensor) : Generated flow map.</p></li>
+<li><p>mask (4D tensor) : Generated occlusion mask.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.vid2vid.FlowGenerator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.vid2vid.FlowGenerator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.generators.vid2vid.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.vid2vid.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.generators.vid2vid.BaseNetwork" title="imaginaire.generators.vid2vid.BaseNetwork"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.generators.vid2vid.BaseNetwork</span></code></a></p>
+<p>vid2vid generator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen_cfg</strong> (<em>obj</em>) – Generator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>vid2vid generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Dictionary of input data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.Generator.get_cond_dims">
+<code class="sig-name descname">get_cond_dims</code><span class="sig-paren">(</span><em class="sig-param">num_downs=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator.get_cond_dims"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.get_cond_dims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dimensions of conditional inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_downs</strong> (<em>int</em>) – How many downsamples at current layer.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of dimensions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ch (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.Generator.get_cond_maps">
+<code class="sig-name descname">get_cond_maps</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">embedder</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator.get_cond_maps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.get_cond_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conditional inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>4D tensor</em>) – Input label tensor.</p></li>
+<li><p><strong>embedder</strong> (<em>obj</em>) – Embedding network.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of conditional inputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>cond_maps (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.Generator.init_temporal_network">
+<code class="sig-name descname">init_temporal_network</code><span class="sig-paren">(</span><em class="sig-param">cfg_init=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator.init_temporal_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.init_temporal_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>When starting training multiple frames, initialize the
+downsampling network and flow network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cfg_init</strong> (<em>dict</em>) – Weight initialization config.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.vid2vid.Generator.one_up_conv_layer">
+<code class="sig-name descname">one_up_conv_layer</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">encoded_label</em>, <em class="sig-param">i</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/vid2vid.html#Generator.one_up_conv_layer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.one_up_conv_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>One residual block layer in the main branch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>4D tensor</em>) – Current feature map.</p></li>
+<li><p><strong>encoded_label</strong> (<em>list of tensors</em>) – Encoded input label maps.</p></li>
+<li><p><strong>i</strong> (<em>int</em>) – Layer index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output feature map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>x (4D tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.vid2vid.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.vid2vid.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators.wc_vid2vid">
+<span id="imaginaire-generators-wc-vid2vid-module"></span><h2>imaginaire.generators.wc_vid2vid module<a class="headerlink" href="#module-imaginaire.generators.wc_vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.generators.wc_vid2vid.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.generators.wc_vid2vid.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">gen_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.generators.vid2vid.Generator" title="imaginaire.generators.vid2vid.Generator"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.generators.vid2vid.Generator</span></code></a></p>
+<p>world consistent vid2vid generator constructor.
+:param gen_cfg: Generator definition part of the yaml config file.
+:type gen_cfg: obj
+:param data_cfg: Data definition part of the yaml config file
+:type data_cfg: obj</p>
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>vid2vid generator forward.
+:param data: Dictionary of input data.
+:type data: dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary of output data.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>output (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.get_cond_dims">
+<code class="sig-name descname">get_cond_dims</code><span class="sig-paren">(</span><em class="sig-param">num_downs=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.get_cond_dims"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.get_cond_dims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dimensions of conditional inputs.
+:param num_downs: How many downsamples at current layer.
+:type num_downs: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of dimensions.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ch (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.get_cond_maps">
+<code class="sig-name descname">get_cond_maps</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">embedder</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.get_cond_maps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.get_cond_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conditional inputs.
+:param label: Input label tensor.
+:type label: 4D tensor
+:param embedder: Embedding network.
+:type embedder: obj</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of conditional inputs.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>cond_maps (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.get_guidance_images_and_masks">
+<code class="sig-name descname">get_guidance_images_and_masks</code><span class="sig-paren">(</span><em class="sig-param">unprojection</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.get_guidance_images_and_masks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.get_guidance_images_and_masks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do stuff.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.get_partial">
+<code class="sig-name descname">get_partial</code><span class="sig-paren">(</span><em class="sig-param">num_downs=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.get_partial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.get_partial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if convs should be partial or not.
+:param num_downs: How many downsamples at current layer.
+:type num_downs: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of boolean partial or not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>partial (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.renderer_update_point_cloud">
+<code class="sig-name descname">renderer_update_point_cloud</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">point_info</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.renderer_update_point_cloud"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.renderer_update_point_cloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the renderer’s color dictionary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.reset_renderer">
+<code class="sig-name descname">reset_renderer</code><span class="sig-paren">(</span><em class="sig-param">is_flipped_input=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/generators/wc_vid2vid.html#Generator.reset_renderer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.reset_renderer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the renderer.
+:param is_flipped_input: Is the input sequence left-right flipped?
+:type is_flipped_input: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.generators.wc_vid2vid.Generator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.generators.wc_vid2vid.Generator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.generators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.generators" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.layers.html" class="btn btn-neutral float-right" title="imaginaire.layers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.evaluation.html" class="btn btn-neutral float-left" title="imaginaire.evaluation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+imaginaire.datasets package
+===========================
+
+Submodules
+----------
+
+imaginaire.datasets.base module
+-------------------------------
+
+.. automodule:: imaginaire.datasets.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.folder module
+---------------------------------
+
+.. automodule:: imaginaire.datasets.folder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.images module
+---------------------------------
+
+.. automodule:: imaginaire.datasets.images
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.lmdb module
+-------------------------------
+
+.. automodule:: imaginaire.datasets.lmdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.paired\_few\_shot\_videos module
+----------------------------------------------------
+
+.. automodule:: imaginaire.datasets.paired_few_shot_videos
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.paired\_few\_shot\_videos\_native module
+------------------------------------------------------------
+
+.. automodule:: imaginaire.datasets.paired_few_shot_videos_native
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.paired\_images module
+-----------------------------------------
+
+.. automodule:: imaginaire.datasets.paired_images
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.paired\_videos module
+-----------------------------------------
+
+.. automodule:: imaginaire.datasets.paired_videos
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.unpaired\_few\_shot\_images module
+------------------------------------------------------
+
+.. automodule:: imaginaire.datasets.unpaired_few_shot_images
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.datasets.unpaired\_images module
+-------------------------------------------
+
+.. automodule:: imaginaire.datasets.unpaired_images
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:

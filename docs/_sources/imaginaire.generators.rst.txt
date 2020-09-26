@@ -1,0 +1,94 @@
+imaginaire.generators package
+=============================
+
+Submodules
+----------
+
+imaginaire.generators.coco\_funit module
+----------------------------------------
+
+.. automodule:: imaginaire.generators.coco_funit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.dummy module
+----------------------------------
+
+.. automodule:: imaginaire.generators.dummy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.fs\_vid2vid module
+----------------------------------------
+
+.. automodule:: imaginaire.generators.fs_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.funit module
+----------------------------------
+
+.. automodule:: imaginaire.generators.funit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.munit module
+----------------------------------
+
+.. automodule:: imaginaire.generators.munit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.pix2pixHD module
+--------------------------------------
+
+.. automodule:: imaginaire.generators.pix2pixHD
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.spade module
+----------------------------------
+
+.. automodule:: imaginaire.generators.spade
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.unit module
+---------------------------------
+
+.. automodule:: imaginaire.generators.unit
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.vid2vid module
+------------------------------------
+
+.. automodule:: imaginaire.generators.vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.generators.wc\_vid2vid module
+----------------------------------------
+
+.. automodule:: imaginaire.generators.wc_vid2vid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.generators
+   :members:
+   :undoc-members:
+   :show-inheritance:

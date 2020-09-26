@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.trainer &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.utils.trainer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.utils.trainer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.distributed</span> <span class="k">as</span> <span class="nn">dist</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">from</span> <span class="nn">torch.optim</span> <span class="kn">import</span> <span class="n">SGD</span><span class="p">,</span> <span class="n">Adam</span><span class="p">,</span> <span class="n">RMSprop</span><span class="p">,</span> <span class="n">lr_scheduler</span>
+
+<span class="kn">import</span> <span class="nn">apex</span>
+<span class="kn">from</span> <span class="nn">apex</span> <span class="kn">import</span> <span class="n">amp</span>
+<span class="kn">from</span> <span class="nn">apex.optimizers</span> <span class="kn">import</span> <span class="n">FusedAdam</span><span class="p">,</span> <span class="n">FusedSGD</span>
+<span class="kn">from</span> <span class="nn">imaginaire.optimizers</span> <span class="kn">import</span> <span class="n">Fromage</span><span class="p">,</span> <span class="n">Madam</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">get_rank</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.init_weight</span> <span class="kn">import</span> <span class="n">weights_init</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.model_average</span> <span class="kn">import</span> <span class="n">ModelAverage</span>
+
+
+<div class="viewcode-block" id="set_random_seed"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.set_random_seed">[docs]</a><span class="k">def</span> <span class="nf">set_random_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">by_rank</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set random seeds for everything.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        seed (int): Random seed.</span>
+<span class="sd">        by_rank (bool):</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">by_rank</span><span class="p">:</span>
+        <span class="n">seed</span> <span class="o">+=</span> <span class="n">get_rank</span><span class="p">()</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">manual_seed_all</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_trainer"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.get_trainer">[docs]</a><span class="k">def</span> <span class="nf">get_trainer</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">opt_G</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">opt_D</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">sch_G</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sch_D</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">train_data_loader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">val_data_loader</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the trainer object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (Config): Loaded config object.</span>
+<span class="sd">        net_G (obj): Generator network object.</span>
+<span class="sd">        net_D (obj): Discriminator network object.</span>
+<span class="sd">        opt_G (obj): Generator optimizer object.</span>
+<span class="sd">        opt_D (obj): Discriminator optimizer object.</span>
+<span class="sd">        sch_G (obj): Generator optimizer scheduler object.</span>
+<span class="sd">        sch_D (obj): Discriminator optimizer scheduler object.</span>
+<span class="sd">        train_data_loader (obj): Train data loader.</span>
+<span class="sd">        val_data_loader (obj): Validation data loader.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (obj): Trainer object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">trainer_lib</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+    <span class="n">trainer</span> <span class="o">=</span> <span class="n">trainer_lib</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span>
+                                  <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span>
+                                  <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                                  <span class="n">train_data_loader</span><span class="p">,</span> <span class="n">val_data_loader</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trainer</span></div>
+
+
+<div class="viewcode-block" id="get_model_optimizer_and_scheduler"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.get_model_optimizer_and_scheduler">[docs]</a><span class="k">def</span> <span class="nf">get_model_optimizer_and_scheduler</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the networks, the optimizers, and the schedulers. We will</span>
+<span class="sd">    first set the random seed to a fixed value so that each GPU copy will be</span>
+<span class="sd">    initialized to have the same network weights. We will then use different</span>
+<span class="sd">    random seeds for different GPUs. After this we will wrap the generator</span>
+<span class="sd">    with a moving average model if applicable. It is followed by getting the</span>
+<span class="sd">    optimizers, amp initialization, and data distributed data parallel wrapping.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Global configuration.</span>
+<span class="sd">        seed (int): Random seed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - net_G (obj): Generator network object.</span>
+<span class="sd">          - net_D (obj): Discriminator network object.</span>
+<span class="sd">          - opt_G (obj): Generator optimizer object.</span>
+<span class="sd">          - opt_D (obj): Discriminator optimizer object.</span>
+<span class="sd">          - sch_G (obj): Generator optimizer scheduler object.</span>
+<span class="sd">          - sch_D (obj): Discriminator optimizer scheduler object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># We first set the random seed to be the same so that we initialize each</span>
+    <span class="c1"># copy of the network in exactly the same way so that they have the same</span>
+    <span class="c1"># weights and other parameters. The true seed will be the seed.</span>
+    <span class="n">set_random_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">by_rank</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># Construct networks</span>
+    <span class="n">lib_G</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+    <span class="n">lib_D</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+    <span class="n">net_G</span> <span class="o">=</span> <span class="n">lib_G</span><span class="o">.</span><span class="n">Generator</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+    <span class="n">net_D</span> <span class="o">=</span> <span class="n">lib_D</span><span class="o">.</span><span class="n">Discriminator</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initialize net_G and net_D weights using &#39;</span>
+          <span class="s1">&#39;type: </span><span class="si">{}</span><span class="s1"> gain: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                                     <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span>
+    <span class="n">init_bias</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="s1">&#39;bias&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">net_G</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span>
+        <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">gain</span><span class="p">,</span> <span class="n">init_bias</span><span class="p">))</span>
+    <span class="n">net_D</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span>
+        <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">gain</span><span class="p">,</span> <span class="n">init_bias</span><span class="p">))</span>
+    <span class="c1"># Different GPU copies of the same model will receive noises</span>
+    <span class="c1"># initialized with different random seeds (if applicable) thanks to the</span>
+    <span class="c1"># set_random_seed command (GPU #K has random seed = args.seed + K).</span>
+    <span class="n">set_random_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">by_rank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;net_G parameter count: </span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">_calculate_model_size</span><span class="p">(</span><span class="n">net_G</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;net_D parameter count: </span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">_calculate_model_size</span><span class="p">(</span><span class="n">net_D</span><span class="p">)))</span>
+
+    <span class="c1"># Optimizer</span>
+    <span class="n">opt_G</span> <span class="o">=</span> <span class="n">get_optimizer</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="p">,</span> <span class="n">net_G</span><span class="p">)</span>
+    <span class="n">opt_D</span> <span class="o">=</span> <span class="n">get_optimizer</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis_opt</span><span class="p">,</span> <span class="n">net_D</span><span class="p">)</span>
+
+    <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span> <span class="o">=</span> \
+        <span class="n">wrap_model_and_optimizer</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">)</span>
+
+    <span class="c1"># Scheduler</span>
+    <span class="n">sch_G</span> <span class="o">=</span> <span class="n">get_scheduler</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">)</span>
+    <span class="n">sch_D</span> <span class="o">=</span> <span class="n">get_scheduler</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis_opt</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span> <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span></div>
+
+
+<div class="viewcode-block" id="wrap_model_and_optimizer"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.wrap_model_and_optimizer">[docs]</a><span class="k">def</span> <span class="nf">wrap_model_and_optimizer</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap the networks and the optimizers with AMP DDP and (optionally)</span>
+<span class="sd">    model average.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Global configuration.</span>
+<span class="sd">        net_G (obj): Generator network object.</span>
+<span class="sd">        net_D (obj): Discriminator network object.</span>
+<span class="sd">        opt_G (obj): Generator optimizer object.</span>
+<span class="sd">        opt_D (obj): Discriminator optimizer object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - net_G (obj): Generator network object.</span>
+<span class="sd">          - net_D (obj): Discriminator network object.</span>
+<span class="sd">          - opt_G (obj): Generator optimizer object.</span>
+<span class="sd">          - opt_D (obj): Discriminator optimizer object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Apply model average wrapper.</span>
+    <span class="k">if</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+        <span class="n">net_G</span> <span class="o">=</span> <span class="n">ModelAverage</span><span class="p">(</span><span class="n">net_G</span><span class="p">,</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average_beta</span><span class="p">,</span>
+                             <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average_start_iteration</span><span class="p">,</span>
+                             <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average_remove_sn</span><span class="p">)</span>
+    <span class="c1"># AMP initialization.</span>
+    <span class="p">[</span><span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">],</span> <span class="p">[</span><span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="n">amp</span><span class="o">.</span><span class="n">initialize</span><span class="p">([</span><span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">],</span> <span class="p">[</span><span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">],</span>
+                       <span class="n">opt_level</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">amp</span><span class="p">,</span> <span class="n">num_losses</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># For dealing with numerical issues that might happen during training.</span>
+    <span class="k">if</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+        <span class="n">net_G_module</span> <span class="o">=</span> <span class="n">net_G</span><span class="o">.</span><span class="n">module</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">net_G_module</span> <span class="o">=</span> <span class="n">net_G</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">net_G_module</span><span class="p">,</span> <span class="s1">&#39;custom_init&#39;</span><span class="p">):</span>
+        <span class="n">net_G_module</span><span class="o">.</span><span class="n">custom_init</span><span class="p">()</span>
+
+    <span class="n">net_G</span> <span class="o">=</span> <span class="n">_wrap_model</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">)</span>
+    <span class="n">net_D</span> <span class="o">=</span> <span class="n">_wrap_model</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_D</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span></div>
+
+
+<span class="k">def</span> <span class="nf">_calculate_model_size</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate number of parameters in a PyTorch network.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model (obj): PyTorch network.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (int): Number of parameters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">requires_grad</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="WrappedModel"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.WrappedModel">[docs]</a><span class="k">class</span> <span class="nc">WrappedModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Dummy wrapping the module.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">WrappedModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="o">=</span> <span class="n">module</span>
+
+<div class="viewcode-block" id="WrappedModel.forward"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.WrappedModel.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;PyTorch module forward function overload.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_wrap_model</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap a model for apex based distributed data parallel training.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model (obj): PyTorch network model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (obj): Wrapped PyTorch network model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">distributed</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="ow">and</span> <span class="n">dist</span><span class="o">.</span><span class="n">is_initialized</span><span class="p">():</span>
+        <span class="n">ddp</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">distributed_data_parallel</span>
+        <span class="k">if</span> <span class="n">ddp</span> <span class="o">==</span> <span class="s1">&#39;pytorch&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">parallel</span><span class="o">.</span><span class="n">DistributedDataParallel</span><span class="p">(</span>
+                <span class="n">model</span><span class="p">,</span>
+                <span class="n">device_ids</span><span class="o">=</span><span class="p">[</span><span class="n">cfg</span><span class="o">.</span><span class="n">local_rank</span><span class="p">],</span>
+                <span class="n">output_device</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">local_rank</span><span class="p">,</span>
+                <span class="n">find_unused_parameters</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">delay_allreduce</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">delay_allreduce</span>
+            <span class="k">return</span> <span class="n">apex</span><span class="o">.</span><span class="n">parallel</span><span class="o">.</span><span class="n">DistributedDataParallel</span><span class="p">(</span>
+                <span class="n">model</span><span class="p">,</span> <span class="n">delay_allreduce</span><span class="o">=</span><span class="n">delay_allreduce</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">WrappedModel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="get_scheduler"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.get_scheduler">[docs]</a><span class="k">def</span> <span class="nf">get_scheduler</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">,</span> <span class="n">opt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the scheduler object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg_opt (obj): Config for the specific optimization module (gen/dis).</span>
+<span class="sd">        opt (obj): PyTorch optimizer object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (obj): Scheduler</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;step&#39;</span><span class="p">:</span>
+        <span class="n">scheduler</span> <span class="o">=</span> <span class="n">lr_scheduler</span><span class="o">.</span><span class="n">StepLR</span><span class="p">(</span>
+            <span class="n">opt</span><span class="p">,</span>
+            <span class="n">step_size</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">step_size</span><span class="p">,</span>
+            <span class="n">gamma</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">gamma</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;constant&#39;</span><span class="p">:</span>
+        <span class="n">scheduler</span> <span class="o">=</span> <span class="n">lr_scheduler</span><span class="o">.</span><span class="n">LambdaLR</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Learning rate policy </span><span class="si">{}</span><span class="s1"> not implemented.&#39;</span><span class="o">.</span>
+                                   <span class="nb">format</span><span class="p">(</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">type</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">scheduler</span></div>
+
+
+<div class="viewcode-block" id="get_optimizer"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.get_optimizer">[docs]</a><span class="k">def</span> <span class="nf">get_optimizer</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">,</span> <span class="n">net</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the scheduler object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg_opt (obj): Config for the specific optimization module (gen/dis).</span>
+<span class="sd">        net (obj): PyTorch network object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (obj): Pytorch optimizer</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s1">&#39;get_param_groups&#39;</span><span class="p">):</span>
+        <span class="c1"># Allow the network to use different hyper-parameters (e.g., learning</span>
+        <span class="c1"># rate) for different parameters.</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">get_param_groups</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">get_optimizer_for_params</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_optimizer_for_params"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.trainer.get_optimizer_for_params">[docs]</a><span class="k">def</span> <span class="nf">get_optimizer_for_params</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the scheduler object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg_opt (obj): Config for the specific optimization module (gen/dis).</span>
+<span class="sd">        params (obj): Parameters to be trained by the parameters.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (obj): Optimizer</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># We will use fuse optimizers by default.</span>
+    <span class="n">fused_opt</span> <span class="o">=</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">fused_opt</span>
+    <span class="k">if</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;adam&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">fused_opt</span><span class="p">:</span>
+            <span class="n">opt</span> <span class="o">=</span> <span class="n">FusedAdam</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
+                            <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span>
+                            <span class="n">betas</span><span class="o">=</span><span class="p">(</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">adam_beta1</span><span class="p">,</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">adam_beta2</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">opt</span> <span class="o">=</span> <span class="n">Adam</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
+                       <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span>
+                       <span class="n">betas</span><span class="o">=</span><span class="p">(</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">adam_beta1</span><span class="p">,</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">adam_beta2</span><span class="p">))</span>
+
+    <span class="k">elif</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;madam&#39;</span><span class="p">:</span>
+        <span class="n">g_bound</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg_opt</span><span class="p">,</span> <span class="s1">&#39;g_bound&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">opt</span> <span class="o">=</span> <span class="n">Madam</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span>
+                    <span class="n">scale</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">g_bound</span><span class="o">=</span><span class="n">g_bound</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;fromage&#39;</span><span class="p">:</span>
+        <span class="n">opt</span> <span class="o">=</span> <span class="n">Fromage</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;rmsprop&#39;</span><span class="p">:</span>
+        <span class="n">opt</span> <span class="o">=</span> <span class="n">RMSprop</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span>
+                      <span class="n">eps</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">weight_decay</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;sgd&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">fused_opt</span><span class="p">:</span>
+            <span class="n">opt</span> <span class="o">=</span> <span class="n">FusedSGD</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
+                           <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span>
+                           <span class="n">momentum</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">momentum</span><span class="p">,</span>
+                           <span class="n">weight_decay</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">weight_decay</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">opt</span> <span class="o">=</span> <span class="n">SGD</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
+                      <span class="n">lr</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span>
+                      <span class="n">momentum</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">momentum</span><span class="p">,</span>
+                      <span class="n">weight_decay</span><span class="o">=</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">weight_decay</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="s1">&#39;Optimizer </span><span class="si">{}</span><span class="s1"> is not yet implemented.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cfg_opt</span><span class="o">.</span><span class="n">type</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">opt</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

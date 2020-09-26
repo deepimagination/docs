@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.trainers.spade &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.trainers.spade</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.trainers.spade</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.evaluation</span> <span class="kn">import</span> <span class="n">compute_fid</span>
+<span class="kn">from</span> <span class="nn">imaginaire.losses</span> <span class="kn">import</span> <span class="p">(</span><span class="n">FeatureMatchingLoss</span><span class="p">,</span> <span class="n">GANLoss</span><span class="p">,</span> <span class="n">GaussianKLLoss</span><span class="p">,</span>
+                               <span class="n">PerceptualLoss</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.trainers.base</span> <span class="kn">import</span> <span class="n">BaseTrainer</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.meters</span> <span class="kn">import</span> <span class="n">Meter</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.model_average</span> <span class="kn">import</span> <span class="n">reset_batch_norm</span><span class="p">,</span> \
+    <span class="n">calibrate_batch_norm_momentum</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.misc</span> <span class="kn">import</span> <span class="n">split_labels</span><span class="p">,</span> <span class="n">to_device</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.visualization</span> <span class="kn">import</span> <span class="n">tensor2label</span>
+
+
+<div class="viewcode-block" id="Trainer"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.spade.Trainer">[docs]</a><span class="k">class</span> <span class="nc">Trainer</span><span class="p">(</span><span class="n">BaseTrainer</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize SPADE trainer.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (Config): Global configuration.</span>
+<span class="sd">        net_G (obj): Generator network.</span>
+<span class="sd">        net_D (obj): Discriminator network.</span>
+<span class="sd">        opt_G (obj): Optimizer for the generator network.</span>
+<span class="sd">        opt_D (obj): Optimizer for the discriminator network.</span>
+<span class="sd">        sch_G (obj): Scheduler for the generator optimizer.</span>
+<span class="sd">        sch_D (obj): Scheduler for the discriminator optimizer.</span>
+<span class="sd">        train_data_loader (obj): Train data loader.</span>
+<span class="sd">        val_data_loader (obj): Validation data loader.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">cfg</span><span class="p">,</span>
+                 <span class="n">net_G</span><span class="p">,</span>
+                 <span class="n">net_D</span><span class="p">,</span>
+                 <span class="n">opt_G</span><span class="p">,</span>
+                 <span class="n">opt_D</span><span class="p">,</span>
+                 <span class="n">sch_G</span><span class="p">,</span>
+                 <span class="n">sch_D</span><span class="p">,</span>
+                 <span class="n">train_data_loader</span><span class="p">,</span>
+                 <span class="n">val_data_loader</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Trainer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span>
+                                      <span class="n">opt_D</span><span class="p">,</span> <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                                      <span class="n">train_data_loader</span><span class="p">,</span> <span class="n">val_data_loader</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;imaginaire.datasets.paired_videos&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video_mode</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">video_mode</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_init_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize loss terms.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cfg (obj): Global configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GANLoss</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">gan_mode</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">loss_weight</span><span class="o">.</span><span class="n">gan</span>
+        <span class="c1"># Setup the perceptual loss. Note that perceptual loss can run in</span>
+        <span class="c1"># fp16 mode for additional speed. We find that running on fp16 mode</span>
+        <span class="c1"># leads to improve training speed while maintaining the same accuracy.</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="p">,</span> <span class="s1">&#39;perceptual_loss&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;Perceptual&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">PerceptualLoss</span><span class="p">(</span>
+                    <span class="n">cfg</span><span class="o">=</span><span class="n">cfg</span><span class="p">,</span>
+                    <span class="n">network</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">perceptual_loss</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+                    <span class="n">layers</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">perceptual_loss</span><span class="o">.</span><span class="n">layers</span><span class="p">,</span>
+                    <span class="n">weights</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">perceptual_loss</span><span class="o">.</span><span class="n">weights</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Perceptual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">loss_weight</span><span class="o">.</span><span class="n">perceptual</span>
+        <span class="c1"># Setup the feature matching loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;FeatureMatching&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">FeatureMatchingLoss</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;FeatureMatching&#39;</span><span class="p">]</span> <span class="o">=</span> \
+            <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">loss_weight</span><span class="o">.</span><span class="n">feature_matching</span>
+        <span class="c1"># Setup the Gaussian KL divergence loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GaussianKL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GaussianKLLoss</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;GaussianKL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">loss_weight</span><span class="o">.</span><span class="n">kl</span>
+
+    <span class="k">def</span> <span class="nf">_init_tensorboard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize the tensorboard. For the SPADE model, we will record</span>
+<span class="sd">        regular and FID, which is the average FID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regular_fid_meter</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="s1">&#39;FID/regular&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">average_fid_meter</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="s1">&#39;FID/average&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_meter</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;optim/gen_lr&#39;</span><span class="p">,</span> <span class="s1">&#39;optim/dis_lr&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;time/iteration&#39;</span><span class="p">,</span> <span class="s1">&#39;time/epoch&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_start_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Model specific custom start of iteration process. We will do two</span>
+<span class="sd">        things. First, put all the data to GPU. Second, we will resize the</span>
+<span class="sd">        input so that it becomes multiple of the factor for bug-free</span>
+<span class="sd">        convolutional operations. This factor is given by the yaml file.</span>
+<span class="sd">        E.g., base = getattr(self.net_G, &#39;base&#39;, 32)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): The current batch.</span>
+<span class="sd">            current_iteration (int): The iteration number of the current batch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">())</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">label_image_raw</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+            <span class="n">label_image</span> <span class="o">=</span> <span class="n">label_image_raw</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">label_image_raw</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                 <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">label_image_raw</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+                 <span class="n">label_image_raw</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+            <span class="n">images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+            <span class="n">label_label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+                 <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+                 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">label_label</span><span class="p">,</span> <span class="n">label_image</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">images</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">to_device</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resize_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+
+<div class="viewcode-block" id="Trainer.gen_forward"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.spade.Trainer.gen_forward">[docs]</a>    <span class="k">def</span> <span class="nf">gen_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute the loss for SPADE generator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">net_G_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">net_D_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_loss</span><span class="p">()</span>
+
+        <span class="n">output_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_outputs</span><span class="p">(</span><span class="n">net_D_output</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">](</span><span class="n">output_fake</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dis_update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;FeatureMatching&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;FeatureMatching&#39;</span><span class="p">](</span>
+            <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;fake_features&#39;</span><span class="p">],</span> <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;real_features&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="o">.</span><span class="n">use_style_encoder</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;GaussianKL&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GaussianKL&#39;</span><span class="p">](</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;mu&#39;</span><span class="p">],</span>
+                                            <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;logvar&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;GaussianKL&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="p">,</span> <span class="s1">&#39;perceptual_loss&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;Perceptual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;Perceptual&#39;</span><span class="p">](</span>
+                <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">])</span>
+
+        <span class="n">total_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">:</span>
+            <span class="n">total_loss</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_loss</span>
+        <span class="k">return</span> <span class="n">total_loss</span></div>
+
+<div class="viewcode-block" id="Trainer.dis_forward"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.spade.Trainer.dis_forward">[docs]</a>    <span class="k">def</span> <span class="nf">dis_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute the loss for SPADE discriminator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">net_G_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+        <span class="n">net_D_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_loss</span><span class="p">()</span>
+
+        <span class="n">output_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_outputs</span><span class="p">(</span><span class="n">net_D_output</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">output_real</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_outputs</span><span class="p">(</span><span class="n">net_D_output</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">fake_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">](</span><span class="n">output_fake</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">dis_update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">true_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">](</span><span class="n">output_real</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">dis_update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="s1">&#39;GAN/fake&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fake_loss</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="s1">&#39;GAN/true&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">true_loss</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fake_loss</span> <span class="o">+</span> <span class="n">true_loss</span>
+        <span class="n">total_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;GAN&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_loss</span>
+        <span class="k">return</span> <span class="n">total_loss</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_visualizations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute visualization image. We will first recalculate the batch</span>
+<span class="sd">        statistics for the moving average model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): The current batch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recalculate_model_average_batch_norm_statistics</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">label_lengths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">get_label_lengths</span><span class="p">()</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="n">split_labels</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">label_lengths</span><span class="p">)</span>
+            <span class="c1"># Get visualization of the segmentation mask.</span>
+            <span class="n">segmap</span> <span class="o">=</span> <span class="n">tensor2label</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;seg_maps&#39;</span><span class="p">],</span>
+                                  <span class="n">label_lengths</span><span class="p">[</span><span class="s1">&#39;seg_maps&#39;</span><span class="p">],</span>
+                                  <span class="n">output_normalized_tensor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">segmap</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">segmap</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">net_G_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">vis_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">],</span>
+                          <span class="n">segmap</span><span class="p">,</span>
+                          <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+                <span class="n">net_G_model_average_output</span> <span class="o">=</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">vis_images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">net_G_model_average_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">vis_images</span>
+
+<div class="viewcode-block" id="Trainer.recalculate_model_average_batch_norm_statistics"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.spade.Trainer.recalculate_model_average_batch_norm_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">recalculate_model_average_batch_norm_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Update the statistics in the moving average model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_loader (pytorch data loader): Data loader for estimating the</span>
+<span class="sd">                statistics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">model_average_iteration</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average_batch_norm_estimation_iteration</span>
+        <span class="k">if</span> <span class="n">model_average_iteration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="c1"># Accumulate bn stats..</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+            <span class="c1"># Reset running stats.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">reset_batch_norm</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">cal_it</span><span class="p">,</span> <span class="n">cal_data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_loader</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">cal_it</span> <span class="o">&gt;=</span> <span class="n">model_average_iteration</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with </span><span class="si">{}</span><span class="s1"> iterations of updating batch norm &#39;</span>
+                          <span class="s1">&#39;statistics&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_average_iteration</span><span class="p">))</span>
+                    <span class="k">break</span>
+                <span class="c1"># cal_data = to_device(cal_data, &#39;cuda&#39;)</span>
+                <span class="n">cal_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_of_iteration</span><span class="p">(</span><span class="n">cal_data</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="c1"># Averaging over all batches</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                    <span class="n">calibrate_batch_norm_momentum</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="p">(</span><span class="n">cal_data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Trainer.write_metrics"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.spade.Trainer.write_metrics">[docs]</a>    <span class="k">def</span> <span class="nf">write_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;If moving average model presents, we have two meters one for</span>
+<span class="sd">        regular FID and one for average FID. If no moving average model,</span>
+<span class="sd">        we just report average FID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="n">regular_fid</span><span class="p">,</span> <span class="n">average_fid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_fid</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">regular_fid_meter</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">regular_fid</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">average_fid_meter</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">average_fid</span><span class="p">)</span>
+            <span class="n">meters</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">regular_fid_meter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">average_fid_meter</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">regular_fid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_fid</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">regular_fid_meter</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">regular_fid</span><span class="p">)</span>
+            <span class="n">meters</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">regular_fid_meter</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">meter</span> <span class="ow">in</span> <span class="n">meters</span><span class="p">:</span>
+            <span class="n">meter</span><span class="o">.</span><span class="n">flush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_compute_fid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;We will compute FID for the regular model using the eval mode.</span>
+<span class="sd">        For the moving average model, we will use the eval mode.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="n">net_G_for_evaluation</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">regular_fid_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_save_path</span><span class="p">(</span><span class="s1">&#39;regular_fid&#39;</span><span class="p">,</span> <span class="s1">&#39;npy&#39;</span><span class="p">)</span>
+        <span class="n">preprocess</span> <span class="o">=</span> \
+            <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_start_of_iteration</span><span class="p">,</span> <span class="n">current_iteration</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">regular_fid_value</span> <span class="o">=</span> <span class="n">compute_fid</span><span class="p">(</span><span class="n">regular_fid_path</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">val_data_loader</span><span class="p">,</span>
+                                        <span class="n">net_G_for_evaluation</span><span class="p">,</span>
+                                        <span class="n">preprocess</span><span class="o">=</span><span class="n">preprocess</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:05}</span><span class="s1">, Iteration </span><span class="si">{:09}</span><span class="s1">, Regular FID </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">,</span> <span class="n">regular_fid_value</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="n">avg_net_G_for_evaluation</span> <span class="o">=</span> \
+                <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="p">,</span>
+                                  <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">fid_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_save_path</span><span class="p">(</span><span class="s1">&#39;average_fid&#39;</span><span class="p">,</span> <span class="s1">&#39;npy&#39;</span><span class="p">)</span>
+            <span class="n">fid_value</span> <span class="o">=</span> <span class="n">compute_fid</span><span class="p">(</span><span class="n">fid_path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">val_data_loader</span><span class="p">,</span>
+                                    <span class="n">avg_net_G_for_evaluation</span><span class="p">,</span>
+                                    <span class="n">preprocess</span><span class="o">=</span><span class="n">preprocess</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:05}</span><span class="s1">, Iteration </span><span class="si">{:09}</span><span class="s1">, FID </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">,</span> <span class="n">fid_value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">regular_fid_value</span><span class="p">,</span> <span class="n">fid_value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">regular_fid_value</span>
+
+    <span class="k">def</span> <span class="nf">_resize_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Resize input label maps and images so that it can be properly</span>
+<span class="sd">        generated by the generator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Input dictionary contains &#39;label&#39; and &#39;image fields.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">,</span> <span class="s1">&#39;base&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="n">sy</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">//</span> <span class="n">base</span><span class="p">)</span> <span class="o">*</span> <span class="n">base</span>
+        <span class="n">sx</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">//</span> <span class="n">base</span><span class="p">)</span> <span class="o">*</span> <span class="n">base</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">sy</span><span class="p">,</span> <span class="n">sx</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;images&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">sy</span><span class="p">,</span> <span class="n">sx</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bicubic&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

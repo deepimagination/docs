@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators.munit &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.generators.munit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.generators.munit</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">SimpleNamespace</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Upsample</span> <span class="k">as</span> <span class="n">NearestUpsample</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.layers</span> <span class="kn">import</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">LinearBlock</span><span class="p">,</span> <span class="n">Res2dBlock</span>
+<span class="kn">from</span> <span class="nn">imaginaire.generators.unit</span> <span class="kn">import</span> <span class="n">ContentEncoder</span>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Improved MUNIT generator.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        gen_cfg (obj): Generator definition part of the yaml config file.</span>
+<span class="sd">        data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span> <span class="o">=</span> <span class="n">AutoEncoder</span><span class="p">(</span><span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span> <span class="o">=</span> <span class="n">AutoEncoder</span><span class="p">(</span><span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">))</span>
+
+<div class="viewcode-block" id="Generator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.Generator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">image_recon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">latent_recon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cycle_recon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">within_latent_recon</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;In MUNIT&#39;s forward pass, it generates a content code and a style</span>
+<span class="sd">        code from images in both domain. It then performs a within-domain</span>
+<span class="sd">        reconstruction step and a cross-domain translation step.</span>
+<span class="sd">        In within-domain reconstruction, it reconstructs an image using the</span>
+<span class="sd">        content and style from the same image and optionally encodes the image</span>
+<span class="sd">        back to the latent space.</span>
+<span class="sd">        In cross-domain translation, it generates an translated image by mixing</span>
+<span class="sd">        the content and style from images in different domains, and optionally</span>
+<span class="sd">        encodes the image back to the latent space.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">              - images_a (tensor): Images from domain A.</span>
+<span class="sd">              - images_b (tensor): Images from domain B.</span>
+<span class="sd">            random_style (bool): If ``True``, samples the style code from the</span>
+<span class="sd">                prior distribution, otherwise uses the style code encoded from</span>
+<span class="sd">                the input images in the other domain.</span>
+<span class="sd">            image_recon (bool): If ``True``, also returns reconstructed images.</span>
+<span class="sd">            latent_recon (bool): If ``True``, also returns reconstructed latent</span>
+<span class="sd">                code during cross-domain translation.</span>
+<span class="sd">            cycle_recon (bool): If ``True``, also returns cycle</span>
+<span class="sd">                reconstructed images.</span>
+<span class="sd">            within_latent_recon (bool): If ``True``, also returns reconstructed</span>
+<span class="sd">                latent code during within-domain reconstruction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">images_a</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_a&#39;</span><span class="p">]</span>
+        <span class="n">images_b</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images_b&#39;</span><span class="p">]</span>
+        <span class="n">net_G_output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="c1"># encode input images into content and style code</span>
+        <span class="n">content_a</span><span class="p">,</span> <span class="n">style_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_a</span><span class="p">)</span>
+        <span class="n">content_b</span><span class="p">,</span> <span class="n">style_b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_b</span><span class="p">)</span>
+
+        <span class="c1"># decode (within domain)</span>
+        <span class="k">if</span> <span class="n">image_recon</span><span class="p">:</span>
+            <span class="n">images_aa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_a</span><span class="p">,</span> <span class="n">style_a</span><span class="p">)</span>
+            <span class="n">images_bb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_b</span><span class="p">,</span> <span class="n">style_b</span><span class="p">)</span>
+            <span class="n">net_G_output</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">images_aa</span><span class="o">=</span><span class="n">images_aa</span><span class="p">,</span> <span class="n">images_bb</span><span class="o">=</span><span class="n">images_bb</span><span class="p">))</span>
+
+        <span class="c1"># decode (cross domain)</span>
+        <span class="k">if</span> <span class="n">random_style</span><span class="p">:</span>  <span class="c1"># use randomly sampled style code</span>
+            <span class="n">style_a_rand</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn_like</span><span class="p">(</span><span class="n">style_a</span><span class="p">)</span>
+            <span class="n">style_b_rand</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn_like</span><span class="p">(</span><span class="n">style_b</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># use style code encoded from the other domain</span>
+            <span class="n">style_a_rand</span> <span class="o">=</span> <span class="n">style_a</span>
+            <span class="n">style_b_rand</span> <span class="o">=</span> <span class="n">style_b</span>
+        <span class="n">images_ba</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_b</span><span class="p">,</span> <span class="n">style_a_rand</span><span class="p">)</span>
+        <span class="n">images_ab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_a</span><span class="p">,</span> <span class="n">style_b_rand</span><span class="p">)</span>
+
+        <span class="c1"># encode translated images into content and style code</span>
+        <span class="k">if</span> <span class="n">latent_recon</span> <span class="ow">or</span> <span class="n">cycle_recon</span><span class="p">:</span>
+            <span class="n">content_ba</span><span class="p">,</span> <span class="n">style_ba</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_ba</span><span class="p">)</span>
+            <span class="n">content_ab</span><span class="p">,</span> <span class="n">style_ab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_ab</span><span class="p">)</span>
+            <span class="n">net_G_output</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">content_ba</span><span class="o">=</span><span class="n">content_ba</span><span class="p">,</span> <span class="n">style_ba</span><span class="o">=</span><span class="n">style_ba</span><span class="p">,</span>
+                                     <span class="n">content_ab</span><span class="o">=</span><span class="n">content_ab</span><span class="p">,</span> <span class="n">style_ab</span><span class="o">=</span><span class="n">style_ab</span><span class="p">))</span>
+
+        <span class="c1"># encode reconstructed images into content and style code</span>
+        <span class="k">if</span> <span class="n">image_recon</span> <span class="ow">and</span> <span class="n">within_latent_recon</span><span class="p">:</span>
+            <span class="n">content_aa</span><span class="p">,</span> <span class="n">style_aa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_aa</span><span class="p">)</span>
+            <span class="n">content_bb</span><span class="p">,</span> <span class="n">style_bb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images_bb</span><span class="p">)</span>
+            <span class="n">net_G_output</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">content_aa</span><span class="o">=</span><span class="n">content_aa</span><span class="p">,</span> <span class="n">style_aa</span><span class="o">=</span><span class="n">style_aa</span><span class="p">,</span>
+                                     <span class="n">content_bb</span><span class="o">=</span><span class="n">content_bb</span><span class="p">,</span> <span class="n">style_bb</span><span class="o">=</span><span class="n">style_bb</span><span class="p">))</span>
+
+        <span class="c1"># cycle reconstruction</span>
+        <span class="k">if</span> <span class="n">cycle_recon</span><span class="p">:</span>
+            <span class="n">images_aba</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_ab</span><span class="p">,</span> <span class="n">style_a</span><span class="p">)</span>
+            <span class="n">images_bab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content_ba</span><span class="p">,</span> <span class="n">style_b</span><span class="p">)</span>
+            <span class="n">net_G_output</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                <span class="nb">dict</span><span class="p">(</span><span class="n">images_aba</span><span class="o">=</span><span class="n">images_aba</span><span class="p">,</span> <span class="n">images_bab</span><span class="o">=</span><span class="n">images_bab</span><span class="p">))</span>
+
+        <span class="c1"># required outputs</span>
+        <span class="n">net_G_output</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">content_a</span><span class="o">=</span><span class="n">content_a</span><span class="p">,</span> <span class="n">content_b</span><span class="o">=</span><span class="n">content_b</span><span class="p">,</span>
+                                 <span class="n">style_a</span><span class="o">=</span><span class="n">style_a</span><span class="p">,</span> <span class="n">style_b</span><span class="o">=</span><span class="n">style_b</span><span class="p">,</span>
+                                 <span class="n">style_a_rand</span><span class="o">=</span><span class="n">style_a_rand</span><span class="p">,</span>
+                                 <span class="n">style_b_rand</span><span class="o">=</span><span class="n">style_b_rand</span><span class="p">,</span>
+                                 <span class="n">images_ba</span><span class="o">=</span><span class="n">images_ba</span><span class="p">,</span> <span class="n">images_ab</span><span class="o">=</span><span class="n">images_ab</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">net_G_output</span></div>
+
+<div class="viewcode-block" id="Generator.inference"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.Generator.inference">[docs]</a>    <span class="k">def</span> <span class="nf">inference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">a2b</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_style</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;MUNIT inference.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">              - images_a (tensor): Images from domain A.</span>
+<span class="sd">              - images_b (tensor): Images from domain B.</span>
+<span class="sd">            a2b (bool): If ``True``, translates images from domain A to B,</span>
+<span class="sd">                otherwise from B to A.</span>
+<span class="sd">            random_style (bool): If ``True``, samples the style code from the</span>
+<span class="sd">                prior distribution, otherwise uses the style code encoded from</span>
+<span class="sd">                the input images in the other domain.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">a2b</span><span class="p">:</span>
+            <span class="n">input_key</span> <span class="o">=</span> <span class="s1">&#39;images_a&#39;</span>
+            <span class="n">content_encode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">content_encoder</span>
+            <span class="n">style_encode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">style_encoder</span>
+            <span class="n">decode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">decode</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">input_key</span> <span class="o">=</span> <span class="s1">&#39;images_b&#39;</span>
+            <span class="n">content_encode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_b</span><span class="o">.</span><span class="n">content_encoder</span>
+            <span class="n">style_encode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">style_encoder</span>
+            <span class="n">decode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">decode</span>
+
+        <span class="n">content_images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">input_key</span><span class="p">]</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">content_encode</span><span class="p">(</span><span class="n">content_images</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">random_style</span><span class="p">:</span>
+            <span class="n">style_channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">autoencoder_a</span><span class="o">.</span><span class="n">style_channels</span>
+            <span class="n">style</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">style_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+            <span class="n">file_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="n">input_key</span><span class="p">][</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">style_key</span> <span class="o">=</span> <span class="s1">&#39;images_b&#39;</span> <span class="k">if</span> <span class="n">a2b</span> <span class="k">else</span> <span class="s1">&#39;images_a&#39;</span>
+            <span class="k">assert</span> <span class="n">style_key</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> \
+                <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> must be provided when &#39;random_style&#39; &quot;</span> \
+                <span class="s2">&quot;is set to False&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">style_key</span><span class="p">)</span>
+            <span class="n">style_images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">style_key</span><span class="p">]</span>
+            <span class="n">style</span> <span class="o">=</span> <span class="n">style_encode</span><span class="p">(</span><span class="n">style_images</span><span class="p">)</span>
+            <span class="n">file_names</span> <span class="o">=</span> \
+                <span class="p">[</span><span class="n">content_name</span> <span class="o">+</span> <span class="s1">&#39;_style_&#39;</span> <span class="o">+</span> <span class="n">style_name</span>
+                 <span class="k">for</span> <span class="n">content_name</span><span class="p">,</span> <span class="n">style_name</span> <span class="ow">in</span>
+                    <span class="nb">zip</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="n">input_key</span><span class="p">][</span><span class="s1">&#39;filename&#39;</span><span class="p">],</span>
+                        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="n">style_key</span><span class="p">][</span><span class="s1">&#39;filename&#39;</span><span class="p">])]</span>
+
+        <span class="n">output_images</span> <span class="o">=</span> <span class="n">decode</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_images</span><span class="p">,</span> <span class="n">file_names</span></div></div>
+
+
+<div class="viewcode-block" id="AutoEncoder"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.AutoEncoder">[docs]</a><span class="k">class</span> <span class="nc">AutoEncoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Improved MUNIT autoencoder.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_filters (int): Base filter numbers.</span>
+<span class="sd">        max_num_filters (int): Maximum number of filters in the encoder.</span>
+<span class="sd">        num_filters_mlp (int): Base filter number in the MLP module.</span>
+<span class="sd">        latent_dim (int): Dimension of the style code.</span>
+<span class="sd">        num_res_blocks (int): Number of residual blocks at the end of the</span>
+<span class="sd">            content encoder.</span>
+<span class="sd">        num_mlp_blocks (int): Number of layers in the MLP module.</span>
+<span class="sd">        num_downsamples_style (int): Number of times we reduce</span>
+<span class="sd">            resolution by 2x2 for the style image.</span>
+<span class="sd">        num_downsamples_content (int): Number of times we reduce</span>
+<span class="sd">            resolution by 2x2 for the content image.</span>
+<span class="sd">        num_image_channels (int): Number of input image channels.</span>
+<span class="sd">        content_norm_type (str): Type of activation normalization in the</span>
+<span class="sd">            content encoder.</span>
+<span class="sd">        style_norm_type (str): Type of activation normalization in the</span>
+<span class="sd">            style encoder.</span>
+<span class="sd">        decoder_norm_type (str): Type of activation normalization in the</span>
+<span class="sd">            decoder.</span>
+<span class="sd">        weight_norm_type (str): Type of weight normalization.</span>
+<span class="sd">        decoder_norm_params (obj): Parameters of activation normalization in the</span>
+<span class="sd">            decoder. If not ``None``, decoder_norm_params.__dict__ will be used</span>
+<span class="sd">            as keyword arguments when initializing activation normalization.</span>
+<span class="sd">        output_nonlinearity (str): Type of nonlinearity before final output,</span>
+<span class="sd">            ``&#39;tanh&#39;`` or ``&#39;none&#39;``.</span>
+<span class="sd">        pre_act (bool): If ``True``, uses pre-activation residual blocks.</span>
+<span class="sd">        apply_noise (bool): If ``True``, injects Gaussian noise in the decoder.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                 <span class="n">max_num_filters</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                 <span class="n">num_filters_mlp</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                 <span class="n">latent_dim</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                 <span class="n">num_res_blocks</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                 <span class="n">num_mlp_blocks</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">num_downsamples_style</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                 <span class="n">num_downsamples_content</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">num_image_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">content_norm_type</span><span class="o">=</span><span class="s1">&#39;instance&#39;</span><span class="p">,</span>
+                 <span class="n">style_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">decoder_norm_type</span><span class="o">=</span><span class="s1">&#39;instance&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">decoder_norm_params</span><span class="o">=</span><span class="n">SimpleNamespace</span><span class="p">(</span><span class="n">affine</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                 <span class="n">output_nonlinearity</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">pre_act</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;Generator argument &#39;</span><span class="si">{}</span><span class="s2">&#39; is not used.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span> <span class="o">=</span> <span class="n">StyleEncoder</span><span class="p">(</span><span class="n">num_downsamples_style</span><span class="p">,</span>
+                                          <span class="n">num_image_channels</span><span class="p">,</span>
+                                          <span class="n">num_filters</span><span class="p">,</span>
+                                          <span class="n">latent_dim</span><span class="p">,</span>
+                                          <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                                          <span class="n">style_norm_type</span><span class="p">,</span>
+                                          <span class="n">weight_norm_type</span><span class="p">,</span>
+                                          <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span> <span class="o">=</span> <span class="n">ContentEncoder</span><span class="p">(</span><span class="n">num_downsamples_content</span><span class="p">,</span>
+                                              <span class="n">num_res_blocks</span><span class="p">,</span>
+                                              <span class="n">num_image_channels</span><span class="p">,</span>
+                                              <span class="n">num_filters</span><span class="p">,</span>
+                                              <span class="n">max_num_filters</span><span class="p">,</span>
+                                              <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                                              <span class="n">content_norm_type</span><span class="p">,</span>
+                                              <span class="n">weight_norm_type</span><span class="p">,</span>
+                                              <span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+                                              <span class="n">pre_act</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">=</span> <span class="n">Decoder</span><span class="p">(</span><span class="n">num_downsamples_content</span><span class="p">,</span>
+                               <span class="n">num_res_blocks</span><span class="p">,</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span><span class="o">.</span><span class="n">output_dim</span><span class="p">,</span>
+                               <span class="n">num_image_channels</span><span class="p">,</span>
+                               <span class="n">num_filters_mlp</span><span class="p">,</span>
+                               <span class="s1">&#39;reflect&#39;</span><span class="p">,</span>
+                               <span class="n">decoder_norm_type</span><span class="p">,</span>
+                               <span class="n">decoder_norm_params</span><span class="p">,</span>
+                               <span class="n">weight_norm_type</span><span class="p">,</span>
+                               <span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+                               <span class="n">output_nonlinearity</span><span class="p">,</span>
+                               <span class="n">pre_act</span><span class="p">,</span>
+                               <span class="n">apply_noise</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span> <span class="o">=</span> <span class="n">MLP</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">,</span>
+                       <span class="n">num_filters_mlp</span><span class="p">,</span>
+                       <span class="n">num_filters_mlp</span><span class="p">,</span>
+                       <span class="n">num_mlp_blocks</span><span class="p">,</span>
+                       <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">style_channels</span> <span class="o">=</span> <span class="n">latent_dim</span>
+
+<div class="viewcode-block" id="AutoEncoder.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.AutoEncoder.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reconstruct an image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            images (Tensor): Input images.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            images_recon (Tensor): Reconstructed images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">content</span><span class="p">,</span> <span class="n">style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">images_recon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images_recon</span></div>
+
+<div class="viewcode-block" id="AutoEncoder.encode"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.AutoEncoder.encode">[docs]</a>    <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Encode an image to content and style code.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            images (Tensor): Input images.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - content (Tensor): Content code.</span>
+<span class="sd">              - style (Tensor): Style code.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">content</span><span class="p">,</span> <span class="n">style</span></div>
+
+<div class="viewcode-block" id="AutoEncoder.decode"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.AutoEncoder.decode">[docs]</a>    <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Decode content and style code to an image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            content (Tensor): Content code.</span>
+<span class="sd">            style (Tensor): Style code.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            images (Tensor): Output images.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images</span></div></div>
+
+
+<div class="viewcode-block" id="StyleEncoder"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.StyleEncoder">[docs]</a><span class="k">class</span> <span class="nc">StyleEncoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;MUNIT style encoder.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_downsamples (int): Number of times we reduce</span>
+<span class="sd">            resolution by 2x2.</span>
+<span class="sd">        num_image_channels (int): Number of input image channels.</span>
+<span class="sd">        num_filters (int): Base filter numbers.</span>
+<span class="sd">        style_channels (int): Dimension of the style code.</span>
+<span class="sd">        padding_mode (string): Type of padding.</span>
+<span class="sd">        activation_norm_type (str): Type of activation normalization.</span>
+<span class="sd">        weight_norm_type (str): Type of weight normalization.</span>
+<span class="sd">        nonlinearity (str): Type of nonlinear activation function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_downsamples</span><span class="p">,</span> <span class="n">num_image_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span>
+                 <span class="n">style_channels</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span> <span class="n">activation_norm_type</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">conv_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">padding_mode</span><span class="o">=</span><span class="n">padding_mode</span><span class="p">,</span>
+                           <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                           <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                           <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                           <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_image_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+                              <span class="o">**</span><span class="n">conv_params</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+            <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">conv_params</span><span class="p">)]</span>
+            <span class="n">num_filters</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_downsamples</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">conv_params</span><span class="p">)]</span>
+        <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">AdaptiveAvgPool2d</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+        <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">style_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_dim</span> <span class="o">=</span> <span class="n">num_filters</span>
+
+<div class="viewcode-block" id="StyleEncoder.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.StyleEncoder.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Decoder"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.Decoder">[docs]</a><span class="k">class</span> <span class="nc">Decoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Improved MUNIT decoder. The network consists of</span>
+
+<span class="sd">    - $(num_res_blocks) residual blocks.</span>
+<span class="sd">    - $(num_upsamples) residual blocks or convolutional blocks</span>
+<span class="sd">    - output layer.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        num_upsamples (int): Number of times we increase resolution by 2x2.</span>
+<span class="sd">        num_res_blocks (int): Number of residual blocks.</span>
+<span class="sd">        num_filters (int): Base filter numbers.</span>
+<span class="sd">        num_image_channels (int): Number of input image channels.</span>
+<span class="sd">        style_channels (int): Dimension of the style code.</span>
+<span class="sd">        padding_mode (string): Type of padding.</span>
+<span class="sd">        activation_norm_type (str): Type of activation normalization.</span>
+<span class="sd">        activation_norm_params (obj): Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, decoder_norm_params.__dict__ will be used</span>
+<span class="sd">            as keyword arguments when initializing activation normalization.</span>
+<span class="sd">        weight_norm_type (str): Type of weight normalization.</span>
+<span class="sd">        nonlinearity (str): Type of nonlinear activation function.</span>
+<span class="sd">        output_nonlinearity (str): Type of nonlinearity before final output,</span>
+<span class="sd">            ``&#39;tanh&#39;`` or ``&#39;none&#39;``.</span>
+<span class="sd">        pre_act (bool): If ``True``, uses pre-activation residual blocks.</span>
+<span class="sd">        apply_noise (bool): If ``True``, injects Gaussian noise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">num_upsamples</span><span class="p">,</span>
+                 <span class="n">num_res_blocks</span><span class="p">,</span>
+                 <span class="n">num_filters</span><span class="p">,</span>
+                 <span class="n">num_image_channels</span><span class="p">,</span>
+                 <span class="n">style_channels</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span>
+                 <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span>
+                 <span class="n">output_nonlinearity</span><span class="p">,</span>
+                 <span class="n">pre_act</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">adain_params</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+            <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">activation_norm_params</span><span class="p">,</span>
+            <span class="n">cond_dims</span><span class="o">=</span><span class="n">style_channels</span><span class="p">)</span>
+        <span class="n">conv_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">padding_mode</span><span class="o">=</span><span class="n">padding_mode</span><span class="p">,</span>
+                           <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                           <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                           <span class="n">apply_noise</span><span class="o">=</span><span class="n">apply_noise</span><span class="p">,</span>
+                           <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                           <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;adaptive&#39;</span><span class="p">,</span>
+                           <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">adain_params</span><span class="p">)</span>
+
+        <span class="c1"># The order of operations in residual blocks.</span>
+        <span class="n">order</span> <span class="o">=</span> <span class="s1">&#39;pre_act&#39;</span> <span class="k">if</span> <span class="n">pre_act</span> <span class="k">else</span> <span class="s1">&#39;CNACNA&#39;</span>
+
+        <span class="c1"># Residual blocks with AdaIN.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_res_blocks</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Res2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span>
+                                        <span class="o">**</span><span class="n">conv_params</span><span class="p">,</span>
+                                        <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">)]</span>
+
+        <span class="c1"># Convolutional blocks with upsampling.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_upsamples</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">+=</span> <span class="p">[</span><span class="n">NearestUpsample</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span>
+                                         <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">conv_params</span><span class="p">)]</span>
+            <span class="n">num_filters</span> <span class="o">//=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_image_channels</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+                                     <span class="n">nonlinearity</span><span class="o">=</span><span class="n">output_nonlinearity</span><span class="p">,</span>
+                                     <span class="n">padding_mode</span><span class="o">=</span><span class="n">padding_mode</span><span class="p">)]</span>
+
+<div class="viewcode-block" id="Decoder.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.Decoder.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">style</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Content embedding of the content image.</span>
+<span class="sd">            style (tensor): Style embedding of the style image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div></div>
+
+
+<div class="viewcode-block" id="MLP"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.MLP">[docs]</a><span class="k">class</span> <span class="nc">MLP</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;The multi-layer perceptron (MLP) that maps Gaussian style code to a</span>
+<span class="sd">    feature vector that is given as the conditional input to AdaIN.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_dim (int): Number of channels in the input tensor.</span>
+<span class="sd">        output_dim (int): Number of channels in the output tensor.</span>
+<span class="sd">        latent_dim (int): Number of channels in the latent features.</span>
+<span class="sd">        num_layers (int): Number of layers in the MLP.</span>
+<span class="sd">        norm (str): Type of activation normalization.</span>
+<span class="sd">        nonlinearity (str): Type of nonlinear activation function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
+                 <span class="n">norm</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">LinearBlock</span><span class="p">(</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">LinearBlock</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">,</span>
+                                  <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">)]</span>
+        <span class="n">model</span> <span class="o">+=</span> <span class="p">[</span><span class="n">LinearBlock</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">,</span>
+                              <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
+                              <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MLP.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.munit.MLP.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

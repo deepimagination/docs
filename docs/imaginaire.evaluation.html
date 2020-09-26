@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.evaluation package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.generators package" href="imaginaire.generators.html" />
+    <link rel="prev" title="imaginaire.discriminators package" href="imaginaire.discriminators.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.evaluation package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.evaluation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-evaluation-package">
+<h1>imaginaire.evaluation package<a class="headerlink" href="#imaginaire-evaluation-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.evaluation.common">
+<span id="imaginaire-evaluation-common-module"></span><h2>imaginaire.evaluation.common module<a class="headerlink" href="#module-imaginaire.evaluation.common" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.evaluation.common.get_activations">
+<code class="sig-prename descclassname">imaginaire.evaluation.common.</code><code class="sig-name descname">get_activations</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em>, <em class="sig-param">key_real</em>, <em class="sig-param">key_fake</em>, <em class="sig-param">generator=None</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/common.html#get_activations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.common.get_activations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute activation values and pack them in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>generator</strong> (<em>obj</em>) – PyTorch trainer network.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to use for FID.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – Pre-processing function to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Inception features of the current batch. Note that</dt><dd><p>only the master gpu will get it.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>batch_y (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.common.get_video_activations">
+<code class="sig-prename descclassname">imaginaire.evaluation.common.</code><code class="sig-name descname">get_video_activations</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em>, <em class="sig-param">key_real</em>, <em class="sig-param">key_fake</em>, <em class="sig-param">trainer=None</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">few_shot=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/common.html#get_video_activations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.common.get_video_activations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute activation values and pack them in a list. We do not do all
+reduce here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>trainer</strong> (<em>obj</em>) – Trainer. Video generation is more involved, we rely on
+the “reset” and “test” function to conduct the evaluation.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – For computing video activation, we will use .</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>few_shot</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the few-shot setting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Inception features of the current batch. Note that</dt><dd><p>only the master gpu will get it.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>batch_y (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.common.set_sequence_idx">
+<code class="sig-prename descclassname">imaginaire.evaluation.common.</code><code class="sig-name descname">set_sequence_idx</code><span class="sig-paren">(</span><em class="sig-param">few_shot</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">sequence_idx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/common.html#set_sequence_idx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.common.set_sequence_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get sequence index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>few_shot</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses the few-shot setting.</p></li>
+<li><p><strong>data_loader</strong> – dataloader object</p></li>
+<li><p><strong>sequence_idx</strong> (<em>int</em>) – which sequence to use.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.evaluation.fid">
+<span id="imaginaire-evaluation-fid-module"></span><h2>imaginaire.evaluation.fid module<a class="headerlink" href="#module-imaginaire.evaluation.fid" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.evaluation.fid.calculate_frechet_distance">
+<code class="sig-prename descclassname">imaginaire.evaluation.fid.</code><code class="sig-name descname">calculate_frechet_distance</code><span class="sig-paren">(</span><em class="sig-param">mu1</em>, <em class="sig-param">sigma1</em>, <em class="sig-param">mu2</em>, <em class="sig-param">sigma2</em>, <em class="sig-param">eps=1e-06</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#calculate_frechet_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.fid.calculate_frechet_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numpy implementation of the Frechet Distance.
+The Frechet distance between two multivariate Gaussians X_1 ~ N(mu_1, C_1)
+and X_2 ~ N(mu_2, C_2) is
+d^2 = ||mu_1 - mu_2||^2 + Tr(C_1 + C_2 - 2*sqrt(C_1*C_2)).
+Stable version by Dougal J. Sutherland.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu1</strong> – Numpy array containing the activations of a layer of the
+inception net (like returned by the function ‘get_predictions’)
+for generated samples.</p></li>
+<li><p><strong>mu2</strong> – The sample mean over activations, pre-calculated on an
+representative data set.</p></li>
+<li><p><strong>sigma1</strong> – The covariance matrix over activations for generated samples.</p></li>
+<li><p><strong>sigma2</strong> – The covariance matrix over activations, pre-calculated on an
+representative data set.</p></li>
+<li><p><strong>eps</strong> – a value added to the diagonal of cov for numerical stability.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Frechet Distance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.fid.compute_fid">
+<code class="sig-prename descclassname">imaginaire.evaluation.fid.</code><code class="sig-name descname">compute_fid</code><span class="sig-paren">(</span><em class="sig-param">fid_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">few_shot_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#compute_fid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.fid.compute_fid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the fid score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fid_path</strong> (<em>str</em>) – Location for the numpy file to store or to load the
+statistics.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – For image generation modes, net_G is the PyTorch trainer
+network. For video generation models, net_G is the trainer
+because video generation requires more complicated processing.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> or </em><em>tuple</em>) – How many samples to be used.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>few_shot_video</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses few-shot video synthesis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.fid.compute_fid_data">
+<code class="sig-prename descclassname">imaginaire.evaluation.fid.</code><code class="sig-name descname">compute_fid_data</code><span class="sig-paren">(</span><em class="sig-param">fid_path</em>, <em class="sig-param">data_loader_a</em>, <em class="sig-param">data_loader_b</em>, <em class="sig-param">key_a='images'</em>, <em class="sig-param">key_b='images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">few_shot_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#compute_fid_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.fid.compute_fid_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the fid score between two datasets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fid_path</strong> (<em>str</em>) – Location for the numpy file to store or to load the
+statistics.</p></li>
+<li><p><strong>data_loader_a</strong> (<em>obj</em>) – PyTorch dataloader object for dataset a.</p></li>
+<li><p><strong>data_loader_b</strong> (<em>obj</em>) – PyTorch dataloader object for dataset b.</p></li>
+<li><p><strong>key_a</strong> (<em>str</em>) – Dictionary key value for images in the dataset a.</p></li>
+<li><p><strong>key_b</strong> (<em>str</em>) – Dictionary key value for images in the dataset b.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to be used for computing the FID.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>few_shot_video</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses few-shot video synthesis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.fid.get_inception_mean_cov">
+<code class="sig-prename descclassname">imaginaire.evaluation.fid.</code><code class="sig-name descname">get_inception_mean_cov</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em>, <em class="sig-param">key_real</em>, <em class="sig-param">key_fake</em>, <em class="sig-param">generator</em>, <em class="sig-param">sample_size</em>, <em class="sig-param">preprocess</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">few_shot_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#get_inception_mean_cov"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.fid.get_inception_mean_cov" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load mean and covariance from saved npy file if exists. Otherwise,
+compute the mean and covariance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>generator</strong> (<em>obj</em>) – PyTorch trainer network.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> or </em><em>tuple</em>) – How many samples to be used.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>is_video</strong> – Whether we are handling video sequences.</p></li>
+<li><p><strong>few_shot_video</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses few-shot video synthesis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>mean (tensor): Mean vector.</p></li>
+<li><p>cov (tensor): Covariance matrix.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+<p>trainer (obj): PyTorch trainer network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.fid.load_or_compute_stats">
+<code class="sig-prename descclassname">imaginaire.evaluation.fid.</code><code class="sig-name descname">load_or_compute_stats</code><span class="sig-paren">(</span><em class="sig-param">fid_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">key_real</em>, <em class="sig-param">key_fake</em>, <em class="sig-param">generator=None</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">few_shot_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#load_or_compute_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.fid.load_or_compute_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load mean and covariance from saved npy file if exists. Otherwise,
+compute the mean and covariance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fid_path</strong> (<em>str</em>) – Location for the numpy file to store or to load the
+statistics.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>generator</strong> (<em>obj</em>) – PyTorch trainer network.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> or </em><em>tuple</em>) – How many samples to be used.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>few_shot_video</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses few-shot video synthesis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>mean (tensor): Mean vector.</p></li>
+<li><p>cov (tensor): Covariance matrix.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.evaluation.kid">
+<span id="imaginaire-evaluation-kid-module"></span><h2>imaginaire.evaluation.kid module<a class="headerlink" href="#module-imaginaire.evaluation.kid" title="Permalink to this headline">¶</a></h2>
+<p>Modified from <a class="reference external" href="https://github.com/abdulfatir/gan-metrics-pytorch">https://github.com/abdulfatir/gan-metrics-pytorch</a>
+Copyright 2018 Institute of Bioinformatics, JKU Linz
+Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.compute_kid">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">compute_kid</code><span class="sig-paren">(</span><em class="sig-param">kid_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">save_act=True</em>, <em class="sig-param">num_subsets=1</em>, <em class="sig-param">subset_size=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#compute_kid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.compute_kid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the kid score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kid_path</strong> (<em>str</em>) – Location for store feature activations.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – For image generation modes, net_G is the PyTorch trainer
+network. For video generation models, net_G is the trainer
+because video generation requires more complicated processing.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to be used for computing feature
+activations.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>save_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, saves real activations to the disk and
+reload them in the future. It might save some computation but will
+cost storage.</p></li>
+<li><p><strong>num_subsets</strong> (<em>int</em>) – Number of subsets to sample from all the samples.</p></li>
+<li><p><strong>subset_size</strong> (<em>int</em>) – Number of samples in each subset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>KID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>kid (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.compute_kid_data">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">compute_kid_data</code><span class="sig-paren">(</span><em class="sig-param">kid_path</em>, <em class="sig-param">data_loader_a</em>, <em class="sig-param">data_loader_b</em>, <em class="sig-param">key_a='images'</em>, <em class="sig-param">key_b='images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">num_subsets=1</em>, <em class="sig-param">subset_size=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#compute_kid_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.compute_kid_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the kid score between two datasets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kid_path</strong> (<em>str</em>) – Location for store feature activations.</p></li>
+<li><p><strong>data_loader_a</strong> (<em>obj</em>) – PyTorch dataloader object for dataset a.</p></li>
+<li><p><strong>data_loader_b</strong> (<em>obj</em>) – PyTorch dataloader object for dataset b.</p></li>
+<li><p><strong>key_a</strong> (<em>str</em>) – Dictionary key value for images in the dataset a.</p></li>
+<li><p><strong>key_b</strong> (<em>str</em>) – Dictionary key value for images in the dataset b.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to be used for computing the KID.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>num_subsets</strong> (<em>int</em>) – Number of subsets to sample from the whole data.</p></li>
+<li><p><strong>subset_size</strong> (<em>int</em>) – Number of samples in each subset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>KID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>kid (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.load_or_compute_activations">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">load_or_compute_activations</code><span class="sig-paren">(</span><em class="sig-param">act_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">key_real</em>, <em class="sig-param">key_fake</em>, <em class="sig-param">generator=None</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#load_or_compute_activations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.load_or_compute_activations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load mean and covariance from saved npy file if exists. Otherwise,
+compute the mean and covariance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>act_path</strong> (<em>str</em><em> or </em><em>None</em>) – Location for the numpy file to store or to load
+the statistics.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>generator</strong> (<em>obj</em>) – PyTorch trainer network.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to be used for computing the KID.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Mean vector.
+cov (tensor): Covariance matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>mean (tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.polynomial_kernel">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">polynomial_kernel</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y=None</em>, <em class="sig-param">degree=3</em>, <em class="sig-param">gamma=None</em>, <em class="sig-param">coef0=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#polynomial_kernel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.polynomial_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the polynomial kernel between X and Y</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.polynomial_mmd">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">polynomial_mmd</code><span class="sig-paren">(</span><em class="sig-param">codes_g</em>, <em class="sig-param">codes_r</em>, <em class="sig-param">degree=3</em>, <em class="sig-param">gamma=None</em>, <em class="sig-param">coef0=1</em>, <em class="sig-param">ret_var=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#polynomial_mmd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.polynomial_mmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes MMD between two sets of features using polynomial kernels. It
+performs a number of repetitions of subset sampling without replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>codes_g</strong> (<em>Tensor</em>) – Feature activations of generated images.</p></li>
+<li><p><strong>codes_r</strong> (<em>Tensor</em>) – Feature activations of real images.</p></li>
+<li><p><strong>degree</strong> (<em>int</em>) – The degree of the polynomial kernel.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em><em> or </em><em>None</em>) – Scale of the polynomial kernel.</p></li>
+<li><p><strong>coef0</strong> (<em>float</em><em> or </em><em>None</em>) – Bias of the polynomial kernel.</p></li>
+<li><p><strong>ret_var</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns both mean and variance of MMDs,
+otherwise only returns the mean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>mmds (Tensor): Mean of MMDs.</p></li>
+<li><p>mmd_vars (Tensor): Variance of MMDs.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.kid.polynomial_mmd_averages">
+<code class="sig-prename descclassname">imaginaire.evaluation.kid.</code><code class="sig-name descname">polynomial_mmd_averages</code><span class="sig-paren">(</span><em class="sig-param">codes_g</em>, <em class="sig-param">codes_r</em>, <em class="sig-param">n_subsets</em>, <em class="sig-param">subset_size</em>, <em class="sig-param">ret_var=True</em>, <em class="sig-param">**kernel_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#polynomial_mmd_averages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.kid.polynomial_mmd_averages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes MMD between two sets of features using polynomial kernels. It
+performs a number of repetitions of subset sampling without replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>codes_g</strong> (<em>Tensor</em>) – Feature activations of generated images.</p></li>
+<li><p><strong>codes_r</strong> (<em>Tensor</em>) – Feature activations of real images.</p></li>
+<li><p><strong>n_subsets</strong> (<em>int</em>) – The number of subsets.</p></li>
+<li><p><strong>subset_size</strong> (<em>int</em>) – The number of samples in each subset.</p></li>
+<li><p><strong>ret_var</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns both mean and variance of MMDs,
+otherwise only returns the mean.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>mmds (Tensor): Mean of MMDs.</p></li>
+<li><p>mmd_vars (Tensor): Variance of MMDs.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.evaluation.prdc">
+<span id="imaginaire-evaluation-prdc-module"></span><h2>imaginaire.evaluation.prdc module<a class="headerlink" href="#module-imaginaire.evaluation.prdc" title="Permalink to this headline">¶</a></h2>
+<p>Modified from <a class="reference external" href="https://github.com/clovaai/generative-evaluation-prdc">https://github.com/clovaai/generative-evaluation-prdc</a>
+Copyright (c) 2020-present NAVER Corp.
+MIT license</p>
+<dl class="function">
+<dt id="imaginaire.evaluation.prdc.compute_prdc">
+<code class="sig-prename descclassname">imaginaire.evaluation.prdc.</code><code class="sig-name descname">compute_prdc</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">k=10</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/prdc.html#compute_prdc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.prdc.compute_prdc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute precision diversity curve</p>
+<p>Args:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.evaluation">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.evaluation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="imaginaire.evaluation.compute_fid">
+<code class="sig-prename descclassname">imaginaire.evaluation.</code><code class="sig-name descname">compute_fid</code><span class="sig-paren">(</span><em class="sig-param">fid_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">few_shot_video=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/fid.html#compute_fid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.compute_fid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the fid score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fid_path</strong> (<em>str</em>) – Location for the numpy file to store or to load the
+statistics.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – For image generation modes, net_G is the PyTorch trainer
+network. For video generation models, net_G is the trainer
+because video generation requires more complicated processing.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em><em> or </em><em>tuple</em>) – How many samples to be used.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>few_shot_video</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses few-shot video synthesis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.compute_kid">
+<code class="sig-prename descclassname">imaginaire.evaluation.</code><code class="sig-name descname">compute_kid</code><span class="sig-paren">(</span><em class="sig-param">kid_path</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">sample_size=None</em>, <em class="sig-param">preprocess=None</em>, <em class="sig-param">is_video=False</em>, <em class="sig-param">save_act=True</em>, <em class="sig-param">num_subsets=1</em>, <em class="sig-param">subset_size=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/kid.html#compute_kid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.compute_kid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the kid score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kid_path</strong> (<em>str</em>) – Location for store feature activations.</p></li>
+<li><p><strong>data_loader</strong> (<em>obj</em>) – PyTorch dataloader object.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – For image generation modes, net_G is the PyTorch trainer
+network. For video generation models, net_G is the trainer
+because video generation requires more complicated processing.</p></li>
+<li><p><strong>key_real</strong> (<em>str</em>) – Dictionary key value for the real data.</p></li>
+<li><p><strong>key_fake</strong> (<em>str</em>) – Dictionary key value for the fake data.</p></li>
+<li><p><strong>sample_size</strong> (<em>int</em>) – How many samples to be used for computing feature
+activations.</p></li>
+<li><p><strong>preprocess</strong> (<em>func</em>) – The preprocess function to be applied to the data.</p></li>
+<li><p><strong>is_video</strong> (<em>bool</em>) – Whether we are handling video sequences.</p></li>
+<li><p><strong>save_act</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, saves real activations to the disk and
+reload them in the future. It might save some computation but will
+cost storage.</p></li>
+<li><p><strong>num_subsets</strong> (<em>int</em>) – Number of subsets to sample from all the samples.</p></li>
+<li><p><strong>subset_size</strong> (<em>int</em>) – Number of samples in each subset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>KID value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>kid (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.evaluation.compute_prdc">
+<code class="sig-prename descclassname">imaginaire.evaluation.</code><code class="sig-name descname">compute_prdc</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">data_loader</em>, <em class="sig-param">net_G</em>, <em class="sig-param">key_real='images'</em>, <em class="sig-param">key_fake='fake_images'</em>, <em class="sig-param">k=10</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/evaluation/prdc.html#compute_prdc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.evaluation.compute_prdc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute precision diversity curve</p>
+<p>Args:</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.generators.html" class="btn btn-neutral float-right" title="imaginaire.generators package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.discriminators.html" class="btn btn-neutral float-left" title="imaginaire.discriminators package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

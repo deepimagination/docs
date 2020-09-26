@@ -1,0 +1,1122 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.discriminators package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.evaluation package" href="imaginaire.evaluation.html" />
+    <link rel="prev" title="imaginaire.datasets package" href="imaginaire.datasets.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.discriminators package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.discriminators.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-discriminators-package">
+<h1>imaginaire.discriminators package<a class="headerlink" href="#imaginaire-discriminators-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.discriminators.dummy">
+<span id="imaginaire-discriminators-dummy-module"></span><h2>imaginaire.discriminators.dummy module<a class="headerlink" href="#module-imaginaire.discriminators.dummy" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.dummy.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.dummy.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/dummy.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.dummy.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Dummy Discriminator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.dummy.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/dummy.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.dummy.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dummy discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.dummy.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.dummy.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.fpse">
+<span id="imaginaire-discriminators-fpse-module"></span><h2>imaginaire.discriminators.fpse module<a class="headerlink" href="#module-imaginaire.discriminators.fpse" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.fpse.FPSEDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.fpse.</code><code class="sig-name descname">FPSEDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">num_input_channels</em>, <em class="sig-param">num_labels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">weight_norm_type</em>, <em class="sig-param">activation_norm_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fpse.html#FPSEDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fpse.FPSEDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p># Feature-Pyramid Semantics Embedding Discriminator. This is a copy
+of the discriminator in <a class="reference external" href="https://arxiv.org/pdf/1910.06809.pdf">https://arxiv.org/pdf/1910.06809.pdf</a></p>
+<dl class="method">
+<dt id="imaginaire.discriminators.fpse.FPSEDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">segmaps</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fpse.html#FPSEDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fpse.FPSEDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> – image tensors.</p></li>
+<li><p><strong>segmaps</strong> – segmentation map tensors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.fpse.FPSEDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.fpse.FPSEDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.fs_vid2vid">
+<span id="imaginaire-discriminators-fs-vid2vid-module"></span><h2>imaginaire.discriminators.fs_vid2vid module<a class="headerlink" href="#module-imaginaire.discriminators.fs_vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.fs_vid2vid.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.fs_vid2vid.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Image and video discriminator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.fs_vid2vid.Discriminator.discriminate_video">
+<code class="sig-name descname">discriminate_video</code><span class="sig-paren">(</span><em class="sig-param">real_B</em>, <em class="sig-param">fake_B</em>, <em class="sig-param">scale</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#Discriminator.discriminate_video"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.Discriminator.discriminate_video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discriminate a sequence of images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real_B</strong> (<em>NxCxHxW tensor</em>) – Real image.</p></li>
+<li><p><strong>fake_B</strong> (<em>NxCxHxW tensor</em>) – Fake image.</p></li>
+<li><p><strong>scale</strong> (<em>int</em>) – Temporal scale.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>pred_real (NxC2xH2xW2 tensor): Output of net_D for real images.</p></li>
+<li><p>pred_fake (NxC2xH2xW2 tensor): Output of net_D for fake images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.discriminators.fs_vid2vid.Discriminator.discrminate_image">
+<code class="sig-name descname">discrminate_image</code><span class="sig-paren">(</span><em class="sig-param">net_D</em>, <em class="sig-param">real_A</em>, <em class="sig-param">real_B</em>, <em class="sig-param">fake_B</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#Discriminator.discrminate_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.Discriminator.discrminate_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discriminate individual images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>real_A</strong> (<em>NxC1xHxW tensor</em>) – Input label map.</p></li>
+<li><p><strong>real_B</strong> (<em>NxC2xHxW tensor</em>) – Real image.</p></li>
+<li><p><strong>fake_B</strong> (<em>NxC2xHxW tensor</em>) – Fake image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>pred_real (NxC3xH2xW2 tensor): Output of net_D for real images.</p></li>
+<li><p>pred_fake (NxC3xH2xW2 tensor): Output of net_D for fake images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.discriminators.fs_vid2vid.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">past_frames</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Input data.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Generator output.</p></li>
+<li><p><strong>past_frames</strong> (<em>list of tensors</em>) – Past real frames / generator outputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>output (dict): Discriminator output.</p></li>
+<li><p>past_frames (list of tensors): New past frames by adding
+current outputs.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.fs_vid2vid.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.fs_vid2vid.</code><code class="sig-name descname">MultiPatchDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">num_input_channels</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#MultiPatchDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-resolution patch discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator part of the yaml config file.</p></li>
+<li><p><strong>num_input_channels</strong> (<em>int</em>) – Number of input channels.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#MultiPatchDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-resolution patch discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_x</strong> (<em>N x C x H x W tensor</em>) – Concatenation of images and
+semantic representations.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>output (list): list of output tensors produced by individual
+patch discriminators.</p></li>
+<li><p>features (list): list of lists of features produced by
+individual patch discriminators.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.MultiPatchDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.discriminators.fs_vid2vid.get_all_skipped_frames">
+<code class="sig-prename descclassname">imaginaire.discriminators.fs_vid2vid.</code><code class="sig-name descname">get_all_skipped_frames</code><span class="sig-paren">(</span><em class="sig-param">past_frames</em>, <em class="sig-param">new_frames</em>, <em class="sig-param">t_scales</em>, <em class="sig-param">tD</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#get_all_skipped_frames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.get_all_skipped_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get temporally skipped frames from the input frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>past_frames</strong> (<em>list of tensors</em>) – Past real frames / generator outputs.</p></li>
+<li><p><strong>new_frames</strong> (<em>list of tensors</em>) – Current real frame / generated output.</p></li>
+<li><p><strong>t_scales</strong> (<em>int</em>) – Temporal scale.</p></li>
+<li><p><strong>tD</strong> (<em>int</em>) – Number of frames as input to the temporal discriminator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>new_past_frames (list of tensors): Past + current frames.</p></li>
+<li><p>skipped_frames (list of tensors): Temporally skipped frames using
+the given t_scales.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="imaginaire.discriminators.fs_vid2vid.get_skipped_frames">
+<code class="sig-prename descclassname">imaginaire.discriminators.fs_vid2vid.</code><code class="sig-name descname">get_skipped_frames</code><span class="sig-paren">(</span><em class="sig-param">all_frames</em>, <em class="sig-param">frame</em>, <em class="sig-param">t_scales</em>, <em class="sig-param">tD</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/fs_vid2vid.html#get_skipped_frames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.fs_vid2vid.get_skipped_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get temporally skipped frames from the input frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>all_frames</strong> (<em>NxTxCxHxW tensor</em>) – All past frames.</p></li>
+<li><p><strong>frame</strong> (<em>Nx1xCxHxW tensor</em>) – Current frame.</p></li>
+<li><p><strong>t_scales</strong> (<em>int</em>) – Temporal scale.</p></li>
+<li><p><strong>tD</strong> (<em>int</em>) – Number of frames as input to the temporal discriminator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>all_frames (NxTxCxHxW tensor): Past + current frames.</p></li>
+<li><p>skipped_frames (list of NxTxCxHxW tensors): Temporally skipped
+frames.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.funit">
+<span id="imaginaire-discriminators-funit-module"></span><h2>imaginaire.discriminators.funit module<a class="headerlink" href="#module-imaginaire.discriminators.funit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.funit.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.funit.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/funit.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.funit.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Discriminator in the improved FUNIT baseline in the COCO-FUNIT paper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.funit.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">recon=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/funit.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.funit.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Improved FUNIT discriminator forward function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Fake data generated at the current iteration.</p></li>
+<li><p><strong>recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies reconstructed images.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.funit.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.funit.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.discriminators.funit.ResDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.funit.</code><code class="sig-name descname">ResDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">image_channels=3</em>, <em class="sig-param">num_classes=119</em>, <em class="sig-param">num_filters=64</em>, <em class="sig-param">max_num_filters=1024</em>, <em class="sig-param">num_layers=6</em>, <em class="sig-param">padding_mode='reflect'</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/funit.html#ResDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.funit.ResDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Residual discriminator architecture used in the FUNIT paper.</p>
+<dl class="method">
+<dt id="imaginaire.discriminators.funit.ResDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/funit.html#ResDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.funit.ResDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward function of the projection discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> (<em>image tensor</em>) – Images inputted to the discriminator.</p></li>
+<li><p><strong>labels</strong> (<em>long int tensor</em>) – Class labels of the images.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.funit.ResDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.funit.ResDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.mlp_multiclass">
+<span id="imaginaire-discriminators-mlp-multiclass-module"></span><h2>imaginaire.discriminators.mlp_multiclass module<a class="headerlink" href="#module-imaginaire.discriminators.mlp_multiclass" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.mlp_multiclass.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.mlp_multiclass.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/mlp_multiclass.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.mlp_multiclass.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-layer Perceptron Classifier constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.mlp_multiclass.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/mlp_multiclass.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.mlp_multiclass.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patch Discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – <ul class="simple">
+<li><p>data (N x -1 tensor): We will reshape the tensor to this format.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>results (N x C tensor): Output scores before softmax.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.mlp_multiclass.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.mlp_multiclass.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.multires_patch">
+<span id="imaginaire-discriminators-multires-patch-module"></span><h2>imaginaire.discriminators.multires_patch module<a class="headerlink" href="#module-imaginaire.discriminators.multires_patch" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.multires_patch.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.multires_patch.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-resolution patch discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config
+file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.multires_patch.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">real=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>SPADE Generator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – <ul>
+<li><p>data  (N x C1 x H x W tensor) : Ground truth images.</p></li>
+<li><p>label (N x C2 x H x W tensor) : Semantic representations.</p></li>
+<li><p>z (N x style_dims tensor): Gaussian random noise.</p></li>
+</ul>
+</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – fake_images  (N x C1 x H x W tensor) : Fake images.</p></li>
+<li><p><strong>real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies real images. Otherwise it
+only classifies generated images to save computation during the
+generator update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>real_outputs (list): list of output tensors produced by</p></li>
+<li><p>individual patch discriminators for real images.</p></li>
+<li><p>real_features (list): list of lists of features produced by
+individual patch discriminators for real images.</p></li>
+<li><p>fake_outputs (list): list of output tensors produced by
+individual patch discriminators for fake images.</p></li>
+<li><p>fake_features (list): list of lists of features produced by
+individual patch discriminators for fake images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.multires_patch.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.multires_patch.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.multires_patch.</code><code class="sig-name descname">MultiResPatchDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">num_discriminators=3</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">num_filters=64</em>, <em class="sig-param">num_layers=4</em>, <em class="sig-param">max_num_filters=512</em>, <em class="sig-param">activation_norm_type=''</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#MultiResPatchDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-resolution patch discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_discriminators</strong> (<em>int</em>) – Num. of discriminators (one per scale).</p></li>
+<li><p><strong>kernel_size</strong> (<em>int</em>) – Convolution kernel size.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Num. of channels in the real/fake image.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Num. of base filters in a layer.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Num. of layers for the patch discriminator.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum num. of filters in a layer.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – batch_norm/instance_norm/none/….</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – none/spectral_norm/weight_norm</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#MultiResPatchDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-resolution patch discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_x</strong> (<em>tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>output_list (list): list of output tensors produced by
+individual patch discriminators.</p></li>
+<li><p>features_list (list): list of lists of features produced by
+individual patch discriminators.</p></li>
+<li><p>input_list (list): list of downsampled input images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.multires_patch.MultiResPatchDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.multires_patch.</code><code class="sig-name descname">NLayerPatchDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">num_input_channels</em>, <em class="sig-param">num_filters</em>, <em class="sig-param">num_layers</em>, <em class="sig-param">max_num_filters</em>, <em class="sig-param">activation_norm_type</em>, <em class="sig-param">weight_norm_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#NLayerPatchDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Patch Discriminator constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kernel_size</strong> (<em>int</em>) – Convolution kernel size.</p></li>
+<li><p><strong>num_input_channels</strong> (<em>int</em>) – Num. of channels in the real/fake image.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Num. of base filters in a layer.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Num. of layers for the patch discriminator.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum num. of filters in a layer.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – batch_norm/instance_norm/none/….</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – none/spectral_norm/weight_norm</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#NLayerPatchDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patch Discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_x</strong> (<em>N x C x H1 x W2 tensor</em>) – Concatenation of images and
+semantic representations.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>output (N x 1 x H2 x W2 tensor): Discriminator output value.
+Before the sigmoid when using NSGAN.</p></li>
+<li><p>features (list): lists of tensors of the intermediate
+activations.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.multires_patch.NLayerPatchDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.multires_patch.</code><code class="sig-name descname">WeightSharedMultiResPatchDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">num_discriminators=3</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">num_image_channels=3</em>, <em class="sig-param">num_filters=64</em>, <em class="sig-param">num_layers=4</em>, <em class="sig-param">max_num_filters=512</em>, <em class="sig-param">activation_norm_type=''</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#WeightSharedMultiResPatchDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-resolution patch discriminator with shared weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_discriminators</strong> (<em>int</em>) – Num. of discriminators (one per scale).</p></li>
+<li><p><strong>kernel_size</strong> (<em>int</em>) – Convolution kernel size.</p></li>
+<li><p><strong>num_image_channels</strong> (<em>int</em>) – Num. of channels in the real/fake image.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Num. of base filters in a layer.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Num. of layers for the patch discriminator.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum num. of filters in a layer.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – batch_norm/instance_norm/none/….</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – none/spectral_norm/weight_norm</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/multires_patch.html#WeightSharedMultiResPatchDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-resolution patch discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_x</strong> (<em>tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>output_list (list): list of output tensors produced by
+individual patch discriminators.</p></li>
+<li><p>features_list (list): list of lists of features produced by
+individual patch discriminators.</p></li>
+<li><p>input_list (list): list of downsampled input images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.multires_patch.WeightSharedMultiResPatchDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.munit">
+<span id="imaginaire-discriminators-munit-module"></span><h2>imaginaire.discriminators.munit module<a class="headerlink" href="#module-imaginaire.discriminators.munit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.munit.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.munit.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/munit.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.munit.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>MUNIT discriminator. It can be either a multi-resolution patch
+discriminator like in the original implementation, or a
+global residual discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.munit.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">gan_recon=False</em>, <em class="sig-param">real=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/munit.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.munit.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output of the discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – <ul>
+<li><p>images_a  (tensor) : Images in domain A.</p></li>
+<li><p>images_b  (tensor) : Images in domain B.</p></li>
+</ul>
+</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – <ul>
+<li><p>images_ab  (tensor) : Images translated from domain A to B by
+the generator.</p></li>
+<li><p>images_ba  (tensor) : Images translated from domain B to A by
+the generator.</p></li>
+<li><p>images_aa  (tensor) : Reconstructed images in domain A.</p></li>
+<li><p>images_bb  (tensor) : Reconstructed images in domain B.</p></li>
+</ul>
+</p></li>
+<li><p><strong>gan_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies reconstructed images.</p></li>
+<li><p><strong>real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies real images. Otherwise it
+only classifies generated images to save computation during the
+generator update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>out_ab (tensor): Output of the discriminator for images
+translated from domain A to B by the generator.</p></li>
+<li><p>out_ab (tensor): Output of the discriminator for images
+translated from domain B to A by the generator.</p></li>
+<li><p>fea_ab (tensor): Intermediate features of the discriminator
+for images translated from domain B to A by the generator.</p></li>
+<li><p>fea_ba (tensor): Intermediate features of the discriminator
+for images translated from domain A to B by the generator.</p></li>
+<li><p>out_a (tensor): Output of the discriminator for images
+in domain A.</p></li>
+<li><p>out_b (tensor): Output of the discriminator for images
+in domain B.</p></li>
+<li><p>fea_a (tensor): Intermediate features of the discriminator
+for images in domain A.</p></li>
+<li><p>fea_b (tensor): Intermediate features of the discriminator
+for images in domain B.</p></li>
+<li><p>out_aa (tensor): Output of the discriminator for
+reconstructed images in domain A.</p></li>
+<li><p>out_bb (tensor): Output of the discriminator for
+reconstructed images in domain B.</p></li>
+<li><p>fea_aa (tensor): Intermediate features of the discriminator
+for reconstructed images in domain A.</p></li>
+<li><p>fea_bb (tensor): Intermediate features of the discriminator
+for reconstructed images in domain B.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.munit.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.munit.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.residual">
+<span id="imaginaire-discriminators-residual-module"></span><h2>imaginaire.discriminators.residual module<a class="headerlink" href="#module-imaginaire.discriminators.residual" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.residual.ResDiscriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.residual.</code><code class="sig-name descname">ResDiscriminator</code><span class="sig-paren">(</span><em class="sig-param">image_channels=3</em>, <em class="sig-param">num_filters=64</em>, <em class="sig-param">max_num_filters=512</em>, <em class="sig-param">first_kernel_size=1</em>, <em class="sig-param">num_layers=4</em>, <em class="sig-param">padding_mode='zeros'</em>, <em class="sig-param">activation_norm_type=''</em>, <em class="sig-param">weight_norm_type=''</em>, <em class="sig-param">aggregation='conv'</em>, <em class="sig-param">order='pre_act'</em>, <em class="sig-param">anti_aliased=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/residual.html#ResDiscriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.residual.ResDiscriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Global residual discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_channels</strong> (<em>int</em>) – Num. of channels in the real/fake image.</p></li>
+<li><p><strong>num_filters</strong> (<em>int</em>) – Num. of base filters in a layer.</p></li>
+<li><p><strong>max_num_filters</strong> (<em>int</em>) – Maximum num. of filters in a layer.</p></li>
+<li><p><strong>first_kernel_size</strong> (<em>int</em>) – Kernel size in the first layer.</p></li>
+<li><p><strong>num_layers</strong> (<em>int</em>) – Num. of layers in discriminator.</p></li>
+<li><p><strong>padding_mode</strong> (<em>str</em>) – Padding mode.</p></li>
+<li><p><strong>activation_norm_type</strong> (<em>str</em>) – Type of activation normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'instance'</span></code>, <code class="docutils literal notranslate"><span class="pre">'batch'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sync_batch'</span></code>.</p></li>
+<li><p><strong>weight_norm_type</strong> (<em>str</em>) – Type of weight normalization.
+<code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'spectral'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'weight'</span></code>.</p></li>
+<li><p><strong>aggregation</strong> (<em>str</em>) – Method to aggregate features across different
+locations in the final layer. <code class="docutils literal notranslate"><span class="pre">'conv'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'pool'</span></code>.</p></li>
+<li><p><strong>order</strong> (<em>str</em>) – Order of operations in the residual link.</p></li>
+<li><p><strong>anti_aliased</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, uses anti-aliased pooling.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.residual.ResDiscriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/residual.html#ResDiscriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.residual.ResDiscriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-resolution patch discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>tensor</em>) – Input images.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>outputs (tensor): Output of the discriminator.</p></li>
+<li><p>features (tensor): Intermediate features of the discriminator.</p></li>
+<li><p>images (tensor): Input images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.residual.ResDiscriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.residual.ResDiscriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.spade">
+<span id="imaginaire-discriminators-spade-module"></span><h2>imaginaire.discriminators.spade module<a class="headerlink" href="#module-imaginaire.discriminators.spade" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.spade.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.spade.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/spade.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.spade.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Multi-resolution patch discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.spade.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/spade.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.spade.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>SPADE discriminator forward.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – <ul>
+<li><p>data  (N x C1 x H x W tensor) : Ground truth images.</p></li>
+<li><p>label (N x C2 x H x W tensor) : Semantic representations.</p></li>
+<li><p>z (N x style_dims tensor): Gaussian random noise.</p></li>
+</ul>
+</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – fake_images  (N x C1 x H x W tensor) : Fake images.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>real_outputs (list): list of output tensors produced by
+individual patch discriminators for real images.</p></li>
+<li><p>real_features (list): list of lists of features produced by
+individual patch discriminators for real images.</p></li>
+<li><p>fake_outputs (list): list of output tensors produced by
+individual patch discriminators for fake images.</p></li>
+<li><p>fake_features (list): list of lists of features produced by
+individual patch discriminators for fake images.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.spade.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.spade.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators.unit">
+<span id="imaginaire-discriminators-unit-module"></span><h2>imaginaire.discriminators.unit module<a class="headerlink" href="#module-imaginaire.discriminators.unit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.discriminators.unit.Discriminator">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.discriminators.unit.</code><code class="sig-name descname">Discriminator</code><span class="sig-paren">(</span><em class="sig-param">dis_cfg</em>, <em class="sig-param">data_cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/unit.html#Discriminator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.unit.Discriminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>UNIT discriminator. It can be either a multi-resolution patch
+discriminator like in the original implementation, or a
+global residual discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dis_cfg</strong> (<em>obj</em>) – Discriminator definition part of the yaml config file.</p></li>
+<li><p><strong>data_cfg</strong> (<em>obj</em>) – Data definition part of the yaml config file</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.discriminators.unit.Discriminator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">gan_recon=False</em>, <em class="sig-param">real=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/discriminators/unit.html#Discriminator.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.discriminators.unit.Discriminator.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output of the discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – <ul>
+<li><p>images_a  (tensor) : Images in domain A.</p></li>
+<li><p>images_b  (tensor) : Images in domain B.</p></li>
+</ul>
+</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – <ul>
+<li><p>images_ab  (tensor) : Images translated from domain A to B by
+the generator.</p></li>
+<li><p>images_ba  (tensor) : Images translated from domain B to A by
+the generator.</p></li>
+<li><p>images_aa  (tensor) : Reconstructed images in domain A.</p></li>
+<li><p>images_bb  (tensor) : Reconstructed images in domain B.</p></li>
+</ul>
+</p></li>
+<li><p><strong>gan_recon</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies reconstructed images.</p></li>
+<li><p><strong>real</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also classifies real images. Otherwise it
+only classifies generated images to save computation during the
+generator update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>out_ab (tensor): Output of the discriminator for images
+translated from domain A to B by the generator.</p></li>
+<li><p>out_ab (tensor): Output of the discriminator for images
+translated from domain B to A by the generator.</p></li>
+<li><p>fea_ab (tensor): Intermediate features of the discriminator
+for images translated from domain B to A by the generator.</p></li>
+<li><p>fea_ba (tensor): Intermediate features of the discriminator
+for images translated from domain A to B by the generator.</p></li>
+<li><p>out_a (tensor): Output of the discriminator for images
+in domain A.</p></li>
+<li><p>out_b (tensor): Output of the discriminator for images
+in domain B.</p></li>
+<li><p>fea_a (tensor): Intermediate features of the discriminator
+for images in domain A.</p></li>
+<li><p>fea_b (tensor): Intermediate features of the discriminator
+for images in domain B.</p></li>
+<li><p>out_aa (tensor): Output of the discriminator for
+reconstructed images in domain A.</p></li>
+<li><p>out_bb (tensor): Output of the discriminator for
+reconstructed images in domain B.</p></li>
+<li><p>fea_aa (tensor): Intermediate features of the discriminator
+for reconstructed images in domain A.</p></li>
+<li><p>fea_bb (tensor): Intermediate features of the discriminator
+for reconstructed images in domain B.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="imaginaire.discriminators.unit.Discriminator.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#imaginaire.discriminators.unit.Discriminator.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.discriminators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.discriminators" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.evaluation.html" class="btn btn-neutral float-right" title="imaginaire.evaluation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.datasets.html" class="btn btn-neutral float-left" title="imaginaire.datasets package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

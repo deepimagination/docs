@@ -1,0 +1,46 @@
+imaginaire.evaluation package
+=============================
+
+Submodules
+----------
+
+imaginaire.evaluation.common module
+-----------------------------------
+
+.. automodule:: imaginaire.evaluation.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.evaluation.fid module
+--------------------------------
+
+.. automodule:: imaginaire.evaluation.fid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.evaluation.kid module
+--------------------------------
+
+.. automodule:: imaginaire.evaluation.kid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.evaluation.prdc module
+---------------------------------
+
+.. automodule:: imaginaire.evaluation.prdc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.evaluation
+   :members:
+   :undoc-members:
+   :show-inheritance:

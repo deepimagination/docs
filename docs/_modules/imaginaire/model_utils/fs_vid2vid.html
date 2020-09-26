@@ -1,0 +1,1087 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.model_utils.fs_vid2vid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.model_utils.fs_vid2vid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.model_utils.fs_vid2vid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="sd">&quot;&quot;&quot;Utils for the few shot vid2vid model.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+
+<div class="viewcode-block" id="resample"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.resample">[docs]</a><span class="k">def</span> <span class="nf">resample</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">flow</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Resamples an image using the provided flow.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        image (NxCxHxW tensor) : Image to resample.</span>
+<span class="sd">        flow (Nx2xHxW tensor) : Optical flow to resample the image.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (NxCxHxW tensor) : Resampled image.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">flow</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">get_grid</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">))</span>
+    <span class="n">flow</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">flow</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">/</span> <span class="p">((</span><span class="n">w</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">),</span>
+                      <span class="n">flow</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">/</span> <span class="p">((</span><span class="n">h</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">final_grid</span> <span class="o">=</span> <span class="p">(</span><span class="n">grid</span> <span class="o">+</span> <span class="n">flow</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">grid_sample</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">final_grid</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                               <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;border&#39;</span><span class="p">,</span> <span class="n">align_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">grid_sample</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">final_grid</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                               <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;border&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="get_grid"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_grid">[docs]</a><span class="k">def</span> <span class="nf">get_grid</span><span class="p">(</span><span class="n">batchsize</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">minval</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get a grid ranging [-1, 1] of 2D/3D coordinates.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        batchsize (int) : Batch size.</span>
+<span class="sd">        size (tuple) : (height, width) or (depth, height, width).</span>
+<span class="sd">        minval (float) : minimum value in returned grid.</span>
+<span class="sd">        maxval (float) : maximum value in returned grid.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        t_grid (4D tensor) : Grid of coordinates.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">deps</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">size</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Dimension can only be 2 or 3.&#39;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">batchsize</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">,</span> <span class="n">rows</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">batchsize</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+
+    <span class="n">t_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">,</span> <span class="n">deps</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">batchsize</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+
+        <span class="n">t_grid</span> <span class="o">=</span> <span class="n">t_grid</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">batchsize</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+        <span class="n">t_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">t_grid</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">t_grid</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="pick_image"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.pick_image">[docs]</a><span class="k">def</span> <span class="nf">pick_image</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Pick the image among images according to idx.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        images (B x N x C x H x W tensor or list of tensors) : N images.</span>
+<span class="sd">        idx (B tensor) : indices to select.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        image (B x C x H x W) : Selected images.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">images</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">pick_image</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">images</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">idx</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">images</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">images</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">idx</span><span class="o">.</span><span class="n">expand_as</span><span class="p">(</span><span class="n">images</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">image</span></div>
+
+
+<div class="viewcode-block" id="crop_face_from_data"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.crop_face_from_data">[docs]</a><span class="k">def</span> <span class="nf">crop_face_from_data</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Crop the face regions in input data and resize to the target size.</span>
+<span class="sd">    This is for training face datasets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Data configuration.</span>
+<span class="sd">        is_inference (bool): Is doing inference or not.</span>
+<span class="sd">        data (dict): Input data.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): Cropped data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;label&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+    <span class="n">landmarks</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;landmarks-dlib68_xy&#39;</span><span class="p">]</span>
+    <span class="n">ref_labels</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;few_shot_label&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">ref_images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_images&#39;</span><span class="p">]</span>
+    <span class="n">ref_landmarks</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_landmarks-dlib68_xy&#39;</span><span class="p">]</span>
+    <span class="n">img_size</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">output_h_w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="c1"># When doing inference, need to sync common attributes like crop coodinates</span>
+    <span class="c1"># between different workers, so all workers crop the same region.</span>
+    <span class="k">if</span> <span class="s1">&#39;common_attr&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="s1">&#39;crop_coords&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">]:</span>
+        <span class="c1"># Has been computed before, reusing the previous one.</span>
+        <span class="n">crop_coords</span><span class="p">,</span> <span class="n">ref_crop_coords</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;crop_coords&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Is the first frame, need to compute the bbox.</span>
+        <span class="n">ref_crop_coords</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">get_face_bbox_for_data</span><span class="p">(</span>
+            <span class="n">ref_landmarks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">img_size</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">)</span>
+        <span class="n">crop_coords</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_face_bbox_for_data</span><span class="p">(</span>
+            <span class="n">landmarks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">img_size</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">)</span>
+
+    <span class="c1"># Crop the images according to the bbox and resize them to target size.</span>
+    <span class="n">label</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">([</span><span class="n">label</span><span class="p">,</span> <span class="n">image</span><span class="p">],</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">))</span>
+    <span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_images</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">([</span><span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_images</span><span class="p">],</span>
+                                             <span class="n">ref_crop_coords</span><span class="p">,</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">))</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">,</span> <span class="n">ref_images</span>
+    <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">ref_labels</span>
+    <span class="k">if</span> <span class="n">is_inference</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;common_attr&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;crop_coords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="n">ref_crop_coords</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="get_face_bbox_for_data"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_data">[docs]</a><span class="k">def</span> <span class="nf">get_face_bbox_for_data</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">orig_img_size</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the bbox coordinates for face region.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (Nx2 tensor): Facial landmarks.</span>
+<span class="sd">        orig_img_size (int tuple): Height and width of the input image size.</span>
+<span class="sd">        scale (float): When training, randomly scale the crop size for</span>
+<span class="sd">        augmentation.</span>
+<span class="sd">        is_inference (bool): Is doing inference or not.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        crop_coords (list of int): bbox for face region.</span>
+<span class="sd">        scale (float): Also returns scale to ensure reference and target frames</span>
+<span class="sd">        are croppped using the same scale.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">min_y</span><span class="p">,</span> <span class="n">max_y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="nb">int</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">min_x</span><span class="p">,</span> <span class="n">max_x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="nb">int</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">x_cen</span><span class="p">,</span> <span class="n">y_cen</span> <span class="o">=</span> <span class="p">(</span><span class="n">min_x</span> <span class="o">+</span> <span class="n">max_x</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">min_y</span> <span class="o">+</span> <span class="n">max_y</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">orig_img_size</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_x</span> <span class="o">-</span> <span class="n">min_x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_inference</span><span class="p">:</span>
+        <span class="c1"># During training, randomly jitter the cropping position by offset</span>
+        <span class="c1"># amount for augmentation.</span>
+        <span class="n">offset_max</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">offset_max</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">),</span>
+                  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">offset_max</span><span class="p">,</span> <span class="n">offset_max</span><span class="p">)]</span>
+        <span class="c1"># Also augment the crop size.</span>
+        <span class="k">if</span> <span class="n">scale</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">scale_max</span> <span class="o">=</span> <span class="mf">0.2</span>
+            <span class="n">scale</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">scale_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">scale_max</span><span class="p">),</span>
+                     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">scale_max</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">scale_max</span><span class="p">)]</span>
+        <span class="n">w</span> <span class="o">*=</span> <span class="n">scale</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">*=</span> <span class="n">scale</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">x_cen</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span>
+        <span class="n">y_cen</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">h</span><span class="p">)</span>
+
+    <span class="c1"># Get the cropping coordinates.</span>
+    <span class="n">x_cen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">W</span> <span class="o">-</span> <span class="n">w</span><span class="p">,</span> <span class="n">x_cen</span><span class="p">))</span>
+    <span class="n">y_cen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h</span> <span class="o">*</span> <span class="mf">1.25</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="mf">0.75</span><span class="p">,</span> <span class="n">y_cen</span><span class="p">))</span>
+
+    <span class="n">min_x</span> <span class="o">=</span> <span class="n">x_cen</span> <span class="o">-</span> <span class="n">w</span>
+    <span class="n">min_y</span> <span class="o">=</span> <span class="n">y_cen</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="mf">1.25</span>
+    <span class="n">max_x</span> <span class="o">=</span> <span class="n">min_x</span> <span class="o">+</span> <span class="n">w</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="n">max_y</span> <span class="o">=</span> <span class="n">min_y</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="mi">2</span>
+
+    <span class="n">crop_coords</span> <span class="o">=</span> <span class="p">[</span><span class="n">min_y</span><span class="p">,</span> <span class="n">max_y</span><span class="p">,</span> <span class="n">min_x</span><span class="p">,</span> <span class="n">max_x</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">crop_coords</span><span class="p">],</span> <span class="n">scale</span></div>
+
+
+<div class="viewcode-block" id="crop_person_from_data"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.crop_person_from_data">[docs]</a><span class="k">def</span> <span class="nf">crop_person_from_data</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Crop the person regions in data and resize to the target size.</span>
+<span class="sd">    This is for training full body datasets.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Data configuration.</span>
+<span class="sd">        is_inference (bool): Is doing inference or not.</span>
+<span class="sd">        data (dict): Input data.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): Cropped data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+    <span class="n">use_few_shot</span> <span class="o">=</span> <span class="s1">&#39;few_shot_label&#39;</span> <span class="ow">in</span> <span class="n">data</span>
+    <span class="k">if</span> <span class="n">use_few_shot</span><span class="p">:</span>
+        <span class="n">ref_labels</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">]</span>
+        <span class="n">ref_images</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_images&#39;</span><span class="p">]</span>
+
+    <span class="n">img_size</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">output_h_w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">output_h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">output_w</span><span class="p">)</span>
+    <span class="n">output_aspect_ratio</span> <span class="o">=</span> <span class="n">output_w</span> <span class="o">/</span> <span class="n">output_h</span>
+
+    <span class="k">if</span> <span class="s1">&#39;human_instance_maps&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="c1"># Remove other people in the DensePose map except for the current</span>
+        <span class="c1"># target.</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">remove_other_ppl</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;human_instance_maps&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">use_few_shot</span><span class="p">:</span>
+            <span class="n">ref_labels</span> <span class="o">=</span> <span class="n">remove_other_ppl</span><span class="p">(</span><span class="n">ref_labels</span><span class="p">,</span>
+                                          <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_human_instance_maps&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Randomly jitter the crop position by offset amount for augmentation.</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="n">ref_offset</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_inference</span><span class="p">:</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span>
+        <span class="n">ref_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.02</span>
+        <span class="n">ref_offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ref_offset</span><span class="p">))</span>
+
+    <span class="c1"># Randomly scale the crop size for augmentation.</span>
+    <span class="c1"># Final cropped size = person height * scale.</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="n">ref_scale</span> <span class="o">=</span> <span class="mf">1.5</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_inference</span><span class="p">:</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.05</span><span class="p">))</span>
+        <span class="n">ref_scale</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ref_scale</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.02</span><span class="p">))</span>
+
+    <span class="c1"># When doing inference, need to sync common attributes like crop coodinates</span>
+    <span class="c1"># between different workers, so all workers crop the same region.</span>
+    <span class="k">if</span> <span class="s1">&#39;common_attr&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="c1"># Has been computed before, reusing the previous one.</span>
+        <span class="n">crop_coords</span><span class="p">,</span> <span class="n">ref_crop_coords</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;crop_coords&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Is the first frame, need to compute the bbox.</span>
+        <span class="n">crop_coords</span> <span class="o">=</span> <span class="n">get_person_bbox_for_data</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">img_size</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span>
+                                               <span class="n">output_aspect_ratio</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">use_few_shot</span><span class="p">:</span>
+            <span class="n">ref_crop_coords</span> <span class="o">=</span> <span class="n">get_person_bbox_for_data</span><span class="p">(</span>
+                <span class="n">ref_labels</span><span class="p">,</span> <span class="n">img_size</span><span class="p">,</span> <span class="n">ref_scale</span><span class="p">,</span>
+                <span class="n">output_aspect_ratio</span><span class="p">,</span> <span class="n">ref_offset</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ref_crop_coords</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Crop the images according to the bbox and resize them to target size.</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="p">(</span><span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span><span class="p">),</span> <span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="p">(</span><span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">use_few_shot</span><span class="p">:</span>
+        <span class="n">ref_labels</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">(</span><span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_crop_coords</span><span class="p">,</span>
+                                     <span class="p">(</span><span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span><span class="p">),</span> <span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+        <span class="n">ref_images</span> <span class="o">=</span> <span class="n">crop_and_resize</span><span class="p">(</span><span class="n">ref_images</span><span class="p">,</span> <span class="n">ref_crop_coords</span><span class="p">,</span>
+                                     <span class="p">(</span><span class="n">output_h</span><span class="p">,</span> <span class="n">output_w</span><span class="p">))</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span><span class="p">,</span> <span class="n">image</span>
+    <span class="k">if</span> <span class="n">use_few_shot</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_labels</span><span class="p">,</span> <span class="n">ref_images</span>
+    <span class="k">if</span> <span class="s1">&#39;human_instance_maps&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;human_instance_maps&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s1">&#39;few_shot_human_instance_maps&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_human_instance_maps&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">is_inference</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;crop_coords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crop_coords</span><span class="p">,</span> <span class="n">ref_crop_coords</span>
+
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="get_person_bbox_for_data"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_person_bbox_for_data">[docs]</a><span class="k">def</span> <span class="nf">get_person_bbox_for_data</span><span class="p">(</span><span class="n">pose_map</span><span class="p">,</span> <span class="n">orig_img_size</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+                             <span class="n">crop_aspect_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the bbox (pixel coordinates) to crop for person body region.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pose_map (NxCxHxW tensor): Input pose map.</span>
+<span class="sd">        orig_img_size (int tuple): Height and width of the input image size.</span>
+<span class="sd">        scale (float): When training, randomly scale the crop size for</span>
+<span class="sd">        augmentation.</span>
+<span class="sd">        crop_aspect_ratio (float): Output aspect ratio,</span>
+<span class="sd">        offset (list of float): Offset for crop position.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        crop_coords (list of int): bbox for body region.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">orig_img_size</span>
+    <span class="k">assert</span> <span class="n">pose_map</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="n">nonzero_indices</span> <span class="o">=</span> <span class="p">(</span><span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nonzero_indices</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">bw</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">H</span> <span class="o">*</span> <span class="n">crop_aspect_ratio</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">bw</span><span class="p">,</span> <span class="n">W</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bw</span><span class="p">]</span>
+
+    <span class="n">y_indices</span><span class="p">,</span> <span class="n">x_indices</span> <span class="o">=</span> <span class="n">nonzero_indices</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">nonzero_indices</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">y_indices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">y_indices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">x_indices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">x_indices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+    <span class="n">y_cen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y_min</span> <span class="o">+</span> <span class="n">y_max</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">x_cen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_min</span> <span class="o">+</span> <span class="n">x_max</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">y_len</span> <span class="o">=</span> <span class="n">y_max</span> <span class="o">-</span> <span class="n">y_min</span>
+    <span class="n">x_len</span> <span class="o">=</span> <span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span>
+
+    <span class="c1"># bh, bw: half of height / width of final cropped size.</span>
+    <span class="n">bh</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">H</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y_len</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)))</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">bh</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">bh</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_len</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">/</span> <span class="n">crop_aspect_ratio</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">bw</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bh</span> <span class="o">*</span> <span class="n">crop_aspect_ratio</span><span class="p">)</span>
+
+    <span class="c1"># Randomly offset the cropped position for augmentation.</span>
+    <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">x_cen</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">bw</span><span class="p">)</span>
+        <span class="n">y_cen</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">bh</span><span class="p">)</span>
+    <span class="n">x_cen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">W</span> <span class="o">-</span> <span class="n">bw</span><span class="p">,</span> <span class="n">x_cen</span><span class="p">))</span>
+    <span class="n">y_cen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">bh</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="n">bh</span><span class="p">,</span> <span class="n">y_cen</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">[(</span><span class="n">y_cen</span> <span class="o">-</span> <span class="n">bh</span><span class="p">),</span> <span class="p">(</span><span class="n">y_cen</span> <span class="o">+</span> <span class="n">bh</span><span class="p">),</span> <span class="p">(</span><span class="n">x_cen</span> <span class="o">-</span> <span class="n">bw</span><span class="p">),</span> <span class="p">(</span><span class="n">x_cen</span> <span class="o">+</span> <span class="n">bw</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="crop_and_resize"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.crop_and_resize">[docs]</a><span class="k">def</span> <span class="nf">crop_and_resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Crop the image using the given coordinates and resize to target size.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        img (tensor or list of tensors): Input image.</span>
+<span class="sd">        coords (list of int): Pixel coordinates to crop.</span>
+<span class="sd">        size (list of int): Output size.</span>
+<span class="sd">        method (str): Interpolation method.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        img (tensor or list of tensors): Output image.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">crop_and_resize</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">img</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">min_y</span><span class="p">,</span> <span class="n">max_y</span><span class="p">,</span> <span class="n">min_x</span><span class="p">,</span> <span class="n">max_x</span> <span class="o">=</span> <span class="n">coords</span>
+
+    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">min_y</span><span class="p">:</span><span class="n">max_y</span><span class="p">,</span> <span class="n">min_x</span><span class="p">:</span><span class="n">max_x</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;nearest&#39;</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
+                                <span class="n">align_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">img</span></div>
+
+
+<div class="viewcode-block" id="remove_other_ppl"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.remove_other_ppl">[docs]</a><span class="k">def</span> <span class="nf">remove_other_ppl</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">densemasks</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Remove other people in the label map except for the current target</span>
+<span class="sd">    by looking at the id in the densemask map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        labels (NxCxHxW tensor): Input labels.</span>
+<span class="sd">        densemasks (Nx1xHxW tensor): Densemask maps.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        labels (NxCxHxW tensor): Output labels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">densemasks</span> <span class="o">=</span> <span class="n">densemasks</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">label</span><span class="p">,</span> <span class="n">densemask</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">densemasks</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="c1"># Get OpenPose and find the person id in Densemask that has the most</span>
+        <span class="c1"># overlap with the person in OpenPose result.</span>
+        <span class="n">openpose</span> <span class="o">=</span> <span class="n">label</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="p">(</span><span class="n">openpose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">openpose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">openpose</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">dp_valid</span> <span class="o">=</span> <span class="n">densemask</span><span class="p">[</span><span class="n">valid</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">dp_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">dp_valid</span><span class="p">)</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+            <span class="c1"># Remove all other people that have different indices.</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">label</span> <span class="o">*</span> <span class="p">(</span><span class="n">densemask</span> <span class="o">==</span> <span class="n">ind</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+        <span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
+    <span class="k">return</span> <span class="n">labels</span></div>
+
+
+<div class="viewcode-block" id="select_object"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.select_object">[docs]</a><span class="k">def</span> <span class="nf">select_object</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">obj_indices</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Select the object/person in the dict according to the object index.</span>
+<span class="sd">    Currently it&#39;s used to select the target person in OpenPose dict.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (dict): Input data.</span>
+<span class="sd">        obj_indices (list of int): Indices for the objects to select.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): Output data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">op_key</span> <span class="o">=</span> <span class="s1">&#39;poses-openpose&#39;</span>
+    <span class="k">if</span> <span class="n">op_key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">op_key</span><span class="p">])):</span>
+            <span class="c1"># data[op_key] is a list of dicts for different frames.</span>
+            <span class="c1"># people = data[op_key][i][&#39;people&#39;]</span>
+            <span class="n">people</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">op_key</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+            <span class="c1"># &quot;people&quot; is a list of people dicts found by OpenPose. We will</span>
+            <span class="c1"># use the obj_index to get the target person from the list, and</span>
+            <span class="c1"># write it back to the dict.</span>
+            <span class="c1"># data[op_key][i][&#39;people&#39;] = [people[obj_indices[i]]]</span>
+            <span class="k">if</span> <span class="n">obj_indices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">op_key</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="n">obj_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">op_key</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="concat_frames"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.concat_frames">[docs]</a><span class="k">def</span> <span class="nf">concat_frames</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">now</span><span class="p">,</span> <span class="n">n_frames</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Concat previous and current frames and only keep the latest $(n_frames).</span>
+<span class="sd">    If concatenated frames are longer than $(n_frames), drop the oldest one.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        prev (NxTxCxHxW tensor): Tensor for previous frames.</span>
+<span class="sd">        now (NxCxHxW tensor): Tensor for current frame.</span>
+<span class="sd">        n_frames (int): Max number of frames to store.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        result (NxTxCxHxW tensor): Updated tensor.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">prev</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">now</span>
+    <span class="k">if</span> <span class="n">prev</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">n_frames</span><span class="p">:</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">prev</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">prev</span><span class="p">,</span> <span class="n">now</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="combine_fg_mask"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.combine_fg_mask">[docs]</a><span class="k">def</span> <span class="nf">combine_fg_mask</span><span class="p">(</span><span class="n">fg_mask</span><span class="p">,</span> <span class="n">ref_fg_mask</span><span class="p">,</span> <span class="n">has_fg</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the union of target and reference foreground masks.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        fg_mask (tensor): Foreground mask for target image.</span>
+<span class="sd">        ref_fg_mask (tensor): Foreground mask for reference image.</span>
+<span class="sd">        has_fg (bool): Whether the image can be classified into fg/bg.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (tensor or int): Combined foreground mask.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">fg_mask</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">ref_fg_mask</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">float</span><span class="p">()</span> <span class="k">if</span> <span class="n">has_fg</span> <span class="k">else</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="get_fg_mask"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_fg_mask">[docs]</a><span class="k">def</span> <span class="nf">get_fg_mask</span><span class="p">(</span><span class="n">densepose_map</span><span class="p">,</span> <span class="n">has_fg</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Obtain the foreground mask for pose sequences, which only includes</span>
+<span class="sd">    the human. This is done by looking at the body part map from DensePose.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        densepose_map (NxCxHxW tensor): DensePose map.</span>
+<span class="sd">        has_fg (bool): Whether data has foreground or not.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        mask (Nx1xHxW tensor): fg mask.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">densepose_map</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">get_fg_mask</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">has_fg</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">densepose_map</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">has_fg</span> <span class="ow">or</span> <span class="n">densepose_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">densepose_map</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># Get the body part map from DensePose.</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+    <span class="c1"># Make the mask slightly larger.</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">)(</span><span class="n">mask</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">mask</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">mask</span></div>
+
+
+<div class="viewcode-block" id="get_part_mask"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_part_mask">[docs]</a><span class="k">def</span> <span class="nf">get_part_mask</span><span class="p">(</span><span class="n">densepose_map</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Obtain mask of different body parts of humans. This is done by</span>
+<span class="sd">    looking at the body part map from DensePose.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        densepose_map (NxCxHxW tensor): DensePose map.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        mask (NxKxHxW tensor): Body part mask, where K is the number of parts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Groups of body parts. Each group contains IDs of body part labels in</span>
+    <span class="c1"># DensePose. The 9 groups here are: background, torso, hands, feet,</span>
+    <span class="c1"># upper legs, lower legs, upper arms, lower arms, head.</span>
+    <span class="n">part_groups</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">]]</span>
+    <span class="n">n_parts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">part_groups</span><span class="p">)</span>
+
+    <span class="n">need_reshape</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="k">if</span> <span class="n">need_reshape</span><span class="p">:</span>
+        <span class="n">bo</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="n">densepose_map</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">part_map</span> <span class="o">=</span> <span class="p">(</span><span class="n">densepose_map</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">ByteTensor</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n_parts</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_parts</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">part_groups</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="c1"># Account for numerical errors.</span>
+            <span class="n">mask</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mask</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">|</span> <span class="p">(</span>
+                <span class="p">(</span><span class="n">part_map</span> <span class="o">&gt;</span> <span class="n">j</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">))</span><span class="o">.</span><span class="n">byte</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">need_reshape</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bo</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mask</span><span class="o">.</span><span class="n">float</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_face_mask"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_face_mask">[docs]</a><span class="k">def</span> <span class="nf">get_face_mask</span><span class="p">(</span><span class="n">densepose_map</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Obtain mask of faces.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        densepose_map (3D or 4D tensor): DensePose map.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        mask (3D or 4D tensor): Face mask.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">need_reshape</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="k">if</span> <span class="n">need_reshape</span><span class="p">:</span>
+        <span class="n">bo</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="n">densepose_map</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+
+    <span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">part_map</span> <span class="o">=</span> <span class="p">(</span><span class="n">densepose_map</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">densepose_map</span><span class="o">.</span><span class="n">is_cuda</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">ByteTensor</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ByteTensor</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">]:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">|</span> <span class="p">((</span><span class="n">part_map</span> <span class="o">&gt;</span> <span class="n">j</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">))</span><span class="o">.</span><span class="n">byte</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">need_reshape</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bo</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mask</span><span class="o">.</span><span class="n">float</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="extract_valid_pose_labels"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.extract_valid_pose_labels">[docs]</a><span class="k">def</span> <span class="nf">extract_valid_pose_labels</span><span class="p">(</span><span class="n">pose_map</span><span class="p">,</span> <span class="n">pose_type</span><span class="p">,</span> <span class="n">remove_face_labels</span><span class="p">,</span>
+                              <span class="n">do_remove</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Remove some labels (e.g. face regions) in the pose map if necessary.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pose_map (3D, 4D or 5D tensor): Input pose map.</span>
+<span class="sd">        pose_type (str): &#39;both&#39; or &#39;open&#39;.</span>
+<span class="sd">        remove_face_labels (bool): Whether to remove labels for the face region.</span>
+<span class="sd">        do_remove (bool): Do remove face labels.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        pose_map (3D, 4D or 5D tensor): Output pose map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">pose_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pose_map</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">pose_map</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">extract_valid_pose_labels</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">pose_type</span><span class="p">,</span> <span class="n">remove_face_labels</span><span class="p">,</span>
+                                          <span class="n">do_remove</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pose_map</span><span class="p">]</span>
+
+    <span class="n">orig_dim</span> <span class="o">=</span> <span class="n">pose_map</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">orig_dim</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">orig_dim</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">orig_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">orig_dim</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pose_type</span> <span class="o">==</span> <span class="s1">&#39;open&#39;</span><span class="p">:</span>
+        <span class="c1"># If input is only openpose, remove densepose part.</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">:]</span>
+
+    <span class="k">elif</span> <span class="n">remove_face_labels</span> <span class="ow">and</span> <span class="n">do_remove</span><span class="p">:</span>
+        <span class="c1"># Remove face part for densepose input.</span>
+        <span class="n">densepose</span><span class="p">,</span> <span class="n">openpose</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">:]</span>
+        <span class="n">face_mask</span> <span class="o">=</span> <span class="n">get_face_mask</span><span class="p">(</span><span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">densepose</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">face_mask</span><span class="p">)</span> <span class="o">-</span> <span class="n">face_mask</span><span class="p">,</span>
+                              <span class="n">openpose</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">orig_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">orig_dim</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pose_map</span></div>
+
+
+<div class="viewcode-block" id="normalize_faces"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.normalize_faces">[docs]</a><span class="k">def</span> <span class="nf">normalize_faces</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">ref_keypoints</span><span class="p">,</span>
+                    <span class="n">dist_scale_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dist_scale_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Normalize face keypoints w.r.t. the reference face keypoints.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (Kx2 numpy array): target facial keypoints.</span>
+<span class="sd">        ref_keypoints (Kx2 numpy array): reference facial keypoints.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        keypoints (Kx2 numpy array): normalized facial keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">68</span><span class="p">:</span>
+        <span class="n">central_keypoints</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+        <span class="n">add_upper_face</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">part_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">26</span><span class="p">],</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span> <span class="p">[</span><span class="mi">33</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span> <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="mi">44</span><span class="p">],</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">43</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">46</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="mi">54</span><span class="p">],</span> <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">],</span> <span class="p">[</span><span class="mi">51</span><span class="p">],</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">59</span><span class="p">],</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">57</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span> <span class="p">[</span><span class="mi">61</span><span class="p">,</span> <span class="mi">63</span><span class="p">],</span> <span class="p">[</span><span class="mi">62</span><span class="p">],</span> <span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">67</span><span class="p">],</span> <span class="p">[</span><span class="mi">66</span><span class="p">]</span>
+                     <span class="p">]</span>
+        <span class="k">if</span> <span class="n">add_upper_face</span><span class="p">:</span>
+            <span class="n">part_list</span> <span class="o">+=</span> <span class="p">[[</span><span class="mi">68</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span> <span class="p">[</span><span class="mi">69</span><span class="p">,</span> <span class="mi">81</span><span class="p">],</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span> <span class="p">[</span><span class="mi">71</span><span class="p">,</span> <span class="mi">79</span><span class="p">],</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span> <span class="mi">78</span><span class="p">],</span>
+                          <span class="p">[</span><span class="mi">73</span><span class="p">,</span> <span class="mi">77</span><span class="p">],</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">75</span><span class="p">]]</span>
+    <span class="k">elif</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">126</span><span class="p">:</span>
+        <span class="n">central_keypoints</span> <span class="o">=</span> <span class="p">[</span><span class="mi">16</span><span class="p">]</span>
+        <span class="n">part_list</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">126</span><span class="p">)]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input keypoints type not supported.&#39;</span><span class="p">)</span>
+
+    <span class="n">face_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[</span><span class="n">central_keypoints</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ref_face_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ref_keypoints</span><span class="p">[</span><span class="n">central_keypoints</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_mean_dists</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">face_cen</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the mean xy distances of keypoints wrt face center.&quot;&quot;&quot;</span>
+        <span class="n">mean_dists_x</span><span class="p">,</span> <span class="n">mean_dists_y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">pts_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">pt</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pts</span><span class="p">):</span>
+            <span class="n">mean_dists_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">pt</span> <span class="o">-</span> <span class="n">pts_cen</span><span class="p">))</span>
+            <span class="n">mean_dists_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">pts_cen</span> <span class="o">-</span> <span class="n">face_cen</span><span class="p">))</span>
+        <span class="n">mean_dist_x</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">mean_dists_x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_dists_x</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-3</span>
+        <span class="n">mean_dist_y</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">mean_dists_y</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_dists_y</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-3</span>
+        <span class="k">return</span> <span class="n">mean_dist_x</span><span class="p">,</span> <span class="n">mean_dist_y</span>
+
+    <span class="k">if</span> <span class="n">dist_scale_x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dist_scale_x</span><span class="p">,</span> <span class="n">dist_scale_y</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">part_list</span><span class="p">),</span> \
+                                     <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">part_list</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pts_idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">part_list</span><span class="p">):</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ref_pts</span> <span class="o">=</span> <span class="n">ref_keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span>
+            <span class="n">mean_dist_x</span><span class="p">,</span> <span class="n">mean_dist_y</span> <span class="o">=</span> <span class="n">get_mean_dists</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">face_cen</span><span class="p">)</span>
+            <span class="n">ref_dist_x</span><span class="p">,</span> <span class="n">ref_dist_y</span> <span class="o">=</span> <span class="n">get_mean_dists</span><span class="p">(</span><span class="n">ref_pts</span><span class="p">,</span> <span class="n">ref_face_cen</span><span class="p">)</span>
+
+            <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_dist_x</span> <span class="o">/</span> <span class="n">mean_dist_x</span>
+            <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_dist_y</span> <span class="o">/</span> <span class="n">mean_dist_y</span>
+
+        <span class="n">pts_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="p">(</span><span class="n">pts</span> <span class="o">-</span> <span class="n">pts_cen</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> \
+              <span class="p">(</span><span class="n">pts_cen</span> <span class="o">-</span> <span class="n">face_cen</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">face_cen</span>
+        <span class="n">keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">pts</span>
+    <span class="k">return</span> <span class="n">keypoints</span><span class="p">,</span> <span class="p">[</span><span class="n">dist_scale_x</span><span class="p">,</span> <span class="n">dist_scale_y</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="crop_face_from_output"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.crop_face_from_output">[docs]</a><span class="k">def</span> <span class="nf">crop_face_from_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">input_label</span><span class="p">,</span> <span class="n">crop_smaller</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Crop out the face region of the image (and resize if necessary to feed</span>
+<span class="sd">    into generator/discriminator).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration.</span>
+<span class="sd">        image (NxC1xHxW tensor or list of tensors): Image to crop.</span>
+<span class="sd">        input_label (NxC2xHxW tensor): Input label map.</span>
+<span class="sd">        crop_smaller (int): Number of pixels to crop slightly smaller region.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (NxC1xHxW tensor or list of tensors): Cropped image.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">crop_face_from_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">input_label</span><span class="p">,</span> <span class="n">crop_smaller</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">im</span> <span class="ow">in</span> <span class="n">image</span><span class="p">]</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">face_size</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">//</span> <span class="mi">32</span> <span class="o">*</span> <span class="mi">8</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">input_label</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+        <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">get_face_bbox_for_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span>
+                                                  <span class="n">input_label</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span>
+                                                  <span class="n">crop_smaller</span><span class="o">=</span><span class="n">crop_smaller</span><span class="p">)</span>
+        <span class="n">output_i</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">:,</span> <span class="n">ys</span><span class="p">:</span><span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">:</span><span class="n">xe</span><span class="p">],</span>
+                                 <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">face_size</span><span class="p">,</span> <span class="n">face_size</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+                                 <span class="n">align_corners</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># output_i = image[i:i + 1, -3:, ys:ye, xs:xe]</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">output</span><span class="p">,</span> <span class="n">output_i</span><span class="p">])</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">output_i</span>
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="get_face_bbox_for_output"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_face_bbox_for_output">[docs]</a><span class="k">def</span> <span class="nf">get_face_bbox_for_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">pose</span><span class="p">,</span> <span class="n">crop_smaller</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get pixel coordinates of the face bounding box.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration.</span>
+<span class="sd">        pose (NxCxHxW tensor): Pose label map.</span>
+<span class="sd">        crop_smaller (int): Number of pixels to crop slightly smaller region.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (list of int): Face bbox.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">pose</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pose</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+    <span class="n">use_openpose</span> <span class="o">=</span> <span class="s1">&#39;pose_maps-densepose&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">input_labels</span>
+    <span class="k">if</span> <span class="n">use_openpose</span><span class="p">:</span>  <span class="c1"># Use openpose face keypoints to identify face region.</span>
+        <span class="k">for</span> <span class="n">input_type</span> <span class="ow">in</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">input_types</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;poses-openpose&#39;</span> <span class="ow">in</span> <span class="n">input_type</span><span class="p">:</span>
+                <span class="n">num_ch</span> <span class="o">=</span> <span class="n">input_type</span><span class="p">[</span><span class="s1">&#39;poses-openpose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+        <span class="k">if</span> <span class="n">num_ch</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">face</span> <span class="o">=</span> <span class="p">(</span><span class="n">pose</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Not implemented yet.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Use densepose labels.</span>
+        <span class="n">face</span> <span class="o">=</span> <span class="p">(</span><span class="n">pose</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">ylen</span> <span class="o">=</span> <span class="n">xlen</span> <span class="o">=</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">32</span> <span class="o">*</span> <span class="mi">8</span>
+    <span class="k">if</span> <span class="n">face</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">face</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">face</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+        <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">use_openpose</span><span class="p">:</span>
+            <span class="n">xc</span><span class="p">,</span> <span class="n">yc</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span> <span class="o">+</span> <span class="n">xe</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">ys</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">ye</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">//</span> <span class="mi">5</span>
+            <span class="n">ylen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">xe</span> <span class="o">-</span> <span class="n">xs</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.5</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">xc</span><span class="p">,</span> <span class="n">yc</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span> <span class="o">+</span> <span class="n">xe</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">ys</span> <span class="o">+</span> <span class="n">ye</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="n">ylen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ye</span> <span class="o">-</span> <span class="n">ys</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.25</span><span class="p">)</span>
+        <span class="n">ylen</span> <span class="o">=</span> <span class="n">xlen</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">ylen</span><span class="p">))</span>
+        <span class="n">yc</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">yc</span><span class="p">))</span>
+        <span class="n">xc</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xc</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">yc</span> <span class="o">=</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">4</span>
+        <span class="n">xc</span> <span class="o">=</span> <span class="n">w</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span> <span class="o">=</span> <span class="n">yc</span> <span class="o">-</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">yc</span> <span class="o">+</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">xc</span> <span class="o">-</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xc</span> <span class="o">+</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">crop_smaller</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Crop slightly smaller region inside face.</span>
+        <span class="n">ys</span> <span class="o">+=</span> <span class="n">crop_smaller</span>
+        <span class="n">xs</span> <span class="o">+=</span> <span class="n">crop_smaller</span>
+        <span class="n">ye</span> <span class="o">-=</span> <span class="n">crop_smaller</span>
+        <span class="n">xe</span> <span class="o">-=</span> <span class="n">crop_smaller</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="crop_hand_from_output"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.crop_hand_from_output">[docs]</a><span class="k">def</span> <span class="nf">crop_hand_from_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">input_label</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Crop out the hand region of the image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration.</span>
+<span class="sd">        image (NxC1xHxW tensor or list of tensors): Image to crop.</span>
+<span class="sd">        input_label (NxC2xHxW tensor): Input label map.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (NxC1xHxW tensor or list of tensors): Cropped image.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">crop_hand_from_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">input_label</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">im</span> <span class="ow">in</span> <span class="n">image</span><span class="p">]</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">input_label</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">get_hand_bbox_for_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">input_label</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">coords</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">coord</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">:</span>
+                <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">coord</span>
+                <span class="n">output_i</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">:,</span> <span class="n">ys</span><span class="p">:</span><span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">:</span><span class="n">xe</span><span class="p">]</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">output</span><span class="p">,</span> <span class="n">output_i</span><span class="p">])</span> \
+                    <span class="k">if</span> <span class="n">output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">output_i</span>
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="get_hand_bbox_for_output"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.get_hand_bbox_for_output">[docs]</a><span class="k">def</span> <span class="nf">get_hand_bbox_for_output</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get coordinates of the hand bounding box.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration.</span>
+<span class="sd">        pose (NxCxHxW tensor): Pose label map.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (list of int): Hand bbox.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">pose</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pose</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">pose</span> <span class="o">=</span> <span class="n">pose</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">pose</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">ylen</span> <span class="o">=</span> <span class="n">xlen</span> <span class="o">=</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">64</span> <span class="o">*</span> <span class="mi">8</span>
+
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pose</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>  <span class="c1"># Using one-hot encoding for openpose.</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">2</span>
+            <span class="n">hand</span> <span class="o">=</span> <span class="p">(</span><span class="n">pose</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Not implemented yet.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">hand</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
+            <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">hand</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">hand</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+            <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> \
+                <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+            <span class="n">xc</span><span class="p">,</span> <span class="n">yc</span> <span class="o">=</span> <span class="p">(</span><span class="n">xs</span> <span class="o">+</span> <span class="n">xe</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">ys</span> <span class="o">+</span> <span class="n">ye</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="n">yc</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">yc</span><span class="p">))</span>
+            <span class="n">xc</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xc</span><span class="p">))</span>
+            <span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span> <span class="o">=</span> <span class="n">yc</span> <span class="o">-</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">yc</span> <span class="o">+</span> <span class="n">ylen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> \
+                <span class="n">xc</span> <span class="o">-</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xc</span> <span class="o">+</span> <span class="n">xlen</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="n">coords</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">ys</span><span class="p">,</span> <span class="n">ye</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">xe</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">coords</span></div>
+
+
+<div class="viewcode-block" id="pre_process_densepose"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.pre_process_densepose">[docs]</a><span class="k">def</span> <span class="nf">pre_process_densepose</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="n">pose_map</span><span class="p">,</span> <span class="n">is_infer</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Pre-process the DensePose part of input label map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pose_cfg (obj): Pose data configuration.</span>
+<span class="sd">        pose_map (NxCxHxW tensor): Pose label map.</span>
+<span class="sd">        is_infer (bool): Is doing inference.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        pose_map (NxCxHxW tensor): Processed pose label map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">part_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span>  <span class="c1"># should be within [0-24]</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="n">part_map</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="c1"># Randomly drop some body part during training.</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_infer</span><span class="p">:</span>
+        <span class="n">random_drop_prob</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;random_drop_prob&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">random_drop_prob</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">random_drop_prob</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">densepose_map</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">part_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">random_drop_prob</span><span class="p">):</span>
+                <span class="n">part_mask</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">part_map</span> <span class="o">-</span> <span class="n">part_id</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.1</span>
+                <span class="n">densepose_map</span><span class="p">[</span><span class="n">part_mask</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">expand_as</span><span class="p">(</span>
+                    <span class="n">densepose_map</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">densepose_map</span>
+
+    <span class="c1"># Renormalize the DensePose channel from [0, 24] to [0, 255].</span>
+    <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">pose_map</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">255</span> <span class="o">/</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="c1"># Normalize from [0, 1] to [-1, 1].</span>
+    <span class="n">pose_map</span> <span class="o">=</span> <span class="n">pose_map</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">pose_map</span></div>
+
+
+<div class="viewcode-block" id="random_roll"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.random_roll">[docs]</a><span class="k">def</span> <span class="nf">random_roll</span><span class="p">(</span><span class="n">tensors</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Randomly roll the input tensors along x and y dimensions. Also randomly</span>
+<span class="sd">    flip the tensors.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        tensors (list of 4D tensors): Input tensors.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (list of 4D tensors): Rolled tensors.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">tensors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">ny</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">h</span><span class="o">//</span><span class="mi">16</span><span class="p">),</span>
+                           <span class="n">h</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">h</span><span class="o">//</span><span class="mi">16</span><span class="p">)])</span>
+    <span class="n">nx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">w</span><span class="o">//</span><span class="mi">16</span><span class="p">),</span>
+                           <span class="n">w</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">w</span><span class="o">//</span><span class="mi">16</span><span class="p">)])</span>
+    <span class="n">flip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">roll</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">flip</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensors</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="roll"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.roll">[docs]</a><span class="k">def</span> <span class="nf">roll</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nx</span><span class="p">,</span> <span class="n">flip</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Roll and flip the tensor by specified amounts.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        t (4D tensor): Input tensor.</span>
+<span class="sd">        ny (int): Amount to roll along y dimension.</span>
+<span class="sd">        nx (int): Amount to roll along x dimension.</span>
+<span class="sd">        flip (bool): Whether to flip input.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        t (4D tensor): Output tensor.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">t</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="n">ny</span><span class="p">:],</span> <span class="n">t</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="n">ny</span><span class="p">]],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">t</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="o">-</span><span class="n">nx</span><span class="p">:],</span> <span class="n">t</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="n">nx</span><span class="p">]],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">flip</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">t</span></div>
+
+
+<div class="viewcode-block" id="detach"><a class="viewcode-back" href="../../../imaginaire.model_utils.html#imaginaire.model_utils.fs_vid2vid.detach">[docs]</a><span class="k">def</span> <span class="nf">detach</span><span class="p">(</span><span class="n">output</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Detach tensors in the dict.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        output (dict): Output dict.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        output (dict): Detached output dict.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="o">==</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">new_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">new_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">detach</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_dict</span>
+    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">output</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

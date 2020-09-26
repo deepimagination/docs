@@ -1,0 +1,1051 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.trainers.base &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.trainers.base</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.trainers.base</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span> <span class="nn">apex</span> <span class="kn">import</span> <span class="n">amp</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">is_master</span><span class="p">,</span> <span class="n">master_only</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.io</span> <span class="kn">import</span> <span class="n">save_pilimage_in_jpeg</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.meters</span> <span class="kn">import</span> <span class="n">Meter</span><span class="p">,</span> <span class="n">add_hparams</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.misc</span> <span class="kn">import</span> <span class="n">to_cuda</span><span class="p">,</span> <span class="n">to_device</span><span class="p">,</span> <span class="n">requires_grad</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.model_average</span> <span class="kn">import</span> <span class="p">(</span><span class="n">calibrate_batch_norm_momentum</span><span class="p">,</span>
+                                            <span class="n">reset_batch_norm</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.visualization</span> <span class="kn">import</span> <span class="n">tensor2pilimage</span>
+
+
+<div class="viewcode-block" id="BaseTrainer"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer">[docs]</a><span class="k">class</span> <span class="nc">BaseTrainer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Base trainer. We expect that all trainers inherit this class.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Global configuration.</span>
+<span class="sd">        net_G (obj): Generator network.</span>
+<span class="sd">        net_D (obj): Discriminator network.</span>
+<span class="sd">        opt_G (obj): Optimizer for the generator network.</span>
+<span class="sd">        opt_D (obj): Optimizer for the discriminator network.</span>
+<span class="sd">        sch_G (obj): Scheduler for the generator optimizer.</span>
+<span class="sd">        sch_D (obj): Scheduler for the discriminator optimizer.</span>
+<span class="sd">        train_data_loader (obj): Train data loader.</span>
+<span class="sd">        val_data_loader (obj): Validation data loader.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">cfg</span><span class="p">,</span>
+                 <span class="n">net_G</span><span class="p">,</span>
+                 <span class="n">net_D</span><span class="p">,</span>
+                 <span class="n">opt_G</span><span class="p">,</span>
+                 <span class="n">opt_D</span><span class="p">,</span>
+                 <span class="n">sch_G</span><span class="p">,</span>
+                 <span class="n">sch_D</span><span class="p">,</span>
+                 <span class="n">train_data_loader</span><span class="p">,</span>
+                 <span class="n">val_data_loader</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">BaseTrainer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Setup trainer.&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Initialize models and data loaders.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span> <span class="o">=</span> <span class="n">cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span> <span class="o">=</span> <span class="n">net_G</span>
+        <span class="k">if</span> <span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="c1"># Two wrappers (DDP + model average).</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">module</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># One wrapper (DDP)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val_data_loader</span> <span class="o">=</span> <span class="n">val_data_loader</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span> <span class="o">=</span> <span class="n">train_data_loader</span> <span class="ow">is</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span> <span class="o">=</span> <span class="n">net_D</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span> <span class="o">=</span> <span class="n">opt_G</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span> <span class="o">=</span> <span class="n">opt_D</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span> <span class="o">=</span> <span class="n">sch_G</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span> <span class="o">=</span> <span class="n">sch_D</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span> <span class="o">=</span> <span class="n">train_data_loader</span>
+
+        <span class="c1"># Initialize loss functions.</span>
+        <span class="c1"># All loss names have weights. Some have criterion modules.</span>
+        <span class="c1"># Mapping from loss names to criterion modules.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleDict</span><span class="p">()</span>
+        <span class="c1"># Mapping from loss names to loss weights.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">losses</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">gen_update</span><span class="o">=</span><span class="nb">dict</span><span class="p">(),</span> <span class="n">dis_update</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;gen_update&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;dis_update&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_loss</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">loss_name</span><span class="p">,</span> <span class="n">loss_weight</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loss </span><span class="si">{:&lt;20}</span><span class="s2"> Weight </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loss_name</span><span class="p">,</span> <span class="n">loss_weight</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">loss_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>
+            <span class="c1"># The initialization steps below can be skipped during inference.</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Initialize logging attributes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_iteration_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_epoch_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_iteration_time</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_iteration</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_epoch</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_forw_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_loss_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_back_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_step_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_avg_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_forw_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_loss_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_back_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_step_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Initialize tensorboard and hparams.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_tensorboard</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_hparams</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_init_tensorboard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize the tensorboard. Different algorithms might require</span>
+<span class="sd">        different performance metrics. Hence, custom tensorboard</span>
+<span class="sd">        initialization might be necessary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Logging frequency: self.cfg.logging_iter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;optim/gen_lr&#39;</span><span class="p">,</span> <span class="s1">&#39;optim/dis_lr&#39;</span><span class="p">,</span> <span class="s1">&#39;time/iteration&#39;</span><span class="p">,</span> <span class="s1">&#39;time/epoch&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># Logging frequency: self.cfg.snapshot_save_iter</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FID&#39;</span><span class="p">,</span> <span class="s1">&#39;best_FID&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metric_meters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metric_meters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># Logging frequency: self.cfg.image_display_iter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_meter</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_hparams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize a dictionary of hyperparameters that we want to monitor</span>
+<span class="sd">        in the HParams dashboard in tensorBoard.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hparam_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">_write_tensorboard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write values to tensorboard. By default, we will log the time used</span>
+<span class="sd">        per iteration, time used per epoch, generator learning rate, and</span>
+<span class="sd">        discriminator learning rate. We will log all the losses as well as</span>
+<span class="sd">        custom meters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Logs that are shared by all models.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_to_meters</span><span class="p">({</span><span class="s1">&#39;time/iteration&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_iteration</span><span class="p">,</span>
+                               <span class="s1">&#39;time/epoch&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_epoch</span><span class="p">,</span>
+                               <span class="s1">&#39;optim/gen_lr&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span><span class="o">.</span><span class="n">get_last_lr</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="s1">&#39;optim/dis_lr&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span><span class="o">.</span><span class="n">get_last_lr</span><span class="p">()[</span><span class="mi">0</span><span class="p">]},</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">)</span>
+        <span class="c1"># Logs for loss values. Different models have different losses.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_loss_meters</span><span class="p">()</span>
+        <span class="c1"># Other custom logs.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_write_custom_meters</span><span class="p">()</span>
+
+        <span class="c1"># Write all logs to tensorboard.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_flush_meters</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_write_loss_meters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write all loss values to tensorboard.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">update</span><span class="p">,</span> <span class="n">losses</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># update is &#39;gen_update&#39; or &#39;dis_update&#39;.</span>
+            <span class="k">assert</span> <span class="n">update</span> <span class="o">==</span> <span class="s1">&#39;gen_update&#39;</span> <span class="ow">or</span> <span class="n">update</span> <span class="o">==</span> <span class="s1">&#39;dis_update&#39;</span>
+            <span class="k">for</span> <span class="n">loss_name</span><span class="p">,</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">losses</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">full_loss_name</span> <span class="o">=</span> <span class="n">update</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">loss_name</span>
+                <span class="k">if</span> <span class="n">full_loss_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="c1"># Create a new meter if it doesn&#39;t exist.</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">[</span><span class="n">full_loss_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Meter</span><span class="p">(</span><span class="n">full_loss_name</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">meters</span><span class="p">[</span><span class="n">full_loss_name</span><span class="p">]</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_write_custom_meters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Dummy member function to be overloaded by the child class.</span>
+<span class="sd">        In the child class, you can write down whatever you want to track.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_write_to_meters</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">meters</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write values to meters.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">meters</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_flush_meters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meters</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Flush all meters using the current iteration.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">meter</span> <span class="ow">in</span> <span class="n">meters</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">meter</span><span class="o">.</span><span class="n">flush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_pre_save_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Implement the things you want to do before saving a checkpoint.</span>
+<span class="sd">        For example, you can compute the K-mean features (pix2pixHD) before</span>
+<span class="sd">        saving the model weights to a checkpoint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="BaseTrainer.save_checkpoint"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.save_checkpoint">[docs]</a>    <span class="k">def</span> <span class="nf">save_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Save network weights, optimizer parameters, scheduler parameters</span>
+<span class="sd">        to a checkpoint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pre_save_checkpoint</span><span class="p">()</span>
+        <span class="n">_save_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span><span class="p">,</span>
+                         <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.load_checkpoint"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.load_checkpoint">[docs]</a>    <span class="k">def</span> <span class="nf">load_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">checkpoint_path</span><span class="p">,</span> <span class="n">resume</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load network weights, optimizer parameters, scheduler parameters</span>
+<span class="sd">        from a checkpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cfg (obj): Global configuration.</span>
+<span class="sd">            checkpoint_path (str): Path to the checkpoint.</span>
+<span class="sd">            resume (bool or None): If not ``None``, will determine whether or</span>
+<span class="sd">                not to load optimizers in addition to network weights.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">):</span>
+            <span class="c1"># If checkpoint_path exists, we will load its weights to</span>
+            <span class="c1"># initialize our network.</span>
+            <span class="k">if</span> <span class="n">resume</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">resume</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="s1">&#39;latest_checkpoint.txt&#39;</span><span class="p">)):</span>
+            <span class="c1"># This is for resuming the training from the previously saved</span>
+            <span class="c1"># checkpoint.</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="s1">&#39;latest_checkpoint.txt&#39;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+            <span class="n">checkpoint_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">resume</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">resume</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># checkpoint not found and not specified. We will train</span>
+            <span class="c1"># everything from scratch.</span>
+            <span class="n">current_epoch</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">current_iteration</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No checkpoint found.&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span>
+        <span class="c1"># Load checkpoint</span>
+        <span class="n">checkpoint</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+            <span class="n">checkpoint_path</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="k">lambda</span> <span class="n">storage</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n">storage</span><span class="p">)</span>
+        <span class="n">current_epoch</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">current_iteration</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">resume</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;net_G&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;net_D&#39;</span><span class="p">])</span>
+                <span class="k">if</span> <span class="s1">&#39;opt_G&#39;</span> <span class="ow">in</span> <span class="n">checkpoint</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;opt_G&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;opt_D&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;sch_G&#39;</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;sch_D&#39;</span><span class="p">])</span>
+                    <span class="n">current_epoch</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;current_epoch&#39;</span><span class="p">]</span>
+                    <span class="n">current_iteration</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;current_iteration&#39;</span><span class="p">]</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Load from: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Load network weights only.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s1">&#39;net_G&#39;</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Load generator weights only.&#39;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with loading the checkpoint.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.start_of_epoch"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.start_of_epoch">[docs]</a>    <span class="k">def</span> <span class="nf">start_of_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Things to do before an epoch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start_of_epoch</span><span class="p">(</span><span class="n">current_epoch</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">=</span> <span class="n">current_epoch</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_epoch_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.start_of_iteration"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.start_of_iteration">[docs]</a>    <span class="k">def</span> <span class="nf">start_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Things to do before an iteration.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_iteration (int): Current number of iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_of_iteration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">to_cuda</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span> <span class="o">=</span> <span class="n">current_iteration</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="c1"># torch.cuda.synchronize()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_iteration_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.end_of_iteration"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.end_of_iteration">[docs]</a>    <span class="k">def</span> <span class="nf">end_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Things to do after an iteration.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">            current_iteration (int): Current number of iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span> <span class="o">=</span> <span class="n">current_iteration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">=</span> <span class="n">current_epoch</span>
+        <span class="c1"># Update the learning rate policy for the generator if operating in the</span>
+        <span class="c1"># iteration mode.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">iteration_mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+        <span class="c1"># Update the learning rate policy for the discriminator if operating</span>
+        <span class="c1"># in the iteration mode.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">iteration_mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="c1"># Accumulate time</span>
+        <span class="c1"># torch.cuda.synchronize()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_iteration_time</span> <span class="o">+=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_iteration_time</span>
+        <span class="c1"># Logging.</span>
+        <span class="k">if</span> <span class="n">current_iteration</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ave_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_iteration_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">time_iteration</span> <span class="o">=</span> <span class="n">ave_t</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iteration: </span><span class="si">{}</span><span class="s1">, average iter time: &#39;</span>
+                  <span class="s1">&#39;</span><span class="si">{:6f}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_iteration</span><span class="p">,</span> <span class="n">ave_t</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_iteration_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="c1"># Below code block only needed when analyzing computation</span>
+                <span class="c1"># bottleneck.</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Generator FWD time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_forw_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Generator LOS time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_loss_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Generator BCK time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_back_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Generator STP time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_step_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Generator AVG time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_avg_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Discriminator FWD time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_forw_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Discriminator LOS time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_loss_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Discriminator BCK time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_back_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Discriminator STP time </span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_step_iter_time</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span><span class="p">))</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ave_t</span><span class="p">))</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_forw_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_loss_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_back_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_step_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_avg_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_forw_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_loss_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_back_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_step_iter_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_end_of_iteration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+        <span class="c1"># Save everything to the checkpoint.</span>
+        <span class="k">if</span> <span class="n">current_iteration</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">snapshot_save_start_iter</span> <span class="ow">and</span> \
+                <span class="n">current_iteration</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">snapshot_save_iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_save_path</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;jpg&#39;</span><span class="p">),</span> <span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_checkpoint</span><span class="p">(</span><span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_metrics</span><span class="p">()</span>
+        <span class="c1"># Compute image to be saved.</span>
+        <span class="k">elif</span> <span class="n">current_iteration</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">image_save_iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_save_path</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;jpg&#39;</span><span class="p">),</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">current_iteration</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">image_display_iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;current.jpg&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">current_iteration</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logging_iter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_tensorboard</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.end_of_epoch"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.end_of_epoch">[docs]</a>    <span class="k">def</span> <span class="nf">end_of_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Things to do after an epoch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">            current_iteration (int): Current number of iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Update the learning rate policy for the generator if operating in the</span>
+        <span class="c1"># epoch mode.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span> <span class="o">=</span> <span class="n">current_iteration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">=</span> <span class="n">current_epoch</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">iteration_mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sch_G</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+        <span class="c1"># Update the learning rate policy for the discriminator if operating</span>
+        <span class="c1"># in the epoch mode.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">dis_opt</span><span class="o">.</span><span class="n">lr_policy</span><span class="o">.</span><span class="n">iteration_mode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sch_D</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+        <span class="n">elapsed_epoch_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_epoch_time</span>
+        <span class="c1"># Logging.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch: </span><span class="si">{}</span><span class="s1">, total time: </span><span class="si">{:6f}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_epoch</span><span class="p">,</span>
+                                                     <span class="n">elapsed_epoch_time</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_epoch</span> <span class="o">=</span> <span class="n">elapsed_epoch_time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_end_of_epoch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+        <span class="c1"># Save everything to the checkpoint.</span>
+        <span class="k">if</span> <span class="n">current_epoch</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">snapshot_save_start_epoch</span> <span class="ow">and</span> \
+                <span class="n">current_epoch</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">snapshot_save_epoch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_save_path</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;jpg&#39;</span><span class="p">),</span> <span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_checkpoint</span><span class="p">(</span><span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_metrics</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.pre_process"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.pre_process">[docs]</a>    <span class="k">def</span> <span class="nf">pre_process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Custom data pre-processing function. Utilize this function if you</span>
+<span class="sd">        need to preprocess your data before sending it to the generator and</span>
+<span class="sd">        discriminator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.recalculate_model_average_batch_norm_statistics"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.recalculate_model_average_batch_norm_statistics">[docs]</a>    <span class="k">def</span> <span class="nf">recalculate_model_average_batch_norm_statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Update the statistics in the moving average model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_loader (torch.utils.data.DataLoader): Data loader for</span>
+<span class="sd">                estimating the statistics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">model_average_iteration</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average_batch_norm_estimation_iteration</span>
+        <span class="k">if</span> <span class="n">model_average_iteration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="c1"># Accumulate bn stats..</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+            <span class="c1"># Reset running stats.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">reset_batch_norm</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">cal_it</span><span class="p">,</span> <span class="n">cal_data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_loader</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">cal_it</span> <span class="o">&gt;=</span> <span class="n">model_average_iteration</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with </span><span class="si">{}</span><span class="s1"> iterations of updating batch norm &#39;</span>
+                          <span class="s1">&#39;statistics&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_average_iteration</span><span class="p">))</span>
+                    <span class="k">break</span>
+                <span class="n">cal_data</span> <span class="o">=</span> <span class="n">to_device</span><span class="p">(</span><span class="n">cal_data</span><span class="p">,</span> <span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+                <span class="c1"># Averaging over all batches</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                    <span class="n">calibrate_batch_norm_momentum</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="p">(</span><span class="n">cal_data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.save_image"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.save_image">[docs]</a>    <span class="k">def</span> <span class="nf">save_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute visualization images and save them to the disk.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path (str): Location of the file.</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="n">vis_images</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_visualizations</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_master</span><span class="p">()</span> <span class="ow">and</span> <span class="n">vis_images</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vis_images</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">vis_images</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+            <span class="n">vis_images</span> <span class="o">=</span> <span class="p">(</span><span class="n">vis_images</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Save output images to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+            <span class="n">vis_images</span><span class="o">.</span><span class="n">clamp_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">image_grid</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">make_grid</span><span class="p">(</span>
+                <span class="n">vis_images</span><span class="p">,</span> <span class="n">nrow</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">image_to_tensorboard</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">image_meter</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="n">image_grid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">)</span>
+            <span class="n">torchvision</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="n">image_grid</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">nrow</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.write_metrics"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.write_metrics">[docs]</a>    <span class="k">def</span> <span class="nf">write_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Write metrics to the tensorboard.&quot;&quot;&quot;</span>
+        <span class="n">cur_fid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_fid</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">cur_fid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span><span class="p">,</span> <span class="n">cur_fid</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span> <span class="o">=</span> <span class="n">cur_fid</span>
+            <span class="n">metric_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;FID&#39;</span><span class="p">:</span> <span class="n">cur_fid</span><span class="p">,</span> <span class="s1">&#39;best_FID&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">best_fid</span><span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_to_meters</span><span class="p">(</span><span class="n">metric_dict</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">metric_meters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_flush_meters</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric_meters</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">hparam_to_tensorboard</span><span class="p">:</span>
+                <span class="n">add_hparams</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hparam_dict</span><span class="p">,</span> <span class="n">metric_dict</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_save_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subdir</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the image save path.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            subdir (str): Sub-directory under the main directory for saving</span>
+<span class="sd">                the outputs.</span>
+<span class="sd">            ext (str): Filename extension for the image (e.g., jpg, png, ...).</span>
+<span class="sd">        Return:</span>
+<span class="sd">            (str): image filename to be used to save the visualization results.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">subdir_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="n">subdir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">subdir_path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">subdir_path</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">subdir_path</span><span class="p">,</span> <span class="s1">&#39;epoch_</span><span class="si">{:05}</span><span class="s1">_iteration_</span><span class="si">{:09}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span><span class="p">,</span> <span class="n">ext</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_get_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">net_D_output</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return output values. Note that when the gan mode is relativistic.</span>
+<span class="sd">        It will do the difference before returning.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           net_D_output (dict):</span>
+<span class="sd">               real_outputs (tensor): Real output values.</span>
+<span class="sd">               fake_outputs (tensor): Fake output values.</span>
+<span class="sd">           real (bool): Return real or fake.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">_get_difference</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+            <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get difference between two lists of tensors or two tensors.</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                a: list of tensors or tensor</span>
+<span class="sd">                b: list of tensors or tensor</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="n">_get_difference</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">out</span>
+
+        <span class="k">if</span> <span class="n">real</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">gan_relativistic</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">_get_difference</span><span class="p">(</span><span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;real_outputs&#39;</span><span class="p">],</span>
+                                       <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;fake_outputs&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;real_outputs&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">gan_relativistic</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">_get_difference</span><span class="p">(</span><span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;fake_outputs&#39;</span><span class="p">],</span>
+                                       <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;real_outputs&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">net_D_output</span><span class="p">[</span><span class="s1">&#39;fake_outputs&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_start_of_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Operations to do before starting an epoch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_start_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Operations to do before starting an iteration.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_iteration (int): Current epoch number.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict): Data used for the current iteration. They might be</span>
+<span class="sd">                processed by the custom _start_of_iteration function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">_end_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Operations to do after an iteration.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">            current_iteration (int): Current epoch number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_end_of_epoch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Operations to do after an epoch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_epoch (int): Current number of epoch.</span>
+<span class="sd">            current_iteration (int): Current epoch number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_get_visualizations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute visualization outputs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_compute_fid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;FID computation function to be overloaded.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_init_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Every trainer should implement its own init loss function.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<div class="viewcode-block" id="BaseTrainer.gen_update"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.gen_update">[docs]</a>    <span class="k">def</span> <span class="nf">gen_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Update the generator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+
+        <span class="c1"># Set requires_grad flags.</span>
+        <span class="n">requires_grad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">requires_grad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Compute the loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_forward</span><span class="p">()</span>
+        <span class="n">total_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_forward</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">total_loss</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Backpropagate the loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_backward</span><span class="p">()</span>
+        <span class="k">with</span> <span class="n">amp</span><span class="o">.</span><span class="n">scale_loss</span><span class="p">(</span><span class="n">total_loss</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="p">,</span> <span class="n">loss_id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">as</span> <span class="n">scaled_loss</span><span class="p">:</span>
+            <span class="n">scaled_loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+        <span class="c1"># Optionally clip gradient norm.</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="p">,</span> <span class="s1">&#39;clip_grad_norm&#39;</span><span class="p">):</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">clip_grad_norm_</span><span class="p">(</span>
+                <span class="n">amp</span><span class="o">.</span><span class="n">master_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen_opt</span><span class="o">.</span><span class="n">clip_grad_norm</span><span class="p">)</span>
+
+        <span class="c1"># Perform an optimizer step.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_step</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_G</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="c1"># Update model average.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_model_avg</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">update_average</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_detach_losses</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_leave_gen</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.gen_forward"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.gen_forward">[docs]</a>    <span class="k">def</span> <span class="nf">gen_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Every trainer should implement its own generator forward.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.dis_update"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.dis_update">[docs]</a>    <span class="k">def</span> <span class="nf">dis_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Update the discriminator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+
+        <span class="c1"># Set requires_grad flags.</span>
+        <span class="n">requires_grad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">requires_grad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Compute the loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_forward</span><span class="p">()</span>
+        <span class="n">total_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dis_forward</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">total_loss</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Backpropagate the loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_backward</span><span class="p">()</span>
+        <span class="k">with</span> <span class="n">amp</span><span class="o">.</span><span class="n">scale_loss</span><span class="p">(</span><span class="n">total_loss</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span><span class="p">,</span> <span class="n">loss_id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">scaled_loss</span><span class="p">:</span>
+            <span class="n">scaled_loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+        <span class="c1"># Perform an optimizer step.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_step</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opt_D</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_detach_losses</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_before_leave_dis</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.dis_forward"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.dis_forward">[docs]</a>    <span class="k">def</span> <span class="nf">dis_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Every trainer should implement its own discriminator forward.&quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+<div class="viewcode-block" id="BaseTrainer.test"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.base.BaseTrainer.test">[docs]</a>    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">inference_args</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute results images for a batch of input data and save the</span>
+<span class="sd">        results in the specified folder.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_loader (torch.utils.data.DataLoader): PyTorch dataloader.</span>
+<span class="sd">            output_dir (str): Target location for saving the output image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span>
+        <span class="n">net_G</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;# of samples </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_loader</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">it</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tqdm</span><span class="p">(</span><span class="n">data_loader</span><span class="p">)):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_of_iteration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+                <span class="n">output_images</span><span class="p">,</span> <span class="n">file_names</span> <span class="o">=</span> \
+                    <span class="n">net_G</span><span class="o">.</span><span class="n">inference</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">inference_args</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">output_image</span><span class="p">,</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">output_images</span><span class="p">,</span> <span class="n">file_names</span><span class="p">):</span>
+                <span class="n">fullname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">)</span>
+                <span class="n">output_image</span> <span class="o">=</span> <span class="n">tensor2pilimage</span><span class="p">(</span><span class="n">output_image</span><span class="o">.</span><span class="n">clamp_</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                                               <span class="n">minus1to1_normalized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">save_pilimage_in_jpeg</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="n">output_image</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_total_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_forward</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the total loss to be backpropagated.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            gen_forward (bool): If ``True``, backpropagates the generator loss,</span>
+<span class="sd">                otherwise the discriminator loss.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">losses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span> <span class="k">if</span> <span class="n">gen_forward</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span>
+        <span class="n">total_loss</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">))</span>
+        <span class="c1"># Iterates over all possible losses.</span>
+        <span class="k">for</span> <span class="n">loss_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">:</span>
+            <span class="c1"># If it is for the current model (gen/dis).</span>
+            <span class="k">if</span> <span class="n">loss_name</span> <span class="ow">in</span> <span class="n">losses</span><span class="p">:</span>
+                <span class="c1"># Multiply it with the corresponding weight</span>
+                <span class="c1"># and add it to the total loss.</span>
+                <span class="n">total_loss</span> <span class="o">+=</span> <span class="n">losses</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span>
+        <span class="n">losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_loss</span>  <span class="c1"># logging purpose</span>
+        <span class="k">return</span> <span class="n">total_loss</span>
+
+    <span class="k">def</span> <span class="nf">_detach_losses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Detach all logging variables to prevent potential memory leak.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">loss_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">loss_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dis_losses</span><span class="p">[</span><span class="n">loss_name</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record time before applying forward.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">forw_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_loss</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record time before computing loss.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">loss_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record time before applying backward.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">back_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record time before updating the weights</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">step_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_model_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record time before applying model average.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_leave_gen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record forward, backward, loss, and model average time for the</span>
+<span class="sd">        generator update.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_forw_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">forw_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_loss_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_back_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_step_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_gen_avg_iter_time</span> <span class="o">+=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_time</span>
+
+    <span class="k">def</span> <span class="nf">_time_before_leave_dis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Record forward, backward, loss time for the discriminator update.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">,</span> <span class="s1">&#39;speed_benchmark&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
+            <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_forw_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">forw_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_loss_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_back_iter_time</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">back_time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">accu_dis_step_iter_time</span> <span class="o">+=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_time</span></div>
+
+
+<span class="nd">@master_only</span>
+<span class="k">def</span> <span class="nf">_save_checkpoint</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span>
+                     <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span>
+                     <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span>
+                     <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                     <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Save network weights, optimizer parameters, scheduler parameters</span>
+<span class="sd">    in the checkpoint.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Global configuration.</span>
+<span class="sd">        net_D (obj): Discriminator network.</span>
+<span class="sd">        opt_G (obj): Optimizer for the generator network.</span>
+<span class="sd">        opt_D (obj): Optimizer for the discriminator network.</span>
+<span class="sd">        sch_G (obj): Scheduler for the generator optimizer.</span>
+<span class="sd">        sch_D (obj): Scheduler for the discriminator optimizer.</span>
+<span class="sd">        current_epoch (int): Current epoch.</span>
+<span class="sd">        current_iteration (int): Current iteration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">latest_checkpoint_path</span> <span class="o">=</span> <span class="s1">&#39;epoch_</span><span class="si">{:05}</span><span class="s1">_iteration_</span><span class="si">{:09}</span><span class="s1">_checkpoint.pt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">current_epoch</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">)</span>
+    <span class="n">save_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="n">latest_checkpoint_path</span><span class="p">)</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;net_G&#39;</span><span class="p">:</span> <span class="n">net_G</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;net_D&#39;</span><span class="p">:</span> <span class="n">net_D</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;opt_G&#39;</span><span class="p">:</span> <span class="n">opt_G</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;opt_D&#39;</span><span class="p">:</span> <span class="n">opt_D</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;sch_G&#39;</span><span class="p">:</span> <span class="n">sch_G</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;sch_D&#39;</span><span class="p">:</span> <span class="n">sch_D</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+            <span class="s1">&#39;current_epoch&#39;</span><span class="p">:</span> <span class="n">current_epoch</span><span class="p">,</span>
+            <span class="s1">&#39;current_iteration&#39;</span><span class="p">:</span> <span class="n">current_iteration</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">save_path</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">logdir</span><span class="p">,</span> <span class="s1">&#39;latest_checkpoint.txt&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;wt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;latest_checkpoint: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">latest_checkpoint_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Save checkpoint to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">save_path</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">save_path</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

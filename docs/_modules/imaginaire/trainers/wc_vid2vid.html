@@ -1,0 +1,730 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.trainers.wc_vid2vid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.trainers.wc_vid2vid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.trainers.wc_vid2vid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">imageio</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.losses</span> <span class="kn">import</span> <span class="n">MaskedL1Loss</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="n">concat_frames</span><span class="p">,</span> <span class="n">resample</span>
+<span class="kn">from</span> <span class="nn">imaginaire.trainers.vid2vid</span> <span class="kn">import</span> <span class="n">Trainer</span> <span class="k">as</span> <span class="n">Vid2VidTrainer</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">is_master</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.misc</span> <span class="kn">import</span> <span class="n">split_labels</span><span class="p">,</span> <span class="n">to_cuda</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.visualization</span> <span class="kn">import</span> <span class="n">tensor2flow</span><span class="p">,</span> <span class="n">tensor2im</span>
+
+
+<div class="viewcode-block" id="Trainer"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer">[docs]</a><span class="k">class</span> <span class="nc">Trainer</span><span class="p">(</span><span class="n">Vid2VidTrainer</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize world consistent vid2vid trainer.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cfg (obj): Global configuration.</span>
+<span class="sd">            net_G (obj): Generator network.</span>
+<span class="sd">            net_D (obj): Discriminator network.</span>
+<span class="sd">            opt_G (obj): Optimizer for the generator network.</span>
+<span class="sd">            opt_D (obj): Optimizer for the discriminator network.</span>
+<span class="sd">            sch_G (obj): Scheduler for the generator optimizer.</span>
+<span class="sd">            sch_D (obj): Scheduler for the discriminator optimizer.</span>
+<span class="sd">            train_data_loader (obj): Train data loader.</span>
+<span class="sd">            val_data_loader (obj): Validation data loader.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span> <span class="n">opt_D</span><span class="p">,</span> <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                 <span class="n">train_data_loader</span><span class="p">,</span> <span class="n">val_data_loader</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Trainer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">net_G</span><span class="p">,</span> <span class="n">net_D</span><span class="p">,</span> <span class="n">opt_G</span><span class="p">,</span>
+                                      <span class="n">opt_D</span><span class="p">,</span> <span class="n">sch_G</span><span class="p">,</span> <span class="n">sch_D</span><span class="p">,</span>
+                                      <span class="n">train_data_loader</span><span class="p">,</span> <span class="n">val_data_loader</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guidance_start_after</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">guidance</span><span class="p">,</span> <span class="s1">&#39;start_from&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span> <span class="o">=</span> <span class="n">train_data_loader</span>
+
+    <span class="k">def</span> <span class="nf">_define_custom_losses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;All other custom losses are defined here.&quot;&quot;&quot;</span>
+        <span class="c1"># Setup the guidance loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;Guidance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">MaskedL1Loss</span><span class="p">(</span><span class="n">normalize_over_valid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Guidance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">loss_weight</span><span class="o">.</span><span class="n">guidance</span>
+
+<div class="viewcode-block" id="Trainer.start_of_iteration"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.start_of_iteration">[docs]</a>    <span class="k">def</span> <span class="nf">start_of_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">current_iteration</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Things to do before an iteration.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Data used for the current iteration.</span>
+<span class="sd">            current_iteration (int): Current iteration number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="o">.</span><span class="n">reset_renderer</span><span class="p">(</span><span class="n">is_flipped_input</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;is_flipped&#39;</span><span class="p">])</span>
+        <span class="c1"># Keep unprojections on cpu to prevent unnecessary transfer.</span>
+        <span class="n">unprojections</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;unprojections&#39;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">to_cuda</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;unprojections&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unprojections</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_iteration</span> <span class="o">=</span> <span class="n">current_iteration</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_D</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_iteration_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="Trainer.reset"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the trainer (for inference) at the beginning of a sequence.&quot;&quot;&quot;</span>
+        <span class="c1"># Inference time.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="o">.</span><span class="n">reset_renderer</span><span class="p">(</span><span class="n">is_flipped_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># print(&#39;Resetting trainer.&#39;)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_prev</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">test_in_model_average_mode</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;test_in_model_average_mode&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">test_in_model_average_mode</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="p">,</span> <span class="s1">&#39;reset&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;reset&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Trainer.create_sequence_output_dir"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.create_sequence_output_dir">[docs]</a>    <span class="k">def</span> <span class="nf">create_sequence_output_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Create output subdir for this sequence.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            output_dir (str): Root output dir.</span>
+<span class="sd">            key (str): LMDB key which contains sequence name and file name.</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            output_dir (str): Output subdir for this sequence.</span>
+<span class="sd">            seq_name (str): Name of this sequence.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">seq_dir</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">output_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">seq_dir</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span> <span class="o">+</span> <span class="s1">&#39;/all&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span> <span class="o">+</span> <span class="s1">&#39;/fake&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">seq_name</span> <span class="o">=</span> <span class="n">seq_dir</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">seq_name</span></div>
+
+<div class="viewcode-block" id="Trainer.test"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.test">[docs]</a>    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_data_loader</span><span class="p">,</span> <span class="n">root_output_dir</span><span class="p">,</span> <span class="n">inference_args</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Run inference on all sequences.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            test_data_loader (object): Test data loader.</span>
+<span class="sd">            root_output_dir (str): Location to dump outputs.</span>
+<span class="sd">            inference_args (optional): Optional args.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Go over all sequences.</span>
+        <span class="n">loader</span> <span class="o">=</span> <span class="n">test_data_loader</span>
+        <span class="n">num_inference_sequences</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">num_inference_sequences</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">sequence_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_inference_sequences</span><span class="p">):</span>
+            <span class="n">loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">set_inference_sequence_idx</span><span class="p">(</span><span class="n">sequence_idx</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Seq id: </span><span class="si">%d</span><span class="s1">, Seq length: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span>
+                  <span class="p">(</span><span class="n">sequence_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">loader</span><span class="p">)))</span>
+
+            <span class="c1"># Reset model at start of new inference sequence.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sequence_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">loader</span><span class="p">)</span>
+
+            <span class="c1"># Go over all frames of this sequence.</span>
+            <span class="n">video</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tqdm</span><span class="p">(</span><span class="n">loader</span><span class="p">)):</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="s1">&#39;seg_maps&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Create output dir for this sequence.</span>
+                <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">output_dir</span><span class="p">,</span> <span class="n">seq_name</span> <span class="o">=</span> \
+                        <span class="bp">self</span><span class="o">.</span><span class="n">create_sequence_output_dir</span><span class="p">(</span><span class="n">root_output_dir</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                    <span class="n">video_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="n">seq_name</span><span class="p">)</span>
+
+                <span class="c1"># Get output, and save all vis to all/.</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;img_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filename</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">to_cuda</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_single</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="n">output_dir</span> <span class="o">+</span> <span class="s1">&#39;/all&#39;</span><span class="p">)</span>
+
+                <span class="c1"># Dump just the fake image here.</span>
+                <span class="n">fake</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">video</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fake</span><span class="p">)</span>
+                <span class="n">imageio</span><span class="o">.</span><span class="n">imsave</span><span class="p">(</span><span class="n">output_dir</span> <span class="o">+</span> <span class="s1">&#39;/fake/</span><span class="si">%s</span><span class="s1">.jpg&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="n">fake</span><span class="p">)</span>
+
+            <span class="c1"># Save as mp4 and gif.</span>
+            <span class="n">imageio</span><span class="o">.</span><span class="n">mimsave</span><span class="p">(</span><span class="n">video_path</span> <span class="o">+</span> <span class="s1">&#39;.mp4&#39;</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Trainer.test_single"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.test_single">[docs]</a>    <span class="k">def</span> <span class="nf">test_single</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">save_fake_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;The inference function. If output_dir exists, also save the</span>
+<span class="sd">        output image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">            output_dir (str): Save image directory.</span>
+<span class="sd">            save_fake_only (bool): Only save the fake output image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_inference</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="n">test_in_model_average_mode</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">test_in_model_average_mode</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+                <span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;test_in_model_average_mode&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">data_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data_t</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_prev</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence_length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data_prev</span> <span class="o">=</span> <span class="n">data_t</span>
+
+        <span class="c1"># Generator forward.</span>
+        <span class="c1"># Reset renderer if first time step.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="o">.</span><span class="n">reset_renderer</span><span class="p">(</span>
+                <span class="n">is_flipped_input</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;is_flipped&#39;</span><span class="p">])</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">test_in_model_average_mode</span><span class="p">:</span>
+                <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span> <span class="o">=</span> <span class="n">net_G</span><span class="p">(</span><span class="n">data_t</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">output_dir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">save_fake_only</span><span class="p">:</span>
+                <span class="n">image_grid</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">vis_images</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_test_output_images</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="n">image_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">im</span><span class="p">)</span> <span class="k">for</span> <span class="n">im</span> <span class="ow">in</span>
+                                        <span class="n">vis_images</span> <span class="k">if</span> <span class="n">im</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span>
+            <span class="k">if</span> <span class="s1">&#39;img_name&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="n">save_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;img_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%04d</span><span class="s1">.jpg&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span>
+            <span class="n">output_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">save_name</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">image_grid</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span></div>
+
+<div class="viewcode-block" id="Trainer.get_test_output_images"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.get_test_output_images">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_output_images</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the visualization output of test function.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Visualize labels.</span>
+        <span class="n">label_lengths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">val_data_loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">get_label_lengths</span><span class="p">()</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">split_labels</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">label_lengths</span><span class="p">)</span>
+        <span class="n">vis_labels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">labels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;seg_maps&#39;</span><span class="p">:</span>
+                <span class="n">vis_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visualize_label</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">vis_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tensor2im</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="c1"># Get gt image.</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># Get guidance image and masks.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">guidance_image</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+            <span class="n">guidance_mask</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
+                <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">guidance_image</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">im</span><span class="p">]</span>
+            <span class="n">guidance_mask</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">im</span><span class="p">]</span>
+
+        <span class="c1"># Create output.</span>
+        <span class="n">vis_images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="o">*</span><span class="n">vis_labels</span><span class="p">,</span>
+            <span class="n">im</span><span class="p">,</span>
+            <span class="n">guidance_image</span><span class="p">,</span> <span class="n">guidance_mask</span><span class="p">,</span>
+            <span class="n">tensor2im</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">vis_images</span></div>
+
+<div class="viewcode-block" id="Trainer.gen_frames"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.gen_frames">[docs]</a>    <span class="k">def</span> <span class="nf">gen_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">use_model_average</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Generate a sequence of frames given a sequence of data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data at the current iteration.</span>
+<span class="sd">            use_model_average (bool): Whether to use model average</span>
+<span class="sd">                for update or not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">net_G_output</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Previous generator output.</span>
+        <span class="n">data_prev</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Previous data.</span>
+        <span class="k">if</span> <span class="n">use_model_average</span><span class="p">:</span>
+            <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">net_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span>
+
+        <span class="c1"># Iterate through the length of sequence.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G_module</span><span class="o">.</span><span class="n">reset_renderer</span><span class="p">(</span><span class="n">is_flipped_input</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;is_flipped&#39;</span><span class="p">])</span>
+
+        <span class="n">all_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;inputs&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence_length</span><span class="p">):</span>
+            <span class="c1"># Get the data at the current time frame.</span>
+            <span class="n">data_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data_t</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">data_prev</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+            <span class="n">data_prev</span> <span class="o">=</span> <span class="n">data_t</span>
+
+            <span class="c1"># Generator forward.</span>
+            <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+                <span class="n">net_G_output</span> <span class="o">=</span> <span class="n">net_G</span><span class="p">(</span><span class="n">data_t</span><span class="p">)</span>
+
+            <span class="c1"># Do any postprocessing if necessary.</span>
+            <span class="n">data_t</span><span class="p">,</span> <span class="n">net_G_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_process</span><span class="p">(</span><span class="n">data_t</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># Get the output at beginning of sequence for visualization.</span>
+                <span class="n">first_net_G_output</span> <span class="o">=</span> <span class="n">net_G_output</span>
+
+            <span class="n">all_info</span><span class="p">[</span><span class="s1">&#39;inputs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_t</span><span class="p">)</span>
+            <span class="n">all_info</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">first_net_G_output</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">all_info</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_custom_gen_losses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_t</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">net_D_output</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;All other custom generator losses go here.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data_t (dict): Training data at the current time t.</span>
+<span class="sd">            net_G_output (dict): Output of the generator.</span>
+<span class="sd">            net_D_output (dict): Output of the discriminator.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Compute guidance loss.</span>
+        <span class="k">if</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">guidance_image</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">guidance_mask</span> <span class="o">=</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="mi">3</span><span class="p">:]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;Guidance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;Guidance&#39;</span><span class="p">](</span>
+                <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">],</span> <span class="n">guidance_image</span><span class="p">,</span> <span class="n">guidance_mask</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gen_losses</span><span class="p">[</span><span class="s1">&#39;Guidance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Trainer.get_data_t"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.get_data_t">[docs]</a>    <span class="k">def</span> <span class="nf">get_data_t</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">data_prev</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get data at current time frame given the sequence of data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (dict): Training data for current iteration.</span>
+<span class="sd">            net_G_output (dict): Output of the generator (for previous frame).</span>
+<span class="sd">            data_prev (dict): Data for previous frame.</span>
+<span class="sd">            t (int): Current time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">][:,</span> <span class="n">t</span><span class="p">]</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="n">t</span><span class="p">]</span>
+
+        <span class="c1"># Get keypoint mapping.</span>
+        <span class="n">unprojection</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">guidance_start_after</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;unprojections&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># Remove unwanted padding.</span>
+                    <span class="n">unprojection</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;unprojections&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+                        <span class="n">length</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">unprojection</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">[:</span><span class="n">length</span><span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa</span>
+                    <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="n">data_prev</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Concat previous labels/fake images to the ones before.</span>
+            <span class="n">num_frames_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">num_frames_G</span>
+            <span class="n">prev_labels</span> <span class="o">=</span> <span class="n">concat_frames</span><span class="p">(</span><span class="n">data_prev</span><span class="p">[</span><span class="s1">&#39;prev_labels&#39;</span><span class="p">],</span>
+                                        <span class="n">data_prev</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">num_frames_G</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">prev_images</span> <span class="o">=</span> <span class="n">concat_frames</span><span class="p">(</span>
+                <span class="n">data_prev</span><span class="p">[</span><span class="s1">&#39;prev_images&#39;</span><span class="p">],</span>
+                <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">(),</span> <span class="n">num_frames_G</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prev_labels</span> <span class="o">=</span> <span class="n">prev_images</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">data_t</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;prev_labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prev_labels</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;prev_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prev_images</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;real_prev_image&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="n">t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">data_t</span><span class="p">[</span><span class="s1">&#39;unprojection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unprojection</span>
+        <span class="k">return</span> <span class="n">data_t</span></div>
+
+<div class="viewcode-block" id="Trainer.save_image"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.save_image">[docs]</a>    <span class="k">def</span> <span class="nf">save_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Save the output images to path.</span>
+<span class="sd">        Note when the generate_raw_output is FALSE. Then,</span>
+<span class="sd">        first_net_G_output[&#39;fake_raw_images&#39;] is None and will not be displayed.</span>
+<span class="sd">        In model average mode, we will plot the flow visualization twice.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            path (str): Save path.</span>
+<span class="sd">            data (dict): Training data for current iteration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">averaged_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G_output</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">first_net_G_output</span><span class="p">,</span> <span class="n">net_G_output</span><span class="p">,</span> <span class="n">all_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_frames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+                <span class="n">first_net_G_output_avg</span><span class="p">,</span> <span class="n">net_G_output_avg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_frames</span><span class="p">(</span>
+                    <span class="n">data</span><span class="p">,</span> <span class="n">use_model_average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Visualize labels.</span>
+        <span class="n">label_lengths</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">get_label_lengths</span><span class="p">()</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">split_labels</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">label_lengths</span><span class="p">)</span>
+        <span class="n">vis_labels_start</span><span class="p">,</span> <span class="n">vis_labels_end</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">labels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="s1">&#39;seg_maps&#39;</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+                <span class="n">vis_labels_start</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visualize_label</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+                <span class="n">vis_labels_end</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visualize_label</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">normalize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">normalize</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+                <span class="n">vis_labels_start</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">))</span>
+                <span class="n">vis_labels_end</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">value</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">is_master</span><span class="p">():</span>
+            <span class="n">vis_images</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="o">*</span><span class="n">vis_labels_start</span><span class="p">,</span>
+                <span class="n">tensor2im</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+                <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span>
+                <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">])]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+                <span class="n">vis_images</span> <span class="o">+=</span> <span class="p">[</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">])]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence_length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">guidance_image</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span>
+                        <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+                    <span class="n">guidance_mask</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span>
+                        <span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
+                        <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">im</span> <span class="o">=</span> <span class="n">tensor2im</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="n">guidance_image</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">im</span><span class="p">]</span>
+                    <span class="n">guidance_mask</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">im</span><span class="p">]</span>
+                <span class="n">vis_images</span> <span class="o">+=</span> <span class="p">[</span><span class="n">guidance_image</span><span class="p">,</span> <span class="n">guidance_mask</span><span class="p">]</span>
+
+                <span class="n">vis_images_first</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="o">*</span><span class="n">vis_labels_end</span><span class="p">,</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">]),</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">first_net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span>
+                    <span class="n">tensor2im</span><span class="p">(</span><span class="n">first_net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">]),</span>
+                    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">guidance_image</span><span class="p">],</span>
+                    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">guidance_mask</span><span class="p">]</span>
+                <span class="p">]</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+                    <span class="n">vis_images_first</span> <span class="o">+=</span> <span class="p">[</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">first_net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]),</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">first_net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">])]</span>
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_flow</span><span class="p">:</span>
+                    <span class="n">flow_gt</span><span class="p">,</span> <span class="n">conf_gt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">criteria</span><span class="p">[</span><span class="s1">&#39;Flow&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">flowNet</span><span class="p">(</span>
+                        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+                    <span class="n">warped_image_gt</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flow_gt</span><span class="p">)</span>
+                    <span class="n">vis_images_first</span> <span class="o">+=</span> <span class="p">[</span>
+                        <span class="n">tensor2flow</span><span class="p">(</span><span class="n">flow_gt</span><span class="p">),</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">conf_gt</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">warped_image_gt</span><span class="p">),</span>
+                    <span class="p">]</span>
+                    <span class="n">vis_images</span> <span class="o">+=</span> <span class="p">[</span>
+                        <span class="n">tensor2flow</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_flow_maps&#39;</span><span class="p">]),</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;fake_occlusion_masks&#39;</span><span class="p">],</span>
+                                  <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                        <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output</span><span class="p">[</span><span class="s1">&#39;warped_images&#39;</span><span class="p">]),</span>
+                    <span class="p">]</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">trainer</span><span class="o">.</span><span class="n">model_average</span><span class="p">:</span>
+                        <span class="n">vis_images_first</span> <span class="o">+=</span> <span class="p">[</span>
+                            <span class="n">tensor2flow</span><span class="p">(</span><span class="n">flow_gt</span><span class="p">),</span>
+                            <span class="n">tensor2im</span><span class="p">(</span><span class="n">conf_gt</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                            <span class="n">tensor2im</span><span class="p">(</span><span class="n">warped_image_gt</span><span class="p">),</span>
+                        <span class="p">]</span>
+                        <span class="n">vis_images</span> <span class="o">+=</span> <span class="p">[</span>
+                            <span class="n">tensor2flow</span><span class="p">(</span><span class="n">net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_flow_maps&#39;</span><span class="p">]),</span>
+                            <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;fake_occlusion_masks&#39;</span><span class="p">],</span>
+                                      <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                            <span class="n">tensor2im</span><span class="p">(</span><span class="n">net_G_output_avg</span><span class="p">[</span><span class="s1">&#39;warped_images&#39;</span><span class="p">])]</span>
+
+                <span class="n">vis_images</span> <span class="o">=</span> <span class="p">[[</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">im_first</span><span class="p">,</span> <span class="n">im</span><span class="p">))</span>
+                               <span class="k">for</span> <span class="n">im_first</span><span class="p">,</span> <span class="n">im</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">imgs_first</span><span class="p">,</span> <span class="n">imgs</span><span class="p">)]</span>
+                              <span class="k">for</span> <span class="n">imgs_first</span><span class="p">,</span> <span class="n">imgs</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vis_images_first</span><span class="p">,</span>
+                                                          <span class="n">vis_images</span><span class="p">)</span>
+                              <span class="k">if</span> <span class="n">imgs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+
+            <span class="n">image_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">im</span><span class="p">)</span> <span class="k">for</span> <span class="n">im</span> <span class="ow">in</span>
+                                    <span class="n">vis_images</span> <span class="k">if</span> <span class="n">im</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Save output images to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">imageio</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">image_grid</span><span class="p">)</span>
+
+            <span class="c1"># Gather all inputs and outputs for dumping into video.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence_length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">input_images</span><span class="p">,</span> <span class="n">output_images</span><span class="p">,</span> <span class="n">output_guidance</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_info</span><span class="p">[</span><span class="s1">&#39;inputs&#39;</span><span class="p">]:</span>
+                    <span class="n">input_images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tensor2im</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">all_info</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">]:</span>
+                    <span class="n">output_images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tensor2im</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">output_guidance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tensor2im</span><span class="p">(</span>
+                            <span class="n">item</span><span class="p">[</span><span class="s1">&#39;guidance_images_and_masks&#39;</span><span class="p">][:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">output_guidance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">output_images</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+                <span class="n">imageio</span><span class="o">.</span><span class="n">mimwrite</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">path</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.mp4&#39;</span><span class="p">,</span>
+                                 <span class="n">output_images</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">macro_block_size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">imageio</span><span class="o">.</span><span class="n">mimwrite</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">path</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_guidance.mp4&#39;</span><span class="p">,</span>
+                                 <span class="n">output_guidance</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">macro_block_size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+            <span class="c1"># for idx, item in enumerate(output_guidance):</span>
+            <span class="c1">#     imageio.imwrite(os.path.splitext(</span>
+            <span class="c1">#         path)[0] + &#39;_guidance_%d.jpg&#39; % (idx), item)</span>
+            <span class="c1"># for idx, item in enumerate(input_images):</span>
+            <span class="c1">#     imageio.imwrite(os.path.splitext(</span>
+            <span class="c1">#         path)[0] + &#39;_input_%d.jpg&#39; % (idx), item)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">float</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_compute_fid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute fid. Ignore for faster training.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Trainer.load_checkpoint"><a class="viewcode-back" href="../../../imaginaire.trainers.html#imaginaire.trainers.wc_vid2vid.Trainer.load_checkpoint">[docs]</a>    <span class="k">def</span> <span class="nf">load_checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">checkpoint_path</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Save network weights, optimizer parameters, scheduler parameters</span>
+<span class="sd">        in the checkpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cfg (obj): Global configuration.</span>
+<span class="sd">            checkpoint_path (str): Path to the checkpoint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Create the single image model.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_data_loader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">load_single_image_model_weights</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">load_single_image_model_weights</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">net_G</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">_init_single_image_model</span><span class="p">(</span>
+            <span class="n">load_weights</span><span class="o">=</span><span class="n">load_single_image_model_weights</span><span class="p">)</span>
+
+        <span class="c1"># Call the original super function.</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">load_checkpoint</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">checkpoint_path</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

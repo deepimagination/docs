@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.generators.vid2vid &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.generators.vid2vid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.generators.vid2vid</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+
+<span class="kn">from</span> <span class="nn">imaginaire.generators.fs_vid2vid</span> <span class="kn">import</span> <span class="n">LabelEmbedder</span>
+<span class="kn">from</span> <span class="nn">imaginaire.layers</span> <span class="kn">import</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">LinearBlock</span><span class="p">,</span> <span class="n">Res2dBlock</span>
+<span class="kn">from</span> <span class="nn">imaginaire.model_utils.fs_vid2vid</span> <span class="kn">import</span> <span class="p">(</span><span class="n">extract_valid_pose_labels</span><span class="p">,</span>
+                                               <span class="n">resample</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.data</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_paired_input_image_channel_number</span><span class="p">,</span>
+                                   <span class="n">get_paired_input_label_channel_number</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.init_weight</span> <span class="kn">import</span> <span class="n">weights_init</span>
+
+
+<div class="viewcode-block" id="BaseNetwork"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.BaseNetwork">[docs]</a><span class="k">class</span> <span class="nc">BaseNetwork</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;vid2vid generator.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">BaseNetwork</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<div class="viewcode-block" id="BaseNetwork.get_num_filters"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.BaseNetwork.get_num_filters">[docs]</a>    <span class="k">def</span> <span class="nf">get_num_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_downsamples</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the number of filters at current layer.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            num_downsamples (int) : How many downsamples at current layer.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (int) : Number of filters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span><span class="p">,</span>
+                   <span class="bp">self</span><span class="o">.</span><span class="n">num_filters</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">num_downsamples</span><span class="p">))</span></div></div>
+
+
+<div class="viewcode-block" id="Generator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator">[docs]</a><span class="k">class</span> <span class="nc">Generator</span><span class="p">(</span><span class="n">BaseNetwork</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;vid2vid generator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        gen_cfg (obj): Generator definition part of the yaml config file.</span>
+<span class="sd">        data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen_cfg</span> <span class="o">=</span> <span class="n">gen_cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span> <span class="o">=</span> <span class="n">data_cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_G</span> <span class="o">=</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">num_frames_G</span>
+        <span class="c1"># Number of residual blocks in generator.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">=</span> <span class="n">num_layers</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="c1"># Number of downsamplings for previous frame.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;num_downsamples_img&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="c1"># Number of filters in the first layer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_filters</span> <span class="o">=</span> <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;max_num_filters&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="n">kernel_size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="n">kernel_size</span> <span class="o">//</span> <span class="mi">2</span>
+
+        <span class="c1"># For pose dataset.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_pose_data</span> <span class="o">=</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="s1">&#39;for_pose_dataset&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_pose_data</span><span class="p">:</span>
+            <span class="n">pose_cfg</span> <span class="o">=</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">for_pose_dataset</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pose_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;pose_type&#39;</span><span class="p">,</span> <span class="s1">&#39;both&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">remove_face_labels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pose_cfg</span><span class="p">,</span> <span class="s1">&#39;remove_face_labels&#39;</span><span class="p">,</span>
+                                              <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Input data params.</span>
+        <span class="n">num_input_channels</span> <span class="o">=</span> <span class="n">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="n">num_img_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="n">aug_cfg</span> <span class="o">=</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">val</span><span class="o">.</span><span class="n">augmentations</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">aug_cfg</span><span class="p">,</span> <span class="s1">&#39;center_crop_h_w&#39;</span><span class="p">):</span>
+            <span class="n">crop_h_w</span> <span class="o">=</span> <span class="n">aug_cfg</span><span class="o">.</span><span class="n">center_crop_h_w</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">aug_cfg</span><span class="p">,</span> <span class="s1">&#39;resize_h_w&#39;</span><span class="p">):</span>
+            <span class="n">crop_h_w</span> <span class="o">=</span> <span class="n">aug_cfg</span><span class="o">.</span><span class="n">resize_h_w</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Need to specify output size.&#39;</span><span class="p">)</span>
+        <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span> <span class="o">=</span> <span class="n">crop_h_w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">crop_h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">crop_w</span><span class="p">)</span>
+        <span class="c1"># Spatial size at the bottle neck of generator.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sh</span> <span class="o">=</span> <span class="n">crop_h</span> <span class="o">//</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">num_layers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sw</span> <span class="o">=</span> <span class="n">crop_w</span> <span class="o">//</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">num_layers</span><span class="p">)</span>
+
+        <span class="c1"># Noise vector dimension.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z_dim</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;style_dims&#39;</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_segmap_as_input</span> <span class="o">=</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;use_segmap_as_input&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Label / image embedding network.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emb_cfg</span> <span class="o">=</span> <span class="n">emb_cfg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;embed&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">emb_cfg</span><span class="p">,</span> <span class="s1">&#39;use_embed&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">emb_cfg</span><span class="p">,</span> <span class="s1">&#39;num_downsamples&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label_embedding</span> <span class="o">=</span> <span class="n">LabelEmbedder</span><span class="p">(</span><span class="n">emb_cfg</span><span class="p">,</span> <span class="n">num_input_channels</span><span class="p">)</span>
+
+        <span class="c1"># Flow network.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flow_cfg</span> <span class="o">=</span> <span class="n">flow_cfg</span> <span class="o">=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">flow</span>
+        <span class="c1"># Use SPADE to combine warped and hallucinated frames instead of</span>
+        <span class="c1"># linear combination.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;multi_spade_combine&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># Number of layers to perform multi-spade combine.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="o">.</span><span class="n">multi_spade_combine</span><span class="p">,</span>
+                                              <span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="c1"># At beginning of training, only train an image generator.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temporal_initialized</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># Whether to output hallucinated frame (when training temporal network)</span>
+        <span class="c1"># for additional loss.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generate_raw_output</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># Image generation network.</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gen_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">activation_norm_type</span>
+        <span class="n">activation_norm_params</span> <span class="o">=</span> <span class="n">gen_cfg</span><span class="o">.</span><span class="n">activation_norm_params</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span> <span class="ow">and</span> \
+                <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">):</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">num_filters</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">nonlinearity</span> <span class="o">=</span> <span class="s1">&#39;leakyrelu&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_res_block</span> <span class="o">=</span> <span class="n">base_res_block</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+            <span class="n">Res2dBlock</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+            <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+            <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+            <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">activation_norm_params</span><span class="p">,</span>
+            <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;NACNAC&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Upsampling residual blocks.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">cond_dims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_dims</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">partial</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_partial</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;get_partial&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">False</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">base_res_block</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;up_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span>
+
+        <span class="c1"># Final conv layer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_img</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="n">num_img_channels</span><span class="p">,</span>
+                                    <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                    <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;AC&#39;</span><span class="p">)</span>
+
+        <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span><span class="p">,</span>
+                          <span class="n">num_filters</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_segmap_as_input</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_input_channels</span><span class="p">,</span> <span class="n">num_filters</span><span class="p">,</span>
+                                  <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">LinearBlock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z_dim</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sh</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">)</span>
+
+        <span class="c1"># Misc.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">downsample</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">AvgPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_temporal_network</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Generator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;vid2vid generator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           data (dict) : Dictionary of input data.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           output (dict) : Dictionary of output data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+        <span class="n">label_prev</span><span class="p">,</span> <span class="n">img_prev</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;prev_labels&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;prev_images&#39;</span><span class="p">]</span>
+        <span class="n">is_first_frame</span> <span class="o">=</span> <span class="n">img_prev</span> <span class="ow">is</span> <span class="kc">None</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">bs</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_pose_data</span><span class="p">:</span>
+            <span class="n">label</span><span class="p">,</span> <span class="n">label_prev</span> <span class="o">=</span> <span class="n">extract_valid_pose_labels</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">label</span><span class="p">,</span> <span class="n">label_prev</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">pose_type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_face_labels</span><span class="p">)</span>
+
+        <span class="c1"># Get SPADE conditional maps by embedding current label input.</span>
+        <span class="n">cond_maps_now</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_embedding</span><span class="p">)</span>
+
+        <span class="c1"># Input to the generator will either be noise/segmentation map (for</span>
+        <span class="c1"># first frame) or encoded previous frame (for subsequent frames).</span>
+        <span class="k">if</span> <span class="n">is_first_frame</span><span class="p">:</span>
+            <span class="c1"># First frame in the sequence, start from scratch.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_segmap_as_input</span><span class="p">:</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sh</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">))</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z_dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">label</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+                                    <span class="n">device</span><span class="o">=</span><span class="n">label</span><span class="o">.</span><span class="n">get_device</span><span class="p">())</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sh</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">)</span>
+
+            <span class="c1"># Upsampling layers.</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;up_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))(</span><span class="n">x_img</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Not the first frame, will encode the previous frame and feed to</span>
+            <span class="c1"># the generator.</span>
+            <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_first</span><span class="p">(</span><span class="n">img_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+            <span class="c1"># Get label embedding for the previous frame.</span>
+            <span class="n">cond_maps_prev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">label_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">label_embedding</span><span class="p">)</span>
+
+            <span class="c1"># Downsampling layers.</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;down_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))(</span><span class="n">x_img</span><span class="p">,</span>
+                                                        <span class="o">*</span><span class="n">cond_maps_prev</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">:</span>
+                    <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">downsample</span><span class="p">(</span><span class="n">x_img</span><span class="p">)</span>
+
+            <span class="c1"># Resnet blocks.</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span><span class="p">):</span>
+                <span class="n">cond_maps</span> <span class="o">=</span> <span class="n">cond_maps_prev</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span> <span class="o">//</span> <span class="mi">2</span> \
+                    <span class="k">else</span> <span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">x_img</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;res_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))(</span><span class="n">x_img</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_maps</span><span class="p">)</span>
+
+        <span class="n">flow</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">img_warp</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">num_frames_G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_frames_G</span>
+        <span class="c1"># Whether to warp the previous frame or not.</span>
+        <span class="n">warp_prev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temporal_initialized</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_first_frame</span> <span class="ow">and</span> \
+            <span class="n">label_prev</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">num_frames_G</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">warp_prev</span><span class="p">:</span>
+            <span class="c1"># Estimate flow &amp; mask.</span>
+            <span class="n">label_concat</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">label_prev</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">),</span>
+                                      <span class="n">label</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">img_prev_concat</span> <span class="o">=</span> <span class="n">img_prev</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+            <span class="n">flow</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flow_network_temp</span><span class="p">(</span><span class="n">label_concat</span><span class="p">,</span> <span class="n">img_prev_concat</span><span class="p">)</span>
+            <span class="n">img_warp</span> <span class="o">=</span> <span class="n">resample</span><span class="p">(</span><span class="n">img_prev</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flow</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span><span class="p">:</span>
+                <span class="c1"># if using SPADE combine, integrate the warped image (and</span>
+                <span class="c1"># occlusion mask) into conditional inputs for SPADE.</span>
+                <span class="n">img_embed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">img_warp</span><span class="p">,</span> <span class="n">mask</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">cond_maps_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_maps</span><span class="p">(</span><span class="n">img_embed</span><span class="p">,</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">img_prev_embedding</span><span class="p">)</span>
+                <span class="n">x_raw_img</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Main image generation branch.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="c1"># Get SPADE conditional inputs.</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">)</span>
+            <span class="n">cond_maps</span> <span class="o">=</span> <span class="n">cond_maps_now</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+            <span class="c1"># For raw output generation.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_raw_output</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">x_raw_img</span> <span class="o">=</span> <span class="n">x_img</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">:</span>
+                    <span class="n">x_raw_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">one_up_conv_layer</span><span class="p">(</span><span class="n">x_raw_img</span><span class="p">,</span> <span class="n">cond_maps</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+            <span class="c1"># For final output.</span>
+            <span class="k">if</span> <span class="n">warp_prev</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">:</span>
+                <span class="n">cond_maps</span> <span class="o">+=</span> <span class="n">cond_maps_img</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">x_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">one_up_conv_layer</span><span class="p">(</span><span class="n">x_img</span><span class="p">,</span> <span class="n">cond_maps</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+        <span class="c1"># Final conv layer.</span>
+        <span class="n">img_final</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_img</span><span class="p">(</span><span class="n">x_img</span><span class="p">))</span>
+
+        <span class="n">img_raw</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_raw_output</span><span class="p">:</span>
+            <span class="n">img_raw</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_img</span><span class="p">(</span><span class="n">x_raw_img</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">warp_prev</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span><span class="p">:</span>
+            <span class="n">img_raw</span> <span class="o">=</span> <span class="n">img_final</span>
+            <span class="n">img_final</span> <span class="o">=</span> <span class="n">img_final</span> <span class="o">*</span> <span class="n">mask</span> <span class="o">+</span> <span class="n">img_warp</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">mask</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_final</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_flow_maps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">flow</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_occlusion_masks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mask</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;fake_raw_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_raw</span>
+        <span class="n">output</span><span class="p">[</span><span class="s1">&#39;warped_images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_warp</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+
+<div class="viewcode-block" id="Generator.one_up_conv_layer"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator.one_up_conv_layer">[docs]</a>    <span class="k">def</span> <span class="nf">one_up_conv_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">encoded_label</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;One residual block layer in the main branch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           x (4D tensor) : Current feature map.</span>
+<span class="sd">           encoded_label (list of tensors) : Encoded input label maps.</span>
+<span class="sd">           i (int) : Layer index.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           x (4D tensor) : Output feature map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;up_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">encoded_label</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+<div class="viewcode-block" id="Generator.init_temporal_network"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator.init_temporal_network">[docs]</a>    <span class="k">def</span> <span class="nf">init_temporal_network</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg_init</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;When starting training multiple frames, initialize the</span>
+<span class="sd">        downsampling network and flow network.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cfg_init (dict) : Weight initialization config.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Number of image downsamplings for the previous frame.</span>
+        <span class="n">num_downsamples_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_img</span>
+        <span class="c1"># Number of residual blocks for the previous frame.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">-</span> <span class="n">num_downsamples_img</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># First conv layer.</span>
+        <span class="n">num_img_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">down_first</span> <span class="o">=</span> \
+            <span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_img_channels</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">num_filters</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span>
+                        <span class="n">padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cfg_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">down_first</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span><span class="n">cfg_init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">cfg_init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span>
+
+        <span class="c1"># Downsampling residual blocks.</span>
+        <span class="n">activation_norm_params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen_cfg</span><span class="o">.</span><span class="n">activation_norm_params</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">cond_dims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_dims</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_res_block</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">cfg_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">layer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span><span class="n">cfg_init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">cfg_init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;down_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span>
+
+        <span class="c1"># Additional residual blocks.</span>
+        <span class="n">res_ch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">activation_norm_params</span><span class="o">.</span><span class="n">cond_dims</span> <span class="o">=</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_cond_dims</span><span class="p">(</span><span class="n">num_downsamples_img</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span><span class="p">):</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_res_block</span><span class="p">(</span><span class="n">res_ch</span><span class="p">,</span> <span class="n">res_ch</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cfg_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">layer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span><span class="n">cfg_init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">cfg_init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;res_</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span>
+
+        <span class="c1"># Flow network.</span>
+        <span class="n">flow_cfg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flow_cfg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temporal_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generate_raw_output</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;generate_raw_output&#39;</span><span class="p">,</span>
+                                           <span class="kc">False</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flow_network_temp</span> <span class="o">=</span> <span class="n">FlowGenerator</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cfg_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">flow_network_temp</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span><span class="n">cfg_init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                                                      <span class="n">cfg_init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;multi_spade_combine&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spade_combine</span><span class="p">:</span>
+            <span class="n">emb_cfg</span> <span class="o">=</span> <span class="n">flow_cfg</span><span class="o">.</span><span class="n">multi_spade_combine</span><span class="o">.</span><span class="n">embed</span>
+            <span class="n">num_img_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data_cfg</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">img_prev_embedding</span> <span class="o">=</span> <span class="n">LabelEmbedder</span><span class="p">(</span><span class="n">emb_cfg</span><span class="p">,</span>
+                                                    <span class="n">num_img_channels</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cfg_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">img_prev_embedding</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weights_init</span><span class="p">(</span><span class="n">cfg_init</span><span class="o">.</span><span class="n">type</span><span class="p">,</span>
+                                                           <span class="n">cfg_init</span><span class="o">.</span><span class="n">gain</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Generator.get_cond_dims"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator.get_cond_dims">[docs]</a>    <span class="k">def</span> <span class="nf">get_cond_dims</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_downs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the dimensions of conditional inputs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           num_downs (int) : How many downsamples at current layer.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           ch (list) : List of dimensions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span><span class="p">:</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_input_channels</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">emb_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+            <span class="n">num_downs</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">num_downs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_downsamples_embed</span><span class="p">)</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span><span class="p">,</span> <span class="n">num_filters</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">num_downs</span><span class="p">))]</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">num_downs</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_multi_spade_layers</span><span class="p">):</span>
+                <span class="n">ch</span> <span class="o">=</span> <span class="n">ch</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">ch</span></div>
+
+<div class="viewcode-block" id="Generator.get_cond_maps"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.Generator.get_cond_maps">[docs]</a>    <span class="k">def</span> <span class="nf">get_cond_maps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">embedder</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the conditional inputs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           label (4D tensor) : Input label tensor.</span>
+<span class="sd">           embedder (obj) : Embedding network.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">           cond_maps (list) : List of conditional inputs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_embed</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">embedded_label</span> <span class="o">=</span> <span class="n">embedder</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="n">cond_maps</span> <span class="o">=</span> <span class="p">[</span><span class="n">embedded_label</span><span class="p">]</span>
+        <span class="n">cond_maps</span> <span class="o">=</span> <span class="p">[[</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">cond_maps</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>
+                     <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cond_maps</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span>
+        <span class="k">return</span> <span class="n">cond_maps</span></div></div>
+
+
+<div class="viewcode-block" id="FlowGenerator"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.FlowGenerator">[docs]</a><span class="k">class</span> <span class="nc">FlowGenerator</span><span class="p">(</span><span class="n">BaseNetwork</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Flow generator constructor.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">       flow_cfg (obj): Flow definition part of the yaml config file.</span>
+<span class="sd">       data_cfg (obj): Data definition part of the yaml config file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow_cfg</span><span class="p">,</span> <span class="n">data_cfg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">num_input_channels</span> <span class="o">=</span> <span class="n">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="n">num_prev_img_channels</span> <span class="o">=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span>
+        <span class="n">num_frames</span> <span class="o">=</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">num_frames_G</span>  <span class="c1"># Num. of input frames.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_filters</span> <span class="o">=</span> <span class="n">num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;num_filters&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_num_filters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;max_num_filters&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+        <span class="n">num_downsamples</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;num_downsamples&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">kernel_size</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;kernel_size&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="n">kernel_size</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;num_res_blocks&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="c1"># Multiplier on the flow output.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flow_output_multiplier</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span>
+                                              <span class="s1">&#39;flow_output_multiplier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+        <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;activation_norm_type&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;sync_batch&#39;</span><span class="p">)</span>
+        <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">flow_cfg</span><span class="p">,</span> <span class="s1">&#39;weight_norm_type&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral&#39;</span><span class="p">)</span>
+
+        <span class="n">base_conv_block</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                                  <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                  <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                                  <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Will downsample the labels and prev frames separately, then combine.</span>
+        <span class="n">down_lbl</span> <span class="o">=</span> <span class="p">[</span><span class="n">base_conv_block</span><span class="p">(</span><span class="n">num_input_channels</span> <span class="o">*</span> <span class="n">num_frames</span><span class="p">,</span>
+                                    <span class="n">num_filters</span><span class="p">)]</span>
+        <span class="n">down_img</span> <span class="o">=</span> <span class="p">[</span><span class="n">base_conv_block</span><span class="p">(</span><span class="n">num_prev_img_channels</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_frames</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                                    <span class="n">num_filters</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_downsamples</span><span class="p">):</span>
+            <span class="n">down_lbl</span> <span class="o">+=</span> <span class="p">[</span><span class="n">base_conv_block</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                         <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
+            <span class="n">down_img</span> <span class="o">+=</span> <span class="p">[</span><span class="n">base_conv_block</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                         <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
+
+        <span class="c1"># Resnet blocks.</span>
+        <span class="n">res_flow</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">num_downsamples</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_res_blocks</span><span class="p">):</span>
+            <span class="n">res_flow</span> <span class="o">+=</span> <span class="p">[</span>
+                <span class="n">Res2dBlock</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                           <span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                           <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                           <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACN&#39;</span><span class="p">)]</span>
+
+        <span class="c1"># Upsample.</span>
+        <span class="n">up_flow</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_downsamples</span><span class="p">)):</span>
+            <span class="n">up_flow</span> <span class="o">+=</span> <span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Upsample</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+                        <span class="n">base_conv_block</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">get_num_filters</span><span class="p">(</span><span class="n">i</span><span class="p">))]</span>
+
+        <span class="n">conv_flow</span> <span class="o">=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">)]</span>
+        <span class="n">conv_mask</span> <span class="o">=</span> <span class="p">[</span><span class="n">Conv2dBlock</span><span class="p">(</span><span class="n">num_filters</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">down_lbl</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">down_lbl</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">down_img</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">down_img</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">res_flow</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">res_flow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">up_flow</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">up_flow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_flow</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">conv_flow</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_mask</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">conv_mask</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FlowGenerator.forward"><a class="viewcode-back" href="../../../imaginaire.generators.html#imaginaire.generators.vid2vid.FlowGenerator.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">img_prev</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Flow generator forward.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           label (4D tensor) : Input label tensor.</span>
+<span class="sd">           img_prev (4D tensor) : Previously generated image tensors.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - flow (4D tensor) : Generated flow map.</span>
+<span class="sd">              - mask (4D tensor) : Generated occlusion mask.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">downsample</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_lbl</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">down_img</span><span class="p">(</span><span class="n">img_prev</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res_flow</span><span class="p">(</span><span class="n">downsample</span><span class="p">)</span>
+        <span class="n">flow_feat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">up_flow</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+        <span class="n">flow</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_flow</span><span class="p">(</span><span class="n">flow_feat</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">flow_output_multiplier</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_mask</span><span class="p">(</span><span class="n">flow_feat</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">flow</span><span class="p">,</span> <span class="n">mask</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

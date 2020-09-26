@@ -1,0 +1,38 @@
+imaginaire.utils.visualization package
+======================================
+
+Submodules
+----------
+
+imaginaire.utils.visualization.common module
+--------------------------------------------
+
+.. automodule:: imaginaire.utils.visualization.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.visualization.face module
+------------------------------------------
+
+.. automodule:: imaginaire.utils.visualization.face
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.utils.visualization.pose module
+------------------------------------------
+
+.. automodule:: imaginaire.utils.visualization.pose
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.utils.visualization
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.layers.conv &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.layers.conv</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.layers.conv</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">SimpleNamespace</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">functional</span> <span class="k">as</span> <span class="n">F</span>
+
+<span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="n">ApplyNoise</span>
+
+
+<span class="k">class</span> <span class="nc">_BaseConvBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract wrapper class that wraps a torch convolution or linear layer</span>
+<span class="sd">    with normalization and nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="kn">from</span> <span class="nn">.nonlinearity</span> <span class="kn">import</span> <span class="n">get_nonlinearity_layer</span>
+        <span class="kn">from</span> <span class="nn">.weight_norm</span> <span class="kn">import</span> <span class="n">get_weight_norm_layer</span>
+        <span class="kn">from</span> <span class="nn">.activation_norm</span> <span class="kn">import</span> <span class="n">get_activation_norm_layer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight_norm_type</span> <span class="o">=</span> <span class="n">weight_norm_type</span>
+
+        <span class="c1"># Convolutional layer.</span>
+        <span class="k">if</span> <span class="n">weight_norm_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">weight_norm_params</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">()</span>
+        <span class="n">weight_norm</span> <span class="o">=</span> <span class="n">get_weight_norm_layer</span><span class="p">(</span>
+            <span class="n">weight_norm_type</span><span class="p">,</span> <span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">weight_norm_params</span><span class="p">))</span>
+        <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">weight_norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_conv_layer</span><span class="p">(</span>
+            <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span>
+            <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">))</span>
+
+        <span class="c1"># Noise injection layer.</span>
+        <span class="n">noise_layer</span> <span class="o">=</span> <span class="n">ApplyNoise</span><span class="p">()</span> <span class="k">if</span> <span class="n">apply_noise</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="c1"># Normalization layer.</span>
+        <span class="n">conv_before_norm</span> <span class="o">=</span> <span class="n">order</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">order</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+        <span class="n">norm_channels</span> <span class="o">=</span> <span class="n">out_channels</span> <span class="k">if</span> <span class="n">conv_before_norm</span> <span class="k">else</span> <span class="n">in_channels</span>
+        <span class="k">if</span> <span class="n">activation_norm_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">activation_norm_params</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">()</span>
+        <span class="n">activation_norm_layer</span> <span class="o">=</span> <span class="n">get_activation_norm_layer</span><span class="p">(</span>
+            <span class="n">norm_channels</span><span class="p">,</span>
+            <span class="n">activation_norm_type</span><span class="p">,</span>
+            <span class="n">input_dim</span><span class="p">,</span>
+            <span class="o">**</span><span class="nb">vars</span><span class="p">(</span><span class="n">activation_norm_params</span><span class="p">))</span>
+
+        <span class="c1"># Nonlinearity layer.</span>
+        <span class="n">nonlinearity_layer</span> <span class="o">=</span> <span class="n">get_nonlinearity_layer</span><span class="p">(</span>
+            <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="n">inplace_nonlinearity</span><span class="p">)</span>
+
+        <span class="c1"># Mapping from operation names to layers.</span>
+        <span class="n">mappings</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;conv&#39;</span><span class="p">:</span> <span class="n">conv_layer</span><span class="p">},</span>
+                    <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;norm&#39;</span><span class="p">:</span> <span class="n">activation_norm_layer</span><span class="p">},</span>
+                    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;nonlinearity&#39;</span><span class="p">:</span> <span class="n">nonlinearity_layer</span><span class="p">}}</span>
+
+        <span class="c1"># All layers in order.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleDict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">list</span><span class="p">(</span><span class="n">mappings</span><span class="p">[</span><span class="n">op</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">mappings</span><span class="p">[</span><span class="n">op</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span> <span class="ow">and</span> <span class="n">noise_layer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># Inject noise after convolution.</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;noise&#39;</span><span class="p">:</span> <span class="n">noise_layer</span><span class="p">})</span>
+
+        <span class="c1"># Whether this block expects conditional inputs.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditional</span> <span class="o">=</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">or</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">activation_norm_layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="c1"># Layers that require conditional inputs.</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span> <span class="nf">_get_conv_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                        <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                        <span class="n">input_dim</span><span class="p">):</span>
+        <span class="c1"># Returns the convolutional layer.</span>
+        <span class="k">if</span> <span class="n">input_dim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">layer_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">nn</span><span class="p">,</span> <span class="s1">&#39;Conv</span><span class="si">%d</span><span class="s1">d&#39;</span> <span class="o">%</span> <span class="n">input_dim</span><span class="p">)</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">layer_type</span><span class="p">(</span>
+                <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">layer</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">main_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_name</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;(&#39;</span>
+        <span class="n">child_lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">mod_str</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;conv&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_norm_type</span> <span class="o">!=</span> <span class="s1">&#39;none&#39;</span> <span class="ow">and</span> \
+                    <span class="bp">self</span><span class="o">.</span><span class="n">weight_norm_type</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="n">mod_str</span> <span class="o">=</span> <span class="n">mod_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> \
+                    <span class="s1">&#39;, weight_norm=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight_norm_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+            <span class="n">mod_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_addindent</span><span class="p">(</span><span class="n">mod_str</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">child_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mod_str</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_lines</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">main_str</span> <span class="o">+=</span> <span class="n">child_lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">main_str</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">  &#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">  &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">child_lines</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="n">main_str</span> <span class="o">+=</span> <span class="s1">&#39;)&#39;</span>
+        <span class="k">return</span> <span class="n">main_str</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_addindent</span><span class="p">(</span><span class="n">s_</span><span class="p">,</span> <span class="n">numSpaces</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s_</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="c1"># don&#39;t do anything for single-line stuff</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">s_</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="n">numSpaces</span> <span class="o">*</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">s</span>
+        <span class="k">return</span> <span class="n">s</span>
+
+
+<div class="viewcode-block" id="LinearBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.LinearBlock">[docs]</a><span class="k">class</span> <span class="nc">LinearBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``torch.nn.Linear`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_features (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_features (int): Number of channels in the output tensor.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, add</span>
+<span class="sd">            Gaussian noise with learnable magnitude after the</span>
+<span class="sd">            fully-connected layer.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: fully-connected,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_features</span><span class="p">,</span> <span class="n">out_features</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_features</span><span class="p">,</span> <span class="n">out_features</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span>
+                         <span class="kc">None</span><span class="p">,</span> <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Conv1dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.Conv1dBlock">[docs]</a><span class="k">class</span> <span class="nc">Conv1dBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``torch.nn.Conv1d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Conv2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.Conv2dBlock">[docs]</a><span class="k">class</span> <span class="nc">Conv2dBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``torch.nn.Conv2d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Conv3dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.Conv3dBlock">[docs]</a><span class="k">class</span> <span class="nc">Conv3dBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``torch.nn.Conv3d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BaseHyperConvBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract wrapper class that wraps a hyper convolutional layer</span>
+<span class="sd">    with normalization and nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                 <span class="n">is_hyper_conv</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_hyper_conv</span> <span class="o">=</span> <span class="n">is_hyper_conv</span>
+        <span class="k">if</span> <span class="n">is_hyper_conv</span><span class="p">:</span>
+            <span class="n">weight_norm_type</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+        <span class="k">if</span> <span class="n">is_hyper_norm</span><span class="p">:</span>
+            <span class="n">activation_norm_type</span> <span class="o">=</span> <span class="s1">&#39;hyper_&#39;</span> <span class="o">+</span> <span class="n">activation_norm_type</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_conv_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                        <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                        <span class="n">input_dim</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">input_dim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;HyperLinearBlock is not supported.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HyperConv&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_hyper_conv</span> <span class="k">else</span> <span class="s1">&#39;nn.Conv&#39;</span>
+            <span class="n">layer_type</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">d&#39;</span> <span class="o">%</span> <span class="n">input_dim</span><span class="p">)</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">layer_type</span><span class="p">(</span>
+                <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">layer</span>
+
+
+<div class="viewcode-block" id="HyperConv2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.HyperConv2dBlock">[docs]</a><span class="k">class</span> <span class="nc">HyperConv2dBlock</span><span class="p">(</span><span class="n">_BaseHyperConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``HyperConv2d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        is_hyper_conv (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            ``HyperConv2d``, otherwise use ``torch.nn.Conv2d``.</span>
+<span class="sd">        is_hyper_norm (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            hyper normalizations.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">is_hyper_conv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">is_hyper_conv</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HyperConv2d"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.HyperConv2d">[docs]</a><span class="k">class</span> <span class="nc">HyperConv2d</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Hyper Conv2d initialization.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Dummy parameter.</span>
+<span class="sd">        out_channels (int): Dummy parameter.</span>
+<span class="sd">        kernel_size (int or tuple): Dummy parameter.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution. Default: 1</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;):</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;``</span>
+<span class="sd">            or ``&#39;circular&#39;``.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True): If ``True``,</span>
+<span class="sd">            adds a learnable bias to the output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">padding</span> <span class="o">=</span> <span class="n">padding</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dilation</span> <span class="o">=</span> <span class="n">dilation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">groups</span> <span class="o">=</span> <span class="n">groups</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_bias</span> <span class="o">=</span> <span class="n">bias</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">padding_mode</span> <span class="o">=</span> <span class="n">padding_mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditional</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="HyperConv2d.forward"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.HyperConv2d.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">conv_weights</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Hyper Conv2d forward. Convolve x using the provided weight and bias.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (N x C x H x W tensor): Input tensor.</span>
+<span class="sd">            conv_weights (N x C2 x C1 x k x k tensor or list of tensors):</span>
+<span class="sd">                Convolution weights or [weight, bias].</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            y (N x C2 x H x W tensor): Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">conv_weights</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">conv_weight</span><span class="p">,</span> <span class="n">conv_bias</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">conv_weights</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+            <span class="n">conv_weight</span><span class="p">,</span> <span class="n">conv_bias</span> <span class="o">=</span> <span class="n">conv_weights</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">conv_weight</span><span class="p">,</span> <span class="n">conv_bias</span> <span class="o">=</span> <span class="n">conv_weights</span>
+
+        <span class="k">if</span> <span class="n">conv_weight</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+        <span class="k">if</span> <span class="n">conv_bias</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_bias</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;bias not provided but set to true during &#39;</span>
+                                 <span class="s1">&#39;initialization&#39;</span><span class="p">)</span>
+            <span class="n">conv_bias</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">padding_mode</span> <span class="o">!=</span> <span class="s1">&#39;zeros&#39;</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">padding_mode</span><span class="p">)</span>
+            <span class="n">padding</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">padding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">padding</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">yi</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span>
+                              <span class="n">weight</span><span class="o">=</span><span class="n">conv_weight</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">bias</span><span class="o">=</span><span class="n">conv_bias</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                              <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">,</span>
+                              <span class="n">dilation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">yi</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv_transpose2d</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">conv_weight</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                        <span class="n">bias</span><span class="o">=</span><span class="n">conv_bias</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span>
+                                        <span class="n">stride</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">),</span>
+                                        <span class="n">dilation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dilation</span><span class="p">,</span>
+                                        <span class="n">output_padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span>
+                                        <span class="n">groups</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">groups</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">yi</span><span class="p">])</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">yi</span>
+        <span class="k">return</span> <span class="n">y</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">_BasePartialConvBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract wrapper class that wraps a partial convolutional layer</span>
+<span class="sd">    with normalization and nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span> <span class="o">=</span> <span class="n">multi_channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span> <span class="o">=</span> <span class="n">return_mask</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partial_conv</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_conv_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                        <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                        <span class="n">input_dim</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">input_dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">layer_type</span> <span class="o">=</span> <span class="n">PartialConv2d</span>
+        <span class="k">elif</span> <span class="n">input_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">layer_type</span> <span class="o">=</span> <span class="n">PartialConv3d</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Partial conv only supports 2D and 3D conv now.&#39;</span><span class="p">)</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">layer_type</span><span class="p">(</span>
+            <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+            <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+            <span class="n">multi_channel</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">layer</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            mask_in (tensor, optional, default=``None``) If not ``None``,</span>
+<span class="sd">                it masks the valid input region.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - x (tensor): Output tensor.</span>
+<span class="sd">              - mask_out (tensor, optional): Masks the valid output region.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mask_out</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;partial_conv&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_in</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">tuple</span><span class="p">:</span>
+                    <span class="n">x</span><span class="p">,</span> <span class="n">mask_out</span> <span class="o">=</span> <span class="n">x</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">mask_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">mask_out</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+
+<div class="viewcode-block" id="PartialConv2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv2dBlock">[docs]</a><span class="k">class</span> <span class="nc">PartialConv2dBlock</span><span class="p">(</span><span class="n">_BasePartialConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``PartialConv2d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">        multi_channel (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            different masks for different channels.</span>
+<span class="sd">        return_mask (bool, optional, default=True): If ``True``, the</span>
+<span class="sd">            forward call also returns a new mask.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PartialConv3dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv3dBlock">[docs]</a><span class="k">class</span> <span class="nc">PartialConv3dBlock</span><span class="p">(</span><span class="n">_BasePartialConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``PartialConv3d`` with normalization and</span>
+<span class="sd">    nonlinearity.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">        multi_channel (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            different masks for different channels.</span>
+<span class="sd">        return_mask (bool, optional, default=True): If ``True``, the</span>
+<span class="sd">            forward call also returns a new mask.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_MultiOutBaseConvBlock</span><span class="p">(</span><span class="n">_BaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract wrapper class that wraps a hyper convolutional layer with</span>
+<span class="sd">    normalization and nonlinearity. It can return multiple outputs, if some</span>
+<span class="sd">    layers in the block return more than one output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multiple_outputs</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - x (tensor): Main output tensor.</span>
+<span class="sd">              - other_outputs (list of tensors): Other output tensors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">other_outputs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;multiple_outputs&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">x</span><span class="p">,</span> <span class="n">other_output</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                <span class="n">other_outputs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">other_output</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">other_outputs</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="MultiOutConv2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.MultiOutConv2dBlock">[docs]</a><span class="k">class</span> <span class="nc">MultiOutConv2dBlock</span><span class="p">(</span><span class="n">_MultiOutBaseConvBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A Wrapper class that wraps ``torch.nn.Conv2d`` with normalization and</span>
+<span class="sd">    nonlinearity. It can return multiple outputs, if some layers in the block</span>
+<span class="sd">    return more than one output.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int): Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int): Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int or tuple): Size of the convolving kernel.</span>
+<span class="sd">        stride (int or tuple, optional, default=1):</span>
+<span class="sd">            Stride of the convolution.</span>
+<span class="sd">        padding (int or tuple, optional, default=0):</span>
+<span class="sd">            Zero-padding added to both sides of the input.</span>
+<span class="sd">        dilation (int or tuple, optional, default=1):</span>
+<span class="sd">            Spacing between kernel elements.</span>
+<span class="sd">        groups (int, optional, default=1): Number of blocked connections</span>
+<span class="sd">            from input channels to output channels.</span>
+<span class="sd">        bias (bool, optional, default=True):</span>
+<span class="sd">            If ``True``, adds a learnable bias to the output.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layer.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        order (str, optional, default=&#39;CNA&#39;): Order of operations.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">            For example, a block initialized with ``order=&#39;CNA&#39;`` will</span>
+<span class="sd">            do convolution first, then normalization, then nonlinearity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNA&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span>
+                         <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># BSD 3-Clause License</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2018, NVIDIA CORPORATION. All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># Author &amp; Contact: Guilin Liu (guilinl@nvidia.com)</span>
+<span class="c1">###############################################################################</span>
+<div class="viewcode-block" id="PartialConv2d"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv2d">[docs]</a><span class="k">class</span> <span class="nc">PartialConv2d</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Partial 2D convolution in</span>
+<span class="sd">    &quot;Image inpainting for irregular holes using partial convolutions.&quot;</span>
+<span class="sd">    Liu et al., ECCV 2018</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># whether the mask is multi-channel or not</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span> <span class="o">=</span> <span class="n">multi_channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span> <span class="o">=</span> <span class="n">return_mask</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PartialConv2d</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="o">.</span><span class="n">shape</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slide_winsize</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_size</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partial_conv</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="PartialConv2d.forward"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv2d.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            mask_in (tensor, optional, default=``None``) If not ``None``,</span>
+<span class="sd">                it masks the valid input region.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+        <span class="k">if</span> <span class="n">mask_in</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_size</span> <span class="o">!=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_size</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+            <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">!=</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">mask_in</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># If mask is not provided, create a mask.</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span><span class="p">:</span>
+                        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                          <span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                          <span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                          <span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                          <span class="n">x</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">mask</span> <span class="o">=</span> <span class="n">mask_in</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="p">,</span>
+                                            <span class="n">bias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span>
+                                            <span class="n">padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span>
+                                            <span class="n">dilation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+                <span class="c1"># For mixed precision training, eps from 1e-8 to 1e-6.</span>
+                <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-6</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slide_winsize</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span><span class="p">)</span>
+
+        <span class="n">raw_out</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PartialConv2d</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span> <span class="k">if</span> <span class="n">mask_in</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bias_view</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">raw_out</span> <span class="o">-</span> <span class="n">bias_view</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias_view</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">raw_out</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_ratio</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_mask</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span></div></div>
+
+
+<div class="viewcode-block" id="PartialConv3d"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv3d">[docs]</a><span class="k">class</span> <span class="nc">PartialConv3d</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv3d</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Partial 3D convolution in</span>
+<span class="sd">    &quot;Image inpainting for irregular holes using partial convolutions.&quot;</span>
+<span class="sd">    Liu et al., ECCV 2018</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># whether the mask is multi-channel or not</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span> <span class="o">=</span> <span class="n">multi_channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span> <span class="o">=</span> <span class="n">return_mask</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PartialConv3d</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_channel</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> \
+                <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+        <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="o">.</span><span class="n">shape</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slide_winsize</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">shape</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partial_conv</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="PartialConv3d.forward"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.conv.PartialConv3d.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            mask_in (tensor, optional, default=``None``) If not ``None``, it</span>
+<span class="sd">                masks the valid input region.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">mask_in</span>
+            <span class="n">update_mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv3d</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight_maskUpdater</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                   <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span>
+                                   <span class="n">dilation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+            <span class="n">mask_ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slide_winsize</span> <span class="o">/</span> <span class="p">(</span><span class="n">update_mask</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span>
+            <span class="n">update_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">update_mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">mask_ratio</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">mask_ratio</span><span class="p">,</span> <span class="n">update_mask</span><span class="p">)</span>
+
+        <span class="n">raw_out</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PartialConv3d</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mask_in</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bias_view</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">raw_out</span> <span class="o">-</span> <span class="n">bias_view</span><span class="p">,</span> <span class="n">mask_ratio</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias_view</span>
+            <span class="k">if</span> <span class="n">mask_in</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">update_mask</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">raw_out</span><span class="p">,</span> <span class="n">mask_ratio</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_mask</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">update_mask</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

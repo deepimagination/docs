@@ -1,0 +1,70 @@
+imaginaire.layers package
+=========================
+
+Submodules
+----------
+
+imaginaire.layers.activation\_norm module
+-----------------------------------------
+
+.. automodule:: imaginaire.layers.activation_norm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.conv module
+-----------------------------
+
+.. automodule:: imaginaire.layers.conv
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.misc module
+-----------------------------
+
+.. automodule:: imaginaire.layers.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.non\_local module
+-----------------------------------
+
+.. automodule:: imaginaire.layers.non_local
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.nonlinearity module
+-------------------------------------
+
+.. automodule:: imaginaire.layers.nonlinearity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.residual module
+---------------------------------
+
+.. automodule:: imaginaire.layers.residual
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+imaginaire.layers.weight\_norm module
+-------------------------------------
+
+.. automodule:: imaginaire.layers.weight_norm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: imaginaire.layers
+   :members:
+   :undoc-members:
+   :show-inheritance:

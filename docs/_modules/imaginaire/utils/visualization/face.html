@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.visualization.face &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html">
+          
+
+          
+            
+            <img src="../../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.utils.visualization.face</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.utils.visualization.face</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">medfilt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.io</span> <span class="kn">import</span> <span class="n">get_checkpoint</span>
+
+
+<div class="viewcode-block" id="connect_face_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.connect_face_keypoints">[docs]</a><span class="k">def</span> <span class="nf">connect_face_keypoints</span><span class="p">(</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span><span class="p">,</span> <span class="n">original_h</span><span class="p">,</span>
+                           <span class="n">original_w</span><span class="p">,</span> <span class="n">is_flipped</span><span class="p">,</span> <span class="n">cfgdata</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Connect the face keypoints to edges and draw the sketch.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        resize_h (int): Height the input image was resized to.</span>
+<span class="sd">        resize_w (int): Width the input image was resized to.</span>
+<span class="sd">        crop_h (int): Height the input image was cropped.</span>
+<span class="sd">        crop_w (int): Width the input image was cropped.</span>
+<span class="sd">        original_h (int): Original height of the input image.</span>
+<span class="sd">        original_w (int): Original width of the input image.</span>
+<span class="sd">        is_flipped (bool): Is the input image flipped.</span>
+<span class="sd">        cfgdata (obj): Data configuration.</span>
+<span class="sd">        keypoints (NxKx2 numpy array): Facial landmarks (with K keypoints).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (list of HxWxC numpy array): Drawn label map.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfgdata</span><span class="p">,</span> <span class="s1">&#39;for_face_dataset&#39;</span><span class="p">):</span>
+        <span class="n">face_cfg</span> <span class="o">=</span> <span class="n">cfgdata</span><span class="o">.</span><span class="n">for_face_dataset</span>
+        <span class="c1"># Whether to add the upper part of face to label map.</span>
+        <span class="n">add_upper_face</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">face_cfg</span><span class="p">,</span> <span class="s1">&#39;add_upper_face&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># Whether to add distance transform output to label map.</span>
+        <span class="n">add_dist_map</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">face_cfg</span><span class="p">,</span> <span class="s1">&#39;add_distance_transform&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># Whether to add positional encoding to label map.</span>
+        <span class="n">add_pos_encode</span> <span class="o">=</span> <span class="n">add_dist_map</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span>
+            <span class="n">face_cfg</span><span class="p">,</span> <span class="s1">&#39;add_positional_encode&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">add_upper_face</span> <span class="o">=</span> <span class="n">add_dist_map</span> <span class="o">=</span> <span class="n">add_pos_encode</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># Mapping from keypoint index to facial part.</span>
+    <span class="n">part_list</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span>
+        <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">68</span><span class="p">,</span> <span class="mi">83</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">add_upper_face</span> <span class="k">else</span> <span class="p">[])],</span>  <span class="c1"># ai_emoji</span>
+                      <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">22</span><span class="p">)],</span>  <span class="c1"># right eyebrow</span>
+                      <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">27</span><span class="p">)],</span>  <span class="c1"># left eyebrow</span>
+                      <span class="p">[[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span> <span class="nb">range</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">28</span><span class="p">]],</span>  <span class="c1"># nose</span>
+                      <span class="p">[[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">39</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">36</span><span class="p">]],</span>  <span class="c1"># right eye</span>
+                      <span class="p">[[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">42</span><span class="p">]],</span>  <span class="c1"># left eye</span>
+                      <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">48</span><span class="p">],</span>
+                       <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">),</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">60</span><span class="p">]],</span>  <span class="c1"># mouth and tongue</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">add_upper_face</span><span class="p">:</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">17</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="n">baseline_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">pts</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pts</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">upper_pts</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">upper_pts</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline_y</span> <span class="o">+</span> <span class="p">(</span>
+                <span class="n">baseline_y</span> <span class="o">-</span> <span class="n">upper_pts</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">//</span> <span class="mi">3</span>
+        <span class="n">keypoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">upper_pts</span><span class="p">[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]))</span>
+
+    <span class="n">edge_len</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Interpolate 3 keypoints to form a curve when drawing edges.</span>
+    <span class="n">bw</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">resize_h</span> <span class="o">//</span> <span class="mi">256</span><span class="p">)</span>  <span class="c1"># Width of the stroke.</span>
+
+    <span class="n">outputs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">t_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="c1"># Edge map for the face region from keypoints.</span>
+        <span class="n">im_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">im_dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">edge_list</span> <span class="ow">in</span> <span class="n">part_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">e</span><span class="p">,</span> <span class="n">edge</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">edge_list</span><span class="p">):</span>
+                <span class="c1"># Edge map for the current edge.</span>
+                <span class="n">im_edge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+                <span class="c1"># Divide a long edge into multiple small edges when drawing.</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">edge</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">edge_len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">sub_edge</span> <span class="o">=</span> <span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">edge_len</span><span class="p">]</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">t_idx</span><span class="p">,</span> <span class="n">sub_edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+                    <span class="n">y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">t_idx</span><span class="p">,</span> <span class="n">sub_edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+                    <span class="c1"># Interp keypoints to get the curve shape.</span>
+                    <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span> <span class="o">=</span> <span class="n">interp_points</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                    <span class="n">draw_edge</span><span class="p">(</span><span class="n">im_edges</span><span class="p">,</span> <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="n">bw</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">add_dist_map</span><span class="p">:</span>
+                        <span class="n">draw_edge</span><span class="p">(</span><span class="n">im_edge</span><span class="p">,</span> <span class="n">curve_x</span><span class="p">,</span> <span class="n">curve_y</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="n">bw</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">add_dist_map</span><span class="p">:</span>
+                    <span class="c1"># Add distance transform map on each facial part.</span>
+                    <span class="n">im_dist</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">distanceTransform</span><span class="p">(</span><span class="mi">255</span> <span class="o">-</span> <span class="n">im_edge</span><span class="p">,</span>
+                                                    <span class="n">cv2</span><span class="o">.</span><span class="n">DIST_L1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+                    <span class="n">im_dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">((</span><span class="n">im_dist</span> <span class="o">/</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+                    <span class="n">im_dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">im_dists</span><span class="p">,</span> <span class="n">im_dist</span><span class="p">))</span>
+
+                <span class="k">if</span> <span class="n">add_pos_encode</span> <span class="ow">and</span> <span class="n">e</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># Add positional encoding for the first edge.</span>
+                    <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+                    <span class="n">im_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>  <span class="c1"># noqa: E741</span>
+                        <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="n">im_dist</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">-</span> <span class="mf">127.5</span><span class="p">)</span> <span class="o">/</span> <span class="mf">127.5</span>
+                        <span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">l</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist</span><span class="p">)</span>
+                        <span class="n">cos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">l</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist</span><span class="p">)</span>
+                        <span class="n">im_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">im_pos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">))</span>
+
+        <span class="c1"># Combine all components to form the final label map.</span>
+        <span class="k">if</span> <span class="n">add_dist_map</span><span class="p">:</span>
+            <span class="n">im_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">im_edges</span><span class="p">,</span> <span class="n">im_dists</span><span class="p">))</span>
+        <span class="n">im_edges</span> <span class="o">=</span> <span class="n">im_edges</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
+        <span class="k">if</span> <span class="n">add_pos_encode</span><span class="p">:</span>
+            <span class="n">im_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">im_edges</span><span class="p">,</span> <span class="n">im_pos</span><span class="p">))</span>
+        <span class="n">outputs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">im_edges</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">outputs</span></div>
+
+
+<div class="viewcode-block" id="normalize_and_connect_face_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.normalize_and_connect_face_keypoints">[docs]</a><span class="k">def</span> <span class="nf">normalize_and_connect_face_keypoints</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">is_inference</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Normalize face keypoints w.r.t. reference face keypoints and connect</span>
+<span class="sd">    keypoints to form 2D images.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg (obj): Data configuration.</span>
+<span class="sd">        is_inference (bool): Is doing inference or not.</span>
+<span class="sd">        data (dict): Input data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict): Output data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">is_inference</span>
+    <span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ref_keypoints</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Get the normalization params and prev data if it&#39;s been computed before.</span>
+    <span class="n">dist_scales</span> <span class="o">=</span> <span class="n">prev_keypoints</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="s1">&#39;common_attr&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="s1">&#39;prev_data&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">]:</span>
+        <span class="n">dist_scales</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;dist_scales&#39;</span><span class="p">]</span>
+        <span class="n">prev_keypoints</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;prev_data&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">concat</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">now</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Concat prev and now frames in first dimension, up to t frames.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">prev</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">now</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">prev</span><span class="p">,</span> <span class="n">now</span><span class="p">])[</span><span class="o">-</span><span class="n">t</span><span class="p">:]</span>
+
+    <span class="c1"># Normalize face keypoints w.r.t. reference face keypoints.</span>
+    <span class="n">keypoints</span><span class="p">,</span> <span class="n">dist_scales</span> <span class="o">=</span> \
+        <span class="n">normalize_face_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ref_keypoints</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dist_scales</span><span class="p">,</span>
+                                 <span class="n">momentum</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">for_face_dataset</span><span class="p">,</span>
+                                                  <span class="s1">&#39;normalize_momentum&#39;</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">))</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="c1"># Temporally smooth the face keypoints by median filtering.</span>
+    <span class="n">ks</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">for_face_dataset</span><span class="p">,</span> <span class="s1">&#39;smooth_kernel_size&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">concat_keypoints</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">prev_keypoints</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">,</span> <span class="n">ks</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ks</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">concat_keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">ks</span><span class="p">:</span>
+        <span class="n">keypoints</span> <span class="o">=</span> <span class="n">smooth_face_keypoints</span><span class="p">(</span><span class="n">concat_keypoints</span><span class="p">,</span> <span class="n">ks</span><span class="p">)</span>
+
+    <span class="c1"># Store the computed params.</span>
+    <span class="k">if</span> <span class="s1">&#39;common_attr&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;dist_scales&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_scales</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;common_attr&#39;</span><span class="p">][</span><span class="s1">&#39;prev_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">concat_keypoints</span>
+
+    <span class="c1"># Draw the keypoints to turn them into images.</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">kpt</span> <span class="ow">in</span> <span class="p">[</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">ref_keypoints</span><span class="p">]:</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">connect_face_keypoints</span><span class="p">(</span><span class="n">resize_h</span><span class="p">,</span> <span class="n">resize_w</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                                       <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">kpt</span><span class="p">)</span>
+        <span class="n">labels</span> <span class="o">+=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">label</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;few_shot_label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="smooth_face_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.smooth_face_keypoints">[docs]</a><span class="k">def</span> <span class="nf">smooth_face_keypoints</span><span class="p">(</span><span class="n">concat_keypoints</span><span class="p">,</span> <span class="n">ks</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot; Temporally smooth the face keypoints by median filtering.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        concat_keypoints (TxKx2 numpy array): Face keypoints to be filtered.</span>
+<span class="sd">        ks (int): Filter kernel size.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (1xKx2 numpy array): Output face keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Median filtering.</span>
+    <span class="n">filtered_keypoints</span> <span class="o">=</span> <span class="n">medfilt</span><span class="p">(</span><span class="n">concat_keypoints</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="n">ks</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Fill in any zero keypoints with the value from previous frame.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">filtered_keypoints</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">filtered_keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">kpt_prev</span> <span class="o">=</span> <span class="n">filtered_keypoints</span><span class="p">[</span><span class="n">t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">kpt_cur</span> <span class="o">=</span> <span class="n">filtered_keypoints</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+            <span class="n">kpt_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">kpt_cur</span><span class="p">,</span> <span class="n">kpt_prev</span><span class="p">)</span>
+            <span class="n">kpt_cur</span><span class="p">[</span><span class="n">kpt_cur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">kpt_max</span><span class="p">[</span><span class="n">kpt_cur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">filtered_keypoints</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">kpt_cur</span>
+    <span class="n">keypoints</span> <span class="o">=</span> <span class="n">filtered_keypoints</span><span class="p">[</span><span class="n">ks</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span> <span class="n">ks</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">keypoints</span></div>
+
+
+<div class="viewcode-block" id="normalize_face_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.normalize_face_keypoints">[docs]</a><span class="k">def</span> <span class="nf">normalize_face_keypoints</span><span class="p">(</span><span class="n">keypoints</span><span class="p">,</span> <span class="n">ref_keypoints</span><span class="p">,</span> <span class="n">dist_scales</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                             <span class="n">momentum</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Normalize face keypoints w.r.t. the reference face keypoints.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keypoints (Kx2 numpy array): Target facial keypoints to be normalized.</span>
+<span class="sd">        ref_keypoints (Kx2 numpy array): Reference facial keypoints.</span>
+<span class="sd">        dist_scales (list of list of floats): Normalization params.</span>
+<span class="sd">        momentum (float): Temporal momentum for the normalization params.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (Kx2 numpy array): Normalized facial keypoints.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">keypoints</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">68</span><span class="p">:</span>
+        <span class="n">central_keypoints</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+        <span class="n">part_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">26</span><span class="p">],</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span> <span class="p">[</span><span class="mi">33</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span> <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="mi">44</span><span class="p">],</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">43</span><span class="p">],</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">46</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="mi">54</span><span class="p">],</span> <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">53</span><span class="p">],</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">],</span> <span class="p">[</span><span class="mi">51</span><span class="p">],</span> <span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">59</span><span class="p">],</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">57</span><span class="p">],</span>
+                     <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span> <span class="p">[</span><span class="mi">61</span><span class="p">,</span> <span class="mi">63</span><span class="p">],</span> <span class="p">[</span><span class="mi">62</span><span class="p">],</span> <span class="p">[</span><span class="mi">65</span><span class="p">,</span> <span class="mi">67</span><span class="p">],</span> <span class="p">[</span><span class="mi">66</span><span class="p">]</span>
+                     <span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input keypoints type not supported.&#39;</span><span class="p">)</span>
+
+    <span class="n">face_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">keypoints</span><span class="p">[</span><span class="n">central_keypoints</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ref_face_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ref_keypoints</span><span class="p">[</span><span class="n">central_keypoints</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_mean_dists</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">face_cen</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get mean distances of the points from face center.&quot;&quot;&quot;</span>
+        <span class="n">mean_dists_x</span><span class="p">,</span> <span class="n">mean_dists_y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">pts_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">pt</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pts</span><span class="p">):</span>
+            <span class="n">mean_dists_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">pt</span> <span class="o">-</span> <span class="n">pts_cen</span><span class="p">))</span>
+            <span class="n">mean_dists_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">pts_cen</span> <span class="o">-</span> <span class="n">face_cen</span><span class="p">))</span>
+        <span class="n">mean_dist_x</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">mean_dists_x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_dists_x</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-3</span>
+        <span class="n">mean_dist_y</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">mean_dists_y</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_dists_y</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-3</span>
+        <span class="k">return</span> <span class="n">mean_dist_x</span><span class="p">,</span> <span class="n">mean_dist_y</span>
+
+    <span class="n">dist_scale_x</span><span class="p">,</span> <span class="n">dist_scale_y</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">part_list</span><span class="p">),</span> \
+                                 <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">part_list</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dist_scales</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dist_scale_x_prev</span> <span class="o">=</span> <span class="n">dist_scale_y_prev</span> <span class="o">=</span> <span class="n">img_scale</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dist_scale_x_prev</span><span class="p">,</span> <span class="n">dist_scale_y_prev</span><span class="p">,</span> <span class="n">img_scale</span> <span class="o">=</span> <span class="n">dist_scales</span>
+    <span class="k">if</span> <span class="n">img_scale</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">img_scale</span> <span class="o">=</span> <span class="p">(</span><span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> \
+                    <span class="o">/</span> <span class="p">(</span><span class="n">ref_keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">ref_keypoints</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pts_idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">part_list</span><span class="p">):</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">pts</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">ref_pts</span> <span class="o">=</span> <span class="n">ref_keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span>
+            <span class="n">mean_dist_x</span><span class="p">,</span> <span class="n">mean_dist_y</span> <span class="o">=</span> <span class="n">get_mean_dists</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">face_cen</span><span class="p">)</span>
+            <span class="n">ref_dist_x</span><span class="p">,</span> <span class="n">ref_dist_y</span> <span class="o">=</span> <span class="n">get_mean_dists</span><span class="p">(</span><span class="n">ref_pts</span><span class="p">,</span> <span class="n">ref_face_cen</span><span class="p">)</span>
+            <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_dist_x</span> <span class="o">/</span> <span class="n">mean_dist_x</span> <span class="o">*</span> <span class="n">img_scale</span>
+            <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref_dist_y</span> <span class="o">/</span> <span class="n">mean_dist_y</span> <span class="o">*</span> <span class="n">img_scale</span>
+            <span class="k">if</span> <span class="n">dist_scale_x_prev</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_scale_x_prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">momentum</span> <span class="o">+</span> \
+                    <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">momentum</span><span class="p">)</span>
+                <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist_scale_y_prev</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">momentum</span> <span class="o">+</span> \
+                    <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">momentum</span><span class="p">)</span>
+
+            <span class="n">pts_cen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">pts</span> <span class="o">=</span> <span class="p">(</span><span class="n">pts</span> <span class="o">-</span> <span class="n">pts_cen</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist_scale_x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> \
+                  <span class="p">(</span><span class="n">pts_cen</span> <span class="o">-</span> <span class="n">face_cen</span><span class="p">)</span> <span class="o">*</span> <span class="n">dist_scale_y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">face_cen</span>
+            <span class="n">keypoints</span><span class="p">[</span><span class="n">pts_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">pts</span>
+
+    <span class="k">return</span> <span class="n">keypoints</span><span class="p">,</span> <span class="p">[</span><span class="n">dist_scale_x</span><span class="p">,</span> <span class="n">dist_scale_y</span><span class="p">,</span> <span class="n">img_scale</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="npy_to_tensor"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.npy_to_tensor">[docs]</a><span class="k">def</span> <span class="nf">npy_to_tensor</span><span class="p">(</span><span class="n">keypoints</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert numpy array to pytorch tensor.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">keypoints</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_dlib_landmarks_from_image"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.get_dlib_landmarks_from_image">[docs]</a><span class="k">def</span> <span class="nf">get_dlib_landmarks_from_image</span><span class="p">(</span>
+        <span class="n">imgs</span><span class="p">,</span> <span class="n">predictor_path</span><span class="o">=</span><span class="s1">&#39;shape_predictor_68_face_landmarks.dat&#39;</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get face keypoints from an image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        imgs (N x 3 x H x W tensor or N x H x W x 3 numpy array): Input images.</span>
+<span class="sd">        predictor_path (str): Path to the predictor model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">dlib</span>
+    <span class="n">predictor_path</span> <span class="o">=</span> <span class="n">get_checkpoint</span><span class="p">(</span><span class="n">predictor_path</span><span class="p">,</span>
+                                    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;1l9zT-AI1yKlfyAb_wl_RjLBSaiWQr8dr&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">imgs</span><span class="p">)</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">imgs</span> <span class="o">=</span> <span class="p">((</span><span class="n">imgs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">byte</span><span class="p">()</span>
+        <span class="n">imgs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">imgs</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">detector</span> <span class="o">=</span> <span class="n">dlib</span><span class="o">.</span><span class="n">get_frontal_face_detector</span><span class="p">()</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">dlib</span><span class="o">.</span><span class="n">shape_predictor</span><span class="p">(</span><span class="n">predictor_path</span><span class="p">)</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">imgs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imgs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">imgs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dets</span> <span class="o">=</span> <span class="n">detector</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Only returns the first face.</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="n">predictor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dets</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">68</span><span class="p">):</span>
+                <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">x</span>
+                <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">part</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">points</span></div>
+
+
+<div class="viewcode-block" id="get_126_landmarks_from_image"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.get_126_landmarks_from_image">[docs]</a><span class="k">def</span> <span class="nf">get_126_landmarks_from_image</span><span class="p">(</span><span class="n">imgs</span><span class="p">,</span> <span class="n">landmarks_network</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get face keypoints from an image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        imgs (Nx3xHxW tensor or NxHxWx3 numpy array):</span>
+<span class="sd">        Input images.</span>
+<span class="sd">        landmarks_network (obj): The landmark detection network.</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        (Nx126x2 numpy array): Predicted landmarks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">imgs</span><span class="p">)</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">imgs</span> <span class="o">=</span> <span class="p">((</span><span class="n">imgs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">byte</span><span class="p">()</span>
+        <span class="n">imgs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">imgs</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">(),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">landmarks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imgs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">imgs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">out_boxes</span><span class="p">,</span> <span class="n">landmark</span> <span class="o">=</span> \
+            <span class="n">landmarks_network</span><span class="o">.</span><span class="n">get_face_boxes_and_landmarks</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">landmark</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Pick the largest face in the image.</span>
+            <span class="n">face_size_max</span> <span class="o">=</span> <span class="n">face_index</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">out_box</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">out_boxes</span><span class="p">):</span>
+                <span class="n">face_size</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">out_box</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">out_box</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                <span class="n">out_box</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">out_box</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">face_size</span> <span class="o">&gt;</span> <span class="n">face_size_max</span><span class="p">:</span>
+                    <span class="n">face_size_max</span> <span class="o">=</span> <span class="n">face_size</span>
+                    <span class="n">face_index</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">landmark</span> <span class="o">=</span> <span class="n">landmark</span><span class="p">[</span><span class="n">face_index</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">landmark</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">landmark</span> <span class="o">=</span> <span class="n">landmark</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">landmark</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">126</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">landmarks</span> <span class="o">+=</span> <span class="p">[</span><span class="n">landmark</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]]</span>
+    <span class="n">landmarks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">landmarks</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">landmarks</span></div>
+
+
+<div class="viewcode-block" id="convert_face_landmarks_to_image"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.convert_face_landmarks_to_image">[docs]</a><span class="k">def</span> <span class="nf">convert_face_landmarks_to_image</span><span class="p">(</span><span class="n">cfgdata</span><span class="p">,</span> <span class="n">landmarks</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span>
+                                    <span class="n">output_tensor</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpu_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Convert the facial landmarks to a label map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfgdata (obj): Data configuration.</span>
+<span class="sd">        landmarks</span>
+<span class="sd">        output_size (tuple of int): H, W of output label map.</span>
+<span class="sd">        output_tensor (bool): Output tensors instead of numpy arrays.</span>
+<span class="sd">        cpu_only (bool): Output CPU tensor only.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (NxCxHxW tensor or list of HxWxC numpy arrays): Label maps.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">output_size</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">connect_face_keypoints</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span>
+                                    <span class="n">cfgdata</span><span class="p">,</span> <span class="n">landmarks</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">output_tensor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">labels</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+              <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cpu_only</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">labels</span>
+    <span class="k">return</span> <span class="n">labels</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="add_face_keypoints"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.add_face_keypoints">[docs]</a><span class="k">def</span> <span class="nf">add_face_keypoints</span><span class="p">(</span><span class="n">label_map</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">keypoints</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Add additional keypoints to label map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        label_map (Nx1xHxW tensor or None)</span>
+<span class="sd">        image (Nx3xHxW tensor)</span>
+<span class="sd">        keypoints (NxKx2 tensor)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">label_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">label_map</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)[:,</span> <span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">keypoints</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">keypoints</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">((</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h</span><span class="p">)</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>
+    <span class="n">bs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">label_map</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">expand_as</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">label_map</span><span class="p">[</span><span class="n">bs</span><span class="p">,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">label_map</span></div>
+
+
+<div class="viewcode-block" id="draw_edge"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.draw_edge">[docs]</a><span class="k">def</span> <span class="nf">draw_edge</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">draw_end_points</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set colors given a list of x and y coordinates for the edge.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        im (HxWxC numpy array): Canvas to draw.</span>
+<span class="sd">        x (1D numpy array): x coordinates of the edge.</span>
+<span class="sd">        y (1D numpy array): y coordinates of the edge.</span>
+<span class="sd">        bw (int): Width of the stroke.</span>
+<span class="sd">        color (list or tuple of int): Color to draw.</span>
+<span class="sd">        draw_end_points (bool): Whether to draw end points of the edge.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+        <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># Draw edge.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">bw</span><span class="p">,</span> <span class="n">bw</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">bw</span><span class="p">,</span> <span class="n">bw</span><span class="p">):</span>
+                <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">))</span>
+                <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">))</span>
+                <span class="n">set_color</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+
+        <span class="c1"># Draw endpoints.</span>
+        <span class="k">if</span> <span class="n">draw_end_points</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">bw</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bw</span> <span class="o">*</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">bw</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bw</span> <span class="o">*</span> <span class="mi">2</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">j</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">bw</span> <span class="o">**</span> <span class="mi">2</span><span class="p">):</span>
+                        <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">+</span> <span class="n">i</span><span class="p">))</span>
+                        <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">w</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">+</span> <span class="n">j</span><span class="p">))</span>
+                        <span class="n">set_color</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="set_color"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.set_color">[docs]</a><span class="k">def</span> <span class="nf">set_color</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set pixels of the image to the given color.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        im (HxWxC numpy array): Canvas to draw.</span>
+<span class="sd">        xx (1D numpy array): x coordinates of the pixels.</span>
+<span class="sd">        yy (1D numpy array): y coordinates of the pixels.</span>
+<span class="sd">        color (list or tuple of int): Color to draw.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">color</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">list</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">color</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">tuple</span><span class="p">:</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="n">color</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">color</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+                <span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+                                  <span class="o">+</span> <span class="n">color</span><span class="p">[</span><span class="n">c</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">im</span><span class="p">[</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="interp_points"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.interp_points">[docs]</a><span class="k">def</span> <span class="nf">interp_points</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Given the start and end points, interpolate to get a curve/line.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (1D array): x coordinates of the points to interpolate.</span>
+<span class="sd">        y (1D array): y coordinates of the points to interpolate.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - curve_x (1D array): x coordinates of the interpolated points.</span>
+<span class="sd">          - curve_y (1D array): y coordinates of the interpolated points.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">.</span><span class="n">max</span><span class="p">():</span>
+        <span class="n">curve_y</span><span class="p">,</span> <span class="n">curve_x</span> <span class="o">=</span> <span class="n">interp_points</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">curve_y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">linear</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+        <span class="n">curve_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">curve_y</span> <span class="o">=</span> <span class="n">linear</span><span class="p">(</span><span class="n">curve_x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">curve_y</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">curve_x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">curve_x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span> <span class="n">curve_y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="func"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.func">[docs]</a><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Quadratic fitting function.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">c</span></div>
+
+
+<div class="viewcode-block" id="linear"><a class="viewcode-back" href="../../../../imaginaire.utils.visualization.html#imaginaire.utils.visualization.face.linear">[docs]</a><span class="k">def</span> <span class="nf">linear</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Linear fitting function.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

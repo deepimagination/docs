@@ -1,0 +1,1270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.trainers package &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="imaginaire.utils package" href="imaginaire.utils.html" />
+    <link rel="prev" title="imaginaire.optimizers package" href="imaginaire.optimizers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">imaginaire_release</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="evaluate.html">evaluate module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="imaginaire.html">imaginaire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="imaginaire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">imaginaire_release</a> &raquo;</li>
+        
+          <li><a href="imaginaire.html">imaginaire package</a> &raquo;</li>
+        
+      <li>imaginaire.trainers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/imaginaire.trainers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imaginaire-trainers-package">
+<h1>imaginaire.trainers package<a class="headerlink" href="#imaginaire-trainers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-imaginaire.trainers.base">
+<span id="imaginaire-trainers-base-module"></span><h2>imaginaire.trainers.base module<a class="headerlink" href="#module-imaginaire.trainers.base" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.base.BaseTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.base.</code><code class="sig-name descname">BaseTrainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base trainer. We expect that all trainers inherit this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every trainer should implement its own discriminator forward.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.dis_update">
+<code class="sig-name descname">dis_update</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.dis_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.dis_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.end_of_epoch">
+<code class="sig-name descname">end_of_epoch</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">current_epoch</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.end_of_epoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.end_of_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Things to do after an epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p></li>
+<li><p><strong>current_epoch</strong> (<em>int</em>) – Current number of epoch.</p></li>
+<li><p><strong>current_iteration</strong> (<em>int</em>) – Current number of iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.end_of_iteration">
+<code class="sig-name descname">end_of_iteration</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">current_epoch</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.end_of_iteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.end_of_iteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Things to do after an iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p></li>
+<li><p><strong>current_epoch</strong> (<em>int</em>) – Current number of epoch.</p></li>
+<li><p><strong>current_iteration</strong> (<em>int</em>) – Current number of iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every trainer should implement its own generator forward.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.gen_update">
+<code class="sig-name descname">gen_update</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.gen_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.gen_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.load_checkpoint">
+<code class="sig-name descname">load_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">checkpoint_path</em>, <em class="sig-param">resume=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.load_checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.load_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load network weights, optimizer parameters, scheduler parameters
+from a checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>checkpoint_path</strong> (<em>str</em>) – Path to the checkpoint.</p></li>
+<li><p><strong>resume</strong> (<em>bool</em><em> or </em><em>None</em>) – If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, will determine whether or
+not to load optimizers in addition to network weights.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.pre_process">
+<code class="sig-name descname">pre_process</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.pre_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.pre_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom data pre-processing function. Utilize this function if you
+need to preprocess your data before sending it to the generator and
+discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.recalculate_model_average_batch_norm_statistics">
+<code class="sig-name descname">recalculate_model_average_batch_norm_statistics</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.recalculate_model_average_batch_norm_statistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.recalculate_model_average_batch_norm_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the statistics in the moving average model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_loader</strong> (<em>torch.utils.data.DataLoader</em>) – Data loader for
+estimating the statistics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.save_checkpoint">
+<code class="sig-name descname">save_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">current_epoch</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.save_checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.save_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save network weights, optimizer parameters, scheduler parameters
+to a checkpoint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.save_image">
+<code class="sig-name descname">save_image</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.save_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute visualization images and save them to the disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Location of the file.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.start_of_epoch">
+<code class="sig-name descname">start_of_epoch</code><span class="sig-paren">(</span><em class="sig-param">current_epoch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.start_of_epoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.start_of_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Things to do before an epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>current_epoch</strong> (<em>int</em>) – Current number of epoch.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.start_of_iteration">
+<code class="sig-name descname">start_of_iteration</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.start_of_iteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.start_of_iteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Things to do before an iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p></li>
+<li><p><strong>current_iteration</strong> (<em>int</em>) – Current number of iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em>, <em class="sig-param">output_dir</em>, <em class="sig-param">inference_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute results images for a batch of input data and save the
+results in the specified folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader</strong> (<em>torch.utils.data.DataLoader</em>) – PyTorch dataloader.</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em>) – Target location for saving the output image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.base.BaseTrainer.write_metrics">
+<code class="sig-name descname">write_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/base.html#BaseTrainer.write_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.base.BaseTrainer.write_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write metrics to the tensorboard.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.fs_vid2vid">
+<span id="imaginaire-trainers-fs-vid2vid-module"></span><h2>imaginaire.trainers.fs_vid2vid module<a class="headerlink" href="#module-imaginaire.trainers.fs_vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.fs_vid2vid.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.vid2vid.Trainer" title="imaginaire.trainers.vid2vid.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.vid2vid.Trainer</span></code></a></p>
+<p>Initialize vid2vid trainer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.finetune">
+<code class="sig-name descname">finetune</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">inference_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.finetune"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.finetune" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finetune the model for a few iterations on the inference data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.get_data_t">
+<code class="sig-name descname">get_data_t</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">data_prev</em>, <em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.get_data_t"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.get_data_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data at current time frame given the sequence of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data for current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator (for previous frame).</p></li>
+<li><p><strong>data_prev</strong> (<em>dict</em>) – Data for previous frame.</p></li>
+<li><p><strong>t</strong> (<em>int</em>) – Current time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.get_test_output_images">
+<code class="sig-name descname">get_test_output_images</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.get_test_output_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.get_test_output_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the visualization output of test function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.post_process">
+<code class="sig-name descname">post_process</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.post_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.post_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do any postprocessing of the data / output here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.pre_process">
+<code class="sig-name descname">pre_process</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.pre_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.pre_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do any data pre-processing here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.save_image">
+<code class="sig-name descname">save_image</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.save_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the output images to path.
+Note when the generate_raw_output is FALSE. Then,
+first_net_G_output[‘fake_raw_images’] is None and will not be displayed.
+In model average mode, we will plot the flow visualization twice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Save path.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Training data for current iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.fs_vid2vid.Trainer.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">test_data_loader</em>, <em class="sig-param">root_output_dir</em>, <em class="sig-param">inference_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/fs_vid2vid.html#Trainer.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.fs_vid2vid.Trainer.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run inference on the specified sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_data_loader</strong> (<em>object</em>) – Test data loader.</p></li>
+<li><p><strong>root_output_dir</strong> (<em>str</em>) – Location to dump outputs.</p></li>
+<li><p><strong>inference_args</strong> (<em>optional</em>) – Optional args.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.funit">
+<span id="imaginaire-trainers-funit-module"></span><h2>imaginaire.trainers.funit module<a class="headerlink" href="#module-imaginaire.trainers.funit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.funit.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.funit.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/funit.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.funit.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.base.BaseTrainer" title="imaginaire.trainers.base.BaseTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.base.BaseTrainer</span></code></a></p>
+<p>Reimplementation of the FUNIT (<a class="reference external" href="https://arxiv.org/abs/1905.01723">https://arxiv.org/abs/1905.01723</a>)
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.funit.Trainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/funit.html#Trainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.funit.Trainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for FUNIT discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.funit.Trainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/funit.html#Trainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.funit.Trainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for FUNIT generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.munit">
+<span id="imaginaire-trainers-munit-module"></span><h2>imaginaire.trainers.munit module<a class="headerlink" href="#module-imaginaire.trainers.munit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.munit.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.munit.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/munit.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.munit.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.base.BaseTrainer" title="imaginaire.trainers.base.BaseTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.base.BaseTrainer</span></code></a></p>
+<p>Reimplementation of the MUNIT (<a class="reference external" href="https://arxiv.org/abs/1804.04732">https://arxiv.org/abs/1804.04732</a>)
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.munit.Trainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/munit.html#Trainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.munit.Trainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for MUNIT discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.munit.Trainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/munit.html#Trainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.munit.Trainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for MUNIT generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.munit.Trainer.write_metrics">
+<code class="sig-name descname">write_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/munit.html#Trainer.write_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.munit.Trainer.write_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute metrics and save them to tensorboard</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.pix2pixHD">
+<span id="imaginaire-trainers-pix2pixhd-module"></span><h2>imaginaire.trainers.pix2pixHD module<a class="headerlink" href="#module-imaginaire.trainers.pix2pixHD" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.pix2pixHD.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.pix2pixHD.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/pix2pixHD.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.pix2pixHD.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.spade.Trainer" title="imaginaire.trainers.spade.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.spade.Trainer</span></code></a></p>
+<p>Initialize pix2pixHD trainer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.pix2pixHD.Trainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/pix2pixHD.html#Trainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.pix2pixHD.Trainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for pix2pixHD discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.pix2pixHD.Trainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/pix2pixHD.html#Trainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.pix2pixHD.Trainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for pix2pixHD generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.pix2pixHD.Trainer.pre_process">
+<code class="sig-name descname">pre_process</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/pix2pixHD.html#Trainer.pre_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.pix2pixHD.Trainer.pre_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data pre-processing step for the pix2pixHD method. It takes a
+dictionary as input where the dictionary contains a label field. The
+label field is the concatenation of the segmentation mask and the
+instance map. In this function, we will replace the instance map with
+an edge map. We will also add a “instance_maps” field to the dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Input dictionary.</p></li>
+<li><p><strong>data</strong><strong>[</strong><strong>'label'</strong><strong>]</strong> – Input label map where the last channel is the
+instance map.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.spade">
+<span id="imaginaire-trainers-spade-module"></span><h2>imaginaire.trainers.spade module<a class="headerlink" href="#module-imaginaire.trainers.spade" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.spade.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.spade.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/spade.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.spade.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.base.BaseTrainer" title="imaginaire.trainers.base.BaseTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.base.BaseTrainer</span></code></a></p>
+<p>Initialize SPADE trainer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<a class="reference internal" href="imaginaire.html#imaginaire.config.Config" title="imaginaire.config.Config"><em>Config</em></a>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.spade.Trainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/spade.html#Trainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.spade.Trainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for SPADE discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.spade.Trainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/spade.html#Trainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.spade.Trainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for SPADE generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.spade.Trainer.recalculate_model_average_batch_norm_statistics">
+<code class="sig-name descname">recalculate_model_average_batch_norm_statistics</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/spade.html#Trainer.recalculate_model_average_batch_norm_statistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.spade.Trainer.recalculate_model_average_batch_norm_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the statistics in the moving average model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_loader</strong> (<em>pytorch data loader</em>) – Data loader for estimating the
+statistics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.spade.Trainer.write_metrics">
+<code class="sig-name descname">write_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/spade.html#Trainer.write_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.spade.Trainer.write_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>If moving average model presents, we have two meters one for
+regular FID and one for average FID. If no moving average model,
+we just report average FID.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.unit">
+<span id="imaginaire-trainers-unit-module"></span><h2>imaginaire.trainers.unit module<a class="headerlink" href="#module-imaginaire.trainers.unit" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.unit.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.unit.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/unit.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.unit.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.base.BaseTrainer" title="imaginaire.trainers.base.BaseTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.base.BaseTrainer</span></code></a></p>
+<p>Reimplementation of the UNIT (<a class="reference external" href="https://arxiv.org/abs/1703.00848">https://arxiv.org/abs/1703.00848</a>)
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.unit.Trainer.dis_forward">
+<code class="sig-name descname">dis_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/unit.html#Trainer.dis_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.unit.Trainer.dis_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for UNIT discriminator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.unit.Trainer.gen_forward">
+<code class="sig-name descname">gen_forward</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/unit.html#Trainer.gen_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.unit.Trainer.gen_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the loss for UNIT generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.unit.Trainer.write_metrics">
+<code class="sig-name descname">write_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/unit.html#Trainer.write_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.unit.Trainer.write_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute metrics and save them to tensorboard</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.vid2vid">
+<span id="imaginaire-trainers-vid2vid-module"></span><h2>imaginaire.trainers.vid2vid module<a class="headerlink" href="#module-imaginaire.trainers.vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.vid2vid.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.vid2vid.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.base.BaseTrainer" title="imaginaire.trainers.base.BaseTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.base.BaseTrainer</span></code></a></p>
+<p>Initialize vid2vid trainer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.compute_GAN_losses">
+<code class="sig-name descname">compute_GAN_losses</code><span class="sig-paren">(</span><em class="sig-param">net_D_output</em>, <em class="sig-param">dis_update</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.compute_GAN_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.compute_GAN_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute GAN loss and feature matching loss.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>net_D_output</strong> (<em>dict</em>) – Output of the discriminator.</p></li>
+<li><p><strong>dis_update</strong> (<em>bool</em>) – Whether to update discriminator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.create_sequence_output_dir">
+<code class="sig-name descname">create_sequence_output_dir</code><span class="sig-paren">(</span><em class="sig-param">output_dir</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.create_sequence_output_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.create_sequence_output_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create output subdir for this sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_dir</strong> (<em>str</em>) – Root output dir.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – LMDB key which contains sequence name and file name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output subdir for this sequence.
+seq_name (str): Name of this sequence.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_dir (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.dis_update">
+<code class="sig-name descname">dis_update</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.dis_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.dis_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>The update is already done in gen_update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.gen_frames">
+<code class="sig-name descname">gen_frames</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">use_model_average=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.gen_frames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.gen_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a sequence of frames given a sequence of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>use_model_average</strong> (<em>bool</em>) – Whether to use model average
+for update or not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.gen_update">
+<code class="sig-name descname">gen_update</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.gen_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.gen_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the vid2vid generator. We update in the fashion of
+dis_update (frame 1), gen_update (frame 1),
+dis_update (frame 2), gen_update (frame 2), … in each iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.get_data_t">
+<code class="sig-name descname">get_data_t</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">data_prev</em>, <em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.get_data_t"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.get_data_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data at current time frame given the sequence of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data for current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator (for previous frame).</p></li>
+<li><p><strong>data_prev</strong> (<em>dict</em>) – Data for previous frame.</p></li>
+<li><p><strong>t</strong> (<em>int</em>) – Current time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.get_dis_losses">
+<code class="sig-name descname">get_dis_losses</code><span class="sig-paren">(</span><em class="sig-param">net_D_output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.get_dis_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.get_dis_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute discriminator losses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>net_D_output</strong> (<em>dict</em>) – Output of the discriminator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.get_gen_losses">
+<code class="sig-name descname">get_gen_losses</code><span class="sig-paren">(</span><em class="sig-param">data_t</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">net_D_output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.get_gen_losses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.get_gen_losses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute generator losses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_t</strong> (<em>dict</em>) – Training data at the current time t.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator.</p></li>
+<li><p><strong>net_D_output</strong> (<em>dict</em>) – Output of the discriminator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.get_test_output_images">
+<code class="sig-name descname">get_test_output_images</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.get_test_output_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.get_test_output_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the visualization output of test function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.init_temporal_network">
+<code class="sig-name descname">init_temporal_network</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.init_temporal_network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.init_temporal_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize temporal training when beginning to train multiple
+frames. Set the sequence length to $(initial_sequence_length).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.post_process">
+<code class="sig-name descname">post_process</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.post_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.post_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do any postprocessing of the data / output here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.pre_process">
+<code class="sig-name descname">pre_process</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.pre_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.pre_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do any data pre-processing here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the trainer (for inference) at the beginning of a sequence.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.save_image">
+<code class="sig-name descname">save_image</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.save_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the output images to path.
+Note when the generate_raw_output is FALSE. Then,
+first_net_G_output[‘fake_raw_images’] is None and will not be displayed.
+In model average mode, we will plot the flow visualization twice.
+:param path: Save path.
+:type path: str
+:param data: Training data for current iteration.
+:type data: dict</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">test_data_loader</em>, <em class="sig-param">root_output_dir</em>, <em class="sig-param">inference_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run inference on all sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_data_loader</strong> (<em>object</em>) – Test data loader.</p></li>
+<li><p><strong>root_output_dir</strong> (<em>str</em>) – Location to dump outputs.</p></li>
+<li><p><strong>inference_args</strong> (<em>optional</em>) – Optional args.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.test_single">
+<code class="sig-name descname">test_single</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">output_dir=None</em>, <em class="sig-param">inference_args=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.test_single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.test_single" title="Permalink to this definition">¶</a></dt>
+<dd><p>The inference function. If output_dir exists, also save the
+output image.
+:param data: Training data at the current iteration.
+:type data: dict
+:param output_dir: Save image directory.
+:type output_dir: str
+:param inference_args: Inference args.
+:type inference_args: obj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.visualize_label">
+<code class="sig-name descname">visualize_label</code><span class="sig-paren">(</span><em class="sig-param">label</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.visualize_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.visualize_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualize the input label when saving to image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label</strong> (<em>tensor</em>) – Input label tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.vid2vid.Trainer.write_metrics">
+<code class="sig-name descname">write_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/vid2vid.html#Trainer.write_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.vid2vid.Trainer.write_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>If moving average model presents, we have two meters one for
+regular FID and one for average FID. If no moving average model,
+we just report average FID.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers.wc_vid2vid">
+<span id="imaginaire-trainers-wc-vid2vid-module"></span><h2>imaginaire.trainers.wc_vid2vid module<a class="headerlink" href="#module-imaginaire.trainers.wc_vid2vid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">imaginaire.trainers.wc_vid2vid.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">net_G</em>, <em class="sig-param">net_D</em>, <em class="sig-param">opt_G</em>, <em class="sig-param">opt_D</em>, <em class="sig-param">sch_G</em>, <em class="sig-param">sch_D</em>, <em class="sig-param">train_data_loader</em>, <em class="sig-param">val_data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#imaginaire.trainers.vid2vid.Trainer" title="imaginaire.trainers.vid2vid.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">imaginaire.trainers.vid2vid.Trainer</span></code></a></p>
+<p>Initialize world consistent vid2vid trainer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>net_G</strong> (<em>obj</em>) – Generator network.</p></li>
+<li><p><strong>net_D</strong> (<em>obj</em>) – Discriminator network.</p></li>
+<li><p><strong>opt_G</strong> (<em>obj</em>) – Optimizer for the generator network.</p></li>
+<li><p><strong>opt_D</strong> (<em>obj</em>) – Optimizer for the discriminator network.</p></li>
+<li><p><strong>sch_G</strong> (<em>obj</em>) – Scheduler for the generator optimizer.</p></li>
+<li><p><strong>sch_D</strong> (<em>obj</em>) – Scheduler for the discriminator optimizer.</p></li>
+<li><p><strong>train_data_loader</strong> (<em>obj</em>) – Train data loader.</p></li>
+<li><p><strong>val_data_loader</strong> (<em>obj</em>) – Validation data loader.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.create_sequence_output_dir">
+<code class="sig-name descname">create_sequence_output_dir</code><span class="sig-paren">(</span><em class="sig-param">output_dir</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.create_sequence_output_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.create_sequence_output_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create output subdir for this sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_dir</strong> (<em>str</em>) – Root output dir.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – LMDB key which contains sequence name and file name.</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>output_dir</strong> – Output subdir for this sequence.</p></li>
+<li><p><strong>seq_name</strong> (<em>str</em>) – Name of this sequence.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.gen_frames">
+<code class="sig-name descname">gen_frames</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">use_model_average=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.gen_frames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.gen_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a sequence of frames given a sequence of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>use_model_average</strong> (<em>bool</em>) – Whether to use model average
+for update or not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.get_data_t">
+<code class="sig-name descname">get_data_t</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">net_G_output</em>, <em class="sig-param">data_prev</em>, <em class="sig-param">t</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.get_data_t"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.get_data_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data at current time frame given the sequence of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data for current iteration.</p></li>
+<li><p><strong>net_G_output</strong> (<em>dict</em>) – Output of the generator (for previous frame).</p></li>
+<li><p><strong>data_prev</strong> (<em>dict</em>) – Data for previous frame.</p></li>
+<li><p><strong>t</strong> (<em>int</em>) – Current time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.get_test_output_images">
+<code class="sig-name descname">get_test_output_images</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.get_test_output_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.get_test_output_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the visualization output of test function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.load_checkpoint">
+<code class="sig-name descname">load_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">cfg</em>, <em class="sig-param">checkpoint_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.load_checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.load_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save network weights, optimizer parameters, scheduler parameters
+in the checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>obj</em>) – Global configuration.</p></li>
+<li><p><strong>checkpoint_path</strong> (<em>str</em>) – Path to the checkpoint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the trainer (for inference) at the beginning of a sequence.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.save_image">
+<code class="sig-name descname">save_image</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.save_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the output images to path.
+Note when the generate_raw_output is FALSE. Then,
+first_net_G_output[‘fake_raw_images’] is None and will not be displayed.
+In model average mode, we will plot the flow visualization twice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Save path.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – Training data for current iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.start_of_iteration">
+<code class="sig-name descname">start_of_iteration</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">current_iteration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.start_of_iteration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.start_of_iteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Things to do before an iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Data used for the current iteration.</p></li>
+<li><p><strong>current_iteration</strong> (<em>int</em>) – Current iteration number.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">test_data_loader</em>, <em class="sig-param">root_output_dir</em>, <em class="sig-param">inference_args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run inference on all sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_data_loader</strong> (<em>object</em>) – Test data loader.</p></li>
+<li><p><strong>root_output_dir</strong> (<em>str</em>) – Location to dump outputs.</p></li>
+<li><p><strong>inference_args</strong> (<em>optional</em>) – Optional args.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="imaginaire.trainers.wc_vid2vid.Trainer.test_single">
+<code class="sig-name descname">test_single</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">output_dir=None</em>, <em class="sig-param">save_fake_only=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/imaginaire/trainers/wc_vid2vid.html#Trainer.test_single"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#imaginaire.trainers.wc_vid2vid.Trainer.test_single" title="Permalink to this definition">¶</a></dt>
+<dd><p>The inference function. If output_dir exists, also save the
+output image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Training data at the current iteration.</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em>) – Save image directory.</p></li>
+<li><p><strong>save_fake_only</strong> (<em>bool</em>) – Only save the fake output image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-imaginaire.trainers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-imaginaire.trainers" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="imaginaire.utils.html" class="btn btn-neutral float-right" title="imaginaire.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="imaginaire.optimizers.html" class="btn btn-neutral float-left" title="imaginaire.optimizers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

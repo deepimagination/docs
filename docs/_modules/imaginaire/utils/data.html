@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.utils.data &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.utils.data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.utils.data</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="c1"># flake8: noqa: E712</span>
+<span class="sd">&quot;&quot;&quot;Utils for handling datasets.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># https://github.com/albumentations-team/albumentations#comments</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">imaginaire.utils.distributed</span> <span class="kn">import</span> <span class="n">master_only_print</span> <span class="k">as</span> <span class="nb">print</span>
+<span class="kn">import</span> <span class="nn">albumentations</span> <span class="k">as</span> <span class="nn">alb</span>  <span class="c1"># noqa nopep8</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">setNumThreads</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">ocl</span><span class="o">.</span><span class="n">setUseOpenCL</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+
+<span class="n">IMG_EXTENSIONS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="s1">&#39;ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;bmp&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;pgm&#39;</span><span class="p">,</span> <span class="s1">&#39;tif&#39;</span><span class="p">,</span> <span class="s1">&#39;tiff&#39;</span><span class="p">,</span> <span class="s1">&#39;webp&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;JPG&#39;</span><span class="p">,</span> <span class="s1">&#39;JPEG&#39;</span><span class="p">,</span> <span class="s1">&#39;PNG&#39;</span><span class="p">,</span> <span class="s1">&#39;PPM&#39;</span><span class="p">,</span> <span class="s1">&#39;BMP&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;PGM&#39;</span><span class="p">,</span> <span class="s1">&#39;TIF&#39;</span><span class="p">,</span> <span class="s1">&#39;TIFF&#39;</span><span class="p">,</span> <span class="s1">&#39;WEBP&#39;</span><span class="p">)</span>
+<span class="n">VIDEO_EXTENSIONS</span> <span class="o">=</span> <span class="s1">&#39;mp4&#39;</span>
+
+
+<div class="viewcode-block" id="Augmentor"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.Augmentor">[docs]</a><span class="k">class</span> <span class="nc">Augmentor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Handles data augmentation using albumentations library.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aug_list</span><span class="p">,</span> <span class="n">image_data_types</span><span class="p">,</span> <span class="n">interpolators</span><span class="p">,</span>
+                 <span class="n">keypoint_data_types</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initializes augmentation pipeline.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            aug_list (list): List of augmentation operations in sequence.</span>
+<span class="sd">            image_data_types (list): List of keys in expected inputs.</span>
+<span class="sd">            interpolators (list): List of PIL.Image interpolators associated</span>
+<span class="sd">                with input. NEAREST means image is segmentation map,</span>
+<span class="sd">                BILINEAR means continuous valued image.</span>
+<span class="sd">            keypoint_data_types (list): List of keys which are keypoints.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">aug_list</span> <span class="o">=</span> <span class="n">aug_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span> <span class="o">=</span> <span class="n">image_data_types</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span> <span class="o">=</span> <span class="n">interpolators</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crop_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_w</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_time_step</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="o">=</span> <span class="n">keypoint_data_types</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">augment_ops</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_augmentation_ops</span><span class="p">()</span>
+        <span class="c1"># Both crop and resize can&#39;t be none at the same time.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_h</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>\
+                <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;resize_smallest_side, resize_h_w, &#39;</span>
+                             <span class="s1">&#39;and crop_h_w cannot all be missing.&#39;</span><span class="p">)</span>
+        <span class="c1"># If resize_smallest_side is given, resize_h_w should not be give.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> \
+                <span class="s1">&#39;Cannot have both `resize_smallest_side` and `resize_h_w` set.&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_w</span>
+
+    <span class="k">def</span> <span class="nf">_build_augmentation_ops</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Builds sequence of augmentation ops.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            (list of alb.ops): List of augmentation ops.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">augs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">aug_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;resize_smallest_side&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;resize_h_w&#39;</span><span class="p">:</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span> <span class="o">=</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;random_resize_h_w_aspect&#39;</span><span class="p">:</span>
+                <span class="n">aspect_start</span><span class="p">,</span> <span class="n">aspect_end</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">),</span> <span class="n">value</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+                <span class="n">aspect</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="n">aspect_start</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">aspect_end</span><span class="p">]</span>
+                <span class="n">aspect_min</span><span class="p">,</span> <span class="n">aspect_max</span> <span class="o">=</span> <span class="n">aspect</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">value</span><span class="p">[:</span><span class="n">aspect_start</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+                <span class="n">aspect_min</span><span class="p">,</span> <span class="n">aspect_max</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">aspect_min</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">aspect_max</span><span class="p">)</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span>
+                    <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                    <span class="n">ratio</span><span class="o">=</span><span class="p">(</span><span class="n">aspect_min</span><span class="p">,</span> <span class="n">aspect_max</span><span class="p">),</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span> <span class="o">=</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;rotate&#39;</span><span class="p">:</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">Rotate</span><span class="p">(</span>
+                    <span class="n">limit</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;random_rotate_90&#39;</span><span class="p">:</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">RandomRotate90</span><span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;random_scale_limit&#39;</span><span class="p">:</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">RandomScale</span><span class="p">(</span><span class="n">scale_limit</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;random_crop_h_w&#39;</span><span class="p">:</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crop_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_w</span> <span class="o">=</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;center_crop_h_w&#39;</span><span class="p">:</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crop_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">crop_w</span> <span class="o">=</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span>
+                <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">CenterCrop</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;horizontal_flip&#39;</span><span class="p">:</span>
+                <span class="c1"># This is handled separately as we need to keep track if this</span>
+                <span class="c1"># was applied in order to correctly modify keypoint data.</span>
+                <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+                    <span class="n">augs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alb</span><span class="o">.</span><span class="n">HorizontalFlip</span><span class="p">(</span><span class="n">always_apply</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;max_time_step&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">max_time_step</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_time_step</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">,</span> \
+                    <span class="s1">&#39;max_time_step has to be at least 1&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown augmentation </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">augs</span>
+
+    <span class="k">def</span> <span class="nf">_choose_image_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Choose key to replace with &#39;image&#39; for input to albumentations.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            key (str): Chosen key to be replace with &#39;image&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s1">&#39;image&#39;</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;image&#39;</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data_type</span>
+
+    <span class="k">def</span> <span class="nf">_choose_keypoint_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Choose key to replace with &#39;keypoints&#39; for input to albumentations.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            key (str): Chosen key to be replace with &#39;keypoints&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="s1">&#39;keypoints&#39;</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;keypoints&#39;</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data_type</span>
+
+    <span class="k">def</span> <span class="nf">_create_augmentation_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Create additional targets as required by the albumentation library.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            inputs (dict): Keys are from self.augmentable_data_types. Values can</span>
+<span class="sd">                be numpy.ndarray or list of numpy.ndarray</span>
+<span class="sd">                (image or list of images).</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):        </span>
+<span class="sd">              - targets (dict): Dict containing mapping of keys to image/mask types.</span>
+<span class="sd">              - new_inputs (dict): Dict containing mapping of keys to data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get additional target list.</span>
+        <span class="n">targets</span><span class="p">,</span> <span class="n">new_inputs</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">:</span>
+                <span class="c1"># Keypoint-type.</span>
+                <span class="n">target_type</span> <span class="o">=</span> <span class="s1">&#39;keypoints&#39;</span>
+            <span class="k">elif</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                <span class="c1"># Image-type.</span>
+                <span class="c1"># Find the target type (image/mask) based on interpolation</span>
+                <span class="c1"># method.</span>
+                <span class="n">interp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolators</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">interp</span> <span class="o">==</span> <span class="n">Image</span><span class="o">.</span><span class="n">NEAREST</span><span class="p">:</span>
+                    <span class="n">target_type</span> <span class="o">=</span> <span class="s1">&#39;mask&#39;</span>
+                <span class="k">elif</span> <span class="n">interp</span> <span class="o">==</span> <span class="n">Image</span><span class="o">.</span><span class="n">BILINEAR</span><span class="p">:</span>
+                    <span class="n">target_type</span> <span class="o">=</span> <span class="s1">&#39;image&#39;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                        <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not supported yet&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">interp</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;Data type: </span><span class="si">%s</span><span class="s1"> is not image or keypoint&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data_type</span><span class="p">))</span>
+
+            <span class="n">current_data_type_inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_data_type_inputs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">current_data_type_inputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">current_data_type_inputs</span><span class="p">]</span>
+
+            <span class="c1"># Create additional_targets and inputs when there are multiples.</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">new_input</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">current_data_type_inputs</span><span class="p">):</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">data_type</span>
+                <span class="k">if</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">::</span><span class="si">%05d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+                <span class="n">targets</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">target_type</span>
+                <span class="n">new_inputs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_input</span>
+
+        <span class="k">return</span> <span class="n">targets</span><span class="p">,</span> <span class="n">new_inputs</span>
+
+    <span class="k">def</span> <span class="nf">_collate_augmented</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">augmented</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Collate separated images back into sequence, grouped by keys.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            augmented (dict): Dict containing frames with keys of the form</span>
+<span class="sd">            &#39;key&#39;, &#39;key::00001&#39;, &#39;key::00002&#39;, ..., &#39;key::N&#39;.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):    </span>
+<span class="sd">              - outputs (dict): Dict with list of collated inputs, i.e. frames of</span>
+<span class="sd">              - same key are arranged in order [&#39;key&#39;, &#39;key::00001&#39;, ..., &#39;key::N&#39;].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">full_keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">augmented</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">full_key</span> <span class="ow">in</span> <span class="n">full_keys</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;::&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_key</span><span class="p">:</span>
+                <span class="c1"># First occurrence of this key.</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">full_key</span>
+                <span class="n">outputs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">full_key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">outputs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">augmented</span><span class="p">[</span><span class="n">full_key</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">outputs</span>
+
+    <span class="k">def</span> <span class="nf">_get_resize_h_w</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get height and width to resize to, given smallest side.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            height (int): Input image height.</span>
+<span class="sd">            width (int): Input image width.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):   </span>
+<span class="sd">              - height (int): Height to resize image to.</span>
+<span class="sd">              - width (int): Width to resize image to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span>
+
+        <span class="k">if</span> <span class="n">height</span> <span class="o">&lt;=</span> <span class="n">width</span><span class="p">:</span>
+            <span class="n">new_height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span>
+            <span class="n">new_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">new_height</span> <span class="o">*</span> <span class="n">width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">height</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span>
+            <span class="n">new_height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">new_width</span> <span class="o">*</span> <span class="n">height</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">new_height</span><span class="p">,</span> <span class="n">new_width</span>
+
+    <span class="k">def</span> <span class="nf">_perform_unpaired_augmentation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Perform different data augmentation on different inputs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            inputs (dict): Keys are from self.image_data_types. Values are list</span>
+<span class="sd">                of numpy.ndarray (list of images).</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - augmented (dict): Augmented inputs, with same keys as inputs.</span>
+<span class="sd">              - is_flipped (dict): Flag which tells if images have been LR flipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Process each data type separately as this is unpaired augmentation.</span>
+        <span class="n">is_flipped</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span>
+            <span class="n">augmented</span><span class="p">,</span> <span class="n">flipped_flag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perform_paired_augmentation</span><span class="p">(</span>
+                <span class="p">{</span><span class="n">data_type</span><span class="p">:</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]})</span>
+            <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">augmented</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="n">is_flipped</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">flipped_flag</span>
+        <span class="k">return</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">is_flipped</span>
+
+    <span class="k">def</span> <span class="nf">_perform_paired_augmentation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Perform same data augmentation on all inputs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            inputs (dict): Keys are from self.augmentable_data_types. Values are</span>
+<span class="sd">                list of numpy.ndarray (list of images).</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (dict):</span>
+<span class="sd">              - augmented (dict): Augmented inputs, with same keys as inputs.</span>
+<span class="sd">              - is_flipped (bool): Flag which tells if images have been LR flipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># All input images here have the same size, and the calling function</span>
+        <span class="c1"># has checked this.</span>
+        <span class="c1"># Convert PIL images to numpy array.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="ow">or</span> \
+                    <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">])):</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
+                <span class="c1"># Get resize h, w.</span>
+                <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">size</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">original_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">original_w</span> <span class="o">=</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resize_h_w</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+                <span class="c1"># Convert to numpy array with 3 dims (H, W, C).</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+                <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="c1"># Add resize op to augmentation ops.</span>
+        <span class="n">aug_ops_with_resize</span> <span class="o">=</span> <span class="p">[</span><span class="n">alb</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resize_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_w</span><span class="p">,</span> <span class="n">always_apply</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">augment_ops</span>
+
+        <span class="c1"># Create targets.</span>
+        <span class="n">targets</span><span class="p">,</span> <span class="n">new_inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_augmentation_targets</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="n">extra_params</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Albumentation requires a key called &#39;image&#39; and</span>
+        <span class="c1"># a key called &#39;keypoints&#39;, if any keypoints are being passed in.</span>
+        <span class="c1"># Arbitrarily choose one key of image type to be &#39;image&#39;.</span>
+        <span class="n">chosen_image_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_choose_image_key</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="n">new_inputs</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_inputs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">chosen_image_key</span><span class="p">)</span>
+        <span class="n">targets</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">targets</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">chosen_image_key</span><span class="p">)</span>
+        <span class="c1"># Arbitrarily choose one key of keypoint type to be &#39;keypoints&#39;.</span>
+        <span class="n">chosen_keypoint_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_choose_keypoint_key</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">chosen_keypoint_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">new_inputs</span><span class="p">[</span><span class="s1">&#39;keypoints&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_inputs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">chosen_keypoint_key</span><span class="p">)</span>
+            <span class="n">targets</span><span class="p">[</span><span class="s1">&#39;keypoints&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">targets</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">chosen_keypoint_key</span><span class="p">)</span>
+            <span class="n">extra_params</span><span class="p">[</span><span class="s1">&#39;keypoint_params&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alb</span><span class="o">.</span><span class="n">KeypointParams</span><span class="p">(</span>
+                <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">remove_invisible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Do augmentation.</span>
+        <span class="n">augmented</span> <span class="o">=</span> <span class="n">alb</span><span class="o">.</span><span class="n">ReplayCompose</span><span class="p">(</span>
+            <span class="n">aug_ops_with_resize</span><span class="p">,</span> <span class="n">additional_targets</span><span class="o">=</span><span class="n">targets</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">extra_params</span><span class="p">)(</span><span class="o">**</span><span class="n">new_inputs</span><span class="p">)</span>
+        <span class="n">augmentation_params</span> <span class="o">=</span> <span class="n">augmented</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;replay&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Check if flipping has occurred.</span>
+        <span class="n">is_flipped</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">augmentation_param</span> <span class="ow">in</span> <span class="n">augmentation_params</span><span class="p">[</span><span class="s1">&#39;transforms&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="s1">&#39;HorizontalFlip&#39;</span> <span class="ow">in</span> <span class="n">augmentation_param</span><span class="p">[</span><span class="s1">&#39;__class_fullname__&#39;</span><span class="p">]:</span>
+                <span class="n">is_flipped</span> <span class="o">=</span> <span class="n">augmentation_param</span><span class="p">[</span><span class="s1">&#39;applied&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_flipped</span> <span class="o">=</span> <span class="n">is_flipped</span>
+
+        <span class="c1"># Replace the key &#39;image&#39; with chosen_image_key, same for &#39;keypoints&#39;.</span>
+        <span class="n">augmented</span><span class="p">[</span><span class="n">chosen_image_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">augmented</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">chosen_keypoint_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">augmented</span><span class="p">[</span><span class="n">chosen_keypoint_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">augmented</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;keypoints&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Pack images back into a sequence.</span>
+        <span class="n">augmented</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_collate_augmented</span><span class="p">(</span><span class="n">augmented</span><span class="p">)</span>
+
+        <span class="c1"># Convert keypoint types to np.array from list.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span><span class="p">:</span>
+            <span class="n">augmented</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">augmented</span><span class="p">[</span><span class="n">data_type</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">augmented</span><span class="p">,</span> <span class="n">is_flipped</span>
+
+<div class="viewcode-block" id="Augmentor.perform_augmentation"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.Augmentor.perform_augmentation">[docs]</a>    <span class="k">def</span> <span class="nf">perform_augmentation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">paired</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Entry point for augmentation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            inputs (dict): Keys are from self.augmentable_data_types. Values are</span>
+<span class="sd">                list of numpy.ndarray (list of images).</span>
+<span class="sd">            paired (bool): Apply same augmentation to all input keys?</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Make sure that all inputs are of same size, else trouble will</span>
+        <span class="c1"># ensue. This is because different images might have different</span>
+        <span class="c1"># aspect ratios.</span>
+        <span class="c1"># Check within data type.</span>
+        <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="ow">or</span> \
+                    <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">this_w</span><span class="p">,</span> <span class="n">this_h</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+                    <span class="c1"># assert this_w == w and this_h == h</span>
+                    <span class="c1"># assert this_w / (1.0 * this_h) == w / (1.0 * h)</span>
+                    <span class="k">if</span> <span class="n">this_w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">this_h</span><span class="p">)</span> <span class="o">!=</span> <span class="n">w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">h</span><span class="p">):</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">) != (</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                            <span class="n">this_w</span><span class="p">,</span> <span class="n">this_h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
+        <span class="c1"># Check across data types.</span>
+        <span class="k">if</span> <span class="n">paired</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">resize_smallest_side</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">inputs</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keypoint_data_types</span> <span class="ow">or</span> \
+                        <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_data_types</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">this_w</span><span class="p">,</span> <span class="n">this_h</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="n">data_type</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+                    <span class="c1"># assert this_w == w and this_h == h</span>
+                    <span class="c1"># assert this_w / (1.0 * this_h) == w / (1.0 * h)</span>
+                    <span class="k">if</span> <span class="n">this_w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">this_h</span><span class="p">)</span> <span class="o">!=</span> <span class="n">w</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">h</span><span class="p">):</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">) != (</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                            <span class="n">this_w</span><span class="p">,</span> <span class="n">this_h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
+        <span class="c1"># Do appropriate augmentation.</span>
+        <span class="k">if</span> <span class="n">paired</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perform_paired_augmentation</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perform_unpaired_augmentation</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="load_from_lmdb"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.load_from_lmdb">[docs]</a><span class="k">def</span> <span class="nf">load_from_lmdb</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">lmdbs</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load keys from lmdb handles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keys (dict): This has data_type as key, and a list of paths into LMDB as</span>
+<span class="sd">            values.</span>
+<span class="sd">        lmdbs (dict): This has data_type as key, and LMDB handle as value.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): This has data_type as key, and a list of decoded items from</span>
+<span class="sd">            LMDBs as value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">data_type_keys</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data_type_keys</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">data_type_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">data_type_keys</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data_type_keys</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lmdbs</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">getitem_by_path</span><span class="p">(</span>
+                <span class="n">key</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">data_type</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="load_from_folder"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.load_from_folder">[docs]</a><span class="k">def</span> <span class="nf">load_from_folder</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">handles</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Load keys from lmdb handles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        keys (dict): This has data_type as key, and a list of paths as</span>
+<span class="sd">            values.</span>
+<span class="sd">        handles (dict): This has data_type as key, and Folder handle as value.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        data (dict): This has data_type as key, and a list of decoded items from</span>
+<span class="sd">            folders as value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">data_type_keys</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data_type_keys</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">data_type_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">data_type_keys</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data_type_keys</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handles</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span><span class="o">.</span><span class="n">getitem_by_path</span><span class="p">(</span>
+                <span class="n">key</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">data_type</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="get_paired_input_image_channel_number"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.get_paired_input_image_channel_number">[docs]</a><span class="k">def</span> <span class="nf">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get number of channels for the input image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration structure.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        num_channels (int): Number of input image channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_channels</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_cfg</span><span class="o">.</span><span class="n">input_types</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">data_type</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">input_image</span><span class="p">:</span>
+                <span class="n">num_channels</span> <span class="o">+=</span> <span class="n">data_type</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Concatenate </span><span class="si">%s</span><span class="s1"> for input.&#39;</span> <span class="o">%</span> <span class="n">data_type</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Num. of channels in the input image: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_channels</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">num_channels</span></div>
+
+
+<div class="viewcode-block" id="get_paired_input_label_channel_number"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.get_paired_input_label_channel_number">[docs]</a><span class="k">def</span> <span class="nf">get_paired_input_label_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="n">video</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get number of channels for the input label map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration structure.</span>
+<span class="sd">        video (bool): Whether we are dealing with video data.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        num_channels (int): Number of input label map channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">num_labels</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">,</span> <span class="s1">&#39;input_labels&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">num_labels</span>
+    <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_cfg</span><span class="o">.</span><span class="n">input_types</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">data_type</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">input_labels</span><span class="p">:</span>
+                <span class="n">num_labels</span> <span class="o">+=</span> <span class="n">data_type</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">num_channels</span>
+                <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_type</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="s1">&#39;use_dont_care&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">data_type</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">use_dont_care</span><span class="p">)</span>
+                    <span class="n">num_labels</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Concatenate </span><span class="si">%s</span><span class="s1"> for input.&#39;</span> <span class="o">%</span> <span class="n">data_type</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">video</span><span class="p">:</span>
+        <span class="n">num_time_steps</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_cfg</span><span class="o">.</span><span class="n">train</span><span class="p">,</span> <span class="s1">&#39;initial_sequence_length&#39;</span><span class="p">,</span>
+                                 <span class="kc">None</span><span class="p">)</span>
+        <span class="n">num_labels</span> <span class="o">*=</span> <span class="n">num_time_steps</span>
+        <span class="n">num_labels</span> <span class="o">+=</span> <span class="n">get_paired_input_image_channel_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="n">num_time_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Num. of channels in the input label: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">num_labels</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">num_labels</span></div>
+
+
+<div class="viewcode-block" id="get_class_number"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.get_class_number">[docs]</a><span class="k">def</span> <span class="nf">get_class_number</span><span class="p">(</span><span class="n">data_cfg</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get number of classes for class-conditional GAN model</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data_cfg (obj): Data configuration structure.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (int): Number of classes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">data_cfg</span><span class="o">.</span><span class="n">num_classes</span></div>
+
+
+<div class="viewcode-block" id="get_crop_h_w"><a class="viewcode-back" href="../../../imaginaire.utils.html#imaginaire.utils.data.get_crop_h_w">[docs]</a><span class="k">def</span> <span class="nf">get_crop_h_w</span><span class="p">(</span><span class="n">augmentation</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get height and width of crop.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        augmentation (dict): Dict of applied augmentations.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (dict):</span>
+<span class="sd">          - crop_h (int): Height of the image crop.</span>
+<span class="sd">          - crop_w (int): Width of the image crop.          </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">augmentation</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">augmentation</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="s1">&#39;crop_h_w&#39;</span> <span class="ow">in</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">filed</span> <span class="o">=</span> <span class="n">augmentation</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+            <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span> <span class="o">=</span> <span class="n">filed</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+            <span class="n">crop_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">crop_h</span><span class="p">)</span>
+            <span class="n">crop_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">crop_w</span><span class="p">)</span>
+            <span class="c1"># assert crop_w == crop_h, &#39;This implementation only &#39; \</span>
+            <span class="c1">#                          &#39;supports square-shaped images.&#39;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Crop size: (</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">crop_h</span><span class="p">,</span> <span class="n">crop_w</span>
+    <span class="k">raise</span> <span class="ne">AttributeError</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

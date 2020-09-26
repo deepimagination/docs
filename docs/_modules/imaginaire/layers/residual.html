@@ -1,0 +1,1461 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imaginaire.layers.residual &mdash; Imaginaire  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/imaginaire_logo_tight.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">imaginaire_release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../evaluate.html">evaluate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imaginaire.html">imaginaire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.datasets.html">imaginaire.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.discriminators.html">imaginaire.discriminators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.evaluation.html">imaginaire.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.generators.html">imaginaire.generators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.layers.html">imaginaire.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.losses.html">imaginaire.losses package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.model_utils.html">imaginaire.model_utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.optimizers.html">imaginaire.optimizers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.trainers.html">imaginaire.trainers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../imaginaire.utils.html">imaginaire.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire.config">imaginaire.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../imaginaire.html#module-imaginaire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../inference.html">inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../train.html">train module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Imaginaire</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>imaginaire.layers.residual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for imaginaire.layers.residual</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020 NVIDIA Corporation.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This work is made available under the Nvidia Source Code License-NC.</span>
+<span class="c1"># To view a copy of this license, check out LICENSE.md</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">torch.nn</span> <span class="kn">import</span> <span class="n">Upsample</span> <span class="k">as</span> <span class="n">NearestUpsample</span>
+<span class="kn">from</span> <span class="nn">torch.utils.checkpoint</span> <span class="kn">import</span> <span class="n">checkpoint</span>
+
+<span class="kn">from</span> <span class="nn">.conv</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Conv1dBlock</span><span class="p">,</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">Conv3dBlock</span><span class="p">,</span> <span class="n">HyperConv2dBlock</span><span class="p">,</span>
+                   <span class="n">LinearBlock</span><span class="p">,</span> <span class="n">MultiOutConv2dBlock</span><span class="p">,</span> <span class="n">PartialConv2dBlock</span><span class="p">,</span>
+                   <span class="n">PartialConv3dBlock</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_BaseResBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for residual blocks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                 <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="s1">&#39;pre_act&#39;</span><span class="p">:</span>
+            <span class="n">order</span> <span class="o">=</span> <span class="s1">&#39;NACNAC&#39;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="c1"># The bias for conv_block_0, conv_block_1, and conv_block_s.</span>
+            <span class="n">biases</span> <span class="o">=</span> <span class="p">[</span><span class="n">bias</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">bias</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bias</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">biases</span> <span class="o">=</span> <span class="n">bias</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Bias list must be 3.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Bias must be either an integer or s list.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span> <span class="o">=</span> <span class="p">(</span><span class="n">in_channels</span> <span class="o">!=</span> <span class="n">out_channels</span><span class="p">)</span> <span class="ow">or</span> <span class="n">learn_shortcut</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;order must be either 5 or 6 characters&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">:</span>
+            <span class="n">hidden_channels</span> <span class="o">=</span> <span class="n">out_channels</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hidden_channels</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">)</span>
+
+        <span class="c1"># Parameters that are specific for convolutions.</span>
+        <span class="n">conv_main_params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">conv_skip_params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">block</span> <span class="o">!=</span> <span class="n">LinearBlock</span><span class="p">:</span>
+            <span class="n">conv_base_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="n">dilation</span><span class="p">,</span>
+                                    <span class="n">groups</span><span class="o">=</span><span class="n">groups</span><span class="p">,</span> <span class="n">padding_mode</span><span class="o">=</span><span class="n">padding_mode</span><span class="p">)</span>
+            <span class="n">conv_main_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">conv_base_params</span><span class="p">)</span>
+            <span class="n">conv_main_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                <span class="nb">dict</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="n">kernel_size</span><span class="p">,</span>
+                     <span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                     <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">activation_norm_params</span><span class="p">,</span>
+                     <span class="n">padding</span><span class="o">=</span><span class="n">padding</span><span class="p">))</span>
+            <span class="n">conv_skip_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">conv_base_params</span><span class="p">)</span>
+            <span class="n">conv_skip_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">skip_activation_norm</span><span class="p">:</span>
+                <span class="n">conv_skip_params</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="nb">dict</span><span class="p">(</span><span class="n">activation_norm_type</span><span class="o">=</span><span class="n">activation_norm_type</span><span class="p">,</span>
+                         <span class="n">activation_norm_params</span><span class="o">=</span><span class="n">activation_norm_params</span><span class="p">))</span>
+
+        <span class="c1"># Other parameters.</span>
+        <span class="n">other_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">weight_norm_type</span><span class="o">=</span><span class="n">weight_norm_type</span><span class="p">,</span>
+                            <span class="n">weight_norm_params</span><span class="o">=</span><span class="n">weight_norm_params</span><span class="p">,</span>
+                            <span class="n">apply_noise</span><span class="o">=</span><span class="n">apply_noise</span><span class="p">)</span>
+
+        <span class="c1"># Residual branch.</span>
+        <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">order</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span> <span class="ow">and</span> \
+                <span class="p">(</span><span class="n">activation_norm_type</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">activation_norm_type</span> <span class="o">==</span> <span class="s1">&#39;none&#39;</span><span class="p">):</span>
+            <span class="c1"># Nonlinearity is the first operation in the residual path.</span>
+            <span class="c1"># In-place nonlinearity will modify the input variable and cause</span>
+            <span class="c1"># backward error.</span>
+            <span class="n">first_inplace</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">first_inplace</span> <span class="o">=</span> <span class="n">inplace_nonlinearity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">hidden_channels</span><span class="p">,</span>
+                                  <span class="n">bias</span><span class="o">=</span><span class="n">biases</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                  <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span>
+                                  <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="n">first_inplace</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">conv_main_params</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">other_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">hidden_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span>
+                                  <span class="n">bias</span><span class="o">=</span><span class="n">biases</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                  <span class="n">nonlinearity</span><span class="o">=</span><span class="n">nonlinearity</span><span class="p">,</span>
+                                  <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">[</span><span class="mi">3</span><span class="p">:],</span>
+                                  <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">conv_main_params</span><span class="p">,</span>
+                                  <span class="o">**</span><span class="n">other_params</span><span class="p">)</span>
+
+        <span class="c1"># Shortcut branch.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">skip_nonlinearity</span><span class="p">:</span>
+                <span class="n">skip_nonlinearity_type</span> <span class="o">=</span> <span class="n">nonlinearity</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">skip_nonlinearity_type</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span>
+                                      <span class="n">bias</span><span class="o">=</span><span class="n">biases</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                      <span class="n">nonlinearity</span><span class="o">=</span><span class="n">skip_nonlinearity_type</span><span class="p">,</span>
+                                      <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span>
+                                      <span class="o">**</span><span class="n">conv_skip_params</span><span class="p">,</span>
+                                      <span class="o">**</span><span class="n">other_params</span><span class="p">)</span>
+
+        <span class="c1"># Whether this block expects conditional inputs.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conditional</span> <span class="o">=</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">or</span> \
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">conv_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the output of the residual branch.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dx (tensor): Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dx</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">do_checkpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            do_checkpoint (bool, optional, default=``False``) If ``True``,</span>
+<span class="sd">                trade compute for memory by checkpointing the model.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (tensor): Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">do_checkpoint</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_blocks</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_blocks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="ResLinearBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.ResLinearBlock">[docs]</a><span class="k">class</span> <span class="nc">ResLinearBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block with full-connected layers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, add</span>
+<span class="sd">            Gaussian noise with learnable magnitude after the</span>
+<span class="sd">            fully-connected layer.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: fully-connected,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">LinearBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Res1dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.Res1dBlock">[docs]</a><span class="k">class</span> <span class="nc">Res1dBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 1D input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">Conv1dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Res2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.Res2dBlock">[docs]</a><span class="k">class</span> <span class="nc">Res2dBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 2D input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Res3dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.Res3dBlock">[docs]</a><span class="k">class</span> <span class="nc">Res3dBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 3D input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">Conv3dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BaseHyperResBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for hyper residual blocks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                 <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span>
+                 <span class="n">is_hyper_conv</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="n">block</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">block</span><span class="p">,</span>
+                                  <span class="n">is_hyper_conv</span><span class="o">=</span><span class="n">is_hyper_conv</span><span class="p">,</span>
+                                  <span class="n">is_hyper_norm</span><span class="o">=</span><span class="n">is_hyper_norm</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">conv_weights</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="n">norm_weights</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            conv_weights (list of tensors): Convolution weights for</span>
+<span class="sd">                three convolutional layers respectively.</span>
+<span class="sd">            norm_weights (list of tensors): Normalization weights for</span>
+<span class="sd">                three convolutional layers respectively.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (tensor): Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">conv_weights</span><span class="o">=</span><span class="n">conv_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="n">norm_weights</span><span class="o">=</span><span class="n">norm_weights</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">conv_weights</span><span class="o">=</span><span class="n">conv_weights</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                               <span class="n">norm_weights</span><span class="o">=</span><span class="n">norm_weights</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                           <span class="n">conv_weights</span><span class="o">=</span><span class="n">conv_weights</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                           <span class="n">norm_weights</span><span class="o">=</span><span class="n">norm_weights</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="HyperRes2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.HyperRes2dBlock">[docs]</a><span class="k">class</span> <span class="nc">HyperRes2dBlock</span><span class="p">(</span><span class="n">_BaseHyperResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Hyper residual block for 2D input.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        is_hyper_conv (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            ``HyperConv2d``, otherwise use ``torch.nn.Conv2d``.</span>
+<span class="sd">        is_hyper_norm (bool, optional, default=False): If ``True``, use</span>
+<span class="sd">            hyper normalizations.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">is_hyper_conv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">is_hyper_conv</span><span class="p">,</span> <span class="n">is_hyper_norm</span><span class="p">,</span>
+                         <span class="n">HyperConv2dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BaseDownResBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for residual blocks with downsampling.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">pooling</span><span class="p">,</span> <span class="n">down_factor</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pooling</span> <span class="o">=</span> <span class="n">pooling</span><span class="p">(</span><span class="n">down_factor</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor) : Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : conditional input.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (tensor) : Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pooling</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pooling</span><span class="p">(</span><span class="n">x_shortcut</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="DownRes2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.DownRes2dBlock">[docs]</a><span class="k">class</span> <span class="nc">DownRes2dBlock</span><span class="p">(</span><span class="n">_BaseDownResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 2D input with downsampling.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        pooling (class, optional, default=nn.AvgPool2d): Pytorch pooling</span>
+<span class="sd">            layer to be used.</span>
+<span class="sd">        down_factor (int, optional, default=2): Downsampling factor.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">pooling</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">AvgPool2d</span><span class="p">,</span> <span class="n">down_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">Conv2dBlock</span><span class="p">,</span> <span class="n">pooling</span><span class="p">,</span>
+                         <span class="n">down_factor</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BaseUpResBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for residual blocks with upsampling.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">upsample</span><span class="p">,</span> <span class="n">up_factor</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span> <span class="o">=</span> <span class="n">upsample</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="n">up_factor</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Implementation of the up residual block forward function.</span>
+<span class="sd">        If the order is &#39;NAC&#39; for the first residual block, we will first</span>
+<span class="sd">        do the activation norm and nonlinearity, in the original resolution.</span>
+<span class="sd">        We will then upsample the activation map to a higher resolution. We</span>
+<span class="sd">        then do the convolution.</span>
+<span class="sd">        It is is other orders, then we first do the whole processing and</span>
+<span class="sd">        then upsample.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor) : Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            output (tensor) : Output tensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># In this particular upsample residual block operation, we first</span>
+        <span class="c1"># upsample the skip connection.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x_shortcut</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;NAC&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">layer</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+                <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">&#39;conditional&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">ix</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="UpRes2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.UpRes2dBlock">[docs]</a><span class="k">class</span> <span class="nc">UpRes2dBlock</span><span class="p">(</span><span class="n">_BaseUpResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 2D input with downsampling.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        upsample (class, optional, default=NearestUpsample): PPytorch</span>
+<span class="sd">            upsampling layer to be used.</span>
+<span class="sd">        up_factor (int, optional, default=2): Upsampling factor.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">upsample</span><span class="o">=</span><span class="n">NearestUpsample</span><span class="p">,</span> <span class="n">up_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">Conv2dBlock</span><span class="p">,</span>
+                         <span class="n">upsample</span><span class="p">,</span> <span class="n">up_factor</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BasePartialResBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for residual blocks with partial convolution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="n">block</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">block</span><span class="p">,</span>
+                                  <span class="n">multi_channel</span><span class="o">=</span><span class="n">multi_channel</span><span class="p">,</span>
+                                  <span class="n">return_mask</span><span class="o">=</span><span class="n">return_mask</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partial_conv</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">            mask_in (tensor, optional, default=``None``) If not ``None``,</span>
+<span class="sd">                it masks the valid input region.</span>
+<span class="sd">            kw_cond_inputs (dict) : Keyword conditional inputs.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output (tensor): Output tensor.</span>
+<span class="sd">              - mask_out (tensor, optional): Masks the valid output region.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">return_mask</span><span class="p">:</span>
+            <span class="n">dx</span><span class="p">,</span> <span class="n">mask_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                             <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_in</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="n">dx</span><span class="p">,</span> <span class="n">mask_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                             <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_out</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                   <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_in</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                   <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_in</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="n">mask_out</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mask_in</span><span class="o">=</span><span class="n">mask_in</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">,</span>
+                                           <span class="o">**</span><span class="n">kw_cond_inputs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x_shortcut</span><span class="p">)</span> <span class="o">==</span> <span class="nb">tuple</span><span class="p">:</span>
+                <span class="n">x_shortcut</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">x_shortcut</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">dx</span>
+
+        <span class="k">if</span> <span class="n">mask_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">mask_out</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="PartialRes2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.PartialRes2dBlock">[docs]</a><span class="k">class</span> <span class="nc">PartialRes2dBlock</span><span class="p">(</span><span class="n">_BasePartialResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 2D input with partial convolution.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">PartialConv2dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PartialRes3dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.PartialRes3dBlock">[docs]</a><span class="k">class</span> <span class="nc">PartialRes3dBlock</span><span class="p">(</span><span class="n">_BasePartialResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 3D input with partial convolution.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">multi_channel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">multi_channel</span><span class="p">,</span> <span class="n">return_mask</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">PartialConv3dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_BaseMultiOutResBlock</span><span class="p">(</span><span class="n">_BaseResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;An abstract class for residual blocks that can returns multiple outputs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="p">,</span> <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                 <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multiple_outputs</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span> <span class="n">apply_noise</span><span class="p">,</span>
+                         <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x (tensor): Input tensor.</span>
+<span class="sd">            cond_inputs (list of tensors) : Conditional input tensors.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tuple):</span>
+<span class="sd">              - output (tensor): Output tensor.</span>
+<span class="sd">              - aux_outputs_0 (tensor): Auxiliary output of the first block.</span>
+<span class="sd">              - aux_outputs_1 (tensor): Auxiliary output of the second block.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span><span class="p">,</span> <span class="n">aux_outputs_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="n">dx</span><span class="p">,</span> <span class="n">aux_outputs_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_1</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learn_shortcut</span><span class="p">:</span>
+            <span class="c1"># We are not using the auxiliary outputs of self.conv_block_s.</span>
+            <span class="n">x_shortcut</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_block_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">cond_inputs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x_shortcut</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x_shortcut</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">aux_outputs_0</span><span class="p">,</span> <span class="n">aux_outputs_1</span>
+
+
+<div class="viewcode-block" id="MultiOutRes2dBlock"><a class="viewcode-back" href="../../../imaginaire.layers.html#imaginaire.layers.residual.MultiOutRes2dBlock">[docs]</a><span class="k">class</span> <span class="nc">MultiOutRes2dBlock</span><span class="p">(</span><span class="n">_BaseMultiOutResBlock</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Residual block for 2D input. It can return multiple outputs, if some</span>
+<span class="sd">    layers in the block return more than one output.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels (int) : Number of channels in the input tensor.</span>
+<span class="sd">        out_channels (int) : Number of channels in the output tensor.</span>
+<span class="sd">        kernel_size (int, optional, default=3): Kernel size for the</span>
+<span class="sd">            convolutional filters in the residual link.</span>
+<span class="sd">        padding (int, optional, default=1): Padding size.</span>
+<span class="sd">        dilation (int, optional, default=1): Dilation factor.</span>
+<span class="sd">        groups (int, optional, default=1): Number of convolutional/linear</span>
+<span class="sd">            groups.</span>
+<span class="sd">        padding_mode (string, optional, default=&#39;zeros&#39;): Type of padding:</span>
+<span class="sd">            ``&#39;zeros&#39;``, ``&#39;reflect&#39;``, ``&#39;replicate&#39;`` or ``&#39;circular&#39;``.</span>
+<span class="sd">        weight_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of weight normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;spectral&#39;``, ``&#39;weight&#39;``</span>
+<span class="sd">            or ``&#39;weight_demod&#39;``.</span>
+<span class="sd">        weight_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of weight normalization.</span>
+<span class="sd">            If not ``None``, ``weight_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing weight normalization.</span>
+<span class="sd">        activation_norm_type (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of activation normalization.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;instance&#39;``, ``&#39;batch&#39;``, ``&#39;sync_batch&#39;``,</span>
+<span class="sd">            ``&#39;layer&#39;``,  ``&#39;layer_2d&#39;``, ``&#39;group&#39;``, ``&#39;adaptive&#39;``,</span>
+<span class="sd">            ``&#39;spatially_adaptive&#39;`` or ``&#39;hyper_spatially_adaptive&#39;``.</span>
+<span class="sd">        activation_norm_params (obj, optional, default=None):</span>
+<span class="sd">            Parameters of activation normalization.</span>
+<span class="sd">            If not ``None``, ``activation_norm_params.__dict__`` will be used as</span>
+<span class="sd">            keyword arguments when initializing activation normalization.</span>
+<span class="sd">        skip_activation_norm (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies activation norm to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        skip_nonlinearity (bool, optional, default=True): If ``True`` and</span>
+<span class="sd">            ``learn_shortcut`` is also ``True``, applies nonlinearity to the</span>
+<span class="sd">            learned shortcut connection.</span>
+<span class="sd">        nonlinearity (str, optional, default=&#39;none&#39;):</span>
+<span class="sd">            Type of nonlinear activation function in the residual link.</span>
+<span class="sd">            ``&#39;none&#39;``, ``&#39;relu&#39;``, ``&#39;leakyrelu&#39;``, ``&#39;prelu&#39;``,</span>
+<span class="sd">            ``&#39;tanh&#39;`` , ``&#39;sigmoid&#39;`` or ``&#39;softmax&#39;``.</span>
+<span class="sd">        inplace_nonlinearity (bool, optional, default=False): If ``True``,</span>
+<span class="sd">            set ``inplace=True`` when initializing the nonlinearity layers.</span>
+<span class="sd">        apply_noise (bool, optional, default=False): If ``True``, adds</span>
+<span class="sd">            Gaussian noise with learnable magnitude to the convolution output.</span>
+<span class="sd">        hidden_channels_equal_out_channels (bool, optional, default=False):</span>
+<span class="sd">            If ``True``, set the hidden channel number to be equal to the</span>
+<span class="sd">            output channel number. If ``False``, the hidden channel number</span>
+<span class="sd">            equals to the smaller of the input channel number and the</span>
+<span class="sd">            output channel number.</span>
+<span class="sd">        order (str, optional, default=&#39;CNACNA&#39;): Order of operations</span>
+<span class="sd">            in the residual link.</span>
+<span class="sd">            ``&#39;C&#39;``: convolution,</span>
+<span class="sd">            ``&#39;N&#39;``: normalization,</span>
+<span class="sd">            ``&#39;A&#39;``: nonlinear activation.</span>
+<span class="sd">        learn_shortcut (bool, optional, default=False): If ``True``, always use</span>
+<span class="sd">            a convolutional shortcut instead of an identity one, otherwise only</span>
+<span class="sd">            use a convolutional one if input and output have different number of</span>
+<span class="sd">            channels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                 <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dilation</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">padding_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">,</span>
+                 <span class="n">weight_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">activation_norm_type</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skip_activation_norm</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leakyrelu&#39;</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">apply_noise</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">order</span><span class="o">=</span><span class="s1">&#39;CNACNA&#39;</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span>
+                         <span class="n">dilation</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">padding_mode</span><span class="p">,</span>
+                         <span class="n">weight_norm_type</span><span class="p">,</span> <span class="n">weight_norm_params</span><span class="p">,</span>
+                         <span class="n">activation_norm_type</span><span class="p">,</span> <span class="n">activation_norm_params</span><span class="p">,</span>
+                         <span class="n">skip_activation_norm</span><span class="p">,</span> <span class="n">skip_nonlinearity</span><span class="p">,</span>
+                         <span class="n">nonlinearity</span><span class="p">,</span> <span class="n">inplace_nonlinearity</span><span class="p">,</span>
+                         <span class="n">apply_noise</span><span class="p">,</span> <span class="n">hidden_channels_equal_out_channels</span><span class="p">,</span>
+                         <span class="n">order</span><span class="p">,</span> <span class="n">MultiOutConv2dBlock</span><span class="p">,</span> <span class="n">learn_shortcut</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright NVIDIA
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
